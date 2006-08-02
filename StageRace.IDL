@@ -1,0 +1,94 @@
+
+	// StageRace.idl : IDL source for StageRace.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (StageRace.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(55B2C551-69F1-43D7-9DCA-59989C3B1808),
+		dual,
+		helpstring("ISRHalfStage Interface"),
+		pointer_default(unique)
+	]
+	interface ISRHalfStage : IUnknown
+	{
+		[id(1), helpstring("method SetArrivalByTime")] HRESULT SetArrivalByTime(unsigned short nStaNo, unsigned long nUnits);
+		[id(2), helpstring("method SetArrivalByRank")] HRESULT SetArrivalByRank(unsigned short nStaNo, unsigned short nRank);
+		[id(3), helpstring("method SetArrival")] HRESULT SetArrival(unsigned short nStaNo, unsigned short nRank, unsigned long nUnits);
+		[id(4), helpstring("method GetArrivalByRank")] HRESULT GetArrivalByRank(unsigned short nRank, unsigned short *nStaNo, unsigned long *nUnits);
+		[id(5), helpstring("method GetArrivalByStaNo")] HRESULT GetArrivalByStaNo(unsigned short nStaNo, unsigned short *nRank, unsigned long *nUnits);
+		[id(6), helpstring("method GetArrivalByTime")] HRESULT GetArrivalByTime(unsigned long nUnits, unsigned short *nStaNo, unsigned short *nRank, unsigned long *pnUnits);
+		[id(7), helpstring("method GetStart")] HRESULT GetStart(unsigned short nStaNo, unsigned short *nOrder, unsigned long *nUnits);
+		[id(8), helpstring("method ResetArrival")] HRESULT ResetArrival(unsigned int nStaNo);
+		[id(9), helpstring("method EnumerateStarts")] HRESULT EnumerateStarts(VARIANT * pStarts);
+		[id(10), helpstring("method SetTimingIdle")] HRESULT SetTimingIdle();
+	};
+	[
+		object,
+		uuid(EB26427B-82AC-45FA-80AF-F93C8A3189AD),
+		dual,
+		helpstring("ICStageRaceDoc Interface"),
+		pointer_default(unique)
+	]
+	interface IStageRaceDoc : IUnknown
+	{
+		[id(1), helpstring("method GetCountHalfStages")] HRESULT GetCountHalfStages([in]int nFS, [in,out]int* pnCount);
+		[id(2), helpstring("method GetCountFullStages")] HRESULT GetCountFullStages([in,out]int* pnCount);
+		[id(3), helpstring("method GetHalfStageName")] HRESULT GetHalfStageName([in]int nFS, [in]int nHS, [in,out]BSTR* pname);
+		[id(4), helpstring("method GetFullStageName")] HRESULT GetFullStageName([in]int nFS, [in,out]BSTR* pname);
+		[id(5), helpstring("method GetHalfStage")] HRESULT GetHalfStage([in]int nFS, [in]int nHS, [in,out]ISRHalfStage** ppHS);
+		[id(6), helpstring("method CompetitorExists")] HRESULT CompetitorExists([in]unsigned short nStaNo, [out]BOOL* bExists);
+		[id(7), helpstring("method GetCompetitor")] HRESULT GetCompetitor([in]unsigned short nStaNo, [in,out]BSTR* pname, [in,out]BSTR* pteam);
+	};
+	[
+		object,
+		uuid(31AC26B2-80B3-4ACF-BBB9-686CA55EDA44),
+		dual,
+		helpstring("IStageRaceServer Interface"),
+		pointer_default(unique)
+	]
+	interface IStageRaceServer : IUnknown
+	{
+		[id(1), helpstring("method EnumerateDocuments")] HRESULT EnumerateDocuments([out]VARIANT* pDocs);
+		[id(2), helpstring("method SendMessage")] HRESULT SendMessage([in]BSTR user, [in]BSTR message);
+		[id(3), helpstring("method GetDocument")] HRESULT GetDocument([in]BSTR title, [out]IStageRaceDoc** ppDoc);
+		[id(4), helpstring("method GetActiveDocName")] HRESULT GetActiveDocName(BSTR* pTitle);
+	};
+[
+	uuid(0F5CA62A-5B01-4FC6-9D68-4FC223AEF89C),
+	version(1.0),
+	helpstring("StageRace 1.0 Type Library")
+]
+library StageRaceLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	[
+		uuid(5AD7E1A3-B139-4A1B-83E0-117F2F3831D0),
+		helpstring("StageRaceServer Class")
+	]
+	coclass StageRaceServer
+	{
+		[default] interface IStageRaceServer;
+	};
+	[
+		uuid(C8B27B99-DDC6-457E-B7DC-8DC35079A9C6),
+		helpstring("StageRaceDoc Class")
+	]
+	coclass StageRaceDoc
+	{
+		[default] interface IStageRaceDoc;
+	};
+	[
+		uuid(6612404C-66ED-4CAB-8506-4B8B5967F18C),
+		helpstring("SRHalfStage Class")
+	]
+	coclass SRHalfStage
+	{
+		[default] interface ISRHalfStage;
+	};
+};
+
+	

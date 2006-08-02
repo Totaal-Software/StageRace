@@ -1,0 +1,23 @@
+HKCR
+{
+	StageRace.StageRaceDoc.1 = s 'StageRaceDoc Class'
+	{
+		CLSID = s '{C8B27B99-DDC6-457E-B7DC-8DC35079A9C6}'
+	}
+	StageRace.StageRaceDoc = s 'StageRaceDoc Class'
+	{
+		CLSID = s '{C8B27B99-DDC6-457E-B7DC-8DC35079A9C6}'
+		CurVer = s 'StageRace.StageRaceDoc.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C8B27B99-DDC6-457E-B7DC-8DC35079A9C6} = s 'StageRaceDoc Class'
+		{
+			ProgID = s 'StageRace.StageRaceDoc.1'
+			VersionIndependentProgID = s 'StageRace.StageRaceDoc'
+			ForceRemove 'Programmable'
+			val AppID = s '{DB6534DF-0365-4FD0-97CD-4064E3F299FF}'
+			'TypeLib' = s '{0F5CA62A-5B01-4FC6-9D68-4FC223AEF89C}'
+		}
+	}
+}

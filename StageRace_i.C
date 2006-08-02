@@ -5,9 +5,9 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Sun May 08 16:17:16 2005
+/* at Wed Aug 02 21:03:44 2006
  */
-/* Compiler settings for D:\Projects\StageRace 2005\StageRace.idl:
+/* Compiler settings for D:\Projects\StageRace\trunk\StageRace.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
     error checks: allocation ref bounds_check enum stub_data 
 */

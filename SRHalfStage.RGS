@@ -1,0 +1,23 @@
+HKCR
+{
+	StageRace.SRHalfStage.1 = s 'SRHalfStage Class'
+	{
+		CLSID = s '{6612404C-66ED-4CAB-8506-4B8B5967F18C}'
+	}
+	StageRace.SRHalfStage = s 'SRHalfStage Class'
+	{
+		CLSID = s '{6612404C-66ED-4CAB-8506-4B8B5967F18C}'
+		CurVer = s 'StageRace.SRHalfStage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6612404C-66ED-4CAB-8506-4B8B5967F18C} = s 'SRHalfStage Class'
+		{
+			ProgID = s 'StageRace.SRHalfStage.1'
+			VersionIndependentProgID = s 'StageRace.SRHalfStage'
+			ForceRemove 'Programmable'
+			val AppID = s '{DB6534DF-0365-4FD0-97CD-4064E3F299FF}'
+			'TypeLib' = s '{0F5CA62A-5B01-4FC6-9D68-4FC223AEF89C}'
+		}
+	}
+}

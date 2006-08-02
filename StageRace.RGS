@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{DB6534DF-0365-4FD0-97CD-4064E3F299FF} = s 'StageRace'
+		'StageRace.EXE'
+		{
+			val AppID = s {DB6534DF-0365-4FD0-97CD-4064E3F299FF}
+		}
+	}
+}
