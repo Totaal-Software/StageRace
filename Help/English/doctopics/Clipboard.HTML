@@ -1,0 +1,202 @@
+<HTML><BODY> 
+
+   <H2>
+      Clipboard 
+   </H2>
+
+   <P>
+      StageRace supports copy, cut and paste for both competitors and teams. Therefore 
+      the following description applies to the 
+      
+         competitors view and the 
+      
+         teams view.</P>
+
+   <H3>
+      Copy 
+   </H3>
+
+   <P>
+      Select the competitors or teams that you want to copy to the clipboard. 
+      Then choose <SPAN CLASS="help_menu">Copy</SPAN> from the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu.</P>
+
+   <H3>
+      Cut 
+   </H3>
+
+   <P>
+      Select the competitors or teams that you want to copy to the clipboard. 
+      Then choose <SPAN CLASS="help_menu">Cut</SPAN> from the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu.</P>
+
+   <P>
+      Cut competitors or teams will immediately be deleted from the particular 
+      list. However, they are not deleted when they are <em>used</em>. Used for 
+      competitors means being ranked in any stage. Used for teams means being 
+      used by competitors.</P>
+
+   <H3>
+      Paste 
+   </H3>
+
+   <P>
+      Choose <SPAN CLASS="help_menu">Paste</SPAN> from the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu. The contents on the clipboard is used as competitors or teams, depending 
+      on whether the pasting is done in the 
+      
+         competitors view or the 
+      
+         teams view.</P>
+
+   <P>
+      StageRace can not always determine if the clipboard actually consists of 
+      the right type (either competitors or teams). Be careful not to past competitors 
+      in the teams view and vice versa.</P>
+
+   <P>
+      Note that pasting a large amount of competitors or teams can take a while. 
+      Your system is not hanging, it is just busy.</P>
+
+   <P>
+      Before pasting a confirmation is being asked for.</P>
+
+   <P>
+      Competitors or teams with the same start no. or team code will be overwritten 
+      when pasting.</P>
+
+   <P>
+      The following paragraphs only apply to pasting competitors.</P>
+
+   <H4>
+      Teams while Pasting Competitors 
+   </H4>
+
+   <P>
+      While pasting competitors the team codes or names that are included will 
+      be used to:</P>
+
+   <UL>
+      <LI> Look up existing teams and link them to the pasted competitors; and</LI><LI>Create 
+      new teams when necessary.</LI>
+   </UL>
+
+   <P>
+      If teams are created in this way, the 
+      
+         <SPAN CLASS="screenquote">Team properties</SPAN> dialog window is 
+      displayed for every team, to allow you to enter the team details.</P>
+
+   <P>
+      However, in the confirmation that is asked for (before pasting, as mentioned 
+      above) you can choose to suppress this. StageRace will then use its own 
+      propositions for team code and name without asking you.</P>
+
+   <P>
+      However, when the latter would result in double team codes being created, 
+      StageRace will again ask for the user to change the team code.</P>
+
+   <H4>
+      
+      Competitors without Start Nos. 
+   </H4>
+
+   <P>
+      Through <SPAN CLASS="help_menu">Paste with start nos.</SPAN> in the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu you can choose to ignore the start numbers that might be included in 
+      the competitors information that you are pasting. This way the information 
+      is pasted as 
+      
+         spare competitors.</P>
+
+   <P>
+      If you do not include start nos. in the information that you want to paste, 
+      StageRace is likely to automatically detect this. It will then automatically 
+      paste your information as 
+      
+         spare competitors, no matter what <SPAN CLASS="help_menu">Paste with 
+      start nos.</SPAN> is currently set to.</P>
+
+   <P>
+      Note that if <SPAN CLASS="help_menu">Paste with start nos.</SPAN> is switched 
+      off, the competitor nos. in the competitors view are grayed out, to indicate 
+      the setting.</P>
+
+   <H3>
+      Other Applications 
+   </H3>
+
+   <P>
+         Except for clipboard support within StageRace (i.e. between two different 
+         event files) you can also transfer competitors from and to many other 
+         programs, such as Office applications like Word, Excel or Access.</P>
+
+   <P>
+      To do this, the data has to be ordered in a table and should have the following 
+      order:</P>
+
+   <P>&nbsp;
+   </P>
+
+   <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="5">
+      <TR>
+         <TH> 
+         <P>
+            For competitors</P>
+
+         </TH><TH> 
+         <P>
+            For teams</P>
+
+         </TH>
+      </TR>
+
+      <TR>
+         <TD>
+            <UL>
+               <LI> Start no.</LI><LI> Name</LI><LI> Team name or code</LI><LI> 
+               Country code</LI><LI> UCI code</LI><LI> License</LI><LI> Category</LI><LI> 
+               Mask 1</LI><LI> Mask 2</LI><LI> Mask 3</LI>
+            </UL>
+
+         </TD>
+
+         <TD>
+            <UL>
+               <LI> Code</LI><LI> Name</LI><LI> Manager</LI><LI> Country </LI>
+            </UL>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      For quick reference, remember that these orders correspond to those in the 
+      
+         Competitor properties and 
+      
+         <SPAN CLASS="screenquote">Team properties</SPAN> dialogs.</P>
+
+   <P>
+      This is the format as it is used when copying or cutting from StageRace. 
+      If you want to paste to StageRace, you should use the same order, but:</P>
+
+   <UL>
+      <LI>Columns can be omitted at the end;</LI><LI>Columns can be left empty; 
+      and </LI><LI>The <SPAN CLASS="screenquote"> Start nos.</SPAN> column can 
+      be omitted entirely as described before, in case spare competitors are involved.</LI>
+   </UL>
+
+      <P>
+         Note that if you want to paste StageRace competitors or teams in Microsoft<SUP>&reg;</SUP> 
+         Word, and you do not want to lose the tabular form, you should already 
+         make a table in Word and select the appropriate cells before pasting. 
+         Otherwise Word will paste the competitors as ordinary text lines while 
+         separating their columns with tab characters.</P>
+
+   </HTML></BODY>

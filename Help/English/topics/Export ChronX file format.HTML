@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+   <HEAD>
+      <TITLE>Export Competitors for AMB ChronX</TITLE>
+      <LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+   </HEAD>
+   <BODY>
+      <!--black bar-->
+      <A NAME="doctop"></A>
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="10" BGCOLOR="#000000">
+         <TR>
+            <TD>
+               <IMG SRC="../layout/headline.gif" WIDTH="201" HEIGHT="26" ALT="StageRace 2003 - Road Cycling Administration"> 
+            </TD>
+            <TD ALIGN="right">
+               <IMG SRC="../layout/help.gif" WIDTH="100" HEIGHT="26" ALT="Help"> 
+            </TD>
+         </TR>
+      </TABLE>
+      <!--rainbow bar-->
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+         <TR><TD HEIGHT="3" BGCOLOR="#FF0000">
+               <IMG SRC="../layout/borderline.gif" WIDTH="100%" HEIGHT="3" ALT="border"></TD></TR>
+      </TABLE>
+      <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="20">
+         <TR VALIGN="TOP">
+            <TD>
+      <!--content--> 
+
+   <H1>
+      Export Competitors for AMB ChronX 
+   </H1>
+
+   <P>
+      Competitors can be exported from StageRace so they can be used in AMB ChronX. 
+   </P>
+
+   <P>
+      Note that you can also import ChronX files for 
+      <A HREF="Arrival%20dialog.html">
+         ranking a stage</A>. </P>
+
+   <H2>
+      Introduction 
+   </H2>
+
+   <P>
+      AMB i.t. specializes in the design, manufacturing and support of sports 
+      timing and scoring systems.</P>
+
+   <P>
+      Their Cyclip system is specifically designed for the identification and 
+      timing during cycling events. For an unlimited number of competitors it 
+      is possible to give positions, best lap times, numbers, names etc. This 
+      information can be presented on a scoreboard, computer or TV screen and 
+      can be printed during and after the race or practice.</P>
+
+   <P>
+      ChronX is AMB's timing software for both professional and club racing. It 
+      is designed for use with all TranX Pro systems, Tranx260, TranX160, AMB130 
+      and Cyclip systems.</P>
+
+   <P>
+      In cooperation with AMB the StageRace program has been made capable to generate 
+      files for ChronX.</P>
+
+   <H2>
+      Exporting 
+   </H2>
+
+   <P>
+      As further described in the ChronX User Manual, text file import is possible, 
+      with as result that imported competitors appear in the <SPAN CLASS="screenquote">Competitor 
+      Database</SPAN>.</P>
+
+   <P>
+         This database is organized with a division into multiple classes, each 
+         containing a number of competitors forming a whole. Therefore StageRace 
+         output is generated in such a way that the starting list for every distinct 
+         half stage will appear in ChronX as a different class. This allowing 
+         the operator to quickly choose the right set of competitors for a race.</P>
+
+   <P>
+      In order to have StageRace generating such output, the <SPAN CLASS="help_menu">Export 
+      competitors for AMB ChronX</SPAN> option in the <SPAN CLASS="help_menu">Tools</SPAN> 
+      menu has to be chosen with the required half stage being selected. Note 
+      that ChronX files can only be exported for one stage at a time.</P>
+
+   <P>
+      The location of the files generated depends on the path set in the 
+      <A HREF="Options.html">
+         <SPAN CLASS="screenquote">Options</SPAN> dialog</A>.</P>
+
+   <P>
+      For ChronX operation, please refer to the appropriate documentation.</P>
+
+   <P>
+      Output is generated in the form of a so-called Comma-Separated Values (CSV) 
+      file of which the file name is set up as follows:</P>
+
+   <BLOCKQUOTE> 
+   <P CLASS="screenquote">
+      [Race Title] - Competitors list [FS]-[HS] (ChronX).txt</P>
+
+   </BLOCKQUOTE>
+   <P>
+      For instance:</P>
+
+   <BLOCKQUOTE> 
+   <P CLASS="screenquote">
+      Ronde van Nederland - Competitors list 3-1 (ChronX).txt</P>
+
+   </BLOCKQUOTE>
+   <H2>
+      File Set-up 
+   </H2>
+
+   <P>
+      Every line in the file consists of:</P>
+
+   <UL>
+         <LI> Competitor's number</LI><LI> Competitor's name, nationality, team 
+         and UCI code (for operator convenience only) </LI><LI> Transponder no. 
+         </LI><LI> Class name </LI>
+   </UL>
+
+   <P>
+      The transponder no. equals to the starting number of the competitor. The 
+      <SPAN CLASS="screenquote">Transponder Translation Table</SPAN> should be 
+      used to make the connection between competitors and their actual transponders.</P>
+
+   <P>
+      Class name has the following format:</P>
+
+   <BLOCKQUOTE> 
+   <P CLASS="screenquote">
+      Competitors list [FS]-[HS] ([Race Title])</P>
+
+   </BLOCKQUOTE>
+   <P>
+      For instance:</P>
+
+   <BLOCKQUOTE> 
+   <P CLASS="screenquote">
+      Competitors list 3-1 (Ronde van Nederland)</P>
+
+   </BLOCKQUOTE>
+   <H2>
+      Example 
+   </H2>
+
+   <P>
+      A typical file looks like this: </P>
+
+   <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+      <TR>
+         <TD>
+            <P CLASS="code">
+               1,"DEKKER, Erik","",1,"1","Competitors list 3-1 (Ronde van Nederland)","NED","Rabobank","NED19700821"<BR> 
+               2,"DEN BAKKER, Maarten","",2,"2","Competitors list 3-1 (Ronde van 
+               Nederland)","NED","Rabobank","NED19690126"<BR> 3,"VAN BON, Leon","",3,"3","Competitors 
+               list 3-1 (Ronde van Nederland)","NED","Rabobank","NED19720128"<BR> 
+               4,"BOOGERD, Michael","",4,"4","Competitors list 3-1 (Ronde van 
+               Nederland)","NED","Rabobank","NED19720528"<BR> 5,"DE JONGH, Steven","",5,"5","Competitors 
+               list 3-1 (Ronde van Nederland)","NED","Rabobank","NED19731125"<BR> 
+               6,"VIERHOUTEN, Aart","",6,"6","Competitors list 3-1 (Ronde van 
+               Nederland)","NED","Rabobank","NED19700319"<BR> 7,"SÖRENSEN, Rolf","",7,"7","Competitors 
+               list 3-1 (Ronde van Nederland)","DEN","Rabobank","DEN19650420"<BR> 
+               8,"WAUTERS, Marc","",8,"8","Competitors list 3-1 (Ronde van Nederland)","BEL","Rabobank","BEL19690223"<BR> 
+               11,"ANDREU, Frankie","",11,"11","Competitors list 3-1 (Ronde van 
+               Nederland)","USA","US Postal Service","USA19670926"<BR> 12,"HAMILTON, 
+               Tyler","",12,"12","Competitors list 3-1 (Ronde van Nederland)","USA","US 
+               Postal Service","USA19710301"<BR> 13,"DEAN, Julian","",13,"13","Competitors 
+               list 3-1 (Ronde van Nederland)","NZL","US Postal Service","NZL19750128"<BR> 
+               14,"HINCAPIE, George","",14,"14","Competitors list 3-1 (Ronde van 
+               Nederland)","USA","US Postal Service","USA19730629"<BR> 15,"JOACHIM, 
+               Benoît","",15,"15","Competitors list 3-1 (Ronde van Nederland)","LUX","US 
+               Postal Service","LUX19760114"<BR> 16,"JONKER, Patrick","",16,"16","Competitors 
+               list 3-1 (Ronde van Nederland)","NED","US Postal Service","NED19690525"<BR> 
+               17,"VANDEVELDE, Christian","",17,"17","Competitors list 3-1 (Ronde 
+               van Nederland)","USA","US Postal Service","USA19760522"<BR> 18,"VERMAUT, 
+               Stive","",18,"18","Competitors list 3-1 (Ronde van Nederland)","BEL","US 
+               Postal Service","BEL19751022"<BR> 21,"RODRIGUEZ, Fred","",21,"21","Competitors 
+               list 3-1 (Ronde van Nederland)","USA","Mapei - Quick Step","USA19730903"<BR> 
+               22,"BODROGI, Laszlo","",22,"22","Competitors list 3-1 (Ronde van 
+               Nederland)","HUN","Mapei - Quick Step","HUN19761211"<BR> 23,"VAN 
+               HEESWIJK, Max","",23,"23","Competitors list 3-1 (Ronde van Nederland)","NED","Mapei 
+               - Quick Step","NED19730203"<BR> 24,"HOSTE, Leif","",24,"24","Competitors 
+               list 3-1 (Ronde van Nederland)","BEL","Mapei - Quick Step","BEL19770717"<BR> 
+               25,"LEYSEN, Bart","",25,"25","Competitors list 3-1 (Ronde van Nederland)","BEL","Mapei 
+               - Quick Step","BEL19690210"<BR> 26,"TANI, David","",26,"26","Competitors 
+               list 3-1 (Ronde van Nederland)","ITA","Mapei - Quick Step","ITA19691008"<BR> 
+               27,"PEETERS, Wilfried","",27,"27","Competitors list 3-1 (Ronde 
+               van Nederland)","BEL","Mapei - Quick Step","BEL19640710"<BR> 31,"BLIJLEVENS, 
+               Jeroen","",31,"31","Competitors list 3-1 (Ronde van Nederland)","NED","Team 
+               Polti","NED19711229"<BR> 32,"CASSANI, Enrico","",32,"32","Competitors 
+               list 3-1 (Ronde van Nederland)","ITA","Team Polti","ITA19720215"<BR> 
+               33,"CELESTINO, Mirko","",33,"33","Competitors list 3-1 (Ronde van 
+               Nederland)","ITA","Team Polti","ITA19740319"<BR> 36,"MAZZOLENI, 
+               Eddy","",36,"36","Competitors list 3-1 (Ronde van Nederland)","ITA","Team 
+               Polti","ITA19730729"<BR> 37,"SACCHI, Fabio","",37,"37","Competitors 
+               list 3-1 (Ronde van Nederland)","ITA","Team Polti","ITA19740522"<BR> 
+               38,"VOSKAMP, Bart","",38,"38","Competitors list 3-1 (Ronde van 
+               Nederland)","NED","Team Polti","NED19680606" </P>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+      <!--footer-->
+               <P>&nbsp;</P>
+               <TABLE WIDTH="100%" BORDERCOLOR="red" BORDER="1" CELLPADDING="5" CELLSPACING="0"><TR><TD><EM>This file was originally part of our V2003 software version, that was now shipped as part 
+of a V2005 b&egrave;ta release &#151; The information in this file may for that 
+reason not be entirely up-to-date or not be entirely accurate &#151; The Help system 
+will shortly be updated in one of the upcoming releases of StageRace 2005</EM></TD></TR></TABLE>
+               <P>&nbsp;</P>
+               <P><A HREF="#doctop"><IMG SRC="../layout/top.gif" ALT="Go top" BORDER="0" WIDTH="28" HEIGHT="20"></A></P>
+            </TD>
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

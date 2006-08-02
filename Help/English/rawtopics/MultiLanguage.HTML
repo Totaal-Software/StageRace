@@ -1,0 +1,148 @@
+<LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+
+   <H1>
+      MultiLanguage 
+   </H1>
+
+   <P>
+      Under the name <EM>MultiLanguage</EM> StageRace provides a system to influence 
+      the languages in which 
+      <A HREF="Publications.html">
+         publications</A> are generated. 
+
+   <H2>
+      Choose Languages 
+   </H2>
+
+   <P>
+      In the <SPAN CLASS="screenquote">Required languages</SPAN> section of the 
+      <A HREF="Settings%20publication.html">
+         publication settings</A> dialog you can select the languages that you 
+      want to use on your publications.</P>
+
+   <P>
+      Left you can enter the name of a language that you require. It will be appended 
+      to the list of required languages when you click the <SPAN CLASS="screenquote">Add</SPAN> 
+      button.</P>
+
+   <P>
+      Languages can be removed from the list of required languages by selecting 
+      them and clicking the <SPAN CLASS="screenquote">Remove</SPAN> button; one 
+      by one. </P>
+
+   <P>
+      Note that StageRace will allow you to enter languages that do not actually 
+      exist yet in the database on your computer.</P>
+
+   <H2>
+      Manage Languages 
+   </H2>
+
+   <P>
+      Every language plus its associated 
+      <A HREF="MultiLanguage%20strings.html">
+         text strings</A> is stored in a Microsoft<SUP>&reg;</SUP> database file, 
+      named <SPAN CLASS="screenquote">MultiLanguage.mdb</SPAN>. The file resides 
+      in the same folder as <SPAN CLASS="screenquote">StageRace.exe</SPAN>.</P>
+
+   <P>
+      This database can be modified using Microsoft<SUP>&reg;</SUP> Access.</P>
+
+   <P>
+      The database has two components:</P>
+
+   <UL>
+      <LI>A table <SPAN CLASS="screenquote">Translations</SPAN>; and</LI><LI>A 
+      query <SPAN CLASS="screenquote">Add new language</SPAN>.</LI>
+   </UL>
+
+   <H3>
+      Translations 
+   </H3>
+
+   <P>
+      The table <SPAN CLASS="screenquote">Translations</SPAN> consists of text 
+      in all available languages. For every text (record) there are:</P>
+
+   <UL>
+      <LI>The <SPAN CLASS="screenquote">Language</SPAN> for which it is intended;</LI><LI>The 
+      <SPAN CLASS="screenquote">Identifier</SPAN> that is unique within this language; 
+      and</LI><LI>The <SPAN CLASS="screenquote">Value</SPAN> that is the actual 
+      text as it is printed.</LI>
+   </UL>
+
+   <p>&nbsp;
+   </p>
+
+   <p>
+      <IMG src="../screenshots/screen79.gif" width="344" height="329" ALT="Translations table in Access"></p>
+
+   <p>&nbsp;
+   </p>
+
+   <P>
+      The <SPAN CLASS="screenquote">Identifier</SPAN> and <SPAN CLASS="screenquote">Language</SPAN> 
+      fields have to be entirely correct. For instance, these fields are case-sensitive.</P>
+
+   <H3>
+      Add new Language 
+   </H3>
+
+   <P>
+      The query <SPAN CLASS="screenquote">Add new language</SPAN> allows to add 
+      an entire new language at once. On executing the query you will be asked 
+      for a <SPAN CLASS="screenquote">New language code</SPAN>. As a result of 
+      the query all 
+      <A HREF="MultiLanguage%20strings.html">
+         existing texts</A> in the database are copied for the new language (code).</P>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      <IMG src="../screenshots/screen81.gif" width="251" height="119" ALT="Add new language query in Access"></P>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      Naturally, these 
+      <A HREF="MultiLanguage%20strings.html">
+         texts</A> remain to be translated in the <SPAN CLASS="screenquote">Translations</SPAN> 
+      table.</P>
+
+   <P>
+      Note that by convention the names of the available languages are based on 
+      the name of a language in the language itself. This results in language 
+      codes <span class="screenquote">ES</span>, <span class="screenquote">DE</span> 
+      and <span class="screenquote">NL</span> (rather than <span class="screenquote">SP</span>, 
+      <span class="screenquote">GE</span> and <span class="screenquote">DU</span>).</P>
+
+   <H2>
+      Available Languages 
+   </H2>
+
+   <P>
+      The following languages are standardly available in StageRace:</P>
+
+   <UL>
+      <LI>English (<SPAN CLASS="screenquote">EN</SPAN>),</LI><LI>French (<SPAN CLASS="screenquote">FR</SPAN>),</LI><LI>Spanish 
+      (<span class="screenquote">ES</span>),</LI><LI>German (<SPAN CLASS="screenquote">DE</SPAN>), 
+      and</LI><LI>Dutch (<SPAN CLASS="screenquote">NL</SPAN>).</LI>
+   </UL>
+
+   <P>
+      Feel free to submit to us any new languages that you add, so we can make 
+      them available to other users.</P>
+
+   <h2>
+      Evaluate Strings
+   </h2>
+
+   <P>
+      You can 
+      <a href="Options.html">
+         choose</a> missing strings to be replaced by a question mark in publications. 
+      That way you can easily discover which strings you still need to add to 
+      a language.</P>
+

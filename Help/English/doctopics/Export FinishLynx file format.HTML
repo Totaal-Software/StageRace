@@ -1,0 +1,231 @@
+<HTML><BODY> 
+
+   <H3>
+      Export Competitors for Lynx FinishLynx 
+   </H3>
+
+   <P>
+      Competitors can be exported from StageRace so they can be used in Lynx FinishLynx<SUP>&reg;</SUP>. 
+   </P>
+
+   <P>
+      Note that you can also import FinishLynx<SUP>&reg;</SUP> files for 
+      
+         ranking a stage. </P>
+
+   <H4>
+      Introduction 
+   </H4>
+
+   <P>
+   </P>
+
+   <P>
+      Lynx System Developers, Inc. from Massachusetts, U.S.A., is a privately-owned 
+      company that supplies the latest results generation and handling technologies 
+      to the sporting industry. The company employs software and hardware engineers 
+      and has its own production division to meet the growing worldwide demand 
+      for the Lynx range of digital sports data generation tools.</P>
+
+   <P>
+      FinishLynx<SUP>&reg;</SUP> is their popular photo finish and timing system. 
+      For instance, various of these systems are used at <EM>le Tour de France</EM> 
+      for intermediate timing as well as for the finishes.</P>
+
+   <P>
+      The StageRace program has been made capable to generate files for FinishLynx<SUP>&reg;</SUP>.</P>
+
+   <H4>
+      Exporting 
+   </H4>
+
+   <P>
+      As further described in the FinishLynx<SUP>&reg;</SUP> help files the database 
+      file can be modified or entirely replaced ("<SPAN CLASS="screenquote">How 
+      Do I Create My Own Database Files?</SPAN>"), after which imported competitors 
+      immediately can be used in the race being judged.</P>
+
+   <P>
+      In order to have StageRace generate such output files, the <SPAN CLASS="help_menu">Export 
+      competitors for Lynx FinishLynx</SPAN> option in the <SPAN CLASS="help_menu">Tools</SPAN> 
+      menu has to be chosen.</P>
+
+   <P>
+      The location of the files generated depends on the path set in the 
+      
+         <SPAN CLASS="screenquote">Options</SPAN> dialog.</P>
+
+   <P>
+      For FinishLynx<SUP>&reg;</SUP> operation, please refer to the appropriate 
+      documentation. </P>
+
+   <H4>
+      File Set-up 
+   </H4>
+
+   <P>
+      Output is generated in the form of a so-called comma-delimited file with 
+      the typical file name <SPAN CLASS="screenquote">lynx.evt</SPAN>.</P>
+
+   <P>
+      Two types of lines can be determined in the file:</P>
+
+   <UL>
+      <LI><EM>Event descriptions</EM> 
+      <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+         <TR>
+            <TD WIDTH="40%" HEIGHT="60%">
+               <P>
+                  Defined by FinishLynx<SUP>®</SUP> as follows:</P>
+
+            </TD>
+
+            <TD>
+               <P>
+                  &lt;event number&gt;, &lt;round number&gt;, &lt;heat number&gt;, 
+                  &lt;event name&gt;</P>
+
+            </TD>
+
+         </TR>
+
+         <TR>
+            <TD WIDTH="40%" HEIGHT="60%">
+               <P>
+                  Used by StageRace as follows:</P>
+
+            </TD>
+
+            <TD>
+               <P>
+                  &lt;stage number&gt;, &lt;half stage number&gt;, 1, &lt;half 
+                  stage name&gt; (&lt;event name&gt;)</P>
+
+               <P>&nbsp;
+               </P>
+
+            </TD>
+
+         </TR>
+
+      </TABLE>
+
+      </LI><LI><EM>Descriptions for all competitors</EM> <BR>(corresponding to 
+      the latest <EM>Event description</EM>) 
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+         <TR>
+            <TD WIDTH="40%" HEIGHT="60%">
+               <P>
+                  Defined by FinishLynx<SUP>®</SUP> as follows:</P>
+
+            </TD>
+
+            <TD>
+               <P>
+                  , &lt;ID&gt;, &lt;lane&gt;, &lt;last name&gt;, &lt;first name&gt;, 
+                  &lt;affiliation&gt;</P>
+
+            </TD>
+
+         </TR>
+
+         <TR>
+            <TD WIDTH="40%" HEIGHT="60%">
+               <P>
+                  Used by StageRace as follows:</P>
+
+            </TD>
+
+            <TD>
+               <P>
+                  , &lt;start no.&gt;, 0, "&lt;name&gt;", "-", "&lt;team name&gt;"</P>
+
+            </TD>
+
+         </TR>
+
+      </TABLE>
+
+      </LI>
+   </UL>
+
+   <P>
+         Stage number, half stage number and start no. are actually used by FinishLynx<SUP>&reg;</SUP> 
+         to work properly. Additional fields are provided for operator convenience 
+         only. Note that heats and lanes aren't used.</P>
+
+   <H4>
+      Example 
+   </H4>
+
+   <P>
+      A typical file looks like this:</P>
+
+   <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+      <TR>
+         <TD>
+            <P CLASS="code">
+               <B>1,1,1,1999-08-26 Stage 1 (12. Trofeo Karlsberg)</B><BR> ,1,0,&quot;ETZINGER, 
+               Jochen&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,2,0,&quot;MERTENS, Boris&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,3,0,&quot;BERLIN, Christopher&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,4,0,&quot;SCHWANKE, Knut&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,5,0,&quot;SIEBERG, Marcel&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,11,0,&quot;GASSNER, Michael&quot;,&quot;-&quot;,&quot;Team Bavarian 
+               Lion (LV Bayern)&quot;<BR> ,12,0,&quot;JENDRUSCH, Stefan&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,13,0,&quot;JUNG, Florian&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,14,0,&quot;ROHRBACH, Axel&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,15,0,&quot;SCHIERING, Chris&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,16,0,&quot;WENDEROTH, Manuel&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,21,0,&quot;HORBER, Stefan&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,22,0,&quot;ALZENI, Thomas&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,23,0,&quot;OBRIST, Gilbert&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,24,0,&quot;PARPAN, Daniel&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,25,0,&quot;SCHUPPLI, Roger&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,26,0,&quot;W&Uuml;THRICH, Simon&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               <B>2,1,1,1999-08-27 Stage 2 (12. Trofeo Karlsberg)</B><BR> ,1,0,&quot;ETZINGER, 
+               Jochen&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,2,0,&quot;MERTENS, Boris&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,3,0,&quot;BERLIN, Christopher&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,4,0,&quot;SCHWANKE, Knut&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,5,0,&quot;SIEBERG, Marcel&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,11,0,&quot;GASSNER, Michael&quot;,&quot;-&quot;,&quot;Team Bavarian 
+               Lion (LV Bayern)&quot;<BR> ,12,0,&quot;JENDRUSCH, Stefan&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,13,0,&quot;JUNG, Florian&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,14,0,&quot;ROHRBACH, Axel&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,15,0,&quot;SCHIERING, Chris&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,16,0,&quot;WENDEROTH, Manuel&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,21,0,&quot;HORBER, Stefan&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,22,0,&quot;ALZENI, Thomas&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,23,0,&quot;OBRIST, Gilbert&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,25,0,&quot;SCHUPPLI, Roger&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               <B>3,1,1,1999-08-28 Stage 3.1 (12. Trofeo Karlsberg)</B><BR> ,1,0,&quot;ETZINGER, 
+               Jochen&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,2,0,&quot;MERTENS, Boris&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,3,0,&quot;BERLIN, Christopher&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,4,0,&quot;SCHWANKE, Knut&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,5,0,&quot;SIEBERG, Marcel&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,11,0,&quot;GASSNER, Michael&quot;,&quot;-&quot;,&quot;Team Bavarian 
+               Lion (LV Bayern)&quot;<BR> ,12,0,&quot;JENDRUSCH, Stefan&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,13,0,&quot;JUNG, Florian&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,14,0,&quot;ROHRBACH, Axel&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,15,0,&quot;SCHIERING, Chris&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,16,0,&quot;WENDEROTH, Manuel&quot;,&quot;-&quot;,&quot;Team 
+               Bavarian Lion (LV Bayern)&quot;<BR> ,21,0,&quot;HORBER, Stefan&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,22,0,&quot;ALZENI, Thomas&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,23,0,&quot;OBRIST, Gilbert&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               ,25,0,&quot;SCHUPPLI, Roger&quot;,&quot;-&quot;,&quot;Schweiz&quot;<BR> 
+               <B>3,2,1,1999-08-28 Stage 3.2 (12. Trofeo Karlsberg)</B><BR> ,1,0,&quot;ETZINGER, 
+               Jochen&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;<BR> 
+               ,2,0,&quot;MERTENS, Boris&quot;,&quot;-&quot;,&quot;Deutschland-Stra&szlig;e&quot;</P>
+
+            <P>
+               Etcetera.</P>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+</HTML></BODY>

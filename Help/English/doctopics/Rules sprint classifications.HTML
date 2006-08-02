@@ -1,0 +1,102 @@
+<HTML><BODY> 
+
+   <H2>
+      Ranking Sprint Classifications 
+   </H2>
+
+   <P>
+      Here the test is described that is done when the competitor <EM>Subject</EM> 
+      is compared to the competitor <EM>Test</EM>. This test is part of the 
+      
+         uniformed sorting process.</P>
+
+   <H3>
+      Formal Description 
+   </H3>
+
+   <P>
+      The test is described using a flow chart diagram. Flow charts are common 
+      tools in engineering and are very appropriate to formally describe a sequence 
+      of actions and conditions.</P>
+
+   <P>
+      The test basically answers the question &quot;insert here?&quot; and answers 
+      it with a Yes or No (in the circles).</P>
+
+   <P>
+      Within the test, decisions are made (in the diamonds), either:</P>
+
+   <UL>
+      <LI>In blue: a decision directly based on 
+      
+         ranking settings; or</LI><LI>In black: a decision that compares properties 
+      of <EM>Subject</EM> and <EM>Test</EM>.</LI>
+   </UL>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      <IMG SRC="../images/Sprint%20classification.jpg" WIDTH="1005" HEIGHT="1302" ALT="Ranking sprint classifications"><P CLASS="caption">Ranking sprint classifications</P></P>
+
+   <P>&nbsp;
+   </P>
+
+   <p>
+      The constant values CALCDEPTH_STAGE and CALCDEPTH_INTERM can be set in the 
+      
+         ranking settings. They signify the rank up to which <em>Test</em> 
+      and <em>Subject</em> are compared for &quot;Most high rankings&quot; in 
+      respectively stage arrivals and intermediate sprints.</p>
+
+   <H3>
+      Informal Description 
+   </H3>
+
+   <P>
+      The diagram lays out that draws (ex equos) in sprint classifications are 
+      resolved by looking at:</P>
+
+   <UL>
+      <LI>The most high rankings in half stages*;</LI><LI>The most high rankings 
+      in intermediate sprints*;</LI><LI>The latest half stage ranking or* the 
+      latest general classification; and</LI><LI>The latest intermediate sprint.</LI>
+   </UL>
+
+   <P>
+      The initial sort order is the sum of the points from all sprints. </P>
+
+   <P>
+      * indicates dependence on a 
+      
+         ranking setting</P>
+
+   <P>
+      <EM>Latest</EM> or <EM>all</EM> always refers to only the half stages that 
+      have come by, up to and including the half stage for which the sorting is 
+      currently done.</P>
+
+   <P>
+      <EM>Most high rankings</EM> means comparing the number of first place rankings. 
+      If still a draw exists, comparing the number of second place rankings. Then 
+      third place rankings. Etcetera.</P>
+
+   <h3>
+      Unofficial Classification
+   </h3>
+
+   <p>
+      Competitors must finish in order to appear in the sprint classification 
+      of that stage. When the sprint classification is generated before the end 
+      of a stage (thus when no competitors at all have finished yet) the statement 
+      &quot;unofficial classification&quot; is printed on the classification.</p>
+
+   <p>
+      As soon as competitors start finishing, StageRace only includes those competitors 
+      in the general sprint classification which also still exist in the general 
+      individual classification.</p>
+
+   <P>&nbsp;
+   </P>
+
+</HTML></BODY>

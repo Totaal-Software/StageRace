@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+   <HEAD>
+      <TITLE>Messaging Techniques</TITLE>
+      <LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+   </HEAD>
+   <BODY>
+      <!--black bar-->
+      <A NAME="doctop"></A>
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="10" BGCOLOR="#000000">
+         <TR>
+            <TD>
+               <IMG SRC="../layout/headline.gif" WIDTH="201" HEIGHT="26" ALT="StageRace 2003 - Road Cycling Administration"> 
+            </TD>
+            <TD ALIGN="right">
+               <IMG SRC="../layout/help.gif" WIDTH="100" HEIGHT="26" ALT="Help"> 
+            </TD>
+         </TR>
+      </TABLE>
+      <!--rainbow bar-->
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+         <TR><TD HEIGHT="3" BGCOLOR="#FF0000">
+               <IMG SRC="../layout/borderline.gif" WIDTH="100%" HEIGHT="3" ALT="border"></TD></TR>
+      </TABLE>
+      <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="20">
+         <TR VALIGN="TOP">
+            <TD>
+      <!--content--> 
+
+   <H1>
+      Messaging Techniques 
+   </H1>
+
+   <P>
+      The following information is not specific to StageRace but is given as a 
+      technical reference for programmers that want to use the 
+      <A HREF="Messaging%20protocol.html">
+         StageRace Messaging protocol</A>.</P>
+
+   <H2>
+      Window Messages 
+   </H2>
+
+   <P>
+      Window messages are used within Windows<SUP>&reg;</SUP> to communicate between 
+      separate application windows.</P>
+
+   <P>
+      Window messages are identified by their unique message identifier. Message 
+      identifiers are numerical values, but are kept hidden (transparent) by string 
+      identifiers, such as &quot;WM_USER&quot;.</P>
+
+   <P>
+      On start-up of StageRace, all 
+      <a href="Message%20definitions.html">
+         appropriate message strings</a> are registered with Windows<SUP>&reg;</SUP>.</P>
+
+   <P>
+      Other applications can do the same, arranging all the applications to have 
+      the same correct and unique numerical identifiers to match the string identifiers.</P>
+
+   <H2>
+      Message Format 
+   </H2>
+
+   <P>
+      The Windows<SUP>&reg;</SUP> API functions for inter-window messaging are 
+      defined like the one below:</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <SPAN CLASS="code"><B>BOOL PostMessage(</B></SPAN></P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <SPAN CLASS="code"><B>HWND</B> <I>hWnd</I>, // handle of destination window<BR> 
+      <B>UINT</B> <I>Msg</I>, // message to post<BR> <B>WPARAM</B> <I>wParam</I>, 
+      // first message parameter<BR> <B>LPARAM</B> <I>lParam</I> // second message 
+      parameter</SPAN></P>
+
+   </BLOCKQUOTE>
+   <P>
+      <SPAN CLASS="code"><B>);</B></SPAN></P>
+
+   </BLOCKQUOTE>
+   <P>
+      (There are more API functions for messaging, this is just an example to 
+      illustrate the message format.)</P>
+
+   <P>
+      Ergo the message format is like this:</P>
+
+   <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+      <TR>
+         <TH> 
+         <P>
+            Destination handle</P>
+
+         </TH><TH> 
+         <P>
+            Message ID</P>
+
+         </TH><TH> 
+         <P>
+            First parameter</P>
+
+         </TH><TH> 
+         <P>
+            Second parameter</P>
+
+         </TH>
+      </TR>
+
+      <TR>
+         <TD>
+            <P>
+               HWND</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               UINT</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               WPARAM</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               LPARAM</P>
+
+         </TD>
+
+      </TR>
+
+      <TR>
+         <TD>
+            <P>
+               32-bits window handle</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               32-bits unsigned integer</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               32-bits user-defined bit-string</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               32-bits user-defined bit-string</P>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      We suggest messages to be posted as global broadcast. In this case <SPAN CLASS="screenquote">Destination 
+      handle = HWND_BROADCAST</SPAN>. This will cause your message to be sent 
+      to all top-level windows, but only the appropriate window will respond anyway 
+      due to the specific <SPAN CLASS="screenquote">Message ID</SPAN>.</P>
+
+   <H2>
+      Message Extensions (Atoms) 
+   </H2>
+
+   <P>
+      Applications can register strings with Windows in exchange for an identifier 
+      of the <em>ATOM</em> type. These atom identifiers are used by the messages 
+      sent across windows to pass strings &quot;by pointer&quot;.</P>
+
+   <P>
+      Strictly, someone is responsible to clean up atom strings after use. For 
+      the 
+      <a href="Message%20definitions.html">
+         defined messages</a> StageRace will take responsibility to clean up the 
+      atoms.</P>
+
+   <H2>
+      Technical References 
+   </H2>
+
+   <P>
+      The inter-window communication is discussed in the library of the Microsoft<SUP>&reg;</sup> 
+      Developer Network (MSDN).</P>
+
+   <UL>
+      <LI> <EM><SPAN CLASS="li_extensive"> 
+      <A HREF="http://msdn.microsoft.com/library/en-us/winui/winui/windowsuserinterface/windowing/messagesandmessagequeues/aboutmessagesandmessagequeues.asp" TARGET="_blank">
+         About Messages and Message Queues</A></SPAN></EM><SPAN CLASS="li_extensive"> 
+      <BR> (http://msdn.microsoft.com / library / en-us / winui / winui / windowsuserinterface 
+      / windowing / messagesandmessagequeues / aboutmessagesandmessagequeues.asp)<br> 
+      <BR> Start page for window messaging subjects</SPAN></LI><LI CLASS="li_extensive"><EM> 
+      <A HREF="http://msdn.microsoft.com/library/en-us/winui/WinUI/WindowsUserInterface/Windowing/MessagesandMessageQueues/MessagesandMessageQueuesReference/MessagesandMessageQueuesFunctions/PostMessage.asp" TARGET="_blank">
+         PostMessage</A></EM><BR> (http://msdn.microsoft.com / library / en-us 
+      / winui / WinUI / WindowsUserInterface / Windowing / MessagesandMessageQueues 
+      / MessagesandMessageQueuesReference / MessagesandMessageQueuesFunctions 
+      / PostMessage.asp)<br> <BR> Documentation on the PostMessage SDK function 
+      for posting messages</LI><LI CLASS="li_extensive"><EM> 
+      <A HREF="http://msdn.microsoft.com/library/en-us/winui/WinUI/WindowsUserInterface/Windowing/MessagesandMessageQueues/MessagesandMessageQueuesReference/MessagesandMessageQueuesFunctions/RegisterWindowMessage.asp" TARGET="_blank">
+         RegisterWindowMessage</A></EM><BR> 
+      <A HREF="http://msdn.microsoft.com/library/en-us/winui/messques_10h1.asp" TARGET="_blank">
+      </A>(http://msdn.microsoft.com / library / en-us / winui / WinUI / WindowsUserInterface 
+      / Windowing / MessagesandMessageQueues / MessagesandMessageQueuesReference 
+      / MessagesandMessageQueuesFunctions / RegisterWindowMessage.asp)<br> <BR> 
+      Documentation on the RegisterWindowMessage SDK function for registering 
+      a message in Windows<SUP>&reg;</SUP></LI><LI CLASS="li_extensive"><EM> 
+      <A HREF="http://msdn.microsoft.com/library/en-us/win9x/unilayer_22k3.asp" TARGET="_blank">
+         Atom Functions</A></EM><BR> 
+      <A HREF="http://msdn.microsoft.com/library/en-us/helplib/atoms_1z3n.asp" TARGET="_blank">
+      </A>(http://msdn.microsoft.com / library / en-us / win9x / unilayer_22k3.asp)<br> 
+      <BR> Start page for atom functions, with shortcuts to GlobalAddAtom, GlobalGetAtomName 
+      and GlobalDeleteAtom</LI>
+   </UL>
+
+      <!--footer-->
+               <P>&nbsp;</P>
+               <TABLE WIDTH="100%" BORDERCOLOR="red" BORDER="1" CELLPADDING="5" CELLSPACING="0"><TR><TD><EM>This file was originally part of our V2003 software version, that was now shipped as part 
+of a V2005 b&egrave;ta release &#151; The information in this file may for that 
+reason not be entirely up-to-date or not be entirely accurate &#151; The Help system 
+will shortly be updated in one of the upcoming releases of StageRace 2005</EM></TD></TR></TABLE>
+               <P>&nbsp;</P>
+               <P><A HREF="#doctop"><IMG SRC="../layout/top.gif" ALT="Go top" BORDER="0" WIDTH="28" HEIGHT="20"></A></P>
+            </TD>
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

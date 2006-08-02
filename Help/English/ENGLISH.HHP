@@ -1,0 +1,138 @@
+[OPTIONS]
+Auto Index=Yes
+Binary Index=No
+Compatibility=1.1 or later
+Compiled file=english.chm
+Contents file=toc.hhc
+Default Window=tripane
+Default topic=index.html
+Display compile progress=Yes
+Full-text search=Yes
+Index file=index.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=StageRace Help
+
+[WINDOWS]
+tripane="StageRace Help","toc.hhc","index.hhk","index.html","index.html","http://www.stagerace.com","stagerace.com",,,0x42520,,0x43846,,,,,,,,0
+
+
+[FILES]
+topics\Work views.html
+topics\Clipboard.html
+topics\Communiqué numbering.html
+topics\Error messages.html
+topics\Event tree.html
+topics\Files.html
+topics\Info on publication.html
+topics\MDI.html
+topics\Menus.html
+topics\Options.html
+topics\Page setup.html
+topics\Publication view.html
+topics\Speed calculator.html
+topics\Time calculator.html
+topics\Tool bars.html
+topics\Totaal Software.html
+topics\Work space.html
+topics\Accelerator keys.html
+topics\System requirements.html
+topics\Program installation.html
+topics\Settings.html
+topics\Division of tasks.html
+topics\Stage race organisation.html
+topics\Race administration.html
+topics\Full stages.html
+topics\Half stages.html
+topics\Climbing classifications.html
+topics\Bonuses.html
+topics\Sprint classifications.html
+topics\Hardware key.html
+topics\Time trials.html
+css\#include.html
+topics\Points classifications.html
+topics\Conventions.html
+topics\Program language.html
+topics\MultiLanguage.html
+topics\Languages.html
+topics\Evaluation mode.html
+topics\Help setup.html
+topics\Introduction.html
+topics\Teams view.html
+topics\Competitors view.html
+topics\Competitors and teams.html
+topics\Context-sensitive menus.html
+topics\Arrivals.html
+topics\Corrections.html
+topics\Sign outs.html
+topics\Communiqués.html
+topics\Masking.html
+topics\Apply a mask dialog.html
+topics\Generate.html
+topics\External editor.html
+topics\Export ScanOVision file format.html
+topics\Export FinishLynx file format.html
+topics\Export OPTIc file format.html
+topics\Export ChronX file format.html
+topics\Support process.html
+Updates.html
+Updates 2000.html
+topics\Classification rules.html
+topics\Classification types.html
+topics\Rules teams classifications.html
+topics\Rules general classifications.html
+topics\Rules points classifications.html
+topics\Rules sprint classifications.html
+topics\Rules climbing classifications.html
+topics\UCI compliance.html
+topics\Sign outs dialog.html
+topics\Communiqué dialog.html
+topics\Team dialog.html
+topics\Competitor dialog.html
+topics\Confirm classification file import dialog.html
+topics\Import ScanOVision file format.html
+topics\Import FinishLynx file format.html
+topics\Import OPTIc file format.html
+topics\Import ChronX file format.html
+topics\Control import classification dialog.html
+index.html
+topics\Import.html
+topics\Arrival tab sheet.html
+topics\Arrival dialog.html
+topics\Time trial arrival tab sheet.html
+topics\Corrections tab sheet.html
+topics\Time trial starting order dialog.html
+topics\MultiLanguage strings.html
+topics\Help.html
+topics\Settings ranking.html
+topics\Settings HTML.html
+topics\Settings general.html
+topics\Settings upload.html
+topics\Settings access.html
+topics\Settings publication.html
+topics\Column types.html
+topics\Footer information.html
+topics\Header information.html
+topics\Publications.html
+topics\Team time trials.html
+topics\Upload.html
+topics\Event items selection.html
+License.html
+topics\Cross out lists.html
+topics\Table of contents.html
+topics\Publication names.html
+topics\Status bar.html
+topics\Select active event window.html
+topics\Messaging protocol.html
+topics\Messaging techniques.html
+topics\Message definitions.html
+topics\Prologue.html
+topics\CSS support.html
+topics\Registry entries.html
+topics\Database engine.html
+topics\Sign in lists.html
+topics\Export TTWare file format.html
+topics\Import TTWare file format.html
+Updates 2003.html
+
+[INFOTYPES]
+

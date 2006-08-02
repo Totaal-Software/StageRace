@@ -1,0 +1,5 @@
+These resource symbols are unmanaged:
+
+IDC_PRINTBROWSER
+IDM_ABOUTBOX
+ID_SRWND_HELP

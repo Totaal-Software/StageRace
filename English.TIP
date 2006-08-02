@@ -1,0 +1,87 @@
+; English tips file
+; ("Tip of the Day")
+; Version shipped with V2005.3.01
+;
+;
+Welcome to this bèta version of StageRace 2005 (V3.01 bèta). This version should not be used at actual events. A final version will be available shortly. Please report any problems you might discover (development@stagerace.com). Note that our Help system has not yet been updated from the V2003 version
+Welcome to this bèta version of StageRace 2005 (V3.01 bèta). This version should not be used at actual events. A final version will be available shortly. Please report any problems you might discover (development@stagerace.com). Note that our Help system has not yet been updated from the V2003 version
+If despite our care you still experience any imperfection, please report this so that we can make our future versions even better. Our contact information can be found in the Help system
+The StageRace software by default works in English. However, if you run it on a French version of Windows(r) it will run in French, and just like that Dutch is supported
+It is a good thing to make a division into the following tasks, and also in the moment on which these tasks are executed: early configuring of an event and the race administration during the event
+Languages for publications that are already provided with the software are English, French, Spanish, German and Dutch, but you can easily add your own languages in the MultiLanguage.mbd database
+Spare competitors are competitors that are not (yet) given a start no. These competitors exist in the StageRace file but do not participate in the actual race. The availability of these competitors, however, allows for the fast (last-minute) exchange of competitors during the team's final sign up prior to the start of the event
+If you select two competitors in the Edit competitors view, you can have these two competitors to swap places by choosing Swap competitors from the Edit menu
+Behind the Competitors and Teams labels in the main event tree the number of competitors respectively teams is displayed. For competitors also the number of spare competitors is displayed between brackets (if any)
+StageRace publications are generated as HTML files. The first part of the file names for these files is taken from the corresponding .str's file name. Only the table of contents can be different as it can be called index.html
+If you press the Ctrl key while in the Edit competitors view you can gray out the start nos. meaning that start nos. are ignored while pasting competitors from a different source. The pasted competitors will then exist as spare competitors without start no. whether or not they had start nos. when they were copied to the clipboard. This option can also be accessed through the Edit menu (Paste with start nos.)
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+Note that anything you change to the configuration of an event is not processed into the publications until they are regenerated. This in contrast to when entering data during the race
+Using "masking" you can generate additional classifications that only include a subset of the competitors, for instance regional talents or young riders
+Use the Corrections tab sheet -- the last tab sheet when you choose Edit selection... for a particular half stage -- to enter penalties or incidental bonuses
+Publication settings let you exactly select which headers and columns have to be printed on each type of publication
+When using communiqué numbering, the table of contents only contains publications that are actually published. That way, if the table of contents is published on a web site, it does not contain faulty links or premature documents and can gradually grow as the event comes along
+For a communiqué in a half stage, you can insert the automatically generated next stage's team captain vehicles starting order based on that half stage's results
+When your table of contents is generated with the name index.html (HTML settings) it is not longer possible for StageRace to determine if a certain index.html corresponds to the event that it is handling. That way an incorrect table of contents could get displayed, uploaded, printed, etc. Be sure and press F8 to regenerate the table of contents for the currently opened event
+If you delete a stage or half stage, all the underlying data will be gone too. The only means of recovery is going back to a saved version of your .str file
+Applying your own CSS file, you can influence the presentation of StageRace publications in much detail
+Distances in half stages are always entered in meters. You can however print speeds and distances on publications using kilometers, miles or both (Publication settings)
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+Before you can enter arrival data for a time trial, you must enter a starting order for that time trial
+Be aware that some colors that you can choose in the HTML settings might look good on screen but are very hazy when printed
+You can cut, copy and paste competitors between StageRace files but also from and to external programs such as Word, Excel or Access
+Numerous accelerator keys are available. There is a full list in the Help system, but these shortcuts are also shown behind corresponding menu items
+Through Page Setup you can enter additional header and footer information for printed documents
+The starting order for a time trial can be generated automatically based on earlier half stages. Also two consecutive competitors from the same team in the starting order can be prevented automatically
+By choosing Preview in the Communiqué dialog the entered dialog information can be previewed in the final layout
+In the Half stage settings dialog some options are available that specifically suit team time trials. In the Time trial starting order dialog also the starting order for a team time trial can be generated automatically. And with finally bonuses/corrections the execution of team time trials is fully covered
+Time trial arrival data can be chosen to be entered either as gross times or net times. If you enter gross times, the time you enter is reduced with the competitor's start time. Then you don't have to do any math yourself but you can still use only one time base (clock)
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+If you ever expect more than the 250 finishing competitors or you have more than 8 competitors awarded intermediate sprint points, you should adapt these values in the Ranking settings so that StageRace can make its calculations accurately but still fast
+In Publication settings you can choose every unique gap time only to be printed once, even if there are more competitors with the same distance from the winner. For the other (same) gaps after that first one an indicator ("..." by default) can be entered
+If you want to paste competitors from StageRace in Word, and you do not want to lose the tabular form, you should already make a table in Word and select the appropriate cells before pasting. Otherwise Word will paste the competitors as ordinary text lines while separating their columns with tab characters
+The work folder that you can set through the Options dialog, can be a good central place to store all your stage races. Set it to the My Stage Races system folder in your My Documents folder to easily find back all your stage race event files
+StageRace comes with some nice, fully worked out examples of actual stage races. These .str files can be found in the My Stage Races folder that is located in your My Documents folder
+The starting order of a time trial can only be changed for those competitors that are not yet ranked in that time trial. Already ranked competitors are within the Time trial starting order dialog indicated with an asterisk
+During the development history of StageRace, the .str file format definition has been upgraded regularly. All StageRace versions are downward compatible so that you can open older file types. Almost entirely on the right in the status bar of StageRace you will see the version no. of the file that is currently opened
+StageRace is able to communicate with external software through the StageRace messaging protocol. Whenever such messages are received or sent by StageRace, the Active document icon in the status bar will light up for a moment, indicating the communication
+The chain lock icon in the status bar will indicate if StageRace is free to use (green and open) or in evaluation mode (red and locked). This obviously depends on the availability of an appropriate hardware key
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+A new team can be made from within the edit dialog for a competitor. This allows you to enroll a team while you are entering its first competitor
+StageRace does not allow you to remove or cut competitors that are used in an arrival of the particular event
+By checking Repeatedly in the Insert menu you can keep on entering competitors or teams without having to give any additional commands. As soon as you press OK for one competitor or team, you'll get an edit dialog for the next one
+Using "Upload all generated publications..." from the Extra menu you can let StageRace upload all publications that belong to the event that has the focus. StageRace simply takes all HTML files with matching file names that exist in the event's directory. For selecting particular publications for upload, use the Event items selection from the View menu
+If your event uses separate event logo and/or style sheet (CSS) files, you will have to upload these manually, using external FTP software
+With New window in the Window menu you can open extra windows for the document that is currently selected. This for instance allows for having both the Edit competitors view and the Edit teams view available, but also any other combination
+Through the Event items selection dialog from the View menu you can select a subset of event (tree) items to be printed, uploaded or e-mailed
+With Event tree in the View menu you can hide a main event tree so that the other part of the particular window can use more of your monitor's space. Use the same command to make it appear again
+If you need to add or subtract times, you may want to use the StageRace Time Calculator (through the Tools menu)
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+The configuration of an event (adapting the Settings as well as inserting, deleting and configuring of stages and half stages) is all available through the Configuration menu and can be locked by the person who is in charge of the configuration at the Access tab sheet in the Settings of an event
+If you need to calculate a speed, you may want to use the StageRace Speed Calculator (through the Tools menu). Speed Calculator calculates speeds in km/h and mph
+The tool bars in StageRace automatically adapt themselves to the view that is currently visible
+StageRace is able to communicate with external software through the StageRace messaging protocol. Whenever more than one document is opened in StageRace, you can choose which of these documents should be used for communication. You can set this 'active document' through Active event selection in the View menu or with the combo box in the status bar
+A cross out list is a useful document that is used by members of the jury during the race to keep track of competitors. It mainly consists of a table with all competitor nos.
+Most of the functions that are available for an item, such as main event tree items or competitors or teams, can be accessed through a context-sensitive menu that appears when right-clicking on the item
+You can choose in which languages publications are generated through the Publication tab from the Settings in the Configuration menu
+A sign in list is available before the start of a half stage for the competitors to put their signature on, signifying that they intend to start that half stage
+All the strings that are used for StageRace publications are taken from MultiLanguage.mdb where you can also add your own languages or change any strings that you may not be completely satisfied with. Use Microsoft(r) Access to open MultiLanguage.mdb
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+Cross out lists, sign in lists and the table of contents are only generated upon user request. Request regeneration of all such lists through the Generate menu
+StageRace looks great in Windows(r) XP, supporting the Windows(r) XP theme that you select for your desktop
+If you choose to print full team names on publications and you also wish to see the team codes next to it, you might chose to show a team codes column without a column title since it would just repeat saying 'team' like for the column with full team names
+Changes made to any settings will be used as of that moment. Be cautious that changes in settings for publications will not be visible until you enforce the regeneration of the particular publications
+When using a CSS2 enabled browser such as the recent versions of Internet Explorer, StageRace publications will repeat page and table headers on every new page that is printed
+If you find the list with settings on any of the Settings dialog tab sheets too small, double click on it in order to have it maximized. Double click again to get back the original size
+By default, publications are generated when you change something in the arrival data. If you check off Automatically in the Generate menu, publications are not longer generated automatically to reflect changes. You can manually force publications to be generated through the Generate menu
+In the General settings you can decide to include a prologue in your stage race. This way the first half stage of your event will not be counted towards the overall distance and have no stage no. (Note that Scan'O'Vision and FinishLynx output will have stage numbering as if no prologue was selected.) Prologues will count towards the general classification just like normal half stages
+If you add your own language to the database, you can have StageRace help you to find missing strings by printing a '?' for every missing string (see the Options dialog)
+When using communiqué numbering, the communiqué no. will only appear on publications when the appropriate check box in the event tree is checked. When checking a publication check box, the communiqué no. will only appear after you enforce the regeneration of the particular publication
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace
+All times entered in Arrival dialogs are rounded down to the nearest second before counted towards the general classification. 1/xths of seconds are only used for draws as set in the Rankings settings
+From the character strings that you import only the numerals are used. Other characters are simply ignored. This way, for instance, it is allowed for values to be enclosed by quotation marks. But also all other non-numerals are ignored
+The StageRace Help system describes in detail how classifications are generated and rules are applied, so that compatibility with your events can easily be determined. Most UCI regulations apply
+From Windows(r) 95 or NT to Windows(r) XP: all tested and approved for StageRace
+Through the StageRace 2003 program group or the Windows(r) Control Panel it is easy to fully uninstall StageRace from your computer system
+Through Read-only publication in the Generate menu, you can determine whether or not a publication can be overwritten by StageRace. When StageRace encounters an existing publication that it cannot regenerate due to the read-only flag, an error message will be displayed
+StageRace allows to edit publications in an external editor of your choice, through Edit publication externally in the Tools menu. You can choose your editor in the Options dialog
+Please visit the StageRace website at http://www.stagerace.com for upgrades, online support and all other information about StageRace

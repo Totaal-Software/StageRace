@@ -1,0 +1,212 @@
+<HTML><BODY> 
+
+      <H1>
+         Export Competitors for Skunkware TT*Ware 
+      </H1>
+
+      <P>
+         Competitors of 
+         
+            time trials can be exported from StageRace so they can be used 
+         in Skunkware TT*Ware.</P>
+
+      <P>
+         In contrary to the other supported import/export formats, TT*Ware is 
+         specifically applicable to 
+         
+            time trials.</P>
+
+      <P>
+      </P>
+
+      <P>
+         Note that you can also import TT*Ware files for 
+         
+            ranking a stage.</P>
+
+      <H2>
+         Introduction 
+      </H2>
+
+      <P>
+         Broder's Skunkware (U.S.A.) develops custom IP-enabled, client-server 
+         scoring and timing systems and broadcast graphics solutions for live 
+         and live-to-tape sporting events.</P>
+
+      <P>
+         Their TT*Ware software allows for real-time support during time trials.</P>
+
+      <P>
+         In cooperation with Phoenix Sports Technology from Pennsylvania, U.S.A., 
+         the StageRace program has been made capable to import files from TT*Ware.</P>
+
+      <H2>
+         Exporting 
+      </H2>
+
+      <P>
+         Within TT*Ware text file import is possible (<SPAN CLASS="help_menu">Import 
+         Comma-Delimited Data into a Race</SPAN>).</P>
+
+      <P>
+         In order to have StageRace generating such output files, the <SPAN CLASS="help_menu">Export 
+         competitors for Skunkware TT*Ware</SPAN> option in the <SPAN CLASS="help_menu">Tools</SPAN> 
+         menu has to be chosen with the required <EM>time trial</EM> being selected. 
+         Note that TT*Ware files can only be exported for one stage at a time.</P>
+
+      <P>
+         The location of the files generated depends on the path set in the 
+         
+            <SPAN CLASS="screenquote">Options</SPAN> dialog.</P>
+
+      <P>
+         For TT*Ware operation, please refer to the appropriate documentation.</P>
+
+      <P>
+         Output is generated in the form of a so-called comma separated file of 
+         which the file name is set up as follows:</P>
+
+      <BLOCKQUOTE> 
+      <P CLASS="screenquote">
+         [Race Title] - Competitors list [FS]-[HS] (TTWare).csv</P>
+
+      </BLOCKQUOTE>
+      <P>
+         For instance:</P>
+
+      <BLOCKQUOTE> 
+      <P CLASS="screenquote">
+         Ronde van Nederland - Competitors list 3-1 (TTWare).csv</P>
+
+      </BLOCKQUOTE>
+      <H2>
+         File Set-up 
+      </H2>
+
+      <P>
+         Every line in the file consists of one competitor with the following 
+         comma-delimited fields:</P>
+
+      <UL>
+         <LI> Time trial start time</LI><LI> Start no.</LI><LI>Full name</LI><LI>Team 
+         code</LI><LI>Team name</LI><LI>Country</LI><LI>Category</LI><LI>License</LI><LI>UCI 
+         code </LI>
+      </UL>
+
+      <P>
+         Note that while TT*Ware differentiates between first and last name, StageRace 
+         can only provide the full name of a competitor.</P>
+
+      <P>
+         A good possible <SPAN CLASS="screenquote">Import Parameters</SPAN> setting 
+         within TT*Ware for this could be:</P>
+
+      <UL>
+         <LI><SPAN CLASS="screenquote">Last Name</SPAN>: 3</LI><LI><SPAN CLASS="screenquote">NAT</SPAN>: 
+         6</LI><LI><SPAN CLASS="screenquote">Team</SPAN>: 4 or 5</LI><LI><SPAN CLASS="screenquote">Start 
+         number</SPAN>: 2</LI><LI><SPAN CLASS="screenquote">Bib Number</SPAN>: 
+         2</LI><LI><SPAN CLASS="screenquote">Start Time, Run 1</SPAN>: 1</LI><LI><SPAN CLASS="screenquote">UCI 
+         Number</SPAN>: 9</LI><LI><SPAN CLASS="screenquote">Class</SPAN>: 7</LI>
+      </UL>
+
+      <P>
+         (Other values left to zero)</P>
+
+      <P>
+         Note that testing with v3.07 of TT*Ware an error occurs (saying &quot;<SPAN CLASS="screenquote">Import 
+         file is Binary, cannot continue</SPAN>&quot;) when in the file non-ANSI 
+         characters are used, such as &eacute;, &agrave;, &ouml;, &szlig;, etc. 
+         If you want to use file export for TT*Ware, you should avoid this kind 
+         of characters in competitor and team names and the like.</P>
+
+      <H2>
+         Example
+</H2>
+
+      <P>
+         A typical file looks like this: </P>
+
+      <PRE CLASS="code">1:35:00,1,ETZINGER Jochen,DST,Deutschland-Straße,GER,,,GER19820328
+0:57:00,2,MERTENS Boris,DST,Deutschland-Straße,GER,,,GER19810414
+0:35:00,3,BERLIN Christopher,DST,Deutschland-Straße,GER,,,GER19820127
+1:00:00,4,SCHWANKE Knut,DST,Deutschland-Straße,GER,,,GER19821103
+1:02:00,5,SIEBERG Marcel,DST,Deutschland-Straße,GER,,,GER19820430
+0:53:00,11,GASSNER Michael,BAV,Team Bavarian Lion (LV Bayern),GER,,,GER19811109
+1:01:00,12,JENDRUSCH Stefan,BAV,Team Bavarian Lion (LV Bayern),GER,,,GER19810927
+0:25:00,13,JUNG Florian,BAV,Team Bavarian Lion (LV Bayern),GER,,,GER19820713
+1:31:00,14,ROHRBACH Axel,BAV,Team Bavarian Lion (LV Bayern),GER,,,GER19810204
+0:16:00,15,SCHIERING Chris,BAV,Team Bavarian Lion (LV Bayern),GER,,,GER19820220
+1:13:00,16,WENDEROTH Manuel,BAV,Team Bavarian Lion (LV Bayern),GER,,,GER19820720
+0:37:00,21,HORBER Stefan,SWI,Schweiz,SUI,,,SUI19820125
+1:11:00,22,ALZENI Thomas,SWI,Schweiz,SUI,,,SUI19810702
+0:40:00,23,OBRIST Gilbert,SWI,Schweiz,SUI,,,SUI19821103
+0:27:00,25,SCHUPPLI Roger,SWI,Schweiz,SUI,,,SUI19820323
+0:17:00,41,KAISER Johannes,BEL,Team Bellheimer Lord Rheinland-Pfalz,GER,,,GER19820206
+0:21:00,43,MEYRER Sven,BEL,Team Bellheimer Lord Rheinland-Pfalz,GER,,,GER19810731
+0:31:00,45,STUMPF Tobias,BEL,Team Bellheimer Lord Rheinland-Pfalz,GER,,,GER19810602
+0:14:00,46,NORD Thomas,BEL,Team Bellheimer Lord Rheinland-Pfalz,GER,,,GER19810118
+1:29:00,52,LÖITEGAARD Kjetil G.,NOR,Norwegen,NOR,,,NOR19810703
+0:10:00,53,KRISTIANSEN Martin,NOR,Norwegen,NOR,,,NOR19810708
+0:30:00,54,ELLERTSEN Kristian,NOR,Norwegen,NOR,,,NOR19820521
+0:55:00,56,HEGREBERG Roy,NOR,Norwegen,NOR,,,NOR19810325
+0:24:00,61,MEISER  Christian,SAA,LV Saarland,GER,,,GER19820129
+0:07:00,64,SCHÄFER Timo,SAA,LV Saarland,GER,,,GER19820809
+0:03:00,65,DEGER Sören,SAA,LV Saarland,GER,,,GER19810831
+0:42:00,66,DÜVEL Eric,SAA,LV Saarland,GER,,,GER19810504
+1:27:00,71,RENÄNG Petter,SWE,Schweden,SWE,,,SWE19810726
+0:54:00,72,BERNSTRÖM Jocke,SWE,Schweden,SWE,,,SWE19810701
+0:22:00,73,LINDELL Fredrik,SWE,Schweden,SWE,,,SWE19810316
+1:09:00,74,HOLMKVIST Jonas,SWE,Schweden,SWE,,,SWE19820817
+0:00:00,75,JOHANSSON Fredrik,SWE,Schweden,SWE,,,SWE19810213
+0:02:00,76,NYMAN  Martin,SWE,Schweden,SWE,,,SWE19820110
+0:34:00,81,MÜLLER Christian,THU,Team Sparkassenversicherung Thüringen,GER,,,GER19820301
+0:56:00,82,STREITZIG Alexander,THU,Team Sparkassenversicherung Thüringen,GER,,,GER19820518
+0:32:00,83,FRANKE Sebastian,THU,Team Sparkassenversicherung Thüringen,GER,,,GER19810917
+0:58:00,84,VEIT Moritz,THU,Team Sparkassenversicherung Thüringen,GER,,,GER19810912
+1:15:00,85,RÜDIGER André,THU,Team Sparkassenversicherung Thüringen,GER,,,GER19810523
+0:18:00,86,LIMBURG Pierre,THU,Team Sparkassenversicherung Thüringen,GER,,,GER19821210
+1:06:00,91,KWANTEN Frank,NED,Niederlande,NED,,,NED19820116
+0:51:00,92,TIMMER Jordy,NED,Niederlande,NED,,,NED19820317
+0:23:00,93,AGTMAAL Peter,NED,Niederlande,NED,,,NED19820125
+0:28:00,94,COHNEN Stephan,NED,Niederlande,NED,,,NED19821204
+1:21:00,95,ELTINK Theo,NED,Niederlande,NED,,,NED19811127
+1:04:00,96,VAN HUMMEL Kenny,NED,Niederlande,NED,,,NED19820930
+1:19:00,101,MAGYAROSI Peter,DBA,Deutschland-Bahn,GER,,,GER19810109
+0:59:00,103,LÖFFLER Stefan,DBA,Deutschland-Bahn,GER,,,GER19820902
+0:44:00,104,VEIT Hanjo,DBA,Deutschland-Bahn,GER,,,GER19810602
+0:46:00,105,KARSTENS Leo,DBA,Deutschland-Bahn,GER,,,GER19821222
+0:20:00,106,VORRATH Frank,DBA,Deutschland-Bahn,GER,,,GER19820623
+1:33:00,111,CUMMINGS Stephen,ENG,England,GBR,,,GBR19810319
+1:23:00,112,SOUTHAM Tom,ENG,England,GBR,,,GBR19810528
+0:08:00,113,BAKER Mark,ENG,England,GBR,,,GBR19820228
+0:11:00,114,ARMSTRONG Iain,ENG,England,GBR,,,GBR19810624
+0:50:00,115,SHAW James,ENG,England,GBR,,,GBR19810711
+0:45:00,116,JENKINS James,ENG,England,GBR,,,GBR19810219
+0:12:00,121,BROSSEIT Ralf,WUR,Württemberg,GER,,,GER19820204
+0:52:00,122,FRAER Jürgen,WUR,Württemberg,GER,,,GER19821016
+0:39:00,123,ARMBRUSTER Stefan,WUR,Württemberg,GER,,,GER19810407
+0:15:00,124,LEUCHTNER Jörg,WUR,Württemberg,GER,,,GER19820427
+0:43:00,125,BAUERHEIM Andreas,WUR,Württemberg,GER,,,GER19820103
+0:41:00,126,HÄUSSLER Sven,WUR,Württemberg,GER,,,GER19820210
+0:33:00,131,BASTIAN Marc,LUX,Luxemburg,LUX,,,LUX19810824
+0:19:00,133,MARGREVE Luc,LUX,Luxemburg,LUX,,,LUX19810904
+0:38:00,134,MAJERUS Serge,LUX,Luxemburg,LUX,,,LUX19811016
+0:36:00,135,PADERHUBER Oliver,LUX,Luxemburg,LUX,,,LUX19810510
+0:48:00,136,WURTH Ben,LUX,Luxemburg,LUX,,,LUX19820202
+0:01:00,141,DUBÉ Éric,CAN,Kanada,CAN,,,CAN19810111
+0:26:00,142,ROLLIN Dominique,CAN,Kanada,CAN,,,CAN19821029
+0:29:00,143,MARTIN Gilbert,CAN,Kanada,CAN,,,CAN19821030
+0:13:00,144,BÉLIVEAU Mathieu,CAN,Kanada,CAN,,,CAN19810417
+0:04:00,145,GORMAN Charles,CAN,Kanada,CAN,,,CAN19810930
+1:07:00,151,RICHTER Stefan,GRE,Team Greese,GER,,,GER19810419
+1:05:00,152,GREIPEL André,GRE,Team Greese,GER,,,GER19820716
+1:03:00,153,ALTMANN Marc,GRE,Team Greese,GER,,,GER19810309
+0:06:00,154,STIELER Christian,GRE,Team Greese,GER,,,GER19821123
+1:25:00,156,REICHL Dirk,GRE,Team Greese,GER,,,GER19810912
+1:17:00,161,MELEHS Olegs,LET,Lettland,LAT,,,LAT19820324
+0:49:00,162,ALVADERS Kaspars,LET,Lettland,LAT,,,LAT19820314
+0:47:00,163,ZAZERSKIS Arturs,LET,Lettland,LAT,,,LAT19810810
+0:05:00,165,DOBROVOLSKIS Igörs,LET,Lettland,LAT,,,LAT19820509</PRE> 
+      <P>
+         The file is always sorted on competitor no.</P>
+</HTML></BODY>

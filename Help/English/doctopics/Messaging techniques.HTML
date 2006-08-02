@@ -1,0 +1,205 @@
+<HTML><BODY> 
+
+   <H3>
+      Messaging Techniques 
+   </H3>
+
+   <P>
+      The following information is not specific to StageRace but is given as a 
+      technical reference for programmers that want to use the 
+      
+         StageRace Messaging protocol.</P>
+
+   <H4>
+      Window Messages 
+   </H4>
+
+   <P>
+      Window messages are used within Windows<SUP>&reg;</SUP> to communicate between 
+      separate application windows.</P>
+
+   <P>
+      Window messages are identified by their unique message identifier. Message 
+      identifiers are numerical values, but are kept hidden (transparent) by string 
+      identifiers, such as &quot;WM_USER&quot;.</P>
+
+   <P>
+      On start-up of StageRace, all 
+      
+         appropriate message strings are registered with Windows<SUP>&reg;</SUP>.</P>
+
+   <P>
+      Other applications can do the same, arranging all the applications to have 
+      the same correct and unique numerical identifiers to match the string identifiers.</P>
+
+   <H4>
+      Message Format 
+   </H4>
+
+   <P>
+      The Windows<SUP>&reg;</SUP> API functions for inter-window messaging are 
+      defined like the one below:</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <SPAN CLASS="code"><B>BOOL PostMessage(</B></SPAN></P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <SPAN CLASS="code"><B>HWND</B> <I>hWnd</I>, // handle of destination window<BR> 
+      <B>UINT</B> <I>Msg</I>, // message to post<BR> <B>WPARAM</B> <I>wParam</I>, 
+      // first message parameter<BR> <B>LPARAM</B> <I>lParam</I> // second message 
+      parameter</SPAN></P>
+
+   </BLOCKQUOTE>
+   <P>
+      <SPAN CLASS="code"><B>);</B></SPAN></P>
+
+   </BLOCKQUOTE>
+   <P>
+      (There are more API functions for messaging, this is just an example to 
+      illustrate the message format.)</P>
+
+   <P>
+      Ergo the message format is like this:</P>
+
+   <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+      <TR>
+         <TH> 
+         <P>
+            Destination handle</P>
+
+         </TH><TH> 
+         <P>
+            Message ID</P>
+
+         </TH><TH> 
+         <P>
+            First parameter</P>
+
+         </TH><TH> 
+         <P>
+            Second parameter</P>
+
+         </TH>
+      </TR>
+
+      <TR>
+         <TD>
+            <P>
+               HWND</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               UINT</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               WPARAM</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               LPARAM</P>
+
+         </TD>
+
+      </TR>
+
+      <TR>
+         <TD>
+            <P>
+               32-bits window handle</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               32-bits unsigned integer</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               32-bits user-defined bit-string</P>
+
+         </TD>
+
+         <TD>
+            <P>
+               32-bits user-defined bit-string</P>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      We suggest messages to be posted as global broadcast. In this case <SPAN CLASS="screenquote">Destination 
+      handle = HWND_BROADCAST</SPAN>. This will cause your message to be sent 
+      to all top-level windows, but only the appropriate window will respond anyway 
+      due to the specific <SPAN CLASS="screenquote">Message ID</SPAN>.</P>
+
+   <H4>
+      Message Extensions (Atoms) 
+   </H4>
+
+   <P>
+      Applications can register strings with Windows in exchange for an identifier 
+      of the <em>ATOM</em> type. These atom identifiers are used by the messages 
+      sent across windows to pass strings &quot;by pointer&quot;.</P>
+
+   <P>
+      Strictly, someone is responsible to clean up atom strings after use. For 
+      the 
+      
+         defined messages StageRace will take responsibility to clean up the 
+      atoms.</P>
+
+   <H4>
+      Technical References 
+   </H4>
+
+   <P>
+      The inter-window communication is discussed in the library of the Microsoft<SUP>&reg;</sup> 
+      Developer Network (MSDN).</P>
+
+   <UL>
+      <LI> <EM><SPAN CLASS="li_extensive"> 
+      
+         About Messages and Message Queues</SPAN></EM><SPAN CLASS="li_extensive"> 
+      <BR> (http://msdn.microsoft.com / library / en-us / winui / winui / windowsuserinterface 
+      / windowing / messagesandmessagequeues / aboutmessagesandmessagequeues.asp)<br> 
+      <BR> Start page for window messaging subjects</SPAN></LI><LI CLASS="li_extensive"><EM> 
+      
+         PostMessage</EM><BR> (http://msdn.microsoft.com / library / en-us 
+      / winui / WinUI / WindowsUserInterface / Windowing / MessagesandMessageQueues 
+      / MessagesandMessageQueuesReference / MessagesandMessageQueuesFunctions 
+      / PostMessage.asp)<br> <BR> Documentation on the PostMessage SDK function 
+      for posting messages</LI><LI CLASS="li_extensive"><EM> 
+      
+         RegisterWindowMessage</EM><BR> 
+      
+      (http://msdn.microsoft.com / library / en-us / winui / WinUI / WindowsUserInterface 
+      / Windowing / MessagesandMessageQueues / MessagesandMessageQueuesReference 
+      / MessagesandMessageQueuesFunctions / RegisterWindowMessage.asp)<br> <BR> 
+      Documentation on the RegisterWindowMessage SDK function for registering 
+      a message in Windows<SUP>&reg;</SUP></LI><LI CLASS="li_extensive"><EM> 
+      
+         Atom Functions</EM><BR> 
+      
+      (http://msdn.microsoft.com / library / en-us / win9x / unilayer_22k3.asp)<br> 
+      <BR> Start page for atom functions, with shortcuts to GlobalAddAtom, GlobalGetAtomName 
+      and GlobalDeleteAtom</LI>
+   </UL>
+
+</HTML></BODY>

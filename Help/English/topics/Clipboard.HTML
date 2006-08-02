@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+   <HEAD>
+      <TITLE>Clipboard</TITLE>
+      <LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+   </HEAD>
+   <BODY>
+      <!--black bar-->
+      <A NAME="doctop"></A>
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="10" BGCOLOR="#000000">
+         <TR>
+            <TD>
+               <IMG SRC="../layout/headline.gif" WIDTH="201" HEIGHT="26" ALT="StageRace 2003 - Road Cycling Administration"> 
+            </TD>
+            <TD ALIGN="right">
+               <IMG SRC="../layout/help.gif" WIDTH="100" HEIGHT="26" ALT="Help"> 
+            </TD>
+         </TR>
+      </TABLE>
+      <!--rainbow bar-->
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+         <TR><TD HEIGHT="3" BGCOLOR="#FF0000">
+               <IMG SRC="../layout/borderline.gif" WIDTH="100%" HEIGHT="3" ALT="border"></TD></TR>
+      </TABLE>
+      <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="20">
+         <TR VALIGN="TOP">
+            <TD>
+      <!--content--> 
+
+   <H1>
+      Clipboard 
+   </H1>
+
+   <P>
+      StageRace supports copy, cut and paste for both competitors and teams. Therefore 
+      the following description applies to the 
+      <A HREF="Competitors%20view.html">
+         competitors view</A> and the 
+      <A HREF="Teams%20view.html">
+         teams view</A>.</P>
+
+   <H2>
+      Copy 
+   </H2>
+
+   <P>
+      Select the competitors or teams that you want to copy to the clipboard. 
+      Then choose <SPAN CLASS="help_menu">Copy</SPAN> from the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu.</P>
+
+   <H2>
+      Cut 
+   </H2>
+
+   <P>
+      Select the competitors or teams that you want to copy to the clipboard. 
+      Then choose <SPAN CLASS="help_menu">Cut</SPAN> from the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu.</P>
+
+   <P>
+      Cut competitors or teams will immediately be deleted from the particular 
+      list. However, they are not deleted when they are <em>used</em>. Used for 
+      competitors means being ranked in any stage. Used for teams means being 
+      used by competitors.</P>
+
+   <H2>
+      Paste 
+   </H2>
+
+   <P>
+      Choose <SPAN CLASS="help_menu">Paste</SPAN> from the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu. The contents on the clipboard is used as competitors or teams, depending 
+      on whether the pasting is done in the 
+      <A HREF="Competitors%20view.html">
+         competitors view</A> or the 
+      <A HREF="Teams%20view.html">
+         teams view</A>.</P>
+
+   <P>
+      StageRace can not always determine if the clipboard actually consists of 
+      the right type (either competitors or teams). Be careful not to past competitors 
+      in the teams view and vice versa.</P>
+
+   <P>
+      Note that pasting a large amount of competitors or teams can take a while. 
+      Your system is not hanging, it is just busy.</P>
+
+   <P>
+      Before pasting a confirmation is being asked for.</P>
+
+   <P>
+      Competitors or teams with the same start no. or team code will be overwritten 
+      when pasting.</P>
+
+   <P>
+      The following paragraphs only apply to pasting competitors.</P>
+
+   <H3>
+      Teams while Pasting Competitors 
+   </H3>
+
+   <P>
+      While pasting competitors the team codes or names that are included will 
+      be used to:</P>
+
+   <UL>
+      <LI> Look up existing teams and link them to the pasted competitors; and</LI><LI>Create 
+      new teams when necessary.</LI>
+   </UL>
+
+   <P>
+      If teams are created in this way, the 
+      <A HREF="Team%20dialog.html">
+         <SPAN CLASS="screenquote">Team properties</SPAN> dialog window</A> is 
+      displayed for every team, to allow you to enter the team details.</P>
+
+   <P>
+      However, in the confirmation that is asked for (before pasting, as mentioned 
+      above) you can choose to suppress this. StageRace will then use its own 
+      propositions for team code and name without asking you.</P>
+
+   <P>
+      However, when the latter would result in double team codes being created, 
+      StageRace will again ask for the user to change the team code.</P>
+
+   <H3>
+      <A NAME="pastewithstartno">
+      </A>Competitors without Start Nos. 
+   </H3>
+
+   <P>
+      Through <SPAN CLASS="help_menu">Paste with start nos.</SPAN> in the <SPAN CLASS="help_menu">Edit</SPAN> 
+      menu you can choose to ignore the start numbers that might be included in 
+      the competitors information that you are pasting. This way the information 
+      is pasted as 
+      <A HREF="Competitors%20and%20teams.html#sparecompetitors">
+         spare competitors</A>.</P>
+
+   <P>
+      If you do not include start nos. in the information that you want to paste, 
+      StageRace is likely to automatically detect this. It will then automatically 
+      paste your information as 
+      <A HREF="Competitors%20and%20teams.html#sparecompetitors">
+         spare competitors</A>, no matter what <SPAN CLASS="help_menu">Paste with 
+      start nos.</SPAN> is currently set to.</P>
+
+   <P>
+      Note that if <SPAN CLASS="help_menu">Paste with start nos.</SPAN> is switched 
+      off, the competitor nos. in the competitors view are grayed out, to indicate 
+      the setting.</P>
+
+   <H2>
+      Other Applications 
+   </H2>
+
+   <P>
+         Except for clipboard support within StageRace (i.e. between two different 
+         event files) you can also transfer competitors from and to many other 
+         programs, such as Office applications like Word, Excel or Access.</P>
+
+   <P>
+      To do this, the data has to be ordered in a table and should have the following 
+      order:</P>
+
+   <P>&nbsp;
+   </P>
+
+   <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="5">
+      <TR>
+         <TH> 
+         <P>
+            For competitors</P>
+
+         </TH><TH> 
+         <P>
+            For teams</P>
+
+         </TH>
+      </TR>
+
+      <TR>
+         <TD>
+            <UL>
+               <LI> Start no.</LI><LI> Name</LI><LI> Team name or code</LI><LI> 
+               Country code</LI><LI> UCI code</LI><LI> License</LI><LI> Category</LI><LI> 
+               Mask 1</LI><LI> Mask 2</LI><LI> Mask 3</LI>
+            </UL>
+
+         </TD>
+
+         <TD>
+            <UL>
+               <LI> Code</LI><LI> Name</LI><LI> Manager</LI><LI> Country </LI>
+            </UL>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      For quick reference, remember that these orders correspond to those in the 
+      <A HREF="Competitor%20dialog.html" CLASS="screenquote">
+         Competitor properties</A> and 
+      <A HREF="Team%20dialog.html">
+         <SPAN CLASS="screenquote">Team properties</SPAN></A> dialogs.</P>
+
+   <P>
+      This is the format as it is used when copying or cutting from StageRace. 
+      If you want to paste to StageRace, you should use the same order, but:</P>
+
+   <UL>
+      <LI>Columns can be omitted at the end;</LI><LI>Columns can be left empty; 
+      and </LI><LI>The <SPAN CLASS="screenquote"> Start nos.</SPAN> column can 
+      be omitted entirely as described before, in case spare competitors are involved.</LI>
+   </UL>
+
+      <P>
+         Note that if you want to paste StageRace competitors or teams in Microsoft<SUP>&reg;</SUP> 
+         Word, and you do not want to lose the tabular form, you should already 
+         make a table in Word and select the appropriate cells before pasting. 
+         Otherwise Word will paste the competitors as ordinary text lines while 
+         separating their columns with tab characters.</P>
+
+         <!--footer-->
+               <P>&nbsp;</P>
+               <TABLE WIDTH="100%" BORDERCOLOR="red" BORDER="1" CELLPADDING="5" CELLSPACING="0"><TR><TD><EM>This file was originally part of our V2003 software version, that was now shipped as part 
+of a V2005 b&egrave;ta release &#151; The information in this file may for that 
+reason not be entirely up-to-date or not be entirely accurate &#151; The Help system 
+will shortly be updated in one of the upcoming releases of StageRace 2005</EM></TD></TR></TABLE>
+               <P>&nbsp;</P>
+               <P><A HREF="#doctop"><IMG SRC="../layout/top.gif" ALT="Go top" BORDER="0" WIDTH="28" HEIGHT="20"></A></P>
+            </TD>
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

@@ -1,0 +1,107 @@
+<HTML><BODY> 
+
+   <H4>
+      Apply a Mask Dialog 
+   </H4>
+
+   <P>
+      In order to quickly add a certain part of the competitors to a mask, a handy 
+      function is added to the 
+      
+         Competitors view, which allows for setting criteria to compare competitors 
+      to.</P>
+
+   <P>
+      The <SPAN CLASS="screenquote">Apply a mask</SPAN> dialog can be opened from 
+      within the 
+      
+         Competitors view through <SPAN CLASS="help_menu">Apply mask...</SPAN> 
+      in the <SPAN CLASS="help_menu">Edit</SPAN> menu. 
+      
+         Masks must be configured to have this function enabled in the menu.</P>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      <IMG src="../screenshots/screen55.gif" width="468" height="399" ALT="Apply a mask dialog"><P CLASS="caption">Apply a mask dialog</P></P>
+
+   <P>&nbsp;
+   </P>
+
+   <H5>
+      Set the Criteria 
+   </H5>
+
+   <P>
+      A character string can be compared to the contents of one of the fields 
+      of a competitor. Therefore you enter the character string and choose with 
+      which field it has to be compared.</P>
+
+   <P>
+      The type of the comparison can be determined, from the following possibilities:</P>
+
+   <UL>
+         <LI> "<B CLASS="screenquote">&lt;=</B>": The value of the field must 
+         be smaller or equal to the value of the character string;</LI><LI> "<B CLASS="screenquote">==</B>": 
+         The value of the field must be entirely equal to the value of the character 
+         string;</LI><LI> "<B CLASS="screenquote">=~</B>": The field must exists 
+         in the character string or reverse; or</LI><LI> "<B CLASS="screenquote">&gt;=</B>": 
+         The value of the field must be larger or equal to the value of the character 
+         string.</LI>
+   </UL>
+
+   <P>
+   </P>
+
+   <P>
+      The choice can be made to start with an empty mask, but also only to add 
+      new competitors to the current mask.</P>
+
+   <P>
+      The involved mask can be chosen from the activated masks.</P>
+
+   <H5>
+      String Comparing 
+   </H5>
+
+   <P>
+      The comparing of character strings takes place based on the order of the 
+      ASCII standard. If you need more information, we suggest a web search for 
+      &quot;extended ascii table&quot; or take your Windows<SUP>&reg;</SUP> Character 
+      Map (<SPAN CLASS="screenquote">charmap.exe</SPAN>) as a reference.</P>
+
+   <P>
+      Start numbers will obviously be compared on numerical value.</P>
+
+   <P>
+      An asterisk can be used to ignore corresponding positions in character string 
+      and field.</P>
+
+   <H5>
+      Example 
+   </H5>
+
+   <P>
+      Let's apply a mask specifically for a youth classification, where competitors 
+      born on or after March 15th 1988 compete in this youth classification.</P>
+
+   <P>
+      For this, make the following choices in the <SPAN CLASS="screenquote">Apply 
+      a mask</SPAN> dialog:</P>
+
+   <UL>
+      <LI><SPAN CLASS="screenquote">Field involved</SPAN>: &quot;UCI code&quot;;</LI><LI><SPAN CLASS="screenquote">Values</SPAN>: 
+      &quot;&gt;=&quot; and &quot;***19880315&quot;;</LI><LI>Select the youth 
+      classification 
+      
+         (that needs to be set up earlier); and then</LI><LI>Close the dialog 
+      through <SPAN CLASS="screenquote">OK</SPAN>.</LI>
+   </UL>
+
+   <P>
+      Note that the use as in this example is based on having the correct UCI 
+      codes entered, in the country-year-month-day format like &quot;USA19740316&quot; 
+      or &quot;NED19900120&quot;.</P>
+
+</HTML></BODY>

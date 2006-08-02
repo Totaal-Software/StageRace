@@ -1,0 +1,22 @@
+body { font-size: 75%; background-color: #FFFFFF; margin-top: 0px; margin-right: 0px; margin-left: 0px; font-family: Arial, Helvetica, sans-serif; color: #0000FF}
+p {  margin-top: 8px; margin-bottom: 8px; margin-left: 12px; padding-top: 0px; padding-bottom: 0px}
+h2 {  font-family: Georgia, "Times New Roman", Times, serif; font-size: 145%; color: #FF0000; font-style: normal; font-weight: normal; margin-top: 30px; margin-bottom: 10px}
+.menu {  font-weight: normal; text-decoration: underline}
+a:visited {  color: #0000FF}
+.withoutunderline { text-decoration: none ; font-weight: normal}
+.caption {  font-family: Georgia, "Times New Roman", Times, serif; font-size: 90%; color: #FF0000}
+h1 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 200%; color: #FF0000; font-style: normal; font-weight: bold; margin-top: 10px; margin-bottom: 30px}
+h3 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 120%; color: #FF0000; font-style: normal; font-weight: normal; margin-top: 10px; margin-bottom: 10px }
+.help_menu {  background-color: #CCCCCC; padding-right: 3px; padding-left: 3px}
+em {  font-style: normal; font-family: Georgia, "Times New Roman", Times, serif; color: #000000}
+
+ul { list-style-image: url(../css/bullet.gif) }
+.li_extensive {  margin-top: 12px; margin-bottom: 12px}
+.screenquote {  font-family: "Courier New", Courier, mono; word-spacing: -4px; letter-spacing: -1px}
+table {  font-size: 100%}
+th {  font-family: Georgia, "Times New Roman", Times, serif; font-size: 110%; color: #FF0000; text-align: left; font-weight: normal; background-color: #FFDDDD}
+td {  vertical-align: top}
+.help_uci {  color: #FF0000}
+.qa_question {  font-family: Georgia, "Times New Roman", Times, serif}
+.front {  font-size: 250%}
+.code {  font-family: "Courier New", Courier, mono; font-size: 90%; color: #000000}

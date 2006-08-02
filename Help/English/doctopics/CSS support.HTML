@@ -1,0 +1,472 @@
+<HTML><BODY> 
+
+   <H3>
+      CSS Support
+   </H3>
+
+   <P>
+      The appearance of publications can be influenced by the 
+      
+         HTML settings. It can be further influenced by applying a custom 
+      Cascaded Style Sheet.</P>
+
+   <h4>
+      Applying a CSS
+   </h4>
+
+   <P>
+      Select <span class="screenquote">Reference external style sheet</span> in 
+      the 
+      
+         HTML settings and enter the name of your own <span class="screenquote">.css</span> 
+      file in the <span class="screenquote">Style sheet file (CSS)</span> edit 
+      box.</P>
+
+   <P>
+      You should provide a sufficiently qualified URL or path. You can just enter 
+      the file name, in which case the file is assumed to be in the same folder 
+      as the publications. But you can also enter a full internet address of the 
+      file or an directory path to it. Note that when you provide a local or even 
+      networked directory path, the file is likely not to be accessible when other 
+      users view your publications over the internet.</P>
+
+   <h4>
+      Formatting Through Paragraph Types
+   </h4>
+
+   <p>
+      The structure of the publications's HTML like any HTML document consists 
+      of tags for paragraphs, titles, tables, etc. </p>
+
+   <p>&nbsp;
+   </p>
+
+   <table border="0">
+      <tr>
+         <th nowrap> 
+         <p>
+            Tag</p>
+
+         </th><th> 
+         <p>
+            Used for</p>
+
+         </th>
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>blockquote</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Signature at bottom</li><li>Communiqu&eacute; body text</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>em</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>(Half) stage identifier in document recognition string </li><li>Properties 
+               at top</li><li>Section headers in main table with listed competitors, 
+               for instance to indicate sprints </li><li>&quot;Last calculated&quot; 
+               statement at bottom</li><li>Advertisement at bottom</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>h1</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Event title</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>h2</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Subtitle</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>h6</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Technical reference string at bottom</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>hr</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Horizontal divider, for instance under main table headers</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>strong</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Crossed out competitor on cross out list</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>td</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Document recognition string </li><li>Communiqu&eacute; numbering</li><li>Listed 
+               competitors in main table</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>th</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Main table's column headers</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+      <tr>
+         <td class="screenquote" nowrap>
+            <ul>
+               <li>tt</li>
+            </ul>
+
+         </td>
+
+         <td>
+            <ul>
+               <li>Labels for properties and advertisement</li>
+            </ul>
+
+         </td>
+
+      </tr>
+
+   </table>
+
+   <p>&nbsp;
+   </p>
+
+   <p>
+      Furthermore, tags as <span class="screenquote">body</span>, <span class="screenquote">table</span> 
+      and others are used as appropriate in an HTML document.</p>
+
+   <p>
+      To implement your own style options for these tags you have to include lines 
+      like this:</p>
+
+   <blockquote> 
+   <p class="code">
+      [tag] { [style information] )</p>
+
+   </blockquote>
+   <p>
+      For instance:</p>
+
+   <blockquote> 
+   <p class="code">
+      h1 { font-family: Georgia, &quot;Times New Roman&quot;, Times, serif; font-size: 
+      150%; color: #FF0000; font-style: normal; font-weight: bold; margin-top: 
+      10px; margin-bottom: 30px }</p>
+
+   </blockquote>
+   <h4>
+      Formatting Through Style Classes
+   </h4>
+
+   <p>
+      To further diversify the layout of the paragraph tags described before, 
+      it is possible to make use of the following style classes.</p>
+
+   <p>&nbsp;
+   </p>
+
+      <table border="0">
+         <tr>
+            <th nowrap> 
+            <p>
+               Class</p>
+
+            </th><th> 
+            <p>
+               Used for</p>
+
+            </th>
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>commnr</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>Communiqu&eacute; numbering</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>communique</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>Communiqu&eacute; body text</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>docreg</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>Document recognition string</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>docregid</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>(Half) stage identifier in document recognition string</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>lastcalc</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>&quot;Last calculated&quot; statement at bottom</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>prop</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>Properties at top</li><li>Advertisement at bottom</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>section</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>Section headers in main table with listed competitors, for 
+                  instance to indicate sprints </li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+         <TR>
+            <TD CLASS="screenquote" nowrap>
+               <UL>
+                  <LI>signature</LI>
+               </UL>
+
+            </TD>
+
+            <TD>
+               <UL>
+                  <LI>Signature at bottom</LI>
+               </UL>
+
+            </TD>
+
+         </TR>
+
+         <tr>
+            <td class="screenquote" nowrap>
+               <ul>
+                  <li>tdblack</li>
+               </ul>
+
+            </td>
+
+            <td>
+               <ul>
+                  <li>Black background for signed out competitors on sign out 
+                  lists</li>
+               </ul>
+
+            </td>
+
+         </tr>
+
+      </table>
+
+   <p>&nbsp;
+   </p>
+
+   <p>
+      To implement your own style options for these classes you have to include 
+      lines like this:</p>
+
+   <blockquote> 
+   <p class="code">
+         .[class] { [style information] )</p>
+
+   </blockquote>
+   <p>
+      For instance:</p>
+
+   <blockquote> 
+   <p class="code">
+      .signature { font-family: Georgia, &quot;Times New Roman&quot;, Times, serif; 
+      font-size: 90%; color: #FF0000 }</p>
+
+   </blockquote>
+   <p>
+         Style classes are not used by StageRace but merely available for you 
+         to diversify the layout of your publications. The only exception to this 
+         is the style class <SPAN CLASS="code">tdblack</SPAN> that is used to 
+         override the <SPAN CLASS="code">td</SPAN> paragraph type tag definition 
+         to get a black background for signed out competitors on sign out lists.</p>
+
+   <p>
+      To decrease file sizes, no class is available for the numerous listed competitors 
+      in the main table.</p>
+
+</HTML></BODY>

@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="help">
+	<param name="ImageList" value="file://%SystemRoot%\icons_stagerace.bmp">
+	<param name="Image Width" value="16">
+	<param name="Color Mask" value="0xff00ff">
+	<param name="Window Styles" value="0x800025">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Help Start">
+		<param name="Local" value="index.html">
+		<param name="ImageNumber" value="10">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="topics\Introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="How this Help is Set-up">
+		<param name="Local" value="topics\Help setup.html">
+		<param name="ImageNumber" value="3">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Typographic Conventions">
+			<param name="Local" value="topics\Conventions.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Installation">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="System Requirements">
+			<param name="Local" value="topics\System requirements.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Program Installation">
+			<param name="Local" value="topics\Program installation.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Database Engine">
+				<param name="Local" value="topics\Database engine.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Registry Entries">
+			<param name="Local" value="topics\Registry entries.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Working with StageRace">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Division of Tasks">
+			<param name="Local" value="topics\Division of tasks.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Files">
+			<param name="Local" value="topics\Files.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Stage Race Organisation">
+			<param name="Local" value="topics\Stage race organisation.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Full Stages">
+				<param name="Local" value="topics\Full stages.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Half Stages">
+				<param name="Local" value="topics\Half stages.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Time Trials">
+					<param name="Local" value="topics\Time trials.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Bonuses">
+					<param name="Local" value="topics\Bonuses.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Sprint Classifications">
+					<param name="Local" value="topics\Sprint classifications.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Points Classifications">
+					<param name="Local" value="topics\Points classifications.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Climbing Classifications">
+					<param name="Local" value="topics\Climbing classifications.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Settings">
+				<param name="Local" value="topics\Settings.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="General Settings">
+					<param name="Local" value="topics\Settings general.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Ranking Settings">
+					<param name="Local" value="topics\Settings ranking.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Publication Settings">
+					<param name="Local" value="topics\Settings publication.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="HTML Settings">
+					<param name="Local" value="topics\Settings HTML.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Upload Settings">
+					<param name="Local" value="topics\Settings upload.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Access Settings">
+					<param name="Local" value="topics\Settings access.html">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Race Administration">
+			<param name="Local" value="topics\Race administration.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Competitors and Teams">
+				<param name="Local" value="topics\Competitors and teams.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Arrivals">
+				<param name="Local" value="topics\Arrivals.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Corrections">
+					<param name="Local" value="topics\Corrections.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Sign Outs">
+					<param name="Local" value="topics\Sign outs.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Communiqu&eacute;s">
+				<param name="Local" value="topics\Communiqués.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Publications">
+		<param name="Local" value="topics\Publications.html">
+		<param name="ImageNumber" value="3">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Publication File Names">
+			<param name="Local" value="topics\Publication names.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Publication Header Information">
+			<param name="Local" value="topics\Header information.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Publication Column Types">
+			<param name="Local" value="topics\Column types.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Publication Footer Information">
+			<param name="Local" value="topics\Footer information.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Table of Contents">
+			<param name="Local" value="topics\Table of contents.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Sign In Lists">
+			<param name="Local" value="topics\Sign in lists.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Cross Out Lists">
+			<param name="Local" value="topics\Cross out lists.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="CSS Support">
+			<param name="Local" value="topics\CSS support.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Work Space">
+		<param name="Local" value="topics\Work space.html">
+		<param name="ImageNumber" value="3">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Menus">
+			<param name="Local" value="topics\Menus.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Context-Sensitive Menus">
+			<param name="Local" value="topics\Context-sensitive menus.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Tool Bars">
+			<param name="Local" value="topics\Tool bars.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Status Bar">
+			<param name="Local" value="topics\Status bar.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Accelerator Keys">
+			<param name="Local" value="topics\Accelerator keys.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Event Tree">
+			<param name="Local" value="topics\Event tree.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Work Views">
+			<param name="Local" value="topics\Work views.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Publication View">
+				<param name="Local" value="topics\Publication view.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Page Setup">
+					<param name="Local" value="topics\Page setup.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Info">
+					<param name="Local" value="topics\Info on publication.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Competitors View">
+				<param name="Local" value="topics\Competitors view.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Apply a Mask Dialog">
+					<param name="Local" value="topics\Apply a mask dialog.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Competitor Properties Dialog">
+					<param name="Local" value="topics\Competitor dialog.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Teams View">
+				<param name="Local" value="topics\Teams view.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Team Properties Dialog">
+					<param name="Local" value="topics\Team dialog.html">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Various Dialogs">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Arrival Dialog">
+				<param name="Local" value="topics\Arrival dialog.html">
+				<param name="ImageNumber" value="3">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Arrival Tab Sheet">
+					<param name="Local" value="topics\Arrival tab sheet.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Time Trial Arrival Tab Sheet">
+					<param name="Local" value="topics\Time trial arrival tab sheet.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Corrections Tab Sheet">
+					<param name="Local" value="topics\Corrections tab sheet.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Time Trial Starting Order Dialog">
+				<param name="Local" value="topics\Time trial starting order dialog.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sign Outs Dialog">
+				<param name="Local" value="topics\Sign outs dialog.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Communiqu&eacute; Dialog">
+				<param name="Local" value="topics\Communiqué dialog.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Techniques">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Prologue">
+			<param name="Local" value="topics\Prologue.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Team Time Trials">
+			<param name="Local" value="topics\Team time trials.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Event Items Selection">
+			<param name="Local" value="topics\Event items selection.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Upload">
+			<param name="Local" value="topics\Upload.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Languages">
+			<param name="Local" value="topics\Languages.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Program Language">
+				<param name="Local" value="topics\Program language.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MultiLanguage">
+				<param name="Local" value="topics\MultiLanguage.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MultiLanguage Strings">
+				<param name="Local" value="topics\MultiLanguage strings.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Clipboard">
+			<param name="Local" value="topics\Clipboard.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Communiqu&eacute; Numbering">
+			<param name="Local" value="topics\Communiqué numbering.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Masking">
+			<param name="Local" value="topics\Masking.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Generate">
+			<param name="Local" value="topics\Generate.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="External Editor">
+			<param name="Local" value="topics\External editor.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Multiple Windows">
+			<param name="Local" value="topics\MDI.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Options">
+			<param name="Local" value="topics\Options.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Import Competitors">
+			<param name="Local" value="topics\Import.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Control Import Classification Dialog">
+				<param name="Local" value="topics\Control import classification dialog.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Confirm Classification File Import Dialog">
+				<param name="Local" value="topics\Confirm classification file import dialog.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Omega Scan'O'Vision">
+				<param name="Local" value="topics\Import ScanOVision file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lynx FinishLynx">
+				<param name="Local" value="topics\Import FinishLynx file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Alge OPTIc">
+				<param name="Local" value="topics\Import OPTIc file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AMB ChronX">
+				<param name="Local" value="topics\Import ChronX file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Skunkware TT*Ware">
+				<param name="Local" value="topics\Import TTWare file format.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Export Competitors">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Omega Scan'O'Vision">
+				<param name="Local" value="topics\Export ScanOVision file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lynx FinishLynx">
+				<param name="Local" value="topics\Export FinishLynx file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Alge OPTIc">
+				<param name="Local" value="topics\Export OPTIc file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AMB ChronX">
+				<param name="Local" value="topics\Export ChronX file format.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Skunkware TT*Ware">
+				<param name="Local" value="topics\Export TTWare file format.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="StageRace Messaging Protocol">
+			<param name="Local" value="topics\Messaging protocol.html">
+			<param name="ImageNumber" value="3">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Select Active Event Window">
+				<param name="Local" value="topics\Select active event window.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Messaging Techniques">
+				<param name="Local" value="topics\Messaging techniques.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Message Definitions">
+				<param name="Local" value="topics\Message definitions.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Rules">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Classification Types">
+			<param name="Local" value="topics\Classification types.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Classification Rules (Sorting Process)">
+			<param name="Local" value="topics\Classification rules.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Rules General Classifications">
+			<param name="Local" value="topics\Rules general classifications.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Rules Points Classifications">
+			<param name="Local" value="topics\Rules points classifications.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Rules Sprint Classifications">
+			<param name="Local" value="topics\Rules sprint classifications.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Rules Climbing Classifications">
+			<param name="Local" value="topics\Rules climbing classifications.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Rules Teams Classifications">
+			<param name="Local" value="topics\Rules teams classifications.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="UCI Compliance">
+			<param name="Local" value="topics\UCI compliance.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Registration">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Evaluation Mode">
+			<param name="Local" value="topics\Evaluation mode.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Hardware Key">
+			<param name="Local" value="topics\Hardware key.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="License Agreement">
+			<param name="Local" value="License.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Addresses">
+			<param name="Local" value="topics\Totaal Software.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Support">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Support Process">
+			<param name="Local" value="topics\Support process.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Help">
+			<param name="Local" value="topics\Help.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Error Messages">
+			<param name="Local" value="topics\Error messages.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Version history">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Updates V2005">
+			<param name="Local" value="Updates.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Updates V2003">
+			<param name="Local" value="Updates 2003.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Updates V2000">
+			<param name="Local" value="Updates 2000.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tools">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Time Calculator">
+			<param name="Local" value="topics\Time calculator.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Speed Calculator">
+			<param name="Local" value="topics\Speed calculator.html">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

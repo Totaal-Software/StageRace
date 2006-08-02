@@ -1,0 +1,26 @@
+// Publication.cpp: implementation of the CPublication class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "incl.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CPublication::CPublication()
+{
+
+}
+
+CPublication::~CPublication()
+{
+
+}

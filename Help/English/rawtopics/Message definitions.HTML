@@ -1,0 +1,377 @@
+<LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+
+   <H1>
+      Message Definitions 
+   </H1>
+
+   <P>
+      The following messages are known and used by StageRace for communicating 
+      with external software through the 
+      <A HREF="Messaging%20protocol.html">
+         StageRace Messaging protocol</A>.</P>
+
+   <P>
+      Note that numerous parameters are divided in two 16-bits parts.</P>
+
+   <P>
+      We recommend that values indicated as 'not used' are set to <em>NULL</em>.</P>
+
+   <H2>
+      Client to StageRace 
+   </H2>
+
+   <H3>
+      To Arrival Dialog 
+   </H3>
+
+   <P>
+      1. WM_STAGERACE_AR_SETCOMP</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: rank [unsigned short int]</LI><LI> 
+      First parameter (W): lower bytes: start no. [unsigned short int]</LI><LI> 
+      Second parameter (L): time [ms] [unsigned int]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the arrival dialog to submit the competitor 
+      in the arrival list</P>
+
+   <P>
+      <EM>Note 1:</EM> For time trials: the time is the gross time<BR><EM>Note 
+      2:</EM> For time trials: the rank is ignored<BR><EM>Note 3:</EM> Illegal 
+      competitors are ignored without further notice</P>
+
+   <P>
+      <EM>Return message:</EM> none</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+      2. WM_STAGERACE_AR_DECLASSCOMP</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: not used</LI><LI> First parameter 
+      (W): lower bytes: StaNo [unsigned short int]</LI><LI> Second parameter (L): 
+      not used</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the arrival dialog to declass the competitor</P>
+
+   <P>
+      <EM>Note:</EM> Illegal competitors are ignored without further notice</P>
+
+   <P>
+      <EM>Return message:</EM> none</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+   </P>
+
+   <P>
+      3. WM_STAGERACE_AR_GETCOMPFROMSTANO</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: not used</LI><LI> First parameter 
+      (W): lower bytes: start no. [unsigned short int]</LI><LI> Second parameter 
+      (L): requesting window [HWND]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the arrival dialog to send this competitor's 
+      rank and race time</P>
+
+   <P>
+      <EM>Return message:</EM> WM_STAGERACE_AR_INFOCOMP</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+      4. WM_STAGERACE_AR_GETCOMPFROMTIME</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): time [ms] [unsigned int]</LI><LI> Second parameter 
+      (L): requesting window [HWND]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the arrival dialog to send rank and race 
+      time of the first competitor with a better time than provided</P>
+
+   <P>
+      <EM>Note:</EM> For time trials: the time is the net time</P>
+
+   <P>
+      <EM>Return message:</EM> WM_STAGERACE_AR_INFOCOMP</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+      5. WM_STAGERACE_AR_GETCOMPFROMRANK</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: rank [unsigned short int]</LI><LI> 
+      First parameter (W): lower bytes: not used</LI><LI> Second parameter (L): 
+      requesting window [HWND]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the arrival dialog to send start no. and 
+      race time of the competitor with the rank as provided</P>
+
+   <P>
+      <EM>Return message:</EM> WM_STAGERACE_AR_INFOCOMP</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+      6. WM_STAGERACE_TT_GETSTARTTIME</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: not used</LI><LI> First parameter 
+      (W): lower bytes: start no. [unsigned short int]</LI><LI> Second parameter 
+      (L): requesting window [HWND]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the time trial arrival dialog to send the 
+      start time of a competitor</P>
+
+   <P>
+      <EM>Return message:</EM> WM_STAGERACE_TT_INFOCOMP</P>
+
+   </BLOCKQUOTE>
+   <H3>
+      To StageRace View 
+   </H3>
+
+   <P>
+      WM_STAGERACE_GETCOMPFROMSTANO</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: not used</LI><LI> First parameter 
+      (W): lower bytes: start no. [unsigned short int]</LI><LI> Second parameter 
+      (L): requesting window [HWND]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the document to send this competitor's 
+      name, team and team code</P>
+
+   <P>
+      <EM>Return message:</EM> WM_STAGERACE_COMP</P>
+
+   </BLOCKQUOTE>
+   <P>
+   </P>
+
+   <H2>
+      StageRace to client 
+   </H2>
+
+   <H3>
+      From Arrival Dialog 
+   </H3>
+
+   <P>
+      1. WM_STAGERACE_AR_INFOCOMP</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <P>
+      (sent to the requesting window)</P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: rank [unsigned short int]</LI><LI> 
+      First parameter (W): lower bytes: start no. [unsigned short int]</LI><LI> 
+      Second parameter (L): time [ms] [unsigned int]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Sends the arrival information of a particular competitor 
+      in the arrival list</P>
+
+   <P>
+      <EM>Note 1:</EM> In case the requested competitor/rank/time is not available, 
+      start no. will be set to -1 while other fields do not necessarily consist 
+      of any valid information</P>
+
+   <P>
+      <EM>Note 2:</EM> For time trials: the time is the net time</P>
+
+   <P>
+      <EM>Return message:</EM> none</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+      2. WM_STAGERACE_TT_INFOCOMP</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <P>
+      (sent to the requesting window)</P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: not used, NULL</LI><LI> First parameter 
+      (W): lower bytes: start no. [unsigned short int]</LI><LI> Second parameter 
+      (L): time [ms] [unsigned int]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Sends the starting time of a particular competitor 
+      in the available/arrival list</P>
+
+   <P>
+      <EM>Note:</EM> In case the requested competitor/rank/time is not available, 
+      start no. will be set to -1 while other fields do not necessarily consist 
+      of any valid information</P>
+
+   <P>
+      <EM>Return message:</EM> none</P>
+
+   </BLOCKQUOTE>
+   <H3>
+      From StageRace View 
+   </H3>
+
+   <P>
+      WM_STAGERACE_COMP</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: name [atom identifier]</LI><LI> First 
+      parameter (W): lower bytes: start no. [unsigned short int]</LI><LI> Second 
+      parameter (L): upper bytes: team [atom identifier]</LI><LI> Second parameter 
+      (L): lower bytes: team code [atom identifier]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Sends the global information of a particular competitor 
+      in the document</P>
+
+   <P>
+      <EM>Note 1:</EM> Text strings are provided as atoms. Receiving window is 
+      responsible for cleaning up atoms<BR><EM>Note 2:</EM> In case the requested 
+      competitor is not available, start no. will be set to -1 while no atoms 
+      being created thus the other fields not necessarily con-sisting of any valid 
+      information<BR><EM>Note 3:</EM> Refer to Message extensions (atoms) for 
+      information on the atoms that are used for this message</P>
+
+   <P>
+      <EM>Return message:</EM> none</P>
+
+   </BLOCKQUOTE>
+   <H2>
+      Non-StageRace 
+   </H2>
+
+   <P>
+      For communication between the Time Trial Controller and the Score Board 
+      Controller from Totaal Software, the following two additional messages are 
+      in order.</P>
+
+   <P>
+      These messages do <em>not</em> apply to StageRace.</P>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      1. WM_TTC_GETTIME</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): not used, NULL</LI><LI> Second parameter (L): 
+      requesting window [HWND]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Request to the Time Trial Controller to send the current 
+      time in the race</P>
+
+   <P>
+      <EM>Return message:</EM> WM_TTC_TIME</P>
+
+   </BLOCKQUOTE>
+   <P>&nbsp;
+   </P>
+
+   <P>
+      2. WM_TTC_TIME</P>
+
+   <BLOCKQUOTE> 
+   <P>
+      <EM>Parameters:</EM></P>
+
+   <UL>
+      <LI> First parameter (W): upper bytes: not used, NULL</LI><LI> First parameter 
+      (W): lower bytes: start no. [unsigned short int]</LI><LI> Second parameter 
+      (L): time [ms] [unsigned int]</LI>
+   </UL>
+
+   <P>
+      <EM>Description:</EM> Sends the arrival time and possible start no. of an 
+      arrived competitor from the Time Trial Controller to the Score Board Controller</P>
+
+   <P>
+      <EM>Note:</EM> Start no. may be zero in which case the message contains 
+      the current time</P>
+
+   <P>
+      <EM>Return message:</EM> none</P>
+
+   </BLOCKQUOTE>
+

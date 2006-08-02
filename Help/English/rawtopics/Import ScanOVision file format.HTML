@@ -1,0 +1,184 @@
+<LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+
+   <H1>
+         Import Competitors from Scan'O'Vision File Format 
+      </H1>
+
+   <P>
+      Competitors from Scan'O'Vision can be imported in StageRace so they can 
+      be used as an 
+      <A HREF="Arrival%20tab%20sheet.html">
+         arrival</A>. </P>
+
+   <P>
+      Note that you can also 
+      <A HREF="Export%20ScanOVision%20file%20format.html">
+         export files for Scan'O'Vision<SUP></SUP></A>.</P>
+
+   <H2>
+      Introduction 
+   </H2>
+
+   <P>
+   </P>
+
+   <P>
+      Omega<SUP>&reg;</SUP> Electronics is part of the world famous watch manufacturer 
+      and is among other things specialized in the development of top-end equipment 
+      for sports timing.</P>
+
+   <P>
+      One of Omega<SUP>&reg;</SUP> Electronics' products is the Scan'O'Vision 
+      finish camera.</P>
+
+   <P>
+      The StageRace program has been made capable to import files from Scan'O'Vision.</P>
+
+   <H2>
+      Data Handling 
+   </H2>
+
+   <H3>
+      Importing 
+   </H3>
+
+   <P>
+      Under the name <SPAN CLASS="screenquote">Data Handling</SPAN>, the Scan'O'Vision 
+      software works with a number of text files, which consist of competitors 
+      information and classifications. Data Handling files can typically be found 
+      in the <SPAN CLASS="screenquote">\osvcolor\dh</SPAN> folder.</P>
+
+   <P>
+      To configure the <SPAN CLASS="screenquote">Data Handling</SPAN> in Scan'O'Vision, 
+      please refer to the appropriate documentation. </P>
+
+   <P>
+      To import start numbers and timing results, the file <SPAN CLASS="screenquote">LstRslt.txt</SPAN> 
+      is of interest. The file is composed as follows.</P>
+
+   <P>
+   </P>
+
+   <P>
+      <B></B>The file's first line has a description of the fields. All following 
+      lines correspond to the results of one single competitor at one particular 
+      measurement point.</P>
+
+   <P>
+      Ergo, the file can consist of classifications of multiple measurement points 
+      ("events"). Thus one <EM>event</EM> will have to be chosen before importing.</P>
+
+   <P>
+      Next, every line consists of:</P>
+
+   <UL>
+      <LI> Event number</LI><LI> Round, heat and lap</LI><LI> Competitor's number</LI><LI> 
+      Lane and status</LI><LI> Time in units</LI><LI> Formatted time in <SPAN CLASS="screenquote">hh:mm.ss.tttt</SPAN> 
+      of which accuracy and rounding depend on Scan'O'Vision settings</LI>
+   </UL>
+
+   <P>
+      The only fields of interest for StageRace are event number, round, heat, 
+      competitor's number and time in units. The event number, round and heat 
+      are used in the 
+      <A HREF="Control%20import%20classification%20dialog.html">
+         <SPAN CLASS="screenquote">Control import classification</SPAN> dialog</A> 
+      to determine which competitors to include during import.</P>
+
+   <P>
+      Time in units means that the time is expressed in a multiple of 1/1000ths 
+      of a second. This time format is difficult to read, but is used often as 
+      an inter-system communication format.</P>
+
+   <P>
+      Within StageRace, the 
+      <A HREF="Arrival%20tab%20sheet.html">
+         <SPAN CLASS="screenquote">Arrival</SPAN> tab</A> provides file import. 
+      In the <SPAN CLASS="screenquote">Import classification</SPAN> file dialog 
+      the text file that contains the classification data can be picked. Additionally, 
+      the file type in this dialog should be set to <SPAN CLASS="screenquote">Omega 
+      Scan'O'Vision data handling</SPAN> so that StageRace can retrieve the appropriate 
+      settings for the advanced 
+      <A HREF="Control%20import%20classification%20dialog.html">
+         <SPAN CLASS="screenquote">Control import classification</SPAN> dialog</A>. 
+   </P>
+
+   <P>
+   </P>
+
+   <P>
+      To configure the Data Handling in Scan'O'Vision, please refer to the appropriate 
+      documentation.</P>
+
+   <H3>
+      Example 
+   </H3>
+
+      <P>
+         A typical file looks like this:</P>
+
+      <PRE CLASS="code">"Event";"Round";"Heat";"Lap";"Bib";"Lane";"idStatus";"Time";"Result"
+1; 1; 1;9999;" 15"; 0; 1; 60451;" 7.046 "
+1; 1; 1;9999;" 45"; 0; 1; 50453;" 5.046 "
+1; 1; 1;9999;" 12"; 0; 1; 80458;" 7.046 "
+1; 1; 1;9999;" 21"; 0; 1; 70461;" 8.046 "
+2; 1; 1;9999;" 45"; 0; 1; 339882;" 33.989 "
+2; 1; 1;9999;" 21"; 0; 1; 340231;" 34.024 "
+2; 1; 1;9999;" 15"; 0; 1; 340242;" 34.025 "</PRE> 
+      <H2>
+      .cl Files 
+   </H2>
+
+   <H3>
+      Importing 
+   </H3>
+
+   <P>
+      Besides the Data Handling functionality, also classification files (<SPAN CLASS="screenquote">.cl</SPAN>) 
+      from Scan'O'Vision can be used for the transfer of results to StageRace. 
+      The important disadvantage of these files is the layout being dependent 
+      on view settings inside Scan'O'Vision. Therefore, the layout of these files 
+      is very varying and so they have to be imported through the 
+      <A HREF="Control%20import%20classification%20dialog.html">
+         <SPAN CLASS="screenquote">Control import classification</SPAN> dialog</A>.</P>
+
+   <P>
+      Within StageRace, the 
+      <A HREF="Arrival%20tab%20sheet.html">
+         <SPAN CLASS="screenquote">Arrival</SPAN> tab</A> provides file import. 
+      In the <SPAN CLASS="screenquote">Import classification</SPAN> file dialog 
+      the text file that contains the classification data can be picked. Additionally, 
+      the file type in this dialog should be set to <SPAN CLASS="screenquote">Omega 
+      Scan'O'Vision formatted results</SPAN> so that StageRace can retrieve the 
+      appropriate settings for the advanced 
+      <A HREF="Control%20import%20classification%20dialog.html">
+         <SPAN CLASS="screenquote">Control import classification</SPAN> dialog</A>.</P>
+
+   <P>
+      For Scan'O'Vision<SUP></SUP> operation, please refer to the appropriate 
+      documentation.</P>
+
+   <H3>
+      Example 
+   </H3>
+
+   <P>
+      A file could look like this:</P>
+
+   <PRE CLASS="code">Z:\N0011.CL       29. 9.2001  17:44:05
+
+OMEGA Scan'O'Vision Color Results
+
+
+Rank Bib Nu First name        Family name       Time      Delta_time 1
+----------------------------------------------------------------------- 
+  1.    101                                     3:15.3889
+  2.    105                                     3:15.4555       0.0666
+  3.    103                                     3:15.6121       0.2232
+  4.      1                                     3:31.1053      15.7164
+  5.     18                                     3:35.6689      20.2800
+  6.     27                                     3:38.2669      22.8780
+  7.    102                                     3:42.4549      27.0660 
+  8.      3                                     3:43.2319      27.8430
+  9.    117                                     3:54.4459      39.0570
+ 10.     10                                     4:02.1391      46.7502</PRE>

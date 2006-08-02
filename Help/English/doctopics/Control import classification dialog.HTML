@@ -1,0 +1,181 @@
+<HTML><BODY> 
+
+   <H3>
+      Control Import Classification Dialog 
+   </H3>
+
+   <P>
+      The <SPAN CLASS="screenquote">Control import classification</SPAN> dialog 
+      appears just before 
+      
+         import data are actually processed.</P>
+
+   <P>
+         It appears only when in the <SPAN CLASS="screenquote">Import classification</SPAN> 
+         file dialog a file type is chosen for which it is not possible to determine 
+         unambiguously how to treat the source files.</P>
+
+   <P>&nbsp;
+   </P>
+
+   <P>
+      <IMG src="../screenshots/screen88.gif" width="1007" height="638" ALT="Control import classification dialog"><P CLASS="caption">Control import classification dialog</P></P>
+
+   <P>&nbsp;
+   </P>
+
+   <H4>
+      Main file type 
+   </H4>
+
+   <P>
+      Choose the file type between: 
+
+   <UL>
+      <LI> Omega Scan'O'Vision Data Handling; or</LI><LI>Text file import (thus 
+      all other types).</LI>
+   </UL>
+
+   <H4>
+      Scan'O'Vision Data Handling 
+   </H4>
+
+   <P>
+         The Scan'O'Vision Data Handling file type makes specific use of events, 
+         rounds and heats. Set <SPAN CLASS="screenquote">Event, round, heat</SPAN> 
+         to match the choices made in the Scan'O'Vision program.</P>
+
+   <P>
+      When you use 
+      
+         Data Handling files exported by StageRace the <EM>event</EM> will 
+      match the stage no. and <EM>round</EM> will match the half stage no.</P>
+
+   <H4>
+      Text File Import 
+   </H4>
+
+   <P>
+      Text file import can be used for many different file types, and therefore 
+      needs some settings:</P>
+
+   <H5>
+      Column Borders 
+   </H5>
+
+   <P>
+      StageRace needs to know where it can find the three required columns <EM>rank</EM>, 
+      <EM>start no.</EM> and <EM>time</EM>. This can be done in two ways, depending 
+      on the type of file: </P>
+
+   <UL>
+         <LI CLASS="li_extensive"><SPAN CLASS="screenquote">Fixed length</SPAN> 
+         (as in the illustrated example)<BR> The columns exist on the same horizontal 
+         positions on every line. You need to set the column positions by entering 
+         the start and end positions for all three required columns. If a column 
+         contains information of different widths, the remaining space is filled 
+         up by blanks, so that the next field starts on the correct horizontal 
+         position again.</LI><LI CLASS="li_extensive"><SPAN CLASS="screenquote">Delimited 
+         by separator</SPAN><BR> The columns (or fields) on each line in the file 
+         are separated by a unique separator token. You can select the separator 
+         token from the following: <SPAN CLASS="screenquote">tab</SPAN>, comma, 
+         semi-colon, &quot;|&quot;, &quot;%&quot; and &quot;/&quot;. You also 
+         need to set the index of the separator after which the columns are expected. 
+         For instance: if the start no. in your import file appears after the 
+         fourth separator, you set the <SPAN CLASS="screenquote">Start no. column 
+         position</SPAN> to 4.</LI>
+   </UL>
+
+   <p>
+      Note that from the character strings that you import only the numerals are 
+      used. Other characters are simply ignored. This way, for instance, it is 
+      allowed for values to be enclosed by quotation marks. But also all other 
+      non-numerals are ignored.</p>
+
+   <H5>
+      Various Settings 
+   </H5>
+
+   <UL>
+      <LI CLASS="li_extensive"><SPAN CLASS="screenquote">Header size</SPAN><BR> 
+      The number of lines that is entered here, will be ignored at the top of 
+      the source file, as a header. (See the illustration.) This header is previewed 
+      in the <SPAN CLASS="screenquote">Header</SPAN> field. The remaining part 
+      of the source file &#151; which will actually be processed &#151; is visible 
+      in the <SPAN CLASS="screenquote">Data preview</SPAN> field.</LI><LI CLASS="li_extensive"><SPAN CLASS="screenquote">Decimals</SPAN><BR> 
+      The accuracy (in number of decimals) in which the rider's time is provided 
+      in the file. Note that this depends on the column borders that are set (described 
+      before).</LI><LI CLASS="li_extensive"><SPAN CLASS="screenquote">Recalculate 
+      rankings</SPAN><BR> If not checked, the rankings will be taken from the 
+      source file. If checked, the rankings will be recalculated, looking at the 
+      rankings and times from the source file. With this function, gaps in the 
+      rankings from the source file can be removed automatically.</LI><LI CLASS="li_extensive"><SPAN CLASS="screenquote">Times' 
+      notation</SPAN><BR> Choose whether times in the file are provided as a formatted 
+      string of the h/mm/ss form (as in the illustrated example) or as a multiple 
+      of seconds.</LI>
+   </UL>
+
+   <H5>
+      Example 
+   </H5>
+
+   <P>
+      The example shows a file that can be imported. The <SPAN CLASS="screenquote">Header 
+      size</SPAN> has to be set to 8, <SPAN CLASS="screenquote">Rank column position</SPAN> 
+      from 0 to 3, <SPAN CLASS="screenquote">Start no. column position</SPAN> 
+      from 7 to 11, <SPAN CLASS="screenquote">Time column position</SPAN> form 
+      73 to 83, <SPAN CLASS="screenquote">Decimals</SPAN> to 4 and <SPAN CLASS="screenquote">Times' 
+      notation</SPAN> to <SPAN CLASS="screenquote">Divided into h/min/s</SPAN>. 
+      Don't forget that you first need to have chose <SPAN CLASS="screenquote">Text 
+      file import</SPAN>.</P>
+
+   <P>&nbsp;
+   </P>
+
+   <IMG SRC="../images/Text%20file%20import.gif" WIDTH="529" HEIGHT="265" ALT="Text file import"><P CLASS="caption">Text file import</P> 
+   <TABLE WIDTH="452" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+      <TR>
+         <TD WIDTH="28">
+            <P ALIGN="CENTER">
+               1.</P>
+
+         </TD>
+
+         <TD WIDTH="57">
+            <P ALIGN="CENTER">
+               2.</P>
+
+         </TD>
+
+         <TD WIDTH="309">
+            <CENTER></CENTER>
+         </TD>
+
+         <TD WIDTH="58">
+            <P ALIGN="CENTER">
+               3.</P>
+
+         </TD>
+
+      </TR>
+
+   </TABLE>
+
+   <P>&nbsp;
+   </P>
+
+   <H4>
+      Defaults 
+   </H4>
+
+   <P>
+         In order to quickly retrieve default presets for known file types, buttons 
+         are available in the upper right corner of the dialog. Note that, since 
+         most of these are not-unambiguous file types, you still might need to 
+         do some tweaking.</P>
+
+   <P>
+      As much as appropriate, the <SPAN CLASS="screenquote">Control import classification</SPAN> 
+      dialog will remember the settings you make, for future use.</P>
+
+</HTML></BODY>
