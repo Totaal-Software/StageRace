@@ -30,7 +30,7 @@ CBottomLinks::CBottomLinks(CDaoDatabase* pdb)
 
 CString CBottomLinks::GetDefaultDBName()
 {
-	return _T("D:\\Projects\\StageRace 2005\\Help\\English\\helptool\\helpenglish.mdb");
+	return _T("D:\\Projects\\StageRace\\trunk\\Help\\English\\helptool\\helpenglish.mdb");
 }
 
 CString CBottomLinks::GetDefaultSQL()
