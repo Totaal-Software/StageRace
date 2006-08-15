@@ -46,18 +46,18 @@ BEGIN_MESSAGE_MAP(CListArrival, CAllListArrivalPages)
 	//{{AFX_MSG_MAP(CListArrival)
 	ON_BN_CLICKED(IDC_SUBMIT, OnSubmit)
 	ON_BN_CLICKED(IDC_ARRIVAL_FUNCTIONS, OnArrivalFunctions)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_CHECK, OnArrivalFunctionsCheck)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_GROUPT_1, OnArrivalFunctionsGroupt1)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_GROUPT_2, OnArrivalFunctionsGroupt2)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_GROUPT_3, OnArrivalFunctionsGroupt3)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_IMPORT, OnArrivalFunctionsImport)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_CHECK, OnArrivalFunctionsCheck)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_GROUPT_1, OnArrivalFunctionsGroupt1)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_GROUPT_2, OnArrivalFunctionsGroupt2)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_GROUPT_3, OnArrivalFunctionsGroupt3)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_IMPORT, OnArrivalFunctionsImport)
 	ON_BN_CLICKED(IDC_DECLASS, OnDeclass)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_REMOVEGAPS, OnArrivalFunctionsRemovegaps)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_REMOVE1XSECONDS, OnArrivalFunctionsRemove1xseconds)
-	ON_COMMAND(ID_EDIT_SELECTALL, OnEditSelectall)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_REMOVEGAPS, OnArrivalFunctionsRemovegaps)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_REMOVE1XSECONDS, OnArrivalFunctionsRemove1xseconds)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_SELECTALL, OnEditSelectall)
 	ON_EN_CHANGE(IDC_ARRIVAL_TIMECUT, OnChangeArrivalTimecut)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_INSERTPOSITION, OnArrivalFunctionsInsertposition)
-	ON_COMMAND(ID_ARRIVAL_FUNCTIONS_INSERTPOSITIONS, OnArrivalFunctionsInsertpositions)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_INSERTPOSITION, OnArrivalFunctionsInsertposition)
+	ON_COMMAND(ID_ARRIVALFUNCTIONS_INSERTPOSITIONS, OnArrivalFunctionsInsertpositions)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -170,7 +170,7 @@ void CListArrival::OnArrivalFunctionsRemovegaps()
 void CListArrival::OnOK() 
 {
 	CString checkResult;
-	if( m_bRankOnly || !m_listArrival.CheckIntegrity( &checkResult ) )
+	if( !m_bRankOnly && !m_listArrival.CheckIntegrity( &checkResult ) )
 	{
 		CReportDlg dlgRep(checkResult);
 		dlgRep.DoModal();

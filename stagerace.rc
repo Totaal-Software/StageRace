@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 1, 1763
- PRODUCTVERSION 2005, 3, 1, 1763
+ FILEVERSION 2005, 3, 1, 1779
+ PRODUCTVERSION 2005, 3, 1, 1779
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 1, 1763\0"
+            VALUE "FileVersion", "2005, 3, 1, 1779\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 1, 1763\0"
+            VALUE "ProductVersion", "2005, 3, 1, 1779\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -2656,28 +2656,28 @@ END
 
 IDR_ARRIVALFUNCTIONS MENU DISCARDABLE 
 BEGIN
-    POPUP "arrival functions"
+    POPUP "2tions"
     BEGIN
-        MENUITEM "&Check integrity...",         ID_ARRIVAL_FUNCTIONS_CHECK
+        MENUITEM "&Check integrity...",         ID_ARRIVALFUNCTIONS_CHECK
         POPUP "&Group time"
         BEGIN
-            MENUITEM "&1 second",                   ID_ARRIVAL_FUNCTIONS_GROUPT_1
+            MENUITEM "&1 second",                   ID_ARRIVALFUNCTIONS_GROUPT_1
 
-            MENUITEM "&2 seconds",                  ID_ARRIVAL_FUNCTIONS_GROUPT_2
+            MENUITEM "&2 seconds",                  ID_ARRIVALFUNCTIONS_GROUPT_2
 
-            MENUITEM "&3 seconds",                  ID_ARRIVAL_FUNCTIONS_GROUPT_3
+            MENUITEM "&3 seconds",                  ID_ARRIVALFUNCTIONS_GROUPT_3
 
         END
-        MENUITEM "&Remove gaps",                ID_ARRIVAL_FUNCTIONS_REMOVEGAPS
+        MENUITEM "&Remove gaps",                ID_ARRIVALFUNCTIONS_REMOVEGAPS
 
-        MENUITEM "Remove 1/x &seconds",         ID_ARRIVAL_FUNCTIONS_REMOVE1XSECONDS
+        MENUITEM "Remove 1/x &seconds",         ID_ARRIVALFUNCTIONS_REMOVE1XSECONDS
 
-        MENUITEM "&Import...",                  ID_ARRIVAL_FUNCTIONS_IMPORT
-        MENUITEM "Insert &position",            ID_ARRIVAL_FUNCTIONS_INSERTPOSITION
+        MENUITEM "&Import...",                  ID_ARRIVALFUNCTIONS_IMPORT
+        MENUITEM "Insert &position",            ID_ARRIVALFUNCTIONS_INSERTPOSITION
 
-        MENUITEM "Insert positions&...",        ID_ARRIVAL_FUNCTIONS_INSERTPOSITIONS
+        MENUITEM "Insert positions&...",        ID_ARRIVALFUNCTIONS_INSERTPOSITIONS
 
-        MENUITEM "Select &all",                 ID_EDIT_SELECTALL
+        MENUITEM "Select &all",                 ID_ARRIVALFUNCTIONS_SELECTALL
     END
 END
 
@@ -6750,22 +6750,25 @@ BEGIN
     POPUP "arrival functions"
     BEGIN
         MENUITEM "&Vérification de l'intégrité...", 
-                                                ID_ARRIVAL_FUNCTIONS_CHECK
+                                                ID_ARRIVALFUNCTIONS_CHECK
         POPUP "&Temps du peleton"
         BEGIN
-            MENUITEM "&1 seconde",                  ID_ARRIVAL_FUNCTIONS_GROUPT_1
+            MENUITEM "&1 seconde",                  ID_ARRIVALFUNCTIONS_GROUPT_1
 
-            MENUITEM "&2 secondes",                 ID_ARRIVAL_FUNCTIONS_GROUPT_2
+            MENUITEM "&2 secondes",                 ID_ARRIVALFUNCTIONS_GROUPT_2
 
-            MENUITEM "&3 secondes",                 ID_ARRIVAL_FUNCTIONS_GROUPT_3
+            MENUITEM "&3 secondes",                 ID_ARRIVALFUNCTIONS_GROUPT_3
 
         END
-        MENUITEM "Supprimer &écarts",           ID_ARRIVAL_FUNCTIONS_REMOVEGAPS
+        MENUITEM "Supprimer &écarts",           ID_ARRIVALFUNCTIONS_REMOVEGAPS
 
-        MENUITEM "Supprimer &1/x de secondes",  ID_ARRIVAL_FUNCTIONS_REMOVE1XSECONDS
+        MENUITEM "Supprimer &1/x de secondes",  ID_ARRIVALFUNCTIONS_REMOVE1XSECONDS
 
-        MENUITEM "&Importer...",                ID_ARRIVAL_FUNCTIONS_IMPORT
-        MENUITEM "Tout &sélectionner",          ID_EDIT_SELECTALL
+        MENUITEM "&Importer...",                ID_ARRIVALFUNCTIONS_IMPORT
+        MENUITEM "Insert &position",            ID_ARRIVALFUNCTIONS_INSERTPOSITION
+
+        MENUITEM "Insert positions&...",        ID_ARRIVALFUNCTIONS_INSERTPOSITIONS
+        MENUITEM "Tout &sélectionner",          ID_ARRIVALFUNCTIONS_SELECTALL
     END
 END
 
@@ -10687,26 +10690,27 @@ IDR_ARRIVALFUNCTIONS MENU DISCARDABLE
 BEGIN
     POPUP "arrival functions"
     BEGIN
-        MENUITEM "Integriteits&controle...",    ID_ARRIVAL_FUNCTIONS_CHECK
+        MENUITEM "Integriteits&controle...",    ID_ARRIVALFUNCTIONS_CHECK
         POPUP "&Groepstijd"
         BEGIN
-            MENUITEM "&1 seconde",                  ID_ARRIVAL_FUNCTIONS_GROUPT_1
+            MENUITEM "&1 seconde",                  ID_ARRIVALFUNCTIONS_GROUPT_1
 
-            MENUITEM "&2 seconden",                 ID_ARRIVAL_FUNCTIONS_GROUPT_2
+            MENUITEM "&2 seconden",                 ID_ARRIVALFUNCTIONS_GROUPT_2
 
-            MENUITEM "&3 seconden",                 ID_ARRIVAL_FUNCTIONS_GROUPT_3
+            MENUITEM "&3 seconden",                 ID_ARRIVALFUNCTIONS_GROUPT_3
 
         END
-        MENUITEM "Gaten &verwijderen",          ID_ARRIVAL_FUNCTIONS_REMOVEGAPS
+        MENUITEM "Gaten &verwijderen",          ID_ARRIVALFUNCTIONS_REMOVEGAPS
 
-        MENUITEM "Verwijder 1/x &seconden",     ID_ARRIVAL_FUNCTIONS_REMOVE1XSECONDS
+        MENUITEM "Verwijder 1/x &seconden",     ID_ARRIVALFUNCTIONS_REMOVE1XSECONDS
 
-        MENUITEM "&Importeren...",              ID_ARRIVAL_FUNCTIONS_IMPORT
-        MENUITEM "&Positie invoegen",           ID_ARRIVAL_FUNCTIONS_INSERTPOSITION
+        MENUITEM "&Importeren...",              ID_ARRIVALFUNCTIONS_IMPORT
+        MENUITEM "&Positie invoegen",           ID_ARRIVALFUNCTIONS_INSERTPOSITION
 
-        MENUITEM "Posities invoegen&...",       ID_ARRIVAL_FUNCTIONS_INSERTPOSITIONS
+        MENUITEM "Posities invoegen&...",       ID_ARRIVALFUNCTIONS_INSERTPOSITIONS
 
-        MENUITEM "&Alles selecteren",           ID_EDIT_SELECTALL
+        MENUITEM "&Alles selecteren",           ID_ARRIVALFUNCTIONS_SELECTALL
+
     END
 END
 
