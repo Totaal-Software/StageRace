@@ -55,7 +55,7 @@ CHaspTotaal::CHaspTotaal()
 	m_VersionInfo.m_Release = cFileVersion.Mid( nComma1,nComma2-nComma1 );
 	m_VersionInfo.m_Release.TrimLeft();
 	m_VersionInfo.m_Release = TEXT("00") + m_VersionInfo.m_Release;
-	m_VersionInfo.m_Release = m_VersionInfo.m_Release.Right( 2 ) + /*" final update";// +*/ " BÈTA";
+	m_VersionInfo.m_Release = m_VersionInfo.m_Release.Right( 2 ) + " final";// update";// +*/ " BÈTA";
 
 	#ifdef _DEBUG
 		m_VersionInfo.m_Release	+= " DEBUG";
