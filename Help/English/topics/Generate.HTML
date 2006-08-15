@@ -31,17 +31,28 @@
       Generate 
    </H1>
 
-   <P>
-      While <SPAN CLASS="help_menu">Automatically</SPAN> in the <SPAN CLASS="help_menu">Generate</SPAN> 
-      menu is checked (switched on), StageRace automatically generates all publications 
-      for you, whenever you enter any data during the event. (Note that changes 
-      to the 
-      <A HREF="Stage%20race%20organisation.html">
-         configuration</A> do not trigger the immediate regeneration of publications.)</P>
+   
+<P> While <SPAN CLASS="help_menu">Automatically</SPAN> in the <SPAN CLASS="help_menu">Generate</SPAN> 
+  menu is checked (switched on), StageRace automatically generates all publications 
+  for you, whenever you enter any data during the event. (Note that changes to 
+  the <A HREF="Stage%20race%20organisation.html"> configuration</A> do not trigger 
+  the immediate regeneration of publications.) You can however, through the Generate 
+  menu, choose to generate or regenerate the desired publications.</P>
+<h2>Background Generating</h2>
+<P>Publications are always generated in the <em>background</em>. This means that 
+  you can continue what you were doing in the foreground. This is convenient anyhow, 
+  but also important, if you use StageRace in a distributed environment with the 
+  <a href="Server.html">StageRace Server</a>. In this situation it is not necessarely 
+  always you yourself who triggers the publication generation.</P>
+<P>The progress of background publications generation is shown in a progress bar 
+  in the <a href="Status%20bar.html">status bar</a>. StageRace is able to restart 
+  the generation process when you (or an incoming request of the <a href="Server.html">StageRace 
+  Server</a>) re-requests the same generation process before it was finished.</P>
+<P>If publications are regenerated in the background while visible in the <a href="Publication%20view.html">publication 
+  view</a>, the view will be refreshed and its scroll position will conveniently 
+  be restored. This also applies to <a href="Monitoring.html">monitoring</a>.</P>
 
-   <P>
-      You can however, through the Generate menu, choose to generate or regenerate 
-      the desired publications.</P>
+   <h2>Generate Menu Functions</h2>
 
    <P>
       The following functions are available for generating a specific type of 
@@ -75,16 +86,16 @@
       Old Publications 
    </H2>
 
-   <P>
-      Note that StageRace only generates publications for which content exists. 
-      So if ever e.g. a half stage classification or a communiqu&eacute; is generated 
-      as publication, the resulting files will remain to exist. Even when you 
-      empty the arrival (so that no new publication for this is generated anymore) 
-      or delete the communiqu&eacute;, the file will stay until you remove it 
-      manually. This means that StageRace might also display such old publications 
-      in the 
-      <A HREF="Publication%20view.html">
-         publication view</A> at some moment.</P>
+   
+<P> Note that StageRace only generates publications for which content exists. 
+  So if ever e.g. a half stage classification or a communiqu&eacute; is generated 
+  as publication, the resulting files will remain to exist. Even when you empty 
+  the arrival (so that no new publication for this is generated anymore) or delete 
+  the communiqu&eacute;, the file will stay until you remove it manually. This 
+  means that StageRace might also display such old publications in the <A HREF="Publication%20view.html"> 
+  publication view</A> at some moment. However, you can also select in the <a href="Settings%20HTML.html">HTML 
+  settings</a> that dummy documents must be generated for when no data are (yet) 
+  available for particular publications.</P>
 
    <P>
       You may want to print 
@@ -116,11 +127,6 @@
          external editor</A> of your choice.</P>
 
       <!--footer-->
-               <P>&nbsp;</P>
-               <TABLE WIDTH="100%" BORDERCOLOR="red" BORDER="1" CELLPADDING="5" CELLSPACING="0"><TR><TD><EM>This file was originally part of our V2003 software version, that was now shipped as part 
-of a V2005 b&egrave;ta release &#151; The information in this file may for that 
-reason not be entirely up-to-date or not be entirely accurate &#151; The Help system 
-will shortly be updated in one of the upcoming releases of StageRace 2005</EM></TD></TR></TABLE>
                <P>&nbsp;</P>
                <P><A HREF="#doctop"><IMG SRC="../layout/top.gif" ALT="Go top" BORDER="0" WIDTH="28" HEIGHT="20"></A></P>
             </TD>

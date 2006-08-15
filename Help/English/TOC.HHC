@@ -104,6 +104,10 @@
 					<param name="Name" value="Climbing Classifications">
 					<param name="Local" value="topics\Climbing classifications.html">
 					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Most Aggressive Rider Classifications">
+					<param name="Local" value="topics\Most aggressive rider classifications.HTML">
+					</OBJECT>
 			</UL>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Settings">
@@ -134,6 +138,10 @@
 				<LI> <OBJECT type="text/sitemap">
 					<param name="Name" value="Access Settings">
 					<param name="Local" value="topics\Settings access.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Profile Picker">
+					<param name="Local" value="topics\Profile picker.HTML">
 					</OBJECT>
 			</UL>
 		</UL>
@@ -189,6 +197,10 @@
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Publication Footer Information">
 			<param name="Local" value="topics\Footer information.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Profiles">
+			<param name="Local" value="topics\Profiles.HTML">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Table of Contents">
@@ -335,6 +347,10 @@
 			<param name="Local" value="topics\Team time trials.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Time Cuts">
+			<param name="Local" value="topics\Time cuts.HTML">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Event Items Selection">
 			<param name="Local" value="topics\Event items selection.html">
 			</OBJECT>
@@ -360,10 +376,22 @@
 				<param name="Name" value="MultiLanguage Strings">
 				<param name="Local" value="topics\MultiLanguage strings.html">
 				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Unicode">
+				<param name="Local" value="topics\Unicode.html">
+				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Clipboard">
 			<param name="Local" value="topics\Clipboard.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Cleanup Competitors">
+			<param name="Local" value="topics\Cleanup competitors.HTML">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Spare Competitors">
+			<param name="Local" value="topics\Spare Competitors.HTML">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Communiqu&eacute; Numbering">
@@ -378,8 +406,16 @@
 			<param name="Local" value="topics\Generate.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Parsing">
+			<param name="Local" value="topics\Parsing.HTML">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="External Editor">
 			<param name="Local" value="topics\External editor.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Monitoring">
+			<param name="Local" value="topics\Monitoring.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Multiple Windows">
@@ -468,6 +504,10 @@
 				<param name="Local" value="topics\Message definitions.html">
 				</OBJECT>
 		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="StageRace Server">
+			<param name="Local" value="topics\Server.HTML">
+			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Rules">

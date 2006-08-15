@@ -15,25 +15,147 @@
       Root Keys
    </h2>
 
-   <p>
-      Base key HKEY_CLASSES_ROOT\.str: identifies the StageRace 
-      <a href="Files.html">
-         file type</a> extension to the operating system</p>
+   
+<p>In the root section of the registry StageRace stores values with the purpose 
+  of:</p>
+<ul>
+  <li>Registering the StageRace <a href="Files.html"> .str file type</a> extension 
+    to the operating system; and</li>
+  <li>Registering the <a href="Server.html">StageRace Server</a> interfaces, coclasses, 
+    inproc-server and type library to the operating system. </li>
+</ul>
+<h2> Current User Keys </h2>
+<p>In the user section of the registry StageRace stores values with the purpose 
+  of:</p>
+<ul>
+  <li>Storing user preferences on the registration of the StageRace <a href="Files.html"> 
+    .str file type</a> extension; and</li>
+  <li>Storing user preferences for the operation of StageRace (typically <a href="Options.html">options</a>). 
+    These are stored in base key <span class="screenquote">HKEY_CURRENT_USER\Software\Totaal 
+    Software\StageRace</span>, with the following values:</li>
+</ul>
+<table border="0" width="100%">
+  <tr> 
+    <th width="20%"> 
+      <p> Value name</p>
+    </th>
+    <th width="80%"> 
+      <p> Value data</p>
+    </th>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> File dialogs</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers the last folder visited for each type of file dialog</p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> Import</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers the import file characteristics that are chosen in the <a href="Import.html"> 
+        <span class="screenquote">Import classification</span> file dialog</a> 
+        and the <a href="Control%20import%20classification%20dialog.html"> <span class="screenquote">Control 
+        import classification</span> dialog</a></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> ListCompetitors</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers order and widths of the columns in the <a href="Competitors%20view.html"> 
+        competitors view</a></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> ListTeams</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers order and widths of the columns in the <a href="Teams%20view.html"> 
+        teams view</a></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> MainFrame</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers the positioning of the main frame</p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> Options</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers the options that you choose through the <a href="Options.html"> 
+        <span class="screenquote">Options</span> dialog</a></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> Recent File List</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers the most recently opened files (for the <span class="help_menu">File</span> 
+        menu)</p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> Settings</p>
+    </td>
+    <td width="80%"> 
+      <p> Unused</p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> Time trial arrival</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers to <a href="Time%20trial%20arrival%20tab%20sheet.html#anticipate"> 
+        anticipate the arrival time</a> and which time to anticipate</p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> Tip of the Day</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers if you want <a href="Help.html"> Tip of the Day</a> displayed 
+        on start up and also which tip was shown last</p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="20%" class="screenquote"> 
+      <p> WindowPositions</p>
+    </td>
+    <td width="80%"> 
+      <p> Remembers the positioning of various dialogs</p>
+    </td>
+  </tr>
+</table>
 
-   <p>
-      Base key HKEY_CLASSES_ROOT\StageRace.Document: defines properties and associated 
-      actions for the StageRace 
-      <a href="Files.html">
-         file type</a> for the operating system</p>
-
-   <h2>
-      Current User
-   </h2>
-
-   <p>
-      Base key HKEY_CURRENT_USER\Software\Totaal Software\StageRace</p>
-
-   <table border="0" width="100%">
+   
+<h2> Local Machine Keys</h2>
+<p> In the local machine section of the registry StageRace stores values with 
+  the purpose of:</p>
+<ul>
+  <li>Registering the StageRace <a href="Files.html"> .str file type</a> extension 
+    to the operating system;</li>
+  <li>Registering the <a href="Server.html">StageRace Server</a> interfaces, coclasses, 
+    inproc-server and type library to the operating system; and</li>
+  <li>Storing system preferences for the operation of StageRace (typically <a href="Options.html">options</a>). 
+    These are stored in base key <span class="screenquote">HKEY_LOCAL_MACHINE\Software\Totaal 
+    Software\StageRace</span>, with the following values:</li>
+</ul>
+<table border="0" width="100%">
       <tr>
          <th width="20%"> 
          <p>
@@ -48,198 +170,8 @@
 
       <tr>
          <td width="20%">
-            <p>
-               Tip of the Day</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers if you want 
-               <a href="Help.html">
-                  Tip of the Day</a> displayed on start up and also which tip 
-               was shown last</p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               MainFrame</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers the positioning of the main frame</p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               File dialogs</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers the last folder visited for each type of file dialog</p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               WindowPositions</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers the positioning of various dialogs</p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               ListCompetitors</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers order and widths of the columns in the 
-               <a href="Competitors%20view.html">
-                  competitors view</a></p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               ListTeams</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers order and widths of the columns in the 
-               <a href="Teams%20view.html">
-                  teams view</a></p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               Options</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers the options that you choose through the 
-               <a href="Options.html">
-                  <span class="screenquote">Options</span> dialog</a></p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               Import</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers the import file characteristics that are chosen in the 
-               <a href="Import.html">
-                  <span class="screenquote">Import classification</span> file 
-                  dialog</a> and the 
-               <a href="Control%20import%20classification%20dialog.html">
-                  <span class="screenquote">Control import classification</span> 
-                  dialog</a></p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               Recent File List</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers the most recently opened files (for the <span class="help_menu">File</span> 
-               menu)</p>
-
-         </td>
-
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               Time trial arrival</p>
-
-         </td>
-
-         <td width="80%">
-            <p>
-               Remembers to 
-               <a href="Time%20trial%20arrival%20tab%20sheet.html#anticipate">
-                  anticipate the arrival time</a> and which time to anticipate</p>
-
-         </td>
-
-      </tr>
-
-   </table>
-
-   <h2>
-      Local Machine
-   </h2>
-
-   <p>
-      Base key HKEY_LOCAL_MACHINE\Software\Totaal Software\StageRace</p>
-
-   <table border="0" width="100%">
-      <tr>
-         <th width="20%"> 
-         <p>
-            Value name</p>
-
-         </th><th width="80%"> 
-         <p>
-            Value data</p>
-
-         </th>
-      </tr>
-
-      <tr>
-         <td width="20%">
-            <p>
-               Export paths</p>
+            
+      <p class="screenquote"> Export paths</p>
 
          </td>
 
@@ -256,15 +188,14 @@
 
    </table>
 
-   <h2>
-      Uninstall Information
-   </h2>
-
-   <p>
-      Base key HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\StageRace 
-      2003 </p>
-
-   <h2>
+   
+<p>Windows<sup>&reg;</sup> will cache connection information of the <a href="Server.html">StageRace 
+  Server</a> in this section of the registry.</p>
+<h2>Uninstall Information </h2>
+<p> Base keys <span class="screenquote">HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\StageRace 
+  2005</span> and <span class="screenquote">HKEY_CURRENT_USER\UserUninstall\StageRace 
+  2005</span> hold uninstall information of StageRace.</p>
+<h2>
       Removing Registry Keys
    </h2>
 
@@ -279,7 +210,7 @@
 
    <blockquote> 
    <p class="screenquote">
-      C:\Program Files\StageRace 2003\StageRace.exe unreg</p>
+      C:\Program Files\StageRace 2005\StageRace.exe unreg</p>
 
    </blockquote>
    <p>

@@ -4,17 +4,28 @@
       Generate 
    </H2>
 
-   <P>
-      While <SPAN CLASS="help_menu">Automatically</SPAN> in the <SPAN CLASS="help_menu">Generate</SPAN> 
-      menu is checked (switched on), StageRace automatically generates all publications 
-      for you, whenever you enter any data during the event. (Note that changes 
-      to the 
-      
-         configuration do not trigger the immediate regeneration of publications.)</P>
+   
+<P> While <SPAN CLASS="help_menu">Automatically</SPAN> in the <SPAN CLASS="help_menu">Generate</SPAN> 
+  menu is checked (switched on), StageRace automatically generates all publications 
+  for you, whenever you enter any data during the event. (Note that changes to 
+  the  configuration do not trigger 
+  the immediate regeneration of publications.) You can however, through the Generate 
+  menu, choose to generate or regenerate the desired publications.</P>
+<h3>Background Generating</h3>
+<P>Publications are always generated in the <em>background</em>. This means that 
+  you can continue what you were doing in the foreground. This is convenient anyhow, 
+  but also important, if you use StageRace in a distributed environment with the 
+  StageRace Server. In this situation it is not necessarely 
+  always you yourself who triggers the publication generation.</P>
+<P>The progress of background publications generation is shown in a progress bar 
+  in the status bar. StageRace is able to restart 
+  the generation process when you (or an incoming request of the StageRace 
+  Server) re-requests the same generation process before it was finished.</P>
+<P>If publications are regenerated in the background while visible in the publication 
+  view, the view will be refreshed and its scroll position will conveniently 
+  be restored. This also applies to monitoring.</P>
 
-   <P>
-      You can however, through the Generate menu, choose to generate or regenerate 
-      the desired publications.</P>
+   <h3>Generate Menu Functions</h3>
 
    <P>
       The following functions are available for generating a specific type of 
@@ -48,16 +59,16 @@
       Old Publications 
    </H3>
 
-   <P>
-      Note that StageRace only generates publications for which content exists. 
-      So if ever e.g. a half stage classification or a communiqu&eacute; is generated 
-      as publication, the resulting files will remain to exist. Even when you 
-      empty the arrival (so that no new publication for this is generated anymore) 
-      or delete the communiqu&eacute;, the file will stay until you remove it 
-      manually. This means that StageRace might also display such old publications 
-      in the 
-      
-         publication view at some moment.</P>
+   
+<P> Note that StageRace only generates publications for which content exists. 
+  So if ever e.g. a half stage classification or a communiqu&eacute; is generated 
+  as publication, the resulting files will remain to exist. Even when you empty 
+  the arrival (so that no new publication for this is generated anymore) or delete 
+  the communiqu&eacute;, the file will stay until you remove it manually. This 
+  means that StageRace might also display such old publications in the  
+  publication view at some moment. However, you can also select in the HTML 
+  settings that dummy documents must be generated for when no data are (yet) 
+  available for particular publications.</P>
 
    <P>
       You may want to print 

@@ -51,31 +51,39 @@
    <P>
       The following columns can be selected:</P>
 
-   <UL>
-      <LI><EM>Ranking</EM> of the competitor or the team</LI><LI><EM>Start no.</EM> 
-      of the competitor</LI><LI><EM>UCI code</EM> of the competitor</LI><LI><EM>License</EM> 
-      no. of the competitor</LI><LI><EM>Name</EM> of the competitor</LI><LI><EM>Name</EM> 
-      of the team</LI><LI><EM>Code</EM> of the team without a column header being 
-      printed; for when the team code is printed next to the team name and it 
-      is not necessary to have the table heading say &quot;team&quot; twice</LI><LI><EM>Code</EM> 
-      of the team</LI><LI><EM>Country</EM> of the competitor or the team</LI><LI><EM>Category</EM> 
-      of the competitor</LI><LI><EM>Time</EM> ridden by the competitor or the 
-      team; normally in full seconds, and with higher accuracy for time trials</LI><LI><EM>Gap</EM> 
-      time between the competitor or the team and the winning competitor or team</LI><LI><EM>Gap</EM> 
-      time between the competitor or the team and the winning competitor or team, 
-      but in a way that every gap time is only listed once, namely the first time 
-      it comes by; if following competitors have that same gap time, only a token 
-      will be displayed. The token can be set in the 
-      <A HREF="Settings%20publication.html">
-         publication settings</A></LI><LI><EM>Bonus</EM> seconds of the competitor</LI><LI><EM>Penalty</EM> 
-      seconds of the competitor</LI><LI><EM>Involved bunch</EM> of competitors; 
-      the competitors that contributed to the printed 
-      <A HREF="Rules%20teams%20classifications.html">
-         team stage classification</A></LI><LI>An indication that the competitor 
-      is part of a <EM> 
-      <A HREF="Masking.html">
-         mask</A></EM></LI>
-   </UL>
+   
+<UL>
+  <LI><EM>Ranking</EM> of the competitor or the team</LI>
+  <LI><EM>Start no.</EM> of the competitor</LI>
+  <LI><EM>UCI code</EM> of the competitor</LI>
+  <LI><EM>License</EM> no. of the competitor</LI>
+  <LI><EM>Name</EM> of the competitor</LI>
+  <LI><EM>Name</EM> of the team</LI>
+  <LI><EM>Code</EM> of the team without a column header being printed; for when 
+    the team code is printed next to the team name and it is not necessary to 
+    have the table heading say &quot;team&quot; twice</LI>
+  <LI><EM>Code</EM> of the team</LI>
+  <LI><EM>Country</EM> of the competitor or the team</LI>
+  <LI><EM>Category</EM> of the competitor</LI>
+  <LI><EM>Time</EM> ridden by the competitor or the team; normally in full seconds, 
+    and with configurable higher accuracy for <a href="Time%20trials.html">time 
+    trials</a></LI>
+  <LI><EM>Gap</EM> time between the competitor or the team and the winning competitor 
+    or team</LI>
+  <LI><EM>Gap</EM> time between the competitor or the team and the winning competitor 
+    or team, but in a way that every gap time is only listed once, namely the 
+    first time it comes by; if following competitors have that same gap time, 
+    only a token will be displayed. The token can be set in the <A HREF="Settings%20publication.html"> 
+    publication settings</A></LI>
+  <LI><EM>Bonus</EM> seconds of the competitor</LI>
+  <LI><EM>Penalty</EM> seconds of the competitor</LI>
+  <LI><em>Speed</em> of the competitor for <a href="Time%20trials.html">time trials</a></LI>
+  <LI><EM>Involved bunch</EM> of competitors; the competitors that contributed 
+    to the printed <A HREF="Rules%20teams%20classifications.html"> team stage 
+    classification</A></LI>
+  <LI>An indication that the competitor is part of a <EM> <A HREF="Masking.html"> 
+    mask</A></EM></LI>
+</UL>
 
    <P>
       The following columns are added automatically and cannot be suppressed by 
@@ -88,19 +96,27 @@
       in a time trial</LI><LI><em>Signature</em> space for the competitor</LI>
    </UL>
 
-   <p>
-      Note that team codes in the HTML documents appear as hyperlinks to the specific 
-      teams in the <span class="screenquote">Competitors list per team</span>. 
-      For this you may want to guarantee that this <span class="screenquote">Competitors 
-      list per team</span> publication exists on your web server when you upload 
-      classifications.</p>
-
+   
+<p> Team codes in the HTML documents appear by default as hyperlinks to the specific 
+  teams in the <span class="screenquote">Competitors list per team</span>. For 
+  this you may want to guarantee that this <span class="screenquote">Competitors 
+  list per team</span> publication exists on your web server when you upload classifications. 
+  These hyperlinks can be switched off in the <a href="Settings%20HTML.html">HTML 
+  settings</a>.</p>
+<p>For team classifications it is possible to select if and how the involved bunch 
+  of competitors is included:</p>
+<ul>
+  <li>Don't include the involved bunch of competitors;</li>
+  <li>Include competitor numbers of the involved bunch of competitors, all on 
+    a single line;</li>
+  <li>Include competitor numbers of the involved bunch of competitors, each on 
+    a new line; or</li>
+  <li>Include extensive competitor information of the involved bunch of competitors, 
+    each on a new line. The competitor details are given as configured for the 
+    <span class="screenquote">Columns selection for individual classifications</span> 
+    in the <a href="Settings%20publication.html">publication settings</a>. </li>
+</ul>
       <!--footer-->
-               <P>&nbsp;</P>
-               <TABLE WIDTH="100%" BORDERCOLOR="red" BORDER="1" CELLPADDING="5" CELLSPACING="0"><TR><TD><EM>This file was originally part of our V2003 software version, that was now shipped as part 
-of a V2005 b&egrave;ta release &#151; The information in this file may for that 
-reason not be entirely up-to-date or not be entirely accurate &#151; The Help system 
-will shortly be updated in one of the upcoming releases of StageRace 2005</EM></TD></TR></TABLE>
                <P>&nbsp;</P>
                <P><A HREF="#doctop"><IMG SRC="../layout/top.gif" ALT="Go top" BORDER="0" WIDTH="28" HEIGHT="20"></A></P>
             </TD>

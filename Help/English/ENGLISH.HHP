@@ -9,7 +9,7 @@ Default topic=index.html
 Display compile progress=Yes
 Full-text search=Yes
 Index file=index.hhk
-Language=0x409 Engels (Verenigde Staten)
+Language=0x409 English (United States)
 Title=StageRace Help
 
 [WINDOWS]
@@ -133,6 +133,16 @@ topics\Sign in lists.html
 topics\Export TTWare file format.html
 topics\Import TTWare file format.html
 Updates 2003.html
+topics\Profiles.HTML
+topics\Profile picker.HTML
+topics\Parsing.HTML
+topics\Time cuts.HTML
+topics\Unicode.html
+topics\Monitoring.html
+topics\Server.HTML
+topics\Most aggressive rider classifications.HTML
+topics\Cleanup competitors.HTML
+topics\Spare Competitors.HTML
 
 [INFOTYPES]
 

@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+   <HEAD>
+      <TITLE>Parsing</TITLE>
+      <LINK REL="stylesheet" HREF="../css/stagerace.css" TYPE="text/css"> 
+   </HEAD>
+   <BODY>
+      <!--black bar-->
+      <A NAME="doctop"></A>
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="10" BGCOLOR="#000000">
+         <TR>
+            <TD>
+               <IMG SRC="../layout/headline.gif" WIDTH="201" HEIGHT="26" ALT="StageRace 2003 - Road Cycling Administration"> 
+            </TD>
+            <TD ALIGN="right">
+               <IMG SRC="../layout/help.gif" WIDTH="100" HEIGHT="26" ALT="Help"> 
+            </TD>
+         </TR>
+      </TABLE>
+      <!--rainbow bar-->
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+         <TR><TD HEIGHT="3" BGCOLOR="#FF0000">
+               <IMG SRC="../layout/borderline.gif" WIDTH="100%" HEIGHT="3" ALT="border"></TD></TR>
+      </TABLE>
+      <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="20">
+         <TR VALIGN="TOP">
+            <TD>
+      <!--content--> 
+
+   
+<H1> Parsing</H1>
+
+   
+<P> Through the various <a href="Settings.html">settings</a> the way <a href="Publications.html">publications</a> 
+  look can be very heavily influenced. And for instance for web publishing even 
+  a dedicated <a href="Profiles.html">profile</a> can be established for this. 
+  But still a race's web designer may want to do an even deeper integration of 
+  publications into its web site.</P>
+<P>Someone may want to parse for parts of publications that are of interest. Parsing 
+  is the automated process in which the raw publication document files are being 
+  scanned for parts that can be recognized as useful for extraction for a certain 
+  function. E.g. you may want to automatically extract the top ten-ranked competitors 
+  from the general classification, or extract just the table with arrivals, without 
+  any header or footer information.</P>
+<P>Specifically for this purpose tags are added to the publication document HTML 
+  files that can easily be scanned for.</P>
+<P>The tages are available as HTML comments, of the following form:</P>
+<blockquote> 
+  <p class="screenquote">&lt;!-- [tagname]:begin --&gt; ... &lt;!-- [tagname]:end 
+    --&gt; </p>
+</blockquote>
+<P>The comment indicated by <span class="screenquote">[tagname]</span> can be 
+  found between the two corresponding <em>begin</em> and <em>end</em> tags.</P>
+<P>The following tag names can exist in StageRace documents:</P>
+<table border="0">
+  <tr> 
+    <th> 
+      <p>Tag name</p>
+    </th>
+    <th> 
+      <p>Denomination</p>
+    </th>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>first_five</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The first five competitors from the main table, their rankings, et 
+          cetera, including column headers.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>first_ten</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The first ten competitors from the main table, their rankings, et 
+          cetera, including column headers.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>main_content</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The main table with competitors, their rankings, et cetera, including 
+          column headers. In case of a communiqu&eacute; this is the communiqu&eacute;'s 
+          body text.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>properties</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The document's properties, with their labels, in the header of the 
+          publication. </li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>signature</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The signature in the footer of the publication.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>statistics_report</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The statistics report, with labels, in the footer of the publication.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>time_stamp</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>The time stamp in the footer of the publication.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td class="screenquote"> 
+      <ul>
+        <li>section_&lt;no.&gt;</li>
+      </ul>
+    </td>
+    <td> 
+      <ul>
+        <li>Other sections, indicated by number. Added for future extensions. 
+          Currently only <span class="screenquote">section_1</span> used to enclose 
+          the entire HTML body.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<P>&nbsp;</P>
+      <!--footer-->
+               <P>&nbsp;</P>
+               <P><A HREF="#doctop"><IMG SRC="../layout/top.gif" ALT="Go top" BORDER="0" WIDTH="28" HEIGHT="20"></A></P>
+            </TD>
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<HTML><BODY> 
+
+   
+<H1> StageRace Server</H1>
+
+   
+<P> The StageRace Server functionality allows for external (third-party) programs 
+  to communicate with StageRace in real-time. This way general competitor information 
+  as well as rankings can be read and also rankings can be set, where rankings 
+  do include race times.</P>
+
+   <P>
+      Only if you are a programmer or are otherwise involved in the application 
+      of a third-party program that is enabled to communicate with StageRace, 
+      this information can be of interest for you.</P>
+
+   
+<P> The StageRace server is a D-COM component that exposes a number of interfaces 
+  and coclasses for the following logical classes:</P>
+<ul>
+  <li><em>SRHalfStage</em>: set or reset arrival information, enumerate time trial 
+    starting information </li>
+  <li><em>StageRaceDoc</em>: enumerate (half) stages and competitor information</li>
+  <li><em>StageraceServer</em>: enumerate open documents and send messages in 
+    natural text</li>
+</ul>
+<P>
+      If actual communication takes place, an icon in the 
+      
+         status bar lights up for every message that is sent.</P>
+
+   
+<P> Note that the StageRace Messaging protocol is part of the StageRace product 
+  and therefore falls under its  
+  License agreement.</P>
+<h2>Set Timing Idle</h2>
+<p>The StageRace Server methods allow for arrival data to be submitted without 
+  yet being processed. Processing can, this way, be postponed until <em>idle time</em>. 
+  One dedicated method allows for flagging the start of idle time, so that pending 
+  timing work can be processed, typically publications 
+  generation.</p>
+<h2>Server Menu</h2>
+<p>Through <span class="help_menu">Server</span> in the <span class="help_menu">Tools</span> 
+  menu a few options are available for the StageRace Server:</p>
+<ul>
+  <li class="li_extensive"><span class="screenquote">Process pending timing work</span> 
+    forces StageRace to process pending timing work. This will only be necessary 
+    in very exceptional circumstances, e.g. when a consumer of the StageRace Server 
+    got offline before it could flag the start of idle time.</li>
+  <li class="li_extensive"><span class="screenquote">Send teams as</span> allows 
+    to choose whether the textual representation of teams is sent as the team 
+    code or the full team name.</li>
+</ul>
+</HTML></BODY>
