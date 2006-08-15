@@ -5473,11 +5473,6 @@ void CStageRaceDoc::OnUpdateConfigureAll(CCmdUI* pCmdUI)
 void CStageRaceDoc::Lock()
 {
 	WaitForSingleObject(m_hGenerateSemaphore_ChangeToDoc, INFINITE);
-	/*
-	if( WaitForSingleObject(m_hGenerateSemaphore_ChangeToDoc,5000)
-         == WAIT_TIMEOUT )
-      AfxMessageBox( TEXT("(BETA VERSION)\n\nA time out occurred while waiting on a multi-processing lock\nLet's try without locking!") );
-	*/
 }
 
 void CStageRaceDoc::Unlock()
