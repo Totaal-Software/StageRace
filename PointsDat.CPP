@@ -108,7 +108,9 @@ void CPointsDat::OnAdd()
 		// Fill data
 		m_points.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTS ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTS ))->AddString( c );
 	}
 
 	((CComboBox*)GetDlgItem( IDC_POINTS ))->SetEditSel(0,-1);

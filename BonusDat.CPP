@@ -84,7 +84,9 @@ void CBonusDat::OnAdd()
 		// Fill data
 		m_bonusesIntermediate.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_BONUSSPRINT ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_BONUSSPRINT ))->AddString( c );
 	}
 
 	// Get Value
@@ -96,7 +98,9 @@ void CBonusDat::OnAdd()
 		// Fill data
 		m_bonusesFinish.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_BONUSFINISH ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_BONUSFINISH ))->AddString( c );
 	}
 
 	((CComboBox*)GetDlgItem( IDC_BONUSFINISH ))->SetEditSel(0,-1);

@@ -191,7 +191,9 @@ void CMountainDat::OnAdd()
 		// Fill data
 		m_climbpointshc.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSCLIMBHC ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSCLIMBHC ))->AddString( c );
 	}
 	
 	// Get Value
@@ -203,7 +205,9 @@ void CMountainDat::OnAdd()
 		// Fill data
 		m_climbpoints1.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB1 ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB1 ))->AddString( c );
 	}
 	
 	// Get Value
@@ -215,7 +219,9 @@ void CMountainDat::OnAdd()
 		// Fill data
 		m_climbpoints2.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB2 ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB2 ))->AddString( c );
 	}
 	
 	// Get Value
@@ -227,7 +233,9 @@ void CMountainDat::OnAdd()
 		// Fill data
 		m_climbpoints3.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB3 ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB3 ))->AddString( c );
 	}
 	
 	// Get Value
@@ -239,7 +247,9 @@ void CMountainDat::OnAdd()
 		// Fill data
 		m_climbpoints4.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB4 ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSCLIMB4 ))->AddString( c );
 	}
 	
 	// Get Value
@@ -258,8 +268,16 @@ void CMountainDat::OnAdd()
 			// Fill data
 			m_climbs.AddTail( nScore );
 			// Update view
-			chBuffer.MakeUpper();
-			((CListBox*)GetDlgItem( IDC_LISTCLIMB ))->AddString( chBuffer );
+			if( nScore )
+			{
+				CString c;
+				c.Format(TEXT("%d"), nScore);
+				((CListBox*)GetDlgItem( IDC_LISTCLIMB ))->AddString( c );
+			}
+			else
+			{
+				((CListBox*)GetDlgItem( IDC_LISTCLIMB ))->AddString( TEXT("HC") );
+			}
 		}
 	}
 

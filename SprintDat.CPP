@@ -149,7 +149,9 @@ void CSprintDat::OnAdd()
 		// Fill data
 		m_sprintpointsIntermediate.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSSPRINT ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSSPRINT ))->AddString( c );
 	}
 
 	// Get Value
@@ -161,7 +163,9 @@ void CSprintDat::OnAdd()
 		// Fill data
 		m_sprintpointsFinish.AddTail( nScore );
 		// Update view
-		((CComboBox*)GetDlgItem( IDC_POINTSFINISH ))->AddString( chBuffer );
+		CString c;
+		c.Format(TEXT("%d"), nScore);
+		((CComboBox*)GetDlgItem( IDC_POINTSFINISH ))->AddString( c );
 	}
 
 	((CComboBox*)GetDlgItem( IDC_POINTSFINISH ))->SetEditSel(0,-1);
