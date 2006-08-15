@@ -89,9 +89,8 @@ BOOL CDlgEventItemSelection::OnInitDialog()
 
 	// Add columns
 	m_ctrlList.InsertColumn(0, LoadStr( IDS_DIV71 ),  LVCFMT_LEFT, 180, 0);
-	m_ctrlList.InsertColumn(1, LoadStr( IDS_DIV72 ), LVCFMT_RIGHT,  30, 1);
-	m_ctrlList.InsertColumn(2, LoadStr( IDS_DIV73 ), LVCFMT_RIGHT,  30, 2);
-	m_ctrlList.InsertColumn(3, LoadStr( IDS_DIV74 ), LVCFMT_RIGHT,  50, 3);
+	m_ctrlList.InsertColumn(1, LoadStr( IDS_DIV72 )+TEXT("/")+LoadStr( IDS_DIV73 ), LVCFMT_RIGHT,  30, 1);
+	m_ctrlList.InsertColumn(2, LoadStr( IDS_DIV74 ), LVCFMT_RIGHT,  50, 3);
 
 	// Create image lists
 	m_imageList.Create( IDB_TREE, 20, 1, RGB(255,0,255) );
@@ -188,19 +187,15 @@ void CDlgEventItemSelection::DrawPrintItem(CPrintItem *pPI, int nItem/*=-1*/)
 		pPI->m_pEventItem->ComposeFileTitle(),
 		pPI->m_pEventItem->IconFromItem() );
 
+	//Stage ID
 	if( pPI->m_pEventItem->m_nFullStage )
 	{
-		_itot( pPI->m_pEventItem->m_nFullStage, czBuffer, 10 );
-		m_ctrlList.SetItemText(nItem, 1, czBuffer);
-	}
-	if( pPI->m_pEventItem->m_nHalfStage )
-	{
-		_itot( pPI->m_pEventItem->m_nHalfStage, czBuffer, 10 );
-		m_ctrlList.SetItemText(nItem, 2, czBuffer);
+		m_ctrlList.SetItemText(nItem, 1, pPI->m_pEventItem->StagesMakeIDString());
 	}
 
+	//Copies
 	_itot( pPI->m_nCopies, czBuffer, 10 );
-	m_ctrlList.SetItemText(nItem, 3, czBuffer);
+	m_ctrlList.SetItemText(nItem, 2, czBuffer);
 	
 	//Set the item data
 	m_ctrlList.SetItemData(nItem, (DWORD)pPI);
