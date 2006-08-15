@@ -50,4 +50,8 @@ BOOL CListTimeTrialArrivalNet::OnInitDialog()
 void CListTimeTrialArrivalNet::SetUnits(CArrival *pArr, DWORD units)
 {
 	pArr->m_units = units;
+	// The following is important: you want to know at arrival, later on
+	// You could also override GetUnits, but this is nicer, since it will
+	// also work when reconfiguring from net to gross time trial
+	pArr->m_unitsAtArrival = units;
 }
