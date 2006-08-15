@@ -178,34 +178,34 @@ void CMaskApplyDlg::OnOK()
 			// on the current mask when "Add only" is checked 
 			if( IsDlgButtonChecked( IDC_MASK1 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 1, 
-					IsMatch( &aComp ) || ( aComp.m_mask1 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask1 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK2 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 2, 
-					IsMatch( &aComp ) || ( aComp.m_mask2 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask2 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK3 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 3, 
-					IsMatch( &aComp ) || ( aComp.m_mask3 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask3 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK4 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 4, 
-					IsMatch( &aComp ) || ( aComp.m_mask4 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask4 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK5 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 5, 
-					IsMatch( &aComp ) || ( aComp.m_mask5 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask5 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK6 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 6, 
-					IsMatch( &aComp ) || ( aComp.m_mask6 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask6 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK7 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 7, 
-					IsMatch( &aComp ) || ( aComp.m_mask7 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask7 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK8 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 8, 
-					IsMatch( &aComp ) || ( aComp.m_mask8 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask8 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK9 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 9, 
-					IsMatch( &aComp ) || ( aComp.m_mask9 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask9 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 			if( IsDlgButtonChecked( IDC_MASK10 )==BST_CHECKED )
 				m_pDoc->CompetitorsSetMask( aComp.m_staNo, 10, 
-					IsMatch( &aComp ) || ( aComp.m_mask10 && IsDlgButtonChecked( IDC_ADDONLY ) ) );
+					IsMatch( &aComp ) || ( aComp.m_mask10 && IsDlgButtonChecked( IDC_ADDONLY ) ), true, true );
 		}
 
 	// NEXT DO SPARE COMPETITORS

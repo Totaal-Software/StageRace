@@ -179,7 +179,7 @@ public:
 	int					CompetitorsCount() const;
 	bool				CompetitorsIterateSorted( DWORD &nState, CCompetitor& aComp ) const;
 	void				CompetitorsEdit( int nStaNo );
-	void				CompetitorsSetMask( int nStaNo, char nMask, bool bOn = TRUE, bool bSuppressFormalities = TRUE );
+	void				CompetitorsSetMask( int nStaNo, char nMask, bool bOn = TRUE, bool bSuppressFormalities = TRUE, bool bSuppressLocks = FALSE );
 	void				CompetitorsCut( CArray<WORD,WORD>* pStaNos, CPtrArray* pComps );
 	void				CompetitorsCopy( CArray<WORD,WORD>* pStaNos, CPtrArray* pComps );
 	void				CompetitorsPaste(bool bWithStaNos);

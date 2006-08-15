@@ -2904,18 +2904,20 @@ bool CStageRaceDoc::CompetitorsExist(int nStaNo) const
 
 // IN: the StaNo for which a mask needs to be set/reset,
 //  the no. of the involved mask (1|2|3) and the new value
-void CStageRaceDoc::CompetitorsSetMask(int nStaNo, char nMask, bool bOn/* = TRUE*/, bool bSuppressFormalities/* = TRUE*/)
+void CStageRaceDoc::CompetitorsSetMask(int nStaNo, char nMask, bool bOn/* = TRUE*/, bool bSuppressFormalities/* = TRUE*/, bool bSuppressLocks/* = FALSE*/)
 {
 	if( CompetitorsExist( nStaNo ) )
 	{
 		CCompetitor aComp = CompetitorsGet( nStaNo );
 		aComp.SetMask(nMask,bOn);
 
-		Lock();
+		if( !bSuppressLocks )
+			Lock();
 
 		m_competitors.Insert( aComp );
 
-		Unlock();
+		if( !bSuppressLocks )
+			Unlock();
 
 		// Made optional for performance reasons
 		if( !bSuppressFormalities )
