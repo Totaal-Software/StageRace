@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 1, 1752
- PRODUCTVERSION 2005, 3, 1, 1752
+ FILEVERSION 2005, 3, 1, 1763
+ PRODUCTVERSION 2005, 3, 1, 1763
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 1, 1752\0"
+            VALUE "FileVersion", "2005, 3, 1, 1763\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 1, 1752\0"
+            VALUE "ProductVersion", "2005, 3, 1, 1763\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -3006,7 +3006,7 @@ BEGIN
         MENUITEM "C&ompetitors...\tAlt+C",      ID_EDIT_COMPETITORS
         MENUITEM "Team&s...\tAlt+T",            ID_EDIT_TEAMS
         MENUITEM "Apply &mask...",              ID_EDIT_APPLYMASK
-        MENUITEM "Cleanup c&ompetitors...",     ID_EDIT_CLEANUPCOMPETITORS
+        MENUITEM "Clean&up competitors...",     ID_EDIT_CLEANUPCOMPETITORS
         MENUITEM "S&wap competitors",           ID_EDIT_SWAPCOMPETITORS
         MENUITEM SEPARATOR
         MENUITEM "Select &all\tCtrl+A",         ID_EDIT_SELECTALL
@@ -3034,7 +3034,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Copy to selection d&ialog\tCtrl+Shift+P", 
                                                 ID_EDIT_COPYTOSELECTIONDLG
-        MENUITEM "Auto-number communi&qués",    ID_EDIT_AUTONUMBER
+        MENUITEM "Auto-number communi&qués...", ID_EDIT_AUTONUMBER
         MENUITEM "Decrement publication no.\tCtrl+<-", ID_EDIT_PUBLISH_MINUS
         MENUITEM "Increment publication no.\tCtrl+->", ID_EDIT_PUBLISH_PLUS
         MENUITEM "Pub&lish\tAlt+P",             ID_EDIT_PUBLISH
@@ -3045,7 +3045,7 @@ BEGIN
         MENUITEM "&Configure toolbar",          ID_VIEW_TLBAR_CONFIGURE
         MENUITEM "E&vent tree toolbar",         ID_VIEW_TLBAR_TREEVIEWMAIN
         MENUITEM "&Generate toolbar",           ID_VIEW_TLBAR_GENERATE
-        MENUITEM "Status &bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Stat&us bar",                 ID_VIEW_STATUS_BAR
         MENUITEM SEPARATOR
         MENUITEM "Gri&d",                       ID_VIEW_GRID
         MENUITEM "&Bars",                       ID_VIEW_BARS
@@ -3141,7 +3141,7 @@ BEGIN
         MENUITEM "&Time Calculator\tF9",        ID_TOOLS_TIMECALCULATOR
         MENUITEM "&Speed Calculator\tF10",      ID_TOOLS_SPEEDCALCULATOR
         MENUITEM SEPARATOR
-        POPUP "S&erver"
+        POPUP "Se&rver"
         BEGIN
             MENUITEM "&Process pending timing work", 
                                                     ID_TOOLS_SERVER_PROCESSPENDING
@@ -6891,7 +6891,7 @@ BEGIN
         MENUITEM "Permuter des coureurs",       ID_EDIT_SWAPCOMPETITORS
         MENUITEM SEPARATOR
         MENUITEM "Tout &sélectionner\tCtrl+A",  ID_EDIT_SELECTALL
-        MENUITEM "Editer &sélection...\tCtrl+Enter", ID_EDIT_EDITSELECTION
+        MENUITEM "Editer sélec&tion...\tCtrl+Enter", ID_EDIT_EDITSELECTION
         POPUP "&Editer demi-étape"
         BEGIN
             MENUITEM "&Vérification de l'intégrité...", 
@@ -6916,6 +6916,8 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Copier &vers la sélection des éléments\tCtrl+Shift+P", 
                                                 ID_EDIT_COPYTOSELECTIONDLG
+        MENUITEM "Num&érotation automatique des communiqués...", 
+                                                ID_EDIT_AUTONUMBER
         MENUITEM "&Diminuer no. de la publication\tCtrl+<-", 
                                                 ID_EDIT_PUBLISH_MINUS
         MENUITEM "&Augmenter no. de la publication\tCtrl+->", 
@@ -11072,7 +11074,7 @@ BEGIN
         MENUITEM "&Deelnemers...\tAlt+C",       ID_EDIT_COMPETITORS
         MENUITEM "Ploe&gen...\tAlt+T",          ID_EDIT_TEAMS
         MENUITEM "&Masker toepassen...",        ID_EDIT_APPLYMASK
-        MENUITEM "&Deelnemers opschonen...",    ID_EDIT_CLEANUPCOMPETITORS
+        MENUITEM "Deelnemers ops&chonen...",    ID_EDIT_CLEANUPCOMPETITORS
         MENUITEM "Deelnemers &omwisselen",      ID_EDIT_SWAPCOMPETITORS
         MENUITEM SEPARATOR
         MENUITEM "&Alles selecteren\tCtrl+A",   ID_EDIT_SELECTALL
@@ -11100,7 +11102,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Kopiëren naar selectied&ialoog\tCtrl+Shift+P", 
                                                 ID_EDIT_COPYTOSELECTIONDLG
-        MENUITEM "Communi&qués automatisch nummeren", ID_EDIT_AUTONUMBER
+        MENUITEM "Communi&qués automatisch nummeren...", ID_EDIT_AUTONUMBER
         MENUITEM "Verlagen publicatienr.\tCtrl+<-", ID_EDIT_PUBLISH_MINUS
         MENUITEM "Verhogen publicatienr.\tCtrl+->", ID_EDIT_PUBLISH_PLUS
         MENUITEM "P&ubliceren\tAlt+P",          ID_EDIT_PUBLISH
