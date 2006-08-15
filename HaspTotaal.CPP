@@ -89,6 +89,9 @@ bool CHaspTotaal::CheckDongle(bool bSuppress/*=FALSE*/)
 	// Port Mode:			Auto
 	// Check earlier absence of hardware key
 #ifdef _DEBUG
+if( m_firstshot )
+PostMessage( AfxGetMainWnd()->m_hWnd, WM_USER_KEY_FREE, NULL, NULL );
+m_firstshot = FALSE;
 return false;
 #endif _DEBUG
 	if ( !m_protected )
