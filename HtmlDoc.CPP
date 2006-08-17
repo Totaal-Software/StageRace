@@ -1952,7 +1952,7 @@ void CHtmlDoc::Toc()
 				{
 					if( pHalfStage->m_idTTArrival.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )	
 						TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_TTARRIVALLIST, nFS, nHS ))+TEXT("\">")
-							+CEventItem::ComposeTocTitle( m_pDocument, TI_TTARRIVALLIST, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idGeneral );
+							+CEventItem::ComposeTocTitle( m_pDocument, TI_TTARRIVALLIST, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idTTArrival );
 				}
 
 				// General classifications
@@ -2109,7 +2109,7 @@ void CHtmlDoc::Toc()
 						&& m_pDocument->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_GENERATETSTANOSORTEDGENERAL) )
 				{
 					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSSTANOSORTEDGENERAL, nFS, nHS ))+TEXT("\">")
-						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSSTANOSORTEDGENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idCrossOut );
+						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSSTANOSORTEDGENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idGeneralStaNoSorted );
 				}
 
 				// Time trial order
@@ -2359,20 +2359,24 @@ CString CHtmlDoc::GetStylePart(const CStageRaceDoc *pDoc)
 
 			if( ((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->ValueGet( IDS_SETT_HTML_FONT_TIMES ) )
 			{
-				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold }\r\n");
+				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
 				cStyle+= TEXT("            blockquote { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal }\r\n");
 				cStyle+= TEXT("            th         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; text-align: left }\r\n");
 				cStyle+= TEXT("            td         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal; border-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor+TEXT(" }\r\n");
 			}
 			else
 			{
-				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold }\r\n");
+				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
 				cStyle+= TEXT("            blockquote { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal }\r\n");
 				cStyle+= TEXT("            th         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; text-align: left }\r\n");
 				cStyle+= TEXT("            td         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(75,pDoc)+TEXT("%; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal; border-color: "+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor+" }\r\n");
 			}
 			cStyle+= TEXT("            strong     { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif;    font-size: ")+CalculateFontSize(220,pDoc)+TEXT("%; color: ") +((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: italic }\r\n"); // cross out font
 			cStyle+= TEXT("            .small     { font-size: ")+CalculateFontSize(65,pDoc)+TEXT("% }\r\n");
+			cStyle+= TEXT("            .prop      { font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
+			cStyle+= TEXT("            .section   { font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
+			cStyle+= TEXT("            .communique{ font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
+			cStyle+= TEXT("            .signature { font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
 		}
 		else
 		{
@@ -2383,26 +2387,40 @@ CString CHtmlDoc::GetStylePart(const CStageRaceDoc *pDoc)
 
 			if( ((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->ValueGet( IDS_SETT_HTML_FONT_TIMES ) )
 			{
-				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold }\r\n");
+				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
 				cStyle+= TEXT("            blockquote { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal }\r\n");
 				cStyle+= TEXT("            th         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; text-align: left }\r\n");
 				cStyle+= TEXT("            td         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: \"Times New Roman\", Times, serif; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal; border-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor+TEXT(" }\r\n");
 			}
 			else
 			{
-				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(8,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold }\r\n");
+				cStyle+= TEXT("            em         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(8,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
 				cStyle+= TEXT("            blockquote { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(8,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal }\r\n");
 				cStyle+= TEXT("            th         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(8,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_titleColor   +TEXT("; font-style: normal; font-weight: bold; text-align: left }\r\n");
 				cStyle+= TEXT("            td         { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif; font-size: ")+CalculateFontSize(8,pDoc)+TEXT("pt; color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: normal; border-color: "+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor+" }\r\n");
 			}
 			cStyle+= TEXT("            strong     { background-color: ")+((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bgColor+TEXT("; font-family: Arial, Helvetica, sans-serif;    font-size: ")+CalculateFontSize(20,pDoc)+TEXT("pt; color: ") +((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->m_bodyColor    +TEXT("; font-style: italic }\r\n"); // cross out font
 			cStyle+= TEXT("            .small     { font-size: ")+CalculateFontSize(7,pDoc)+TEXT("pt }\r\n");
+			cStyle+= TEXT("            .prop      { font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
+			cStyle+= TEXT("            .section   { font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
+			cStyle+= TEXT("            .communique{ font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
+			cStyle+= TEXT("            .signature { font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
 		}
 
+		cStyle+= TEXT("            thead.docrecognition { ");
 		if( pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_HEADER_DOCRECOGNITION_REPEAT) )
 		{
-			cStyle+= TEXT("            thead.docrecognition { display: table-header-group }\r\n");
+			cStyle+= TEXT("display: table-header-group; ");
 		}
+		if( ((CSettingsHTML*)pDoc->m_allsettings.GetSettings(SETT_HTML))->ValueGet( IDS_SETT_HTML_FONTSIZE_PROC ) )
+		{
+			cStyle+= TEXT("font-size: ")+CalculateFontSize(100,pDoc)+TEXT("% }\r\n");
+		}
+		else
+		{
+			cStyle+= TEXT("font-size: ")+CalculateFontSize(9,pDoc)+TEXT("pt }\r\n");
+		}
+
 		if( pDoc->m_allsettings.ValueGet(IDS_SETT_HTML_CUSTOMONEACHPAGE_TOP) )
 		{
 			cStyle+= TEXT("            thead.customhtml { display: table-header-group }\r\n");
