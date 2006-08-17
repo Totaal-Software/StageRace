@@ -58,7 +58,7 @@ LINK32=link.exe
 # Begin Special Build Tool
 SOURCE="$(InputPath)"
 PreLink_Cmds=D:\Projects\Non-StageRace\buildinc\Debug\buildinc.exe version.ver stagerace.rc	rc /l 0x809 /fo"Release/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc
-PostBuild_Cmds=copy Debug\StageRace.tlb StageRace.tlb	"AppendChecksum\release\AppendChecksum.exe" "StageRace.exe"	copy StageRace.exe executable\StageRace.exe
+PostBuild_Cmds=copy Release\StageRace.tlb StageRace.tlb	"AppendChecksum\release\AppendChecksum.exe" "StageRace.exe"	copy StageRace.exe executable\StageRace.exe
 # End Special Build Tool
 
 !ELSEIF  "$(CFG)" == "StageRace - Win32 Debug"
