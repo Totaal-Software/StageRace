@@ -361,7 +361,7 @@ CString CEventItem::ComposeFileTitle()
 		case TI_COMMUNIQUE:
 			// Half stage communiqué
 			if( m_nHalfStage )
-				return "Communiqué "+cHSID;
+				return "Communiqué half stage, demi-étape "+cHSID;
 			else
 				// Full stage communiqué
 				if( m_nFullStage )
