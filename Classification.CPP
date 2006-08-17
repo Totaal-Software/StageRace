@@ -1035,7 +1035,7 @@ void CClassification::PublishGeneral(int nFS, int nHS, bool bGeneral, bool bMask
 					// needed to calculate the time gaps...
 					pAllSorted->m_championTime = (objArrival.m_units/1000)*1000;
 					// ...and to make the headers
-					pAllSorted->Header(m_pDoc->StagesGet(nFS,nHS)->m_idGeneral.GetNo());
+					pAllSorted->Header(m_pDoc->StagesGet(nFS,nHS)->m_idGeneralStaNoSorted.GetNo());
 				}
 				// We write the competitor with his ranking to the html document
 				objArrival.m_rank = nAll++;
