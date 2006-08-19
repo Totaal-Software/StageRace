@@ -545,6 +545,11 @@ void CDlgEventItemSelection::OnCopy()
 	TCHAR czSelectedItem[MAX_PATH];
 	if( SHGetPathFromIDList( pSelectedItem, czSelectedItem ) )
 	{
+		CString cSelectedItem( czSelectedItem );
+		if( cSelectedItem.Right(1)!=TEXT("\\") )
+		{
+			cSelectedItem += TEXT("\\");
+		}
 		// Iterate all items that need copying
 		POSITION nPos = m_mapPrintItems.GetStartPosition();
 		while( nPos )
@@ -557,7 +562,7 @@ void CDlgEventItemSelection::OnCopy()
 				// Copy files that exist
 				if( !CopyFile(
 						p->m_pEventItem->ComposeFileNamePath(),
-						czSelectedItem+p->m_pEventItem->ComposeFileName(),
+						cSelectedItem+p->m_pEventItem->ComposeFileName(),
 						false ) )
 				{
 					// Show an error message when the copying fails
