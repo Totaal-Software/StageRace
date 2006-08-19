@@ -31,12 +31,15 @@ public:
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(CEditCommunique)
+	public:
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	//}}AFX_VIRTUAL
 
 // Implementation
 protected:
+	void SelectAll();
    CFont m_contentsfont;
 	void OnCancel();
 	void UpdatePreview();
@@ -65,6 +68,7 @@ protected:
 	afx_msg void OnEditApplystyletoselectionUnderlined();
 	afx_msg void OnUpdateEditApplystyletoselection(CCmdUI* pCmdUI);
 	afx_msg void OnInsertParagraphtitle();
+	afx_msg void OnEditselectall();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

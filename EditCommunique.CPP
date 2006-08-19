@@ -57,11 +57,12 @@ BEGIN_MESSAGE_MAP(CEditCommunique, CStageRaceWnd<cdxCDynamicDialog>)
 	ON_COMMAND(ID_EDIT_APPLYSTYLETOSELECTION_ITALIC, OnEditApplystyletoselectionItalic)
 	ON_COMMAND(ID_EDIT_APPLYSTYLETOSELECTION_UNDERLINED, OnEditApplystyletoselectionUnderlined)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_APPLYSTYLETOSELECTION_UNDERLINED, OnUpdateEditApplystyletoselection)
+	ON_COMMAND(ID_INSERT_PARAGRAPHTITLE, OnInsertParagraphtitle)
+	ON_COMMAND(ID_EDITSELECTALL, OnEditselectall)
 	ON_EN_CHANGE(IDC_CONTENTS, OnChange)
 	ON_EN_CHANGE(IDC_DATE, OnChange)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_APPLYSTYLETOSELECTION_ITALIC, OnUpdateEditApplystyletoselection)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_APPLYSTYLETOSELECTION_BOLD, OnUpdateEditApplystyletoselection)
-	ON_COMMAND(ID_INSERT_PARAGRAPHTITLE, OnInsertParagraphtitle)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -404,4 +405,29 @@ void CEditCommunique::OnUpdateEditApplystyletoselection(CCmdUI* pCmdUI)
 	((CEdit*)GetDlgItem(IDC_CONTENTS))->GetSel( nStartChar, nEndChar );
 	// Only enable if something selected
 	pCmdUI->Enable( nStartChar!=nEndChar );
+}
+
+void CEditCommunique::OnEditselectall() 
+{
+	// TODO: Add your command handler code here
+	SelectAll();	
+}
+
+void CEditCommunique::SelectAll()
+{
+	GetDlgItem(IDC_CONTENTS)->SetFocus();
+	((CEdit*)GetDlgItem(IDC_CONTENTS))->SetSel(0, -1);
+}
+
+BOOL CEditCommunique::PreTranslateMessage(MSG* pMsg) 
+{
+	if( pMsg->message == WM_CHAR )
+	{
+		if( pMsg->wParam == 1 ) // 1 == Ctrl+A
+		{
+			SelectAll();
+			return TRUE;
+		}
+	}
+	return CStageRaceWnd<cdxCDynamicDialog>::PreTranslateMessage(pMsg);
 }
