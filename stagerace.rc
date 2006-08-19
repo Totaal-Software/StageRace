@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 12, 1861
- PRODUCTVERSION 2005, 3, 12, 1861
+ FILEVERSION 2005, 3, 12, 1877
+ PRODUCTVERSION 2005, 3, 12, 1877
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 12, 1861\0"
+            VALUE "FileVersion", "2005, 3, 12, 1877\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 12, 1861\0"
+            VALUE "ProductVersion", "2005, 3, 12, 1877\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -3249,6 +3249,7 @@ BEGIN
             MENUITEM "&Underlined",                 ID_EDIT_APPLYSTYLETOSELECTION_UNDERLINED
 
         END
+        MENUITEM "Select &all\tCtrl+A",         ID_EDITSELECTALL
     END
     POPUP "&View"
     BEGIN
@@ -7069,6 +7070,7 @@ BEGIN
             MENUITEM "&Souligné",                   ID_EDIT_APPLYSTYLETOSELECTION_UNDERLINED
 
         END
+        MENUITEM "Tout &sélectionner\tCtrl+A",  ID_EDITSELECTALL
     END
     POPUP "&Affichage"
     BEGIN
@@ -11396,6 +11398,7 @@ BEGIN
             MENUITEM "&Onderstreept",               ID_EDIT_APPLYSTYLETOSELECTION_UNDERLINED
 
         END
+        MENUITEM "&Alles selecteren\tCtrl+A",   ID_EDITSELECTALL
     END
     POPUP "Bee&ld"
     BEGIN
