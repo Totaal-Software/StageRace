@@ -246,6 +246,7 @@ class CEventItem
 		const CStageRaceDoc* m_pDoc;
 		static BOOL m_bIndexMsgSuppress;
 protected:
+	CString RemoveIllegalChars(CString);
 	int GetCumulativeDistance( bool bBefore = false, bool bOfficial = true );
 };
 

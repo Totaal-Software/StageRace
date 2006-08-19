@@ -458,7 +458,7 @@ CString CEventItem::ComposeFileName()
 		return "index.html";
 	}
 	else
-		return m_pDoc->FilesTitle()+" - "+m_pDoc->m_allsettings.ProfilesGetCurrentFileName()+ComposeFileTitle()+".html";
+		return RemoveIllegalChars(m_pDoc->FilesTitle()+" - "+m_pDoc->m_allsettings.ProfilesGetCurrentFileName()+ComposeFileTitle()+".html");
 }
 
 CString CEventItem::ComposeFileNamePath()
@@ -1506,4 +1506,18 @@ CString CEventItem::GetSponsor()
 		default:
 			return CString();
 	}
+}
+
+CString CEventItem::RemoveIllegalChars(CString c)
+{
+	c.Replace('/', '_');
+	c.Replace('\\', '_');
+	c.Replace(':', '_');
+	c.Replace('*', '_');
+	c.Replace('?', '_');
+	c.Replace('"', '_');
+	c.Replace('<', '_');
+	c.Replace('>', '_');
+	c.Replace('|', '_');
+	return c;
 }
