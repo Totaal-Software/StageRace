@@ -2339,7 +2339,10 @@ void CTreeViewMain::OnBegindrag(NMHDR* pNMHDR, LRESULT* pResult)
 	NM_TREEVIEW* pNMTreeView = (NM_TREEVIEW*)pNMHDR;
 	*pResult = 0;
 
-	if( GetEventItem( pNMTreeView->itemNew.hItem ).IsPublicable() )
+	CEventItem ei = GetEventItem( pNMTreeView->itemNew.hItem );
+	if( ei.IsPublicable()
+		// Exception: TI_CLASSMASKxx also hold publicable events, typically
+		|| (ei.m_tiConcerning >= TI_CLASSMASK10 && ei.m_tiConcerning <= TI_CLASSMASK1) )
 	{
 		m_DragDrop.m_hItemDrag = pNMTreeView->itemNew.hItem;
 
@@ -2418,10 +2421,36 @@ void CTreeViewMain::OnLButtonUp(UINT nFlags, CPoint point)
 			{
 				CEventItem* pEI = new CEventItem(
 					GetEventItem( m_DragDrop.m_hItemDrag ) );
-				pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
-										(WPARAM)m_pDoc,
-										(LPARAM)pEI
-									);
+
+				// Exception: TI_CLASSMASKxx also hold publicable events, typically
+				if(pEI->m_tiConcerning >= TI_CLASSMASK10 && pEI->m_tiConcerning <= TI_CLASSMASK1)
+				{
+					// Get the two child items typically below a
+					// class mask leaf; don't use the leaf itself
+					// This is very specific
+					HTREEITEM hchild;
+					hchild = ctrlTree.GetNextItem(m_DragDrop.m_hItemDrag, TVGN_CHILD);
+					pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
+											(WPARAM)m_pDoc,
+											(LPARAM)new CEventItem(
+												GetEventItem(hchild))
+										);
+					hchild = ctrlTree.GetNextItem(hchild, TVGN_NEXT);
+					pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
+											(WPARAM)m_pDoc,
+											(LPARAM)new CEventItem(
+												GetEventItem(hchild))
+										);
+					delete pEI;
+					
+				}
+				else
+				{
+					pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
+											(WPARAM)m_pDoc,
+											(LPARAM)pEI
+										);
+				}
 			}
 		}
 		// This prevents from ugly leftovers from the dragging process
