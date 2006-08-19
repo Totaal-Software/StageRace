@@ -315,6 +315,8 @@ CSettingsPublication::CSettingsPublication()
 				CSettings::CSetting::MULTIOPTION, false, IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS );
     ValueAdd( IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_6,
 				CSettings::CSetting::MULTIOPTION, false, IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS );
+    ValueAdd( IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE,
+				CSettings::CSetting::SINGLEOPTION, true, IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS );
 
 	ValueAdd( IDS_SETT_PUBL_FOOTER,
 				CSettings::CSetting::GROUP, false, 0, 17 );

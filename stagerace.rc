@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 12, 1858
- PRODUCTVERSION 2005, 3, 12, 1858
+ FILEVERSION 2005, 3, 12, 1861
+ PRODUCTVERSION 2005, 3, 12, 1861
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 12, 1858\0"
+            VALUE "FileVersion", "2005, 3, 12, 1861\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 12, 1858\0"
+            VALUE "ProductVersion", "2005, 3, 12, 1861\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -916,7 +916,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 279, 114
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Start interval"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     LTEXT           "Start at competitor",IDC_STATIC,20,20,58,8
     EDITTEXT        IDC_STANO,87,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -4377,6 +4377,7 @@ BEGIN
     IDS_SETT_RANK_TEAMS_BUNCH "Get bunch"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "From best times"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "From best rankings"
+    IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Separator line"
 END
 
 #endif    // English (U.S.) resources
@@ -5506,7 +5507,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 302, 114
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Intervalle de départ"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     LTEXT           "&Commence au coureur",IDC_STATIC,20,20,72,8
     EDITTEXT        IDC_STANO,110,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -8231,6 +8232,7 @@ BEGIN
     IDS_SETT_RANK_TEAMS_BUNCH "Obtenir le premier groupe"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "Des meilleurs temps"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "Des meilleurs classées"
+    IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Ligne pour séparer"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -8717,7 +8719,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 273, 114
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Start interval"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     LTEXT           "Vanaf deelnemer",IDC_STATIC,20,20,54,8
     EDITTEXT        IDC_STANO,81,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -12506,6 +12508,7 @@ BEGIN
     IDS_SETT_RANK_TEAMS_BUNCH "Verkrijg groepje"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "Uit beste tijden"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "Uit beste klasseringen"
+    IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Scheidingslijn"
 END
 
 #endif    // Dutch (Netherlands) resources

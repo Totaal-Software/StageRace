@@ -2565,7 +2565,7 @@ void CHtmlDoc::StartColumns()
 	if( !m_openSuccess )
 		return;
 
-	WriteString( TEXT("        <TABLE WIDTH=\"100%\" CELLSPACING=\"10\" CELLPADDING=\"0\" BORDER=\"0\">\r\n") );
+	WriteString( TEXT("        <TABLE WIDTH=\"100%\" CELLSPACING=\"5\" CELLPADDING=\"0\" BORDER=\"0\">\r\n") );
 	WriteString( TEXT("           <TR VALIGN=\"top\">\r\n") );
 	WriteString( TEXT("              <TD>\r\n") );
 }
@@ -2583,6 +2583,10 @@ void CHtmlDoc::NextColumn()
 	}
 	
 	WriteString( TEXT("              </TD>\r\n") );
+	if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE) )
+	{
+		WriteString( TEXT("              <TD style=\"border-right-style: solid; border-right-width: 1px\">&nbsp;</TD>\r\n") );
+	}
 	WriteString( TEXT("              <TD>\r\n") );
 }
 
