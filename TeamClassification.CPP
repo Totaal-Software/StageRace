@@ -40,6 +40,7 @@ void CTeamClassification::LoadClassification(CClassification* pClass, bool bOneF
 	//
 	// Per stage:
 	//  1. Sum of times of first three competitors, without bonification times
+	//     First three can either be on time, or on ranking *
 	// (2. Sum of rankings of first three competitors)*
 	//  3. Ranking of first/last* competitor of three
 	//
@@ -49,6 +50,47 @@ void CTeamClassification::LoadClassification(CClassification* pClass, bool bOneF
 	//  3. Ranking of last stage teams classification
 	//
 	// * = setting
+
+	CList<CArrival,CArrival&>* pRanking;
+	CList<CArrival,CArrival&> tempclassification;
+	// This is the setting mentioned under 1.
+	if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES) )
+	{
+		// We need to convert the classification on ranks to one on times
+		// Walk through the entire classification
+		POSITION nPos = pClass->m_classification.GetHeadPosition();
+		while( nPos )
+		{
+			CArrival arr = pClass->m_classification.GetNext(nPos);
+			// For each arrival, walk through the temporary list, looking
+			// for a place to insert, on basis of time (units)
+			POSITION nPos1 = tempclassification.GetHeadPosition();
+			bool bdone = false;
+			while( nPos1 && !bdone )
+			{
+				POSITION nPos2 = nPos1;
+				CArrival arrcomp = tempclassification.GetNext(nPos1);
+				// Found a place to insert
+				if( arrcomp.m_units > arr.m_units )
+				{
+					// Insert and stop
+					tempclassification.InsertBefore(nPos2, arr);
+					bdone = true;
+				}
+			}
+			if( !bdone )
+			{
+				// Not matched, so add at tail
+				tempclassification.AddTail(arr);
+			}
+		}
+		pRanking = &tempclassification;
+	}
+	else
+	{
+		// Just use ranks
+		pRanking = &pClass->m_classification;
+	}
 
 	// We handle all the teams once
 	POSITION nPos1 = m_store.GetStartPosition();
@@ -72,14 +114,14 @@ void CTeamClassification::LoadClassification(CClassification* pClass, bool bOneF
 		CClassification* pBunch = new CClassification(m_pDoc);
 
 		// We skip through the classification until we have enough competitors of the team handled
-		POSITION nPos2 = pClass->m_classification.GetHeadPosition();
+		POSITION nPos2 = pRanking->GetHeadPosition();
 		while( nPos2 && nCompsLeft )
 		{
 			// We make an object for the competitor we handle
 			CArrival objSubjArrival;
 
 			// We fill the object with the current competitor to handle
-			objSubjArrival = pClass->m_classification.GetNext( nPos2 );
+			objSubjArrival = pRanking->GetNext( nPos2 );
 
 // Temporarely because we're loosing m_pTeam data somewhere down the road
 CCompetitor objTempComp;
@@ -287,10 +329,10 @@ void CTeamClassification::Publish(int nFS, int nHS)
 				&& objArrival.m_pBunch )
 			{
 				CArrival bunchcompetitor;
-				POSITION nPos1 = objArrival.m_pBunch->m_classification.GetHeadPosition();
-				while( nPos1 )
+				POSITION nPos = objArrival.m_pBunch->m_classification.GetHeadPosition();
+				while( nPos )
 				{
-					bunchcompetitor = objArrival.m_pBunch->m_classification.GetNext(nPos1);
+					bunchcompetitor = objArrival.m_pBunch->m_classification.GetNext(nPos);
 					objHtml.Competitor( columns, bunchcompetitor.m_staNo, &bunchcompetitor, NULL, true, false, true );
 				}
 				if( nPos )

@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 11, 1825
- PRODUCTVERSION 2005, 3, 11, 1825
+ FILEVERSION 2005, 3, 12, 1850
+ PRODUCTVERSION 2005, 3, 12, 1850
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 11, 1825\0"
+            VALUE "FileVersion", "2005, 3, 12, 1850\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 11, 1825\0"
+            VALUE "ProductVersion", "2005, 3, 12, 1850\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -4374,6 +4374,9 @@ BEGIN
     IDS_SETT_HTML_CUSTOMONEACHPAGE_BOTTOM "Custom bottom"
     IDS_SETT_MAIL           "Mail"
     IDS_SETT_MAIL_BCC       "As BCC"
+    IDS_SETT_RANK_TEAMS_BUNCH "Get bunch"
+    IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "From best times"
+    IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "From best rankings"
 END
 
 #endif    // English (U.S.) resources
@@ -8225,6 +8228,9 @@ BEGIN
     IDS_SETT_HTML_CUSTOMONEACHPAGE_BOTTOM "Personnalisation bas"
     IDS_SETT_MAIL           "Mail"
     IDS_SETT_MAIL_BCC       "Comme BCC"
+    IDS_SETT_RANK_TEAMS_BUNCH "Obtenir le premier groupe"
+    IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "Des meilleurs temps"
+    IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "Des meilleurs classées"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -12497,6 +12503,9 @@ BEGIN
     IDS_SETT_HTML_CUSTOMONEACHPAGE_BOTTOM "Eigen onderzijde"
     IDS_SETT_MAIL           "Mail"
     IDS_SETT_MAIL_BCC       "Als BCC"
+    IDS_SETT_RANK_TEAMS_BUNCH "Verkrijg groepje"
+    IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "Uit beste tijden"
+    IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "Uit beste klasseringen"
 END
 
 #endif    // Dutch (Netherlands) resources

@@ -1016,6 +1016,9 @@
 #define IDS_SETT_HTML_CUSTOMONEACHPAGE_BOTTOM 25269
 #define IDS_SETT_MAIL                   25270
 #define IDS_SETT_MAIL_BCC               25271
+#define IDS_SETT_RANK_TEAMS_BUNCH       25272
+#define IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES 25273
+#define IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS 25274
 #define IDS_MBC_44                      32774
 #define IDS_MBT_44                      32775
 #define IDS_MBC_45                      32776
