@@ -139,7 +139,7 @@ void CListTimeTrialOrder::OnTimetrialorderfunctionsAuto()
 	// so that we can use the time of the first competitor to start from
 	if( m_ctrlArrivalList.GetSelectedCount() > 1 )
 	{
-		CDlgInterval aDlg( m_staNo.GetValue(), m_time.GetTime()/1000 );
+		CDlgInterval aDlg( m_staNo.GetValue(), m_time.GetTime() );
 
 		if( aDlg.DoModal()==IDOK )
 		{
@@ -158,9 +158,9 @@ void CListTimeTrialOrder::OnTimetrialorderfunctionsAuto()
 				CArrival objArr	= m_listArrival.GetAt( nStaNo );
 				DWORD tNewTime;
 				if( aDlg.m_useOrder )
-					tNewTime	= aDlg.m_startTime * 1000 + (objArr.m_order-nOrder) * aDlg.m_interval * 1000;
+					tNewTime	= aDlg.m_startTime + (objArr.m_order-nOrder) * aDlg.m_interval;
 				else
-					tNewTime	= aDlg.m_startTime * 1000 + nCount++ * aDlg.m_interval * 1000;
+					tNewTime	= aDlg.m_startTime + nCount++ * aDlg.m_interval;
 				if( objArr.m_unitsAtStart != tNewTime )
 				{
 					if( ChangesAllowed( objArr.m_staNo ) )

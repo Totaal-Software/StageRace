@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 12, 1851
- PRODUCTVERSION 2005, 3, 12, 1851
+ FILEVERSION 2005, 3, 12, 1858
+ PRODUCTVERSION 2005, 3, 12, 1858
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 12, 1851\0"
+            VALUE "FileVersion", "2005, 3, 12, 1858\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 12, 1851\0"
+            VALUE "ProductVersion", "2005, 3, 12, 1858\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -916,7 +916,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 279, 114
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Start interval"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
+FONT 8, "MS Sans Serif"
 BEGIN
     LTEXT           "Start at competitor",IDC_STATIC,20,20,58,8
     EDITTEXT        IDC_STANO,87,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -924,12 +924,10 @@ BEGIN
                     WS_EX_STATICEDGE
     LTEXT           "&First starting time",IDC_STATIC,20,39,53,8
     EDITTEXT        IDC_STARTTIME,87,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "seconds",IDC_STATIC,159,39,31,8
+                    NOT WS_BORDER,WS_EX_STATICEDGE
     LTEXT           "&Interval",IDC_STATIC,20,57,24,8
-    EDITTEXT        IDC_INTERVAL,87,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "seconds",IDC_STATIC,159,57,31,8
+    EDITTEXT        IDC_INTERVAL,87,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
     DEFPUSHBUTTON   "OK",IDOK,209,42,50,23
     PUSHBUTTON      "Cancel",IDCANCEL,209,71,50,23
     CONTROL         "&Multiply interval by start order offset",IDC_USEORDER,
@@ -1287,7 +1285,7 @@ END
 IDD_SETT_PUBL DIALOGEX 0, 0, 420, 343
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Publication"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     CONTROL         "Binary settings",IDC_SETTINGS_BINARYSETTINGS,"Button",
                     BS_OWNERDRAW | WS_TABSTOP,20,20,380,85
@@ -1373,7 +1371,7 @@ END
 IDD_SETT_UPLOAD DIALOGEX 0, 0, 420, 343
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Upload/Mail"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     CONTROL         "Binary settings",IDC_SETTINGS_BINARYSETTINGS,"Button",
                     BS_OWNERDRAW | WS_TABSTOP,20,20,380,85
@@ -5317,7 +5315,7 @@ END
 IDD_SETT_PUBL DIALOGEX 0, 0, 420, 343
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Publication"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     CONTROL         "Binary settings",IDC_SETTINGS_BINARYSETTINGS,"Button",
                     BS_OWNERDRAW | WS_TABSTOP,20,20,380,85
@@ -5404,7 +5402,7 @@ END
 IDD_SETT_UPLOAD DIALOGEX 0, 0, 420, 343
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Transfert/Mail"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     CONTROL         "Binary settings",IDC_SETTINGS_BINARYSETTINGS,"Button",
                     BS_OWNERDRAW | WS_TABSTOP,20,20,380,85
@@ -5508,7 +5506,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 302, 114
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Intervalle de départ"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
+FONT 8, "MS Sans Serif"
 BEGIN
     LTEXT           "&Commence au coureur",IDC_STATIC,20,20,72,8
     EDITTEXT        IDC_STANO,110,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -5516,12 +5514,10 @@ BEGIN
                     WS_EX_STATICEDGE
     LTEXT           "&Heure du premier départ",IDC_STATIC,20,39,77,8
     EDITTEXT        IDC_STARTTIME,110,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "secondes",IDC_STATIC,182,39,35,8
+                    NOT WS_BORDER,WS_EX_STATICEDGE
     LTEXT           "&Intervalle",IDC_STATIC,20,57,30,8
     EDITTEXT        IDC_INTERVAL,110,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "secondes",IDC_STATIC,182,57,35,8
+                    NOT WS_BORDER,WS_EX_STATICEDGE
     DEFPUSHBUTTON   "OK",IDOK,232,42,50,23
     PUSHBUTTON      "Annuler",IDCANCEL,232,71,50,23
     CONTROL         "Insérer des intervalles par un &décalage de l'ordre de départ",
@@ -8721,7 +8717,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 273, 114
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Start interval"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
+FONT 8, "MS Sans Serif"
 BEGIN
     LTEXT           "Vanaf deelnemer",IDC_STATIC,20,20,54,8
     EDITTEXT        IDC_STANO,81,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -8729,12 +8725,10 @@ BEGIN
                     WS_EX_STATICEDGE
     LTEXT           "&Eerste starttijd",IDC_STATIC,20,39,45,8
     EDITTEXT        IDC_STARTTIME,81,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "seconden",IDC_STATIC,153,39,31,8
+                    NOT WS_BORDER,WS_EX_STATICEDGE
     LTEXT           "&Interval",IDC_STATIC,20,57,24,8
-    EDITTEXT        IDC_INTERVAL,81,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "seconden",IDC_STATIC,153,57,31,8
+    EDITTEXT        IDC_INTERVAL,81,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
     DEFPUSHBUTTON   "OK",IDOK,203,42,50,23
     PUSHBUTTON      "Annuleren",IDCANCEL,203,71,50,23
     CONTROL         "&Vermenigvuldig interval met verschil in start orde",
@@ -9324,7 +9318,7 @@ END
 IDD_SETT_PUBL DIALOGEX 0, 0, 420, 343
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Publicatie"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     CONTROL         "Binary settings",IDC_SETTINGS_BINARYSETTINGS,"Button",
                     BS_OWNERDRAW | WS_TABSTOP,20,20,380,85
@@ -9402,7 +9396,7 @@ END
 IDD_SETT_UPLOAD DIALOGEX 0, 0, 420, 343
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Uploaden/Mail"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     CONTROL         "Binary settings",IDC_SETTINGS_BINARYSETTINGS,"Button",
                     BS_OWNERDRAW | WS_TABSTOP,20,20,380,85
