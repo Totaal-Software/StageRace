@@ -416,13 +416,6 @@ void CDlgEventItemSelection::OnMail()
 
 		ZeroMemory( &MailAttachments, sizeof(MapiFileDesc) );
 		
-		MailSendTo.ulReserved				= 0;
-		MailSendTo.ulRecipClass				= MAPI_TO;
-		MailSendTo.lpszName					= NULL;
-		MailSendTo.lpszAddress				= NULL;
-		MailSendTo.ulEIDSize				= 0;
-		MailSendTo.lpEntryID				= NULL;
-		
 		CString cSubject = ((CSettingsGeneral*)m_pDoc->m_allsettings.GetSettings(SETT_GENERAL))->m_eventName;
 		CString cNote = ((CSettingsGeneral*)m_pDoc->m_allsettings.GetSettings(SETT_GENERAL))->m_eventName+"\r\n";
 			cNote += ((CSettingsGeneral*)m_pDoc->m_allsettings.GetSettings(SETT_GENERAL))->m_eventSubTitle+"\r\n";
@@ -444,7 +437,7 @@ void CDlgEventItemSelection::OnMail()
 			cNote += "  StageRace "+((CStageRaceApp*)AfxGetApp())->m_key.GetVersionTitle()+"\r\n";
 			cNote += "  http://www.stagerace.com";
 
-		char* pconverted1, * pconverted2;
+		char* pconverted1, * pconverted2, * pconverted3;
 		int need;
 
 		need = WideCharToMultiByte( CP_ACP, 0, cSubject, -1, NULL, 0, NULL, NULL );
@@ -459,14 +452,34 @@ void CDlgEventItemSelection::OnMail()
 			WideCharToMultiByte( CP_ACP, 0, cNote, -1, pconverted2, need, NULL, NULL );
 		MailMsg.lpszNoteText				= pconverted2;
 
+		CString recps( TEXT("SMTP:")+((CSettingsUpload*)m_pDoc->m_allsettings.GetSettings(SETT_UPLOAD))->m_mailRecipients );
+		need = WideCharToMultiByte( CP_ACP, 0, recps, -1, NULL, 0, NULL, NULL );
+		pconverted3 = new char[need];
+		if( pconverted3 )
+			WideCharToMultiByte( CP_ACP, 0, recps, -1, pconverted3, need, NULL, NULL );
+
+		MailSendTo.ulReserved				= 0;
+		if( m_pDoc->m_allsettings.ValueGet( IDS_SETT_MAIL_BCC ) )
+		{
+			MailSendTo.ulRecipClass	= MAPI_BCC;
+		}
+		else
+		{
+			MailSendTo.ulRecipClass = MAPI_TO;
+		}
+		MailSendTo.lpszName					= NULL;
+		MailSendTo.lpszAddress				= pconverted3;
+		MailSendTo.ulEIDSize				= 0;
+		MailSendTo.lpEntryID				= NULL;
+		
 		MailMsg.ulReserved					= 0;			//Always 0
 		MailMsg.lpszMessageType				= NULL;
 		MailMsg.lpszDateReceived			= NULL;
 		MailMsg.lpszConversationID			= NULL;
 		MailMsg.flFlags						= 0l;
 		MailMsg.lpOriginator				= NULL;			//Mail Sender's Info
-		MailMsg.nRecipCount					= 0;
-		MailMsg.lpRecips					= NULL;			//Details of recipiant.
+		MailMsg.nRecipCount					= ((CSettingsUpload*)m_pDoc->m_allsettings.GetSettings(SETT_UPLOAD))->m_mailRecipients.GetLength()?1:0;
+		MailMsg.lpRecips					= &MailSendTo;			//Details of recipiant.
 
 		// Iterate all items that need sending
 		POSITION nPos = m_mapPrintItems.GetStartPosition();
@@ -500,6 +513,7 @@ void CDlgEventItemSelection::OnMail()
 
 		if( pconverted1 ) delete pconverted1;
 		if( pconverted2 ) delete pconverted2;
+		if( pconverted3 ) delete pconverted3;
 
 		if( Error==SUCCESS_SUCCESS )
 		{

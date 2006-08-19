@@ -165,7 +165,7 @@ int CStageRaceDoc::GetHardcodedFileVersion() const
 {
 	// Compose it from the current program version with
 	// one following digit
-	return 3020;
+	return 3120;
 }
 
 void CStageRaceDoc::Serialize(CArchive& objAr)

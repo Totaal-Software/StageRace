@@ -22,6 +22,7 @@ public:
 	CString m_username;
 	CString m_hostAddress;
 	CString m_remoteDir;
+	CString m_mailRecipients;
 };
 
 #endif // !defined(AFX_SETTINGSUPLOAD_H__CF2DE107_4CA2_4C17_81B1_997B141521C5__INCLUDED_)

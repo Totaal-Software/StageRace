@@ -50,6 +50,7 @@ BOOL CPageSettingsUpload::OnInitDialog()
 	SetDlgItemText( IDC_SETTINGS_USERNAME, pSet->m_username );
 	SetDlgItemText( IDC_SETTINGS_PASSWORD, pSet->m_password );
 	SetDlgItemText( IDC_SETTINGS_REMOTEDIR, pSet->m_remoteDir );
+	SetDlgItemText( IDC_SETTINGS_MAILRECIPIENTS, pSet->m_mailRecipients );
 	
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
@@ -62,6 +63,7 @@ void CPageSettingsUpload::OnOK()
 	GetDlgItemText( IDC_SETTINGS_USERNAME, pSet->m_username );
 	GetDlgItemText( IDC_SETTINGS_PASSWORD, pSet->m_password );
 	GetDlgItemText( IDC_SETTINGS_REMOTEDIR, pSet->m_remoteDir );
+	GetDlgItemText( IDC_SETTINGS_MAILRECIPIENTS, pSet->m_mailRecipients );
 
 	CPageSettings::OnOK();
 }
