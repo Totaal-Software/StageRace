@@ -89,8 +89,8 @@ void CPageSettingsRanking::OnChangeSettingsrankingDepthintermediate()
 {
 	CString cNumber;
 	((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHINTERMEDIATE ))->GetWindowText( cNumber );
-	if( _ttoi( cNumber ) < 3 )
-		((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHINTERMEDIATE ))->SetWindowText( TEXT("3") );
+	if( _ttoi( cNumber ) < 1 )
+		((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHINTERMEDIATE ))->SetWindowText( TEXT("1") );
 	if( _ttoi( cNumber ) > 100 )
 		((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHINTERMEDIATE ))->SetWindowText( TEXT("100") );
 }
@@ -99,8 +99,8 @@ void CPageSettingsRanking::OnChangeSettingsrankingDepthstage()
 {
 	CString cNumber;
 	((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHSTAGE ))->GetWindowText( cNumber );
-	if( _ttoi( cNumber ) < 3 )
-		((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHSTAGE ))->SetWindowText( TEXT("3") );
+	if( _ttoi( cNumber ) < 1 )
+		((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHSTAGE ))->SetWindowText( TEXT("1") );
 	if( _ttoi( cNumber ) > 65536 )
 		((CWnd*) GetDlgItem( IDC_SETTINGSRANKING_DEPTHSTAGE ))->SetWindowText( TEXT("65535") );
 }
