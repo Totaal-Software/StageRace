@@ -128,6 +128,8 @@ public:
 	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint);
 	//}}AFX_VIRTUAL
 	
+private:
+	bool ShouldDrag(CEventItem&);
 };
 
 #ifndef _DEBUG  // debug version in TreeViewMain.cpp

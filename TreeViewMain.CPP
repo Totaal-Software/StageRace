@@ -2340,9 +2340,7 @@ void CTreeViewMain::OnBegindrag(NMHDR* pNMHDR, LRESULT* pResult)
 	*pResult = 0;
 
 	CEventItem ei = GetEventItem( pNMTreeView->itemNew.hItem );
-	if( ei.IsPublicable()
-		// Exception: TI_CLASSMASKxx also hold publicable events, typically
-		|| (ei.m_tiConcerning >= TI_CLASSMASK10 && ei.m_tiConcerning <= TI_CLASSMASK1) )
+	if( ShouldDrag(ei) )
 	{
 		m_DragDrop.m_hItemDrag = pNMTreeView->itemNew.hItem;
 
@@ -2423,33 +2421,44 @@ void CTreeViewMain::OnLButtonUp(UINT nFlags, CPoint point)
 					GetEventItem( m_DragDrop.m_hItemDrag ) );
 
 				// Exception: TI_CLASSMASKxx also hold publicable events, typically
-				if(pEI->m_tiConcerning >= TI_CLASSMASK10 && pEI->m_tiConcerning <= TI_CLASSMASK1)
+				switch(pEI->m_tiConcerning)
 				{
-					// Get the two child items typically below a
-					// class mask leaf; don't use the leaf itself
-					// This is very specific
-					HTREEITEM hchild;
-					hchild = ctrlTree.GetNextItem(m_DragDrop.m_hItemDrag, TVGN_CHILD);
-					pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
-											(WPARAM)m_pDoc,
-											(LPARAM)new CEventItem(
-												GetEventItem(hchild))
-										);
-					hchild = ctrlTree.GetNextItem(hchild, TVGN_NEXT);
-					pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
-											(WPARAM)m_pDoc,
-											(LPARAM)new CEventItem(
-												GetEventItem(hchild))
-										);
-					delete pEI;
-					
-				}
-				else
-				{
-					pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
-											(WPARAM)m_pDoc,
-											(LPARAM)pEI
-										);
+					case TI_CLASSMASK1:
+					case TI_CLASSMASK2:
+					case TI_CLASSMASK3:
+					case TI_CLASSMASK4:
+					case TI_CLASSMASK5:
+					case TI_CLASSMASK6:
+					case TI_CLASSMASK7:
+					case TI_CLASSMASK8:
+					case TI_CLASSMASK9:
+					case TI_CLASSMASK10:
+					{
+						// Get the two child items typically below a
+						// class mask leaf; don't use the leaf itself
+						// This is very specific
+						HTREEITEM hchild;
+						hchild = ctrlTree.GetNextItem(m_DragDrop.m_hItemDrag, TVGN_CHILD);
+						pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
+												(WPARAM)m_pDoc,
+												(LPARAM)new CEventItem(
+													GetEventItem(hchild))
+											);
+						hchild = ctrlTree.GetNextItem(hchild, TVGN_NEXT);
+						pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
+												(WPARAM)m_pDoc,
+												(LPARAM)new CEventItem(
+													GetEventItem(hchild))
+											);
+						delete pEI;
+						
+					}
+					break;
+					default:
+						pWnd->PostMessage( WM_USER_DRAGGEDEVENTITEM,
+												(WPARAM)m_pDoc,
+												(LPARAM)pEI
+											);
 				}
 			}
 		}
@@ -2544,4 +2553,31 @@ BOOL CTreeViewMain::PreTranslateMessage(MSG* pMsg)
 			(CObject*)pMsg->wParam );
 	}
 	return CTreeView::PreTranslateMessage(pMsg);
+}
+
+bool CTreeViewMain::ShouldDrag(CEventItem &ei)
+{
+	if( ei.IsPublicable() )
+	{
+		return true;
+	}
+	else
+	{
+		switch(ei.m_tiConcerning)
+		{
+			case TI_CLASSMASK1:
+			case TI_CLASSMASK2:
+			case TI_CLASSMASK3:
+			case TI_CLASSMASK4:
+			case TI_CLASSMASK5:
+			case TI_CLASSMASK6:
+			case TI_CLASSMASK7:
+			case TI_CLASSMASK8:
+			case TI_CLASSMASK9:
+			case TI_CLASSMASK10:
+				return true;
+			default:
+				return false;
+		}
+	}
 }
