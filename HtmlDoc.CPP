@@ -27,10 +27,23 @@ static char THIS_FILE[]=__FILE__;
 
 ///////////////////////////////////////////////////////////////////////////
 // CONSTRUCTION AND INITIALISATION
-//experimental: CTextDoc* ptextdoc = NULL;
 CHtmlDoc::CHtmlDoc( CEventItem ei )
 {
-//experimental: ptextdoc = new CTextDoc(ei);
+	// Generation of CSV counterpart of this method
+	m_ptextdoc = NULL;
+	// Feature switch on/off right here
+	if( false )
+	{
+		if( ei.IsPublicableCSV() )
+		{
+			m_ptextdoc = new CTextDoc(ei);
+			if( m_ptextdoc && !m_ptextdoc->IsFileOpened() )
+			{
+				delete m_ptextdoc;
+				m_ptextdoc = NULL;
+			}
+		}
+	}
 	// Save for further use
 	m_ei = ei;
 	m_pDocument = ei.GetDocument();
@@ -70,9 +83,23 @@ CHtmlDoc::CHtmlDoc( CEventItem ei )
 	HtmlHeader();
 }
 
+CHtmlDoc::~CHtmlDoc()
+{
+	if( m_ptextdoc )
+	{
+		delete m_ptextdoc;
+		m_ptextdoc = NULL;
+	}
+}
+
 void CHtmlDoc::Finish()
 {
-//experimental: ptextdoc->Finish();
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->Finish();
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -85,6 +112,7 @@ void CHtmlDoc::Finish()
 
 void CHtmlDoc::HtmlHeader()
 {
+	// Note: this method has not CSV counterpart (due to HTML specifics)
 	if( !m_openSuccess )
 		return;
 
@@ -141,6 +169,7 @@ void CHtmlDoc::HtmlHeader()
 
 void CHtmlDoc::HtmlFooter()
 {
+	// Note: this method has not CSV counterpart (due to HTML specifics)
 	if( !m_openSuccess )
 		return;
 
@@ -165,7 +194,12 @@ void CHtmlDoc::HtmlFooter()
 
 void CHtmlDoc::Header(unsigned short nId)
 {
-//experimental: ptextdoc->Header(nId);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->Header(nId);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -310,7 +344,12 @@ void CHtmlDoc::Header(unsigned short nId)
 
 void CHtmlDoc::Footer(PUBLI_BODYCOLUMNS columns[]/*NULL*/, CSignOutList* pSignOuts/*=NULL*/, int nNumberNotStarted/*=-1*/, int nNumberStarters/*=-1*/, int nNumberLeft/*=-1*/, CString czDroppedOut/*=""*/, CString czCutOff/*=""*/)
 {
-//experimental: ptextdoc->Footer(columns, pSignOuts, nNumberNotStarted, nNumberStarters, nNumberLeft, czDroppedOut, czCutOff);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->Footer(columns, pSignOuts, nNumberNotStarted, nNumberStarters, nNumberLeft, czDroppedOut, czCutOff);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -647,6 +686,7 @@ bool CHtmlDoc::IsUnsafe(unsigned char cCompare)
 
 void CHtmlDoc::StartCompetitorsTable(PUBLI_BODYCOLUMNS columns[])
 {
+	// Note: this method has not CSV counterpart (due to HTML specifics)
 	// If this is the first line, the flag m_competitorsStarted will be
 	// false and the table header will printed
 	if( !m_competitorsStarted )
@@ -810,7 +850,12 @@ void CHtmlDoc::ColumnItem(CString item, int nColSpan/*=1*/)
 
 void CHtmlDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pRank/*=NULL*/, CSignOut* pSignOut/*=NULL*/, bool bDraw/*=true*/, bool bBold/*=false*/, bool bSuppressGap/*=false*/ )
 {
-//experimental: ptextdoc->Competitor(columns, nComp, pRank, pSignOut, bDraw, bBold, bSuppressGap);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->Competitor(columns, nComp, pRank, pSignOut, bDraw, bBold, bSuppressGap);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -1172,7 +1217,12 @@ void CHtmlDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 
 void CHtmlDoc::SayText(PUBLI_BODYCOLUMNS columns[], CString czText)
 {
-//experimental: ptextdoc->SayText(columns, czText);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->SayText(columns, czText);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -1198,7 +1248,6 @@ void CHtmlDoc::SayText(PUBLI_BODYCOLUMNS columns[], CString czText)
 
 void CHtmlDoc::SaySprint(PUBLI_BODYCOLUMNS columns[], int nSprint)
 {
-//experimental: ptextdoc->SaySprint(columns, nSprint);
 	// Helper
 	TCHAR cBuffer[10];
 	_itot( nSprint, cBuffer, 10 );
@@ -1208,6 +1257,12 @@ void CHtmlDoc::SaySprint(PUBLI_BODYCOLUMNS columns[], int nSprint)
 
 void CHtmlDoc::Legenda(PUBLI_BODYCOLUMNS columns[])
 {
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->Legenda(columns);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -1329,7 +1384,12 @@ void CHtmlDoc::Legenda(PUBLI_BODYCOLUMNS columns[])
 
 void CHtmlDoc::TeamHeader(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 {
-//experimental: ptextdoc->TeamHeader(columns, pTeam);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->TeamHeader(columns, pTeam);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -1374,7 +1434,12 @@ void CHtmlDoc::TeamHeader(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 
 void CHtmlDoc::TeamFooter(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 {
-//experimental: ptextdoc->TeamFooter(columns, pTeam);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->TeamFooter(columns, pTeam);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -1409,7 +1474,12 @@ void CHtmlDoc::TeamFooter(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 
 void CHtmlDoc::Break(PUBLI_BODYCOLUMNS columns[])
 {
-//experimental: ptextdoc->Break(columns);
+	// Generation of CSV counterpart of this method
+	if( m_ptextdoc )
+	{
+		m_ptextdoc->m_championTime = this->m_championTime;
+		m_ptextdoc->Break(columns);
+	}
 	if( !m_openSuccess )
 		return;
 
@@ -1700,6 +1770,7 @@ void CHtmlDoc::Properties( PUBLI_PROPERTIES props[], CObject* pObj/*=NULL*/ )
 
 void CHtmlDoc::Communique(CCommunique* pComm)
 {
+	// Note: this method has not CSV counterpart (communique not supported)
 	if( !m_openSuccess )
 		return;
 
@@ -1880,6 +1951,7 @@ CString CHtmlDoc::CommuniqueStatic(CCommunique *pComm, const CStageRaceDoc *pDoc
 
 void CHtmlDoc::Toc()
 {
+	// Note: this method has not CSV counterpart (TOC not supported)
 	if( !m_openSuccess )
 		return;
 
@@ -2165,6 +2237,7 @@ void CHtmlDoc::Toc()
 #define MAXTOCROWINDENT 4
 void CHtmlDoc::TocRow(int nIndent, CString cContent, const CId* objId/*=NULL*/, CString cNo/*=""*/ )
 {
+	// Note: this method has not CSV counterpart (TOC not supported)
 	if( !m_openSuccess )
 		return;
 
@@ -2265,9 +2338,17 @@ void CHtmlDoc::SignOuts(PUBLI_BODYCOLUMNS columns[], CSignOutList* pSignOuts)
 
 			DWORD nState = 0;
 			CSignOut objSignOut;
+			
+			// This is a dirty trick to prevent wrong behaviour of the befriended text output class
+			CTextDoc* ptextdoc = m_ptextdoc;
+			m_ptextdoc = NULL;
+
 			while( pSignOuts->IterateSorted( nState, objSignOut ) )
 				Competitor( so_columns, objSignOut.m_staNo, NULL, &objSignOut );
-			
+
+			// End the dirty trick
+			m_ptextdoc = ptextdoc;
+
 			WriteString( TEXT("        </TABLE>\r\n") );
 			WriteString( TEXT("\r\n") );
 			m_competitorsStarted = false;
@@ -2531,7 +2612,8 @@ CString CHtmlDoc::CalculateFontSize(int nSize, const CStageRaceDoc *pDoc)
 
 void CHtmlDoc::MakeDummy(CEventItem ei, unsigned short nId)
 {
-//experimental: ptextdoc->MakeDummy(ei, nId);
+	// Note: this method has not CSV counterpart (no dummies for CSV exports)
+
 	if( ei.GetDocument()->m_allsettings.ValueGet(IDS_SETT_HTML_DUMMY_PRINT) )
 	{
 		// Make the html document

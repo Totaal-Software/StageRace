@@ -24,14 +24,15 @@
 class CTextDoc : public CPublication
 {
 public:
+	bool IsFileOpened();
 	void EndColumns();
 	void NextColumn();
 	void StartColumns();
 	static void MakeDummy(CEventItem, unsigned short nId);
 	CTextDoc( CEventItem ei );
+	void Legenda( PUBLI_BODYCOLUMNS columns[] );
 	void SayText( PUBLI_BODYCOLUMNS columns[], CString czText );
 	void Break( PUBLI_BODYCOLUMNS columns[] );
-	void SaySprint( PUBLI_BODYCOLUMNS columns[], int nSprint );
 	int m_nPrintedRules;
 	void TeamHeader(PUBLI_BODYCOLUMNS columns[], CTeam* pTeam);
 	void TeamFooter(PUBLI_BODYCOLUMNS columns[], CTeam* pTeam);

@@ -158,6 +158,8 @@ void CTextDoc::Footer(PUBLI_BODYCOLUMNS columns[]/*NULL*/, CSignOutList* pSignOu
 			+CString(czDroppedOut) );
 	}
 
+	WriteStringLine();
+
 	// Here we make an eventual time stamp
 	if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_FOOTER_UNDERSIGN_TIMESTAMP) )
 	{
@@ -503,7 +505,7 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 			case PBC_TIME:
 				if( pRank )
 				{
-					WriteStringColumn( CStageTime( pRank->m_units ).GetFormattedLefttrimmed() );
+					WriteStringColumn( CStageTime( pRank->m_units ).GetFormattedSemicolons() );
 				}
 				else
 				{
@@ -575,11 +577,11 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 						|| m_previousGap==0 )
 					{
 						m_previousGap = (pRank->m_units/1000)*1000-m_championTime;
-						WriteStringColumn( CStageTime( m_previousGap ).GetFormattedAlllefttrimmed() );
+						WriteStringColumn( CStageTime( m_previousGap ).GetFormattedSemicolons() );
 					}
 					else
 					{
-						WriteStringColumn( ((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_sameGap );
+						WriteStringColumnQuote( ((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_sameGap );
 					}
 				}
 				else
@@ -590,7 +592,7 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 			case PBC_GAP:
 				if( !bSuppressGap && pRank )
 				{
-					WriteStringColumn( CStageTime( (pRank->m_units/1000)*1000-m_championTime ).GetFormattedAlllefttrimmed() );
+					WriteStringColumn( CStageTime( (pRank->m_units/1000)*1000-m_championTime ).GetFormattedSemicolons() );
 				}
 				else
 				{
@@ -602,7 +604,7 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 				{
 					TCHAR cBuffer[10];
 					_itot( pRank->m_bonus, cBuffer, 10 );
-					WriteStringColumn( CString(cBuffer)+TEXT("\"") );
+					WriteStringColumn( CString(cBuffer) );
 				}
 				else
 				{
@@ -646,10 +648,14 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 				if( pRank )
 				{
 					if( bDraw )
-						WriteStringColumn( CStageTime( pRank->m_units ).GetFormattedLefttrimmed()
-							+CStageTime( pRank->m_units ).GetThousandth() );
+					{
+						WriteStringColumn( CStageTime( pRank->m_units ).GetFormattedSemicolons()
+							+"."+CStageTime( pRank->m_units ).GetThousandth() );
+					}
 					else
-						WriteStringColumn( CStageTime( pRank->m_units ).GetFormattedLefttrimmed() );
+					{
+						WriteStringColumn( CStageTime( pRank->m_units ).GetFormattedSemicolons() );
+					}
 				}
 				else
 				{
@@ -659,7 +665,7 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 			case PBC_STARTINGORDERTIME:
 				if( pRank )
 				{
-					WriteStringColumn( CStageTime( pRank->m_unitsAtStart ).GetFormattedLefttrimmed() );
+					WriteStringColumn( CStageTime( pRank->m_unitsAtStart ).GetFormattedSemicolons() );
 				}
 				else
 				{
@@ -783,7 +789,7 @@ void CTextDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 				{
 					TCHAR cBuffer[10];
 					_itot( pRank->m_penalty, cBuffer, 10 );
-					WriteStringColumn( CString(cBuffer)+TEXT("\"") );
+					WriteStringColumn( CString(cBuffer) );
 				}
 				else
 				{
@@ -822,17 +828,74 @@ void CTextDoc::SayText(PUBLI_BODYCOLUMNS columns[], CString czText)
 	// This function prints a single row with the provided text
 
 	StartCompetitorsTable(columns);
-
+	WriteString( TEXT("\r\n") );
 	WriteStringLineComment( czText );
 }
 
-void CTextDoc::SaySprint(PUBLI_BODYCOLUMNS columns[], int nSprint)
+void CTextDoc::Legenda(PUBLI_BODYCOLUMNS columns[])
 {
-	// Helper
-	TCHAR cBuffer[10];
-	_itot( nSprint, cBuffer, 10 );
-
-	SayText(columns, CString(cBuffer));
+	CString line;
+	int i=0;
+	while( columns[i]!=PBC_TERMINATOR )
+	{
+		switch( columns[i] )
+		{
+			case PBC_MASK1:
+				line = ((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_mask1icon;
+				line += TEXT(" ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask1;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK2:
+				line = ((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_mask2icon;
+				line += TEXT(" ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask2;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK3:
+				line = ((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_mask3icon;
+				line += TEXT(" ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask3;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK4:
+				line = TEXT("M4 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask4;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK5:
+				line = TEXT("M5 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask5;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK6:
+				line = TEXT("M6 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask6;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK7:
+				line = TEXT("M7 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask7;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK8:
+				line = TEXT("M8 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask8;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK9:
+				line = TEXT("M9 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask9;
+				WriteStringLineComment(line);
+				break;
+			case PBC_MASK10:
+				line = TEXT("M10 ");
+				line += ((CSettingsGeneral*)m_pDocument->m_allsettings.GetSettings(SETT_GENERAL))->m_mask10;
+				WriteStringLineComment(line);
+				break;
+		};
+		i++;
+	};
 }
 
 void CTextDoc::TeamHeader(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
@@ -1207,4 +1270,9 @@ void CTextDoc::WriteStringColumn(CString c)
 void CTextDoc::WriteStringColumnQuote(CString c)
 {
 	m_output.WriteString(TEXT("\"") + UnQuote(c) + TEXT("\";"));
+}
+
+bool CTextDoc::IsFileOpened()
+{
+	return m_openSuccess;
 }

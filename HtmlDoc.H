@@ -33,6 +33,7 @@ enum PUB_PARTS
 	PP_TIMESTAMP
 };
 
+class CTextDoc;
 class CHtmlDoc : public CPublication
 {
 public:
@@ -47,6 +48,7 @@ public:
 	void TocRow( int nIndent, CString cContent, const CId* objId=NULL, CString cNo="" );
 	void Toc();
 	CHtmlDoc( CEventItem ei );
+	virtual ~CHtmlDoc();
 	void Legenda( PUBLI_BODYCOLUMNS columns[] );
 	void CrossOut( int nCompetitors[10], int nCrossedOut[10], CTeam* pTeam );
 	void SayText( PUBLI_BODYCOLUMNS columns[], CString czText );
@@ -65,6 +67,7 @@ public:
 	void Label( PUB_PARTS = PP_UNKNOWN, bool bBegin = true );
 
 protected:
+	CTextDoc* m_ptextdoc;
 	bool m_b2ByteFile;
 	void WriteString(CString c);
 	static CString CalculateFontSize( int nSize, const CStageRaceDoc* pDoc );

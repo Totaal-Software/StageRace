@@ -220,6 +220,7 @@ class CEventItem
 		void SetDoc(const CStageRaceDoc* pDoc);
 		static bool IsPublicationAvailable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static bool IsPublicable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
+		static bool IsPublicableCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeTocTitle(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeFileTitle(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeFileNameHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
@@ -228,6 +229,7 @@ class CEventItem
 		static CString ComposeFileNamePathCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		bool IsPublicationAvailable();
 		bool IsPublicable();
+		bool IsPublicableCSV();
 		CEventItem( const CEventItem& ei );
 		CString ComposeTocTitle();
 		CString ComposeFileTitle();

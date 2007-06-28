@@ -536,10 +536,80 @@ bool CEventItem::IsPublicable()
 	return ComposeFileTitle().GetLength()>0;
 }
 
+bool CEventItem::IsPublicableCSV()
+{
+	switch( m_tiConcerning )
+	{
+		case TI_FULLSTAGE:
+		case TI_HALFSTAGE:
+		case TI_COMPETITORS:
+		case TI_TEAMS:
+		case TI_TIMETRIALORDER:
+		case TI_SPRINT:
+		case TI_CLIMB:
+		case TI_POINTS:
+		case TI_CLASSGENERAL:
+		case TI_CLASSMASK1:
+		case TI_CLASSMASK2:
+		case TI_CLASSMASK3:
+		case TI_CLASSMASK4:
+		case TI_CLASSMASK5:
+		case TI_CLASSMASK6:
+		case TI_CLASSMASK7:
+		case TI_CLASSMASK8:
+		case TI_CLASSMASK9:
+		case TI_CLASSMASK10:
+		case TI_CLASSTEAMS:
+		case TI_LISTCOMPETITORS1:
+		case TI_LISTCOMPETITORS2:
+		case TI_TTARRIVALLIST:
+		case TI_MOSTAGGRESSIVE:
+		case TI_CLASSSTANOSORTEDGENERAL:
+		case TI_CLASSMASK1STAGE:
+		case TI_CLASSMASK2STAGE:
+		case TI_CLASSMASK3STAGE:
+		case TI_CLASSMASK4STAGE:
+		case TI_CLASSMASK5STAGE:
+		case TI_CLASSMASK6STAGE:
+		case TI_CLASSMASK7STAGE:
+		case TI_CLASSMASK8STAGE:
+		case TI_CLASSMASK9STAGE:
+		case TI_CLASSMASK10STAGE:
+		case TI_CLASSMASK1GENERAL:
+		case TI_CLASSMASK2GENERAL:
+		case TI_CLASSMASK3GENERAL:
+		case TI_CLASSMASK4GENERAL:
+		case TI_CLASSMASK5GENERAL:
+		case TI_CLASSMASK6GENERAL:
+		case TI_CLASSMASK7GENERAL:
+		case TI_CLASSMASK8GENERAL:
+		case TI_CLASSMASK9GENERAL:
+		case TI_CLASSMASK10GENERAL:
+			return true;
+		case TI_ROOT:
+		case TI_SETTINGS:
+		case TI_COMMUNIQUE:
+		case TI_SIGNOUTS:
+		case TI_CROSSOUTLIST:
+		case TI_SPARECOMPETITORS:
+		case TI_SIGNINLIST:
+		case TI_TOBEDETERMINED:
+		case TI_UNKNOWN:
+		default:
+			return false;
+	}
+}
+
 bool CEventItem::IsPublicable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
 	return ei.IsPublicable();
+}
+
+bool CEventItem::IsPublicableCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	return ei.IsPublicableCSV();
 }
 
 void CEventItem::SetDoc(const CStageRaceDoc *pDoc)
