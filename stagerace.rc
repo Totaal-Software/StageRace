@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 14, 1949
- PRODUCTVERSION 2005, 3, 14, 1949
+ FILEVERSION 2005, 3, 14, 1955
+ PRODUCTVERSION 2005, 3, 14, 1955
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 14, 1949\0"
+            VALUE "FileVersion", "2005, 3, 14, 1955\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 14, 1949\0"
+            VALUE "ProductVersion", "2005, 3, 14, 1955\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -4379,6 +4379,8 @@ BEGIN
     IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "From best times"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "From best rankings"
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Separator line"
+    IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
+                            "Exclude time cut offs from general sprint, points, climbing, most aggressive"
 END
 
 #endif    // English (U.S.) resources
@@ -8235,6 +8237,8 @@ BEGIN
     IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "Des meilleurs temps"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "Des meilleurs classées"
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Ligne pour séparer"
+    IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
+                            "Exclure terminant hors-délai de sprint, points, grimpeur, plus agressif général"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -12512,6 +12516,8 @@ BEGIN
     IDS_SETT_RANK_TEAMS_BUNCH_FROMTIMES "Uit beste tijden"
     IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS "Uit beste klasseringen"
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Scheidingslijn"
+    IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
+                            "Na tijdslimiet uitsluiten van algemeen sprint, punten, berg, agressiefste"
 END
 
 #endif    // Dutch (Netherlands) resources

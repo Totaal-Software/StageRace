@@ -309,7 +309,9 @@ void CSprintClassification::FinishClassification()
 		if( m_pDoc->StagesGet( m_nFS, m_nHS )->m_arrival.GetCount() )
 		{
 			// Only insert when still competing during this stage
-			if( m_pDoc->StagesGet( m_nFS, m_nHS )->m_arrival.Exist( aArr.m_staNo ) )
+			if( m_pDoc->StagesGet( m_nFS, m_nHS )->m_arrival.Exist( aArr.m_staNo )
+					&& (!m_pDoc->StagesGet( m_nFS, m_nHS )->m_arrival.IsTimeCutted( aArr.m_staNo )
+					|| m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS)) )
 				DoGeneral( aArr );
 		}
 		else
