@@ -27,9 +27,10 @@ static char THIS_FILE[]=__FILE__;
 
 ///////////////////////////////////////////////////////////////////////////
 // CONSTRUCTION AND INITIALISATION
-
+//experimental: CTextDoc* ptextdoc = NULL;
 CHtmlDoc::CHtmlDoc( CEventItem ei )
 {
+//experimental: ptextdoc = new CTextDoc(ei);
 	// Save for further use
 	m_ei = ei;
 	m_pDocument = ei.GetDocument();
@@ -43,7 +44,7 @@ CHtmlDoc::CHtmlDoc( CEventItem ei )
 	m_b2ByteFile = m_pDocument->m_allsettings.ValueGet(IDS_SETT_HTML_UNICODE_PRINTUNICODE);
 
 	// Set up filename
-	CString sFileName = ei.ComposeFileNamePath();
+	CString sFileName = ei.ComposeFileNamePathHTML();
 
 	// We create a file with this new name
 	CFileException objFileException;
@@ -71,6 +72,7 @@ CHtmlDoc::CHtmlDoc( CEventItem ei )
 
 void CHtmlDoc::Finish()
 {
+//experimental: ptextdoc->Finish();
 	if( !m_openSuccess )
 		return;
 
@@ -163,6 +165,7 @@ void CHtmlDoc::HtmlFooter()
 
 void CHtmlDoc::Header(unsigned short nId)
 {
+//experimental: ptextdoc->Header(nId);
 	if( !m_openSuccess )
 		return;
 
@@ -307,6 +310,7 @@ void CHtmlDoc::Header(unsigned short nId)
 
 void CHtmlDoc::Footer(PUBLI_BODYCOLUMNS columns[]/*NULL*/, CSignOutList* pSignOuts/*=NULL*/, int nNumberNotStarted/*=-1*/, int nNumberStarters/*=-1*/, int nNumberLeft/*=-1*/, CString czDroppedOut/*=""*/, CString czCutOff/*=""*/)
 {
+//experimental: ptextdoc->Footer(columns, pSignOuts, nNumberNotStarted, nNumberStarters, nNumberLeft, czDroppedOut, czCutOff);
 	if( !m_openSuccess )
 		return;
 
@@ -562,7 +566,7 @@ void CHtmlDoc::Footer(PUBLI_BODYCOLUMNS columns[]/*NULL*/, CSignOutList* pSignOu
 	{
 		WriteString( TEXT("                <TD ALIGN=\"center\">\r\n") );
 		WriteString( TEXT("                    <EM>\r\n") );
-		WriteString( TEXT("                        StageRace 2003 software &#151;\r\n") );
+		WriteString( TEXT("                        StageRace ")+((CStageRaceApp*)AfxGetApp())->m_key.GetVersionTitle()+TEXT(" software &#151;\r\n") );
 		WriteString( TEXT("                        <A HREF=\"http://www.stagerace.com\" TARGET=\"_blank\">\r\n") );
 		WriteString( TEXT("                            www.stagerace.com\r\n") );
 		WriteString( TEXT("                        </A>\r\n") );
@@ -806,6 +810,7 @@ void CHtmlDoc::ColumnItem(CString item, int nColSpan/*=1*/)
 
 void CHtmlDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pRank/*=NULL*/, CSignOut* pSignOut/*=NULL*/, bool bDraw/*=true*/, bool bBold/*=false*/, bool bSuppressGap/*=false*/ )
 {
+//experimental: ptextdoc->Competitor(columns, nComp, pRank, pSignOut, bDraw, bBold, bSuppressGap);
 	if( !m_openSuccess )
 		return;
 
@@ -884,7 +889,7 @@ void CHtmlDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 				{
 					if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_HTML_HYPERLINKS_USE) )
 						WriteString( TEXT("<A HREF=\"")
-							+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))
+							+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))
 							+TEXT("#")+EncodeURL(pComp->m_pTeam->m_code)+TEXT("\">") );
 					WriteString( pComp->m_pTeam->m_code );
 					if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_HTML_HYPERLINKS_USE) )
@@ -1034,7 +1039,7 @@ void CHtmlDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 				{
 					if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_HTML_HYPERLINKS_USE) )
 						WriteString( TEXT("<A HREF=\"")
-							+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))
+							+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))
 							+TEXT("#")+EncodeURL(pRank->m_pTeam->m_code)+TEXT("\">") );
 					WriteString( pRank->m_pTeam->m_code );
 					if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_HTML_HYPERLINKS_USE) )
@@ -1167,6 +1172,7 @@ void CHtmlDoc::Competitor( PUBLI_BODYCOLUMNS columns[], WORD nComp, CArrival* pR
 
 void CHtmlDoc::SayText(PUBLI_BODYCOLUMNS columns[], CString czText)
 {
+//experimental: ptextdoc->SayText(columns, czText);
 	if( !m_openSuccess )
 		return;
 
@@ -1192,6 +1198,7 @@ void CHtmlDoc::SayText(PUBLI_BODYCOLUMNS columns[], CString czText)
 
 void CHtmlDoc::SaySprint(PUBLI_BODYCOLUMNS columns[], int nSprint)
 {
+//experimental: ptextdoc->SaySprint(columns, nSprint);
 	// Helper
 	TCHAR cBuffer[10];
 	_itot( nSprint, cBuffer, 10 );
@@ -1322,6 +1329,7 @@ void CHtmlDoc::Legenda(PUBLI_BODYCOLUMNS columns[])
 
 void CHtmlDoc::TeamHeader(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 {
+//experimental: ptextdoc->TeamHeader(columns, pTeam);
 	if( !m_openSuccess )
 		return;
 
@@ -1366,6 +1374,7 @@ void CHtmlDoc::TeamHeader(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 
 void CHtmlDoc::TeamFooter(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 {
+//experimental: ptextdoc->TeamFooter(columns, pTeam);
 	if( !m_openSuccess )
 		return;
 
@@ -1400,6 +1409,7 @@ void CHtmlDoc::TeamFooter(PUBLI_BODYCOLUMNS columns[], CTeam *pTeam)
 
 void CHtmlDoc::Break(PUBLI_BODYCOLUMNS columns[])
 {
+//experimental: ptextdoc->Break(columns);
 	if( !m_openSuccess )
 		return;
 
@@ -1876,7 +1886,7 @@ void CHtmlDoc::Toc()
 	// This function composes the TOC
 	//
 	// Rows are made clickable when publication status allows this
-	// Therefore CEventItem::ComposeFileName is used
+	// Therefore CEventItem::ComposeFileNameHTML is used
 	//
 	// Contents of rows are taken from CEventItem::ComposeTocTitle
 	// except for event, full stage and half stage titles
@@ -1898,10 +1908,10 @@ void CHtmlDoc::Toc()
 		TocRow( 0, TEXT("<HR SIZE=\"1\" NOSHADE>") );
 		// Competitor lists AT THE TOP
 		if( m_pDocument->m_idCompetitors.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE) )
-			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_LISTCOMPETITORS1, 0, 0 ))+TEXT("\">")
+			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_LISTCOMPETITORS1, 0, 0 ))+TEXT("\">")
 				+CEventItem::ComposeTocTitle( m_pDocument, TI_LISTCOMPETITORS1, 0, 0 )+TEXT("</A>"), &m_pDocument->m_idCompetitors );
 		if( m_pDocument->m_idTeams.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )
-			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))+TEXT("\">")
+			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))+TEXT("\">")
 				+CEventItem::ComposeTocTitle( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 )+TEXT("</A>"), &m_pDocument->m_idTeams );
 	}
 
@@ -1924,7 +1934,7 @@ void CHtmlDoc::Toc()
 
 		// Full stage communique
 		if ( pFullStage->m_communique.m_contents.GetLength() && (pFullStage->m_communique.m_id.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-			TocRow( 2, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_COMMUNIQUE, nFS, 0 ))+TEXT("\">")
+			TocRow( 2, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_COMMUNIQUE, nFS, 0 ))+TEXT("\">")
 				+CEventItem::ComposeTocTitle( m_pDocument, TI_COMMUNIQUE, nFS, 0 )+TEXT("</A>"), &pFullStage->m_communique.m_id );
 
 		const CHalfStage* pHalfStage;
@@ -1941,7 +1951,7 @@ void CHtmlDoc::Toc()
 			pHalfStage = ((CStageRaceDoc*)m_pDocument)->StagesGet( nFS, nHS );
 			if( pHalfStage->m_idStage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE) )
 				TocRow( 2, TEXT("<A HREF=\"")
-					+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_HALFSTAGE, nFS, nHS ))
+					+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_HALFSTAGE, nFS, nHS ))
 					+TEXT("\"><EM>")+pHalfStage->m_title+TEXT("</EM> (")+CEventItem::ComposeTocTitle( m_pDocument, TI_HALFSTAGE, nFS, nHS )+TEXT(")</A>"), &pHalfStage->m_idStage, CEventItem::StagesMakeIDString(nFS,nHS,m_pDocument) );
 			else
 				TocRow( 2, TEXT("<EM>")+pHalfStage->m_title+TEXT("</EM> (")+CEventItem::ComposeTocTitle( m_pDocument, TI_HALFSTAGE, nFS, nHS )+TEXT(")"), &pHalfStage->m_idStage, CEventItem::StagesMakeIDString(nFS,nHS,m_pDocument) );
@@ -1951,164 +1961,164 @@ void CHtmlDoc::Toc()
 				if( pHalfStage->m_stageType==ST_TT_GROSS )
 				{
 					if( pHalfStage->m_idTTArrival.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )	
-						TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_TTARRIVALLIST, nFS, nHS ))+TEXT("\">")
+						TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_TTARRIVALLIST, nFS, nHS ))+TEXT("\">")
 							+CEventItem::ComposeTocTitle( m_pDocument, TI_TTARRIVALLIST, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idTTArrival );
 				}
 
 				// General classifications
 				if( pHalfStage->m_idGeneral.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSGENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSGENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSGENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idGeneral );
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE1) && (pHalfStage->m_idMask1stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK1STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK1STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK1STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask1stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE1) && (pHalfStage->m_idMask1gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK1GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK1GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK1GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask1gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE2) && (pHalfStage->m_idMask2stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK2STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK2STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK2STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask2stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE2) && (pHalfStage->m_idMask2gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK2GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK2GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK2GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask2gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE3) && (pHalfStage->m_idMask3stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK3STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK3STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK3STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask3stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE3) && (pHalfStage->m_idMask3gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK3GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK3GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK3GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask3gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE4) && (pHalfStage->m_idMask4stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK4STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK4STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK4STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask4stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE4) && (pHalfStage->m_idMask4gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK4GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK4GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK4GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask4gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE5) && (pHalfStage->m_idMask5stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK5STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK5STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK5STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask5stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE5) && (pHalfStage->m_idMask5gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK5GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK5GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK5GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask5gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE6) && (pHalfStage->m_idMask6stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK6STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK6STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK6STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask6stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE6) && (pHalfStage->m_idMask6gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK6GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK6GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK6GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask6gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE7) && (pHalfStage->m_idMask7stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK7STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK7STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK7STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask7stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE7) && (pHalfStage->m_idMask7gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK7GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK7GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK7GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask7gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE8) && (pHalfStage->m_idMask8stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK8STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK8STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK8STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask8stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE8) && (pHalfStage->m_idMask8gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK8GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK8GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK8GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask8gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE9) && (pHalfStage->m_idMask9stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK9STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK9STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK9STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask9stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE9) && (pHalfStage->m_idMask9gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK9GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK9GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK9GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask9gen );
 				}			
 
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE10) && (pHalfStage->m_idMask10stage.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK10STAGE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK10STAGE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK10STAGE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask10stage );
 				}			
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE10) && (pHalfStage->m_idMask10gen.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSMASK10GENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSMASK10GENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSMASK10GENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMask10gen );
 				}			
 
 				// Teams classification
 				if( m_pDocument->m_allsettings.ValueGet(IDS_SETT_RANK_TEAMS_GENERATE) && (pHalfStage->m_idTeams.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSTEAMS, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSTEAMS, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSTEAMS, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idTeams );
 
 				// Additional classifications
 				if( pHalfStage->m_sprintpointsCount && (pHalfStage->m_idSprints.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_SPRINT, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_SPRINT, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_SPRINT, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idSprints );
 				if( pHalfStage->m_climbsorder.GetCount() && (pHalfStage->m_idClimbs.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLIMB, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLIMB, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLIMB, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idClimbs );
 				if( pHalfStage->m_pointspointsFinish.GetCount() && (pHalfStage->m_idPoints.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_POINTS, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_POINTS, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_POINTS, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idPoints );
 				if( pHalfStage->m_mostaggressivepoints.GetCount() && (pHalfStage->m_idMostAggressive.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_MOSTAGGRESSIVE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_MOSTAGGRESSIVE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_MOSTAGGRESSIVE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idMostAggressive );
 			
 				// Half stage communique
 				if ( pHalfStage->m_communique.m_contents.GetLength() && (pHalfStage->m_communique.m_id.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)) )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_COMMUNIQUE, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_COMMUNIQUE, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_COMMUNIQUE, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_communique.m_id );
 
 				// Cross out list
 				if( pHalfStage->m_idCrossOut.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CROSSOUTLIST, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CROSSOUTLIST, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CROSSOUTLIST, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idCrossOut );
 				
 				// Sign in list
 				if( pHalfStage->m_idSignIn.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_SIGNINLIST, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_SIGNINLIST, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_SIGNINLIST, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idCrossOut );
 				
 				// General classification sorted on stano
 				if( ( pHalfStage->m_idGeneralStaNoSorted.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE) )
 						&& m_pDocument->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_GENERATETSTANOSORTEDGENERAL) )
 				{
-					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_CLASSSTANOSORTEDGENERAL, nFS, nHS ))+TEXT("\">")
+					TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_CLASSSTANOSORTEDGENERAL, nFS, nHS ))+TEXT("\">")
 						+CEventItem::ComposeTocTitle( m_pDocument, TI_CLASSSTANOSORTEDGENERAL, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idGeneralStaNoSorted );
 				}
 
@@ -2117,7 +2127,7 @@ void CHtmlDoc::Toc()
 				if ( pHalfStage->m_stageType!=ST_NORMAL )
 				{
 					if( pHalfStage->m_idStartList.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )
-						TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_TIMETRIALORDER, nFS, nHS ))+TEXT("\">")
+						TocRow( 3, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_TIMETRIALORDER, nFS, nHS ))+TEXT("\">")
 							+CEventItem::ComposeTocTitle( m_pDocument, TI_TIMETRIALORDER, nFS, nHS )+TEXT("</A>"), &pHalfStage->m_idStartList );
 				}
 		}
@@ -2127,7 +2137,7 @@ void CHtmlDoc::Toc()
 	if( m_pDocument->m_communique.m_contents.GetLength() && (m_pDocument->m_communique.m_id.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE) ) )
 	{
 		TocRow( 0, TEXT("<HR SIZE=\"1\" NOSHADE>") );
-		TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_COMMUNIQUE, 0, 0 ))+TEXT("\">")
+		TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_COMMUNIQUE, 0, 0 ))+TEXT("\">")
 			+CEventItem::ComposeTocTitle( m_pDocument, TI_COMMUNIQUE, 0, 0 )+TEXT("</A>"), &m_pDocument->m_communique.m_id );
 	}
 
@@ -2136,10 +2146,10 @@ void CHtmlDoc::Toc()
 		TocRow( 0, TEXT("<HR SIZE=\"1\" NOSHADE>") );
 		// Competitor lists AT THE BOTTOM
 		if( m_pDocument->m_idCompetitors.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE) )
-			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_LISTCOMPETITORS1, 0, 0 ))+TEXT("\">")
+			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_LISTCOMPETITORS1, 0, 0 ))+TEXT("\">")
 				+CEventItem::ComposeTocTitle( m_pDocument, TI_LISTCOMPETITORS1, 0, 0 )+TEXT("</A>"), &m_pDocument->m_idCompetitors );
 		if( m_pDocument->m_idTeams.IsPublished() || !m_pDocument->m_allsettings.ValueGet(IDS_SETT_PUBL_COMMNOS_USE)  )
-			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileName( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))+TEXT("\">")
+			TocRow( 0, TEXT("<A HREF=\"")+EncodeURL(CEventItem::ComposeFileNameHTML( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 ))+TEXT("\">")
 				+CEventItem::ComposeTocTitle( m_pDocument, TI_LISTCOMPETITORS2, 0, 0 )+TEXT("</A>"), &m_pDocument->m_idTeams );
 	}
 
@@ -2521,6 +2531,7 @@ CString CHtmlDoc::CalculateFontSize(int nSize, const CStageRaceDoc *pDoc)
 
 void CHtmlDoc::MakeDummy(CEventItem ei, unsigned short nId)
 {
+//experimental: ptextdoc->MakeDummy(ei, nId);
 	if( ei.GetDocument()->m_allsettings.ValueGet(IDS_SETT_HTML_DUMMY_PRINT) )
 	{
 		// Make the html document

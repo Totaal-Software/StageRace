@@ -154,6 +154,7 @@ TREEICONS CEventItem::IconFromItem() const
 CString CEventItem::ComposeTocTitle()
 {
 	CString cstage;
+	//THERE's A BUG HERE!!!
 	if( ((CStageRaceDoc*)m_pDoc)->StagesGet( m_nFullStage, m_nHalfStage )->m_stageType==ST_NORMAL )
 		cstage = AssembleStr( TEXT("TocStage"), TEXT(", "), &((CSettingsPublication*)m_pDoc->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages );
 	else
@@ -439,7 +440,7 @@ CString CEventItem::ComposeFileTitle()
 	return "";
 }
 
-CString CEventItem::ComposeFileName()
+CString CEventItem::ComposeFileNameHTML()
 {
 	if( m_tiConcerning==TI_ROOT
 		&& (m_pDoc->m_allsettings.ValueGet(IDS_SETT_HTML_TOC_INDEXHTML)) )
@@ -461,9 +462,19 @@ CString CEventItem::ComposeFileName()
 		return RemoveIllegalChars(m_pDoc->FilesTitle()+" - "+m_pDoc->m_allsettings.ProfilesGetCurrentFileName()+ComposeFileTitle()+".html");
 }
 
-CString CEventItem::ComposeFileNamePath()
+CString CEventItem::ComposeFileNameCSV()
 {
-	return m_pDoc->FilesPath()+ComposeFileName();
+	return RemoveIllegalChars(m_pDoc->FilesTitle()+" - "+m_pDoc->m_allsettings.ProfilesGetCurrentFileName()+ComposeFileTitle()+".csv");
+}
+
+CString CEventItem::ComposeFileNamePathHTML()
+{
+	return m_pDoc->FilesPath()+ComposeFileNameHTML();
+}
+
+CString CEventItem::ComposeFileNamePathCSV()
+{
+	return m_pDoc->FilesPath()+ComposeFileNameCSV();
 }
 
 CString CEventItem::ComposeTocTitle(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
@@ -478,28 +489,40 @@ CString CEventItem::ComposeFileTitle(const CStageRaceDoc* pDoc, TREEITEMS ti, in
 	return ei.ComposeFileTitle();
 }
 
-CString CEventItem::ComposeFileName(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+CString CEventItem::ComposeFileNameHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	if( ti == TI_ROOT )
 		return "index.html";
 	else
 	{
 		CEventItem ei( pDoc, ti, nFS, nHS );
-		return ei.ComposeFileName();
+		return ei.ComposeFileNameHTML();
 	}
 }
 
-CString CEventItem::ComposeFileNamePath(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+CString CEventItem::ComposeFileNameCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
-	return ei.ComposeFileNamePath();
+	return ei.ComposeFileNameCSV();
+}
+
+CString CEventItem::ComposeFileNamePathHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	return ei.ComposeFileNamePathHTML();
+}
+
+CString CEventItem::ComposeFileNamePathCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	return ei.ComposeFileNamePathCSV();
 }
 
 bool CEventItem::IsPublicationAvailable()
 {
 	CFileFind objCheckFile;
 	// If the file exists...
-	return objCheckFile.FindFile( ComposeFileNamePath() )==TRUE;
+	return objCheckFile.FindFile( ComposeFileNamePathHTML() )==TRUE;
 }
 
 bool CEventItem::IsPublicationAvailable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
@@ -1327,7 +1350,7 @@ bool CEventItem::IsPublicationReadonly()
 		BY_HANDLE_FILE_INFORMATION info;
 
 		handle = CreateFile(
-			ComposeFileNamePath(),
+			ComposeFileNamePathHTML(),
 			GENERIC_READ,
 			FILE_SHARE_READ | FILE_SHARE_WRITE,
 			NULL,
@@ -1361,7 +1384,7 @@ void CEventItem::ToggleReadonly()
 		BY_HANDLE_FILE_INFORMATION info;
 
 		handle = CreateFile(
-			ComposeFileNamePath(),
+			ComposeFileNamePathHTML(),
 			GENERIC_READ,
 			FILE_SHARE_READ | FILE_SHARE_WRITE,
 			NULL,
@@ -1378,7 +1401,7 @@ void CEventItem::ToggleReadonly()
 			info.dwFileAttributes = info.dwFileAttributes ^ FILE_ATTRIBUTE_READONLY;
 
 			SetFileAttributes(
-				ComposeFileNamePath(),
+				ComposeFileNamePathHTML(),
 				info.dwFileAttributes
 			);
 		}
@@ -1417,7 +1440,7 @@ void CEventItem::EditPublication()
 
 	CreateProcess(
 			cPath.GetBuffer(0),
-			CString(" \""+ComposeFileNamePath()+"\"").GetBuffer(0),
+			CString(" \""+ComposeFileNamePathHTML()+"\"").GetBuffer(0),
 			NULL,
 			NULL,
 			FALSE,

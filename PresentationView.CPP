@@ -162,7 +162,7 @@ bool CPresentationView::Navigate(CEventItem* pEI)
 {
 	if( pEI->IsPublicationAvailable() )
 	{
-		CPresentationView::Navigate( pEI->ComposeFileNamePath() );	
+		CPresentationView::Navigate( pEI->ComposeFileNamePathHTML() );	
 		return true;
 	}
 	else

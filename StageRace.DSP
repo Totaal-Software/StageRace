@@ -687,6 +687,10 @@ SOURCE=.\TeamClassification.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\TextDoc.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\TextOutput.cpp
 # End Source File
 # Begin Source File
@@ -1336,6 +1340,10 @@ SOURCE=.\Team.h
 # Begin Source File
 
 SOURCE=.\TeamClassification.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\TextDoc.h
 # End Source File
 # Begin Source File
 

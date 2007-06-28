@@ -251,6 +251,7 @@
 	// Output
 	#include "Publication.h"
 	#include "HtmlDoc.h"
+	#include "TextDoc.h"
 	#include "TextOutput.h"
 
 	// Some edit dialogs

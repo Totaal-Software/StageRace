@@ -321,7 +321,7 @@ void CDlgEventItemSelection::OnPrint()
 			CPrintWebBrowser* pwb = new CPrintWebBrowser( p->m_nCopies * nTotalCopies );
 			pwb->Create( NULL, NULL, WS_CHILD|WS_VISIBLE, CRect(0,0,0,0), this, IDC_PRINTBROWSER+i++ );
 			pwb->SetSilent(true);
-			pwb->Navigate( p->m_pEventItem->ComposeFileNamePath(), 0, 0, 0, 0 );
+			pwb->Navigate( p->m_pEventItem->ComposeFileNamePathHTML(), 0, 0, 0, 0 );
 		}
 	}
 }
@@ -367,14 +367,14 @@ void CDlgEventItemSelection::OnUpload()
 				else
 				{
 					// Upload every event item
-					if(pFtpConnection->PutFile(	p->m_pEventItem->ComposeFileNamePath(),
-												p->m_pEventItem->ComposeFileName() ) )
+					if(pFtpConnection->PutFile(	p->m_pEventItem->ComposeFileNamePathHTML(),
+												p->m_pEventItem->ComposeFileNameHTML() ) )
 					{
-						czReport = czReport + p->m_pEventItem->ComposeFileName() + "\n";
+						czReport = czReport + p->m_pEventItem->ComposeFileNameHTML() + "\n";
 					}
 					else
 					{
-						czReport = czReport + p->m_pEventItem->ComposeFileName() + " (ERROR)\n";
+						czReport = czReport + p->m_pEventItem->ComposeFileNameHTML() + " (ERROR)\n";
 						error = true;
 					}
 				}
@@ -491,7 +491,7 @@ void CDlgEventItemSelection::OnMail()
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
 			if( p->m_pEventItem->IsPublicationAvailable() )
 			{
-				WideCharToMultiByte( CP_ACP, 0, p->m_pEventItem->ComposeFileNamePath(), -1, Attachments[n], MAX_PATH, NULL, NULL );
+				WideCharToMultiByte( CP_ACP, 0, p->m_pEventItem->ComposeFileNamePathHTML(), -1, Attachments[n], MAX_PATH, NULL, NULL );
 				MailAttachments[n].lpszPathName	= Attachments[n];
 
 				MailAttachments[n].ulReserved	= 0;
@@ -561,8 +561,8 @@ void CDlgEventItemSelection::OnCopy()
 			{
 				// Copy files that exist
 				if( !CopyFile(
-						p->m_pEventItem->ComposeFileNamePath(),
-						cSelectedItem+p->m_pEventItem->ComposeFileName(),
+						p->m_pEventItem->ComposeFileNamePathHTML(),
+						cSelectedItem+p->m_pEventItem->ComposeFileNameHTML(),
 						false ) )
 				{
 					// Show an error message when the copying fails
@@ -578,7 +578,7 @@ void CDlgEventItemSelection::OnCopy()
 					{
 						MessageBox( LoadStr( IDS_MBC_55 )
 								+"\n\n"
-								+p->m_pEventItem->ComposeFileName()
+								+p->m_pEventItem->ComposeFileNameHTML()
 								+"\n\n"
 								+CString((LPCTSTR)lpMessage),
 							LoadStr( IDS_MBT_55 ), MB_OK );
