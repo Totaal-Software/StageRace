@@ -1720,8 +1720,16 @@ void CHtmlDoc::Properties( PUBLI_PROPERTIES props[], CObject* pObj/*=NULL*/ )
 					pHS->m_title );
 				break;
 			case PPR_HALF_STAGE_INDICATOR:
-				Property( AssembleStr( TEXT("HalfStage"), TEXT("<BR>"), &((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages ),
-					pHS->m_title );
+				if( ((CStageRaceDoc*)m_pDocument)->StagesGet(m_ei.m_nFullStage)->CountHalfStages()>1 )
+				{
+					Property( AssembleStr( TEXT("HalfStage"), TEXT("<BR>"), &((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages ),
+						pHS->m_title );
+				}
+				else
+				{
+					Property( AssembleStr( TEXT("Stage"), TEXT("<BR>"), &((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages ),
+						pHS->m_title );
+				}
 				break;
 			case PPR_START_OF_EVENT_TIME:
 				Property( AssembleStr( TEXT("OpeningHour"), TEXT("<BR>"), &((CSettingsPublication*)m_pDocument->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages ),
