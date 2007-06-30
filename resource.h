@@ -398,6 +398,8 @@
 #define IDC_NAME                        1000
 #define IDC_STANO                       1000
 #define IDC_COMPETITOR                  1001
+#define IDC_STANO2                      1001
+#define IDC_POSITION                    1001
 #define IDC_CONTENTS                    1002
 #define IDC_COUNTRYCODE                 1004
 #define IDC_UCICODE                     1005
@@ -705,6 +707,10 @@
 #define IDC_TIMETRIALSTARTLATECHANGE    1449
 #define IDC_SETTINGS_EMAILRECiPIENTS    1450
 #define IDC_SETTINGS_MAILRECIPIENTS     1451
+#define IDC_ASCENDING                   1452
+#define IDC_DESCENDING                  1453
+#define IDC_STATICFIRST                 1454
+#define IDC_STATICLAST                  1455
 #define IDC_CREDITS                     2000
 #define IDS_SETT_ACCESS                 25000
 #define IDS_SETT_ACCESS_FREE            25001
@@ -1201,7 +1207,7 @@
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        355
 #define _APS_NEXT_COMMAND_VALUE         33105
-#define _APS_NEXT_CONTROL_VALUE         1452
+#define _APS_NEXT_CONTROL_VALUE         1455
 #define _APS_NEXT_SYMED_VALUE           118
 #endif
 #endif

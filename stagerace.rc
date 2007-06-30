@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 14, 1956
- PRODUCTVERSION 2005, 3, 14, 1956
+ FILEVERSION 2005, 3, 14, 1974
+ PRODUCTVERSION 2005, 3, 14, 1974
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 14, 1956\0"
+            VALUE "FileVersion", "2005, 3, 14, 1974\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 14, 1956\0"
+            VALUE "ProductVersion", "2005, 3, 14, 1974\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -913,25 +913,35 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,210,106,50,23
 END
 
-IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 279, 114
+IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 279, 153
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Start interval"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
+FONT 8, "MS Sans Serif"
 BEGIN
     LTEXT           "Start at competitor",IDC_STATIC,20,20,58,8
     EDITTEXT        IDC_STANO,87,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
                     ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
                     WS_EX_STATICEDGE
-    LTEXT           "&First starting time",IDC_STATIC,20,39,53,8
-    EDITTEXT        IDC_STARTTIME,87,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+    LTEXT           "Start at order",IDC_STATIC,20,39,42,8
+    EDITTEXT        IDC_POSITION,87,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    LTEXT           "Assign &times",IDC_STATIC,20,58,40,8
+    CONTROL         "&Ascending",IDC_ASCENDING,"Button",BS_AUTORADIOBUTTON,
+                    86,57,49,10
+    CONTROL         "&Descending",IDC_DESCENDING,"Button",BS_AUTORADIOBUTTON,
+                    141,57,54,10
+    LTEXT           "&Last starting time",IDC_STATICLAST,20,77,54,8
+    LTEXT           "&First starting time",IDC_STATICFIRST,20,77,53,8
+    EDITTEXT        IDC_STARTTIME,87,77,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
                     NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "&Interval",IDC_STATIC,20,57,24,8
-    EDITTEXT        IDC_INTERVAL,87,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | NOT 
+    LTEXT           "&Interval",IDC_STATIC,20,96,24,8
+    EDITTEXT        IDC_INTERVAL,87,96,67,12,ES_RIGHT | ES_AUTOHSCROLL | NOT 
                     WS_BORDER,WS_EX_STATICEDGE
-    DEFPUSHBUTTON   "OK",IDOK,209,42,50,23
-    PUSHBUTTON      "Cancel",IDCANCEL,209,71,50,23
     CONTROL         "&Multiply interval by start order offset",IDC_USEORDER,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,84,126,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,123,126,10
+    DEFPUSHBUTTON   "OK",IDOK,209,81,50,23
+    PUSHBUTTON      "Cancel",IDCANCEL,209,111,50,23
 END
 
 IDD_TTORDEROPTIONS DIALOG DISCARDABLE  0, 0, 190, 143
@@ -2183,9 +2193,13 @@ BEGIN
         LEFTMARGIN, 20
         RIGHTMARGIN, 259
         TOPMARGIN, 20
-        BOTTOMMARGIN, 94
-        HORZGUIDE, 69
-        HORZGUIDE, 84
+        BOTTOMMARGIN, 133
+        HORZGUIDE, 32
+        HORZGUIDE, 51
+        HORZGUIDE, 67
+        HORZGUIDE, 89
+        HORZGUIDE, 108
+        HORZGUIDE, 123
     END
 
     IDD_TTORDEROPTIONS, DIALOG
@@ -5507,28 +5521,6 @@ BEGIN
                     WS_VISIBLE
 END
 
-IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 302, 114
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Intervalle de départ"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
-BEGIN
-    LTEXT           "&Commence au coureur",IDC_STATIC,20,20,72,8
-    EDITTEXT        IDC_STANO,110,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
-                    WS_EX_STATICEDGE
-    LTEXT           "&Heure du premier départ",IDC_STATIC,20,39,77,8
-    EDITTEXT        IDC_STARTTIME,110,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "&Intervalle",IDC_STATIC,20,57,30,8
-    EDITTEXT        IDC_INTERVAL,110,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    NOT WS_BORDER,WS_EX_STATICEDGE
-    DEFPUSHBUTTON   "OK",IDOK,232,42,50,23
-    PUSHBUTTON      "Annuler",IDCANCEL,232,71,50,23
-    CONTROL         "Insérer des intervalles par un &décalage de l'ordre de départ",
-                    IDC_USEORDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,84,
-                    200,10
-END
-
 IDD_TTORDEROPTIONS DIALOG DISCARDABLE  0, 0, 253, 143
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Automatique de l'étape précédente"
@@ -5679,7 +5671,7 @@ BEGIN
                     WS_DISABLED | WS_TABSTOP,144,64,58,10
 END
 
-IDD_DLGPROFILEPICKER DIALOGEX 0, 0, 317, 227
+IDD_DLGPROFILEPICKER DIALOGEX 0, 0, 317, 228
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Choix du profil"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
@@ -5699,7 +5691,7 @@ BEGIN
                     WS_TABSTOP,20,189,184,8
     CONTROL         "&Utiliser le nom du profil pour le nom des fichiers",
                     IDC_USEPROFILENAMES,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,20,199,164,8
+                    WS_TABSTOP,31,201,164,8
 END
 
 IDD_INSERTITEMINCOMMUNIQUE DIALOGEX 0, 0, 198, 110
@@ -5757,6 +5749,38 @@ BEGIN
                     WS_EX_STATICEDGE
     DEFPUSHBUTTON   "OK",IDOK,118,47,50,23
     PUSHBUTTON      "Annuler",IDCANCEL,175,47,50,23
+END
+
+IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 296, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Intervalle de départ"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Commence au coureur",IDC_STATIC,20,20,72,8
+    EDITTEXT        IDC_STANO,103,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    LTEXT           "Commence au ordre",IDC_STATIC,20,39,64,8
+    EDITTEXT        IDC_POSITION,103,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    LTEXT           "&Assigner des temps",IDC_STATIC,20,58,62,8
+    CONTROL         "&En haut",IDC_ASCENDING,"Button",BS_AUTORADIOBUTTON,102,
+                    57,41,10
+    CONTROL         "En &bas",IDC_DESCENDING,"Button",BS_AUTORADIOBUTTON,157,
+                    57,38,10
+    LTEXT           "&Heure de dernier départ",IDC_STATICLAST,20,77,76,8
+    LTEXT           "&Heure de premier départ",IDC_STATICFIRST,20,77,77,8
+    EDITTEXT        IDC_STARTTIME,103,77,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "&Intervalle",IDC_STATIC,20,96,30,8
+    EDITTEXT        IDC_INTERVAL,103,96,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Insérer des intervalles par un &décalage de l'ordre de départ",
+                    IDC_USEORDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    123,200,10
+    DEFPUSHBUTTON   "OK",IDOK,226,81,50,23
+    PUSHBUTTON      "Annuler",IDCANCEL,226,111,50,23
 END
 
 
@@ -6497,16 +6521,6 @@ BEGIN
         HORZGUIDE, 161
     END
 
-    IDD_TTORDER_INTERVAL, DIALOG
-    BEGIN
-        LEFTMARGIN, 20
-        RIGHTMARGIN, 282
-        TOPMARGIN, 20
-        BOTTOMMARGIN, 94
-        HORZGUIDE, 69
-        HORZGUIDE, 84
-    END
-
     IDD_TTORDEROPTIONS, DIALOG
     BEGIN
         LEFTMARGIN, 20
@@ -6599,7 +6613,7 @@ BEGIN
         VERTGUIDE, 217
         VERTGUIDE, 232
         TOPMARGIN, 20
-        BOTTOMMARGIN, 207
+        BOTTOMMARGIN, 208
         HORZGUIDE, 43
         HORZGUIDE, 50
         HORZGUIDE, 73
@@ -6652,6 +6666,20 @@ BEGIN
         BOTTOMMARGIN, 70
         HORZGUIDE, 32
         HORZGUIDE, 47
+    END
+
+    IDD_TTORDER_INTERVAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 20
+        RIGHTMARGIN, 276
+        TOPMARGIN, 20
+        BOTTOMMARGIN, 133
+        HORZGUIDE, 32
+        HORZGUIDE, 51
+        HORZGUIDE, 67
+        HORZGUIDE, 89
+        HORZGUIDE, 108
+        HORZGUIDE, 123
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -8722,28 +8750,6 @@ BEGIN
     PUSHBUTTON      "Annuleren",IDCANCEL,210,106,50,23
 END
 
-IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 273, 114
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Start interval"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
-BEGIN
-    LTEXT           "Vanaf deelnemer",IDC_STATIC,20,20,54,8
-    EDITTEXT        IDC_STANO,81,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
-                    WS_EX_STATICEDGE
-    LTEXT           "&Eerste starttijd",IDC_STATIC,20,39,45,8
-    EDITTEXT        IDC_STARTTIME,81,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
-                    NOT WS_BORDER,WS_EX_STATICEDGE
-    LTEXT           "&Interval",IDC_STATIC,20,57,24,8
-    EDITTEXT        IDC_INTERVAL,81,57,67,12,ES_RIGHT | ES_AUTOHSCROLL | NOT 
-                    WS_BORDER,WS_EX_STATICEDGE
-    DEFPUSHBUTTON   "OK",IDOK,203,42,50,23
-    PUSHBUTTON      "Annuleren",IDCANCEL,203,71,50,23
-    CONTROL         "&Vermenigvuldig interval met verschil in start orde",
-                    IDC_USEORDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,84,
-                    167,10
-END
-
 IDD_ARRIVALIMPORTPREVIEW DIALOGEX 0, 0, 667, 362
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Besturen importeren uitslag"
@@ -9808,6 +9814,38 @@ BEGIN
     PUSHBUTTON      "Annuleren",IDCANCEL,103,47,50,23
 END
 
+IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 259, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Startinterval"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Vanaf deelnemer",IDC_STATIC,20,20,54,8
+    EDITTEXT        IDC_STANO,87,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    LTEXT           "Vanaf orde",IDC_STATIC,20,39,36,8
+    EDITTEXT        IDC_POSITION,87,39,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    LTEXT           "&Tijden toewijzen",IDC_STATIC,20,58,52,8
+    CONTROL         "&Oplopend",IDC_ASCENDING,"Button",BS_AUTORADIOBUTTON,86,
+                    57,47,10
+    CONTROL         "&Aflopend",IDC_DESCENDING,"Button",BS_AUTORADIOBUTTON,
+                    141,57,44,10
+    LTEXT           "&Laatste starttijd",IDC_STATICLAST,20,77,48,8
+    LTEXT           "&Eerste starttijd",IDC_STATICFIRST,20,77,45,8
+    EDITTEXT        IDC_STARTTIME,87,77,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "&Interval",IDC_STATIC,20,96,24,8
+    EDITTEXT        IDC_INTERVAL,87,96,67,12,ES_RIGHT | ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "&Vermenigvuldig interval met verschil in startorde",
+                    IDC_USEORDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    123,165,10
+    DEFPUSHBUTTON   "OK",IDOK,189,81,50,23
+    PUSHBUTTON      "Annuleren",IDCANCEL,189,111,50,23
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -10172,16 +10210,6 @@ BEGIN
         TOPMARGIN, 20
         BOTTOMMARGIN, 129
         HORZGUIDE, 91
-    END
-
-    IDD_TTORDER_INTERVAL, DIALOG
-    BEGIN
-        LEFTMARGIN, 20
-        RIGHTMARGIN, 253
-        TOPMARGIN, 20
-        BOTTOMMARGIN, 94
-        HORZGUIDE, 69
-        HORZGUIDE, 84
     END
 
     IDD_ARRIVALIMPORTPREVIEW, DIALOG
@@ -10698,6 +10726,20 @@ BEGIN
         BOTTOMMARGIN, 70
         HORZGUIDE, 32
         HORZGUIDE, 47
+    END
+
+    IDD_TTORDER_INTERVAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 20
+        RIGHTMARGIN, 239
+        TOPMARGIN, 20
+        BOTTOMMARGIN, 133
+        HORZGUIDE, 32
+        HORZGUIDE, 51
+        HORZGUIDE, 67
+        HORZGUIDE, 89
+        HORZGUIDE, 108
+        HORZGUIDE, 123
     END
 END
 #endif    // APSTUDIO_INVOKED

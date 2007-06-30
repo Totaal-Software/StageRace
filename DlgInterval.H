@@ -14,7 +14,8 @@ class CDlgInterval : public CStageRaceWnd<CDialog>
 {
 // Construction
 public:
-	CDlgInterval(WORD nStaNo, int nStartTime, int nInterval = 60000);   // standard constructor
+	CDlgInterval(WORD nStaNoFirst, int nStartTimeFirst, int nPositionFirst,
+						   WORD nStaNoLast, int nStartTimeLast, int nPositionLast, int nInterval = 60000);   // standard constructor
 
 // Dialog Data
 	//{{AFX_DATA(CDlgInterval)
@@ -22,11 +23,16 @@ public:
 	CTimeEdit	m_ctrl_starttime;
 	CTimeEdit	m_ctrl_interval;
 	int		m_interval;
-	int		m_staNo;
 	int		m_startTime;
 	BOOL	m_useOrder;
 	//}}AFX_DATA
-
+	bool	m_ascending;
+	int		m_startTimeFirst;
+	int		m_startTimeLast;
+	int		m_staNoFirst;
+	int		m_staNoLast;
+	int		m_positionFirst;
+	int		m_positionLast;
 
 // Overrides
 	// ClassWizard generated virtual function overrides
@@ -37,11 +43,14 @@ public:
 
 // Implementation
 protected:
+	void SetFirstLast();
 
 	// Generated message map functions
 	//{{AFX_MSG(CDlgInterval)
 	virtual BOOL OnInitDialog();
 	virtual void OnOK();
+	afx_msg void OnAscending();
+	afx_msg void OnDescending();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

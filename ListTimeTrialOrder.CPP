@@ -79,6 +79,8 @@ void CListTimeTrialOrder::OnTtorderFunctions()
 		m_pListPreviousHS?MF_ENABLED:MF_GRAYED  );
 	aMenu.EnableMenuItem( ID_TIMETRIALORDERFUNCTIONS_FROMLASTFULLSTAGE,
 		m_pListPreviousFS?MF_ENABLED:MF_GRAYED  );
+	aMenu.EnableMenuItem( ID_TIMETRIALORDERFUNCTIONS_AUTO,
+		(m_ctrlArrivalList.GetSelectedCount() > 1)?MF_ENABLED:MF_GRAYED );
 	// Retrieve the position of the button by which this menu is requested
 	RECT posButton;
 	GetDlgItem( IDC_ARRIVAL_FUNCTIONS )->GetWindowRect( &posButton );
@@ -139,28 +141,52 @@ void CListTimeTrialOrder::OnTimetrialorderfunctionsAuto()
 	// so that we can use the time of the first competitor to start from
 	if( m_ctrlArrivalList.GetSelectedCount() > 1 )
 	{
-		CDlgInterval aDlg( m_staNo.GetValue(), m_time.GetTime() );
+		// Build an array with all selected staNos
+		CArray<WORD, WORD> selectedStaNos;
+		POSITION nPos = m_ctrlArrivalList.GetFirstSelectedItemPosition();
+		while( nPos )
+		{
+			int nItem = m_ctrlArrivalList.GetNextSelectedItem(nPos);
+			selectedStaNos.Add((WORD)m_ctrlArrivalList.GetItemData(nItem));
+		}
+
+		// Get the first and last so that we can use them in the dialog
+		CArrival first = m_listArrival.GetAt( selectedStaNos.GetAt(0) );
+		CArrival last = m_listArrival.GetAt( selectedStaNos.GetAt(selectedStaNos.GetSize()-1 ) );
+
+		// Ask user for details
+		CDlgInterval aDlg( first.m_staNo, first.m_unitsAtStart, first.m_order,
+			last.m_staNo, last.m_unitsAtStart, last.m_order );
 
 		if( aDlg.DoModal()==IDOK )
 		{
-			CString cOrder;
-			GetDlgItem( IDC_ARRIVAL_RANK )->GetWindowText( cOrder );
-			WORD nOrder = _ttoi( cOrder );
-
+			// We only edit the data, see below for the view
 			bool bAllAllowed = true;
 			int nCount = 0;
-			// We only edit the data, see below for the view
-			POSITION nPos = m_ctrlArrivalList.GetFirstSelectedItemPosition();
-			while( nPos )
+			DWORD tNewTime;
+			CArrival objArr;
+			short nSign;
+			while( nCount < selectedStaNos.GetSize() )
 			{
-				int nItem		= m_ctrlArrivalList.GetNextSelectedItem(nPos);
-				WORD nStaNo		= (WORD)m_ctrlArrivalList.GetItemData(nItem);
-				CArrival objArr	= m_listArrival.GetAt( nStaNo );
-				DWORD tNewTime;
-				if( aDlg.m_useOrder )
-					tNewTime	= aDlg.m_startTime + (objArr.m_order-nOrder) * aDlg.m_interval;
+				if( aDlg.m_ascending )
+				{
+					objArr = m_listArrival.GetAt( selectedStaNos.GetAt(nCount) );
+					nSign = 1;
+				}
 				else
-					tNewTime	= aDlg.m_startTime + nCount++ * aDlg.m_interval;
+				{
+					objArr = m_listArrival.GetAt( selectedStaNos.GetAt(selectedStaNos.GetSize()-nCount-1) );
+					nSign = -1;
+				}
+
+				if( aDlg.m_useOrder )
+				{
+					tNewTime = aDlg.m_startTime + (objArr.m_order-first.m_order) * aDlg.m_interval * nSign;
+				}
+				else
+				{
+					tNewTime = aDlg.m_startTime + nCount * aDlg.m_interval * nSign;
+				}
 				if( objArr.m_unitsAtStart != tNewTime )
 				{
 					if( ChangesAllowed( objArr.m_staNo ) )
@@ -170,9 +196,13 @@ void CListTimeTrialOrder::OnTimetrialorderfunctionsAuto()
 						m_listArrival.Insert( objArr );
 					}
 					else
+					{
 						bAllAllowed = false;
+					}
 				}
+				nCount++;
 			}
+
 			// Visualisation
 			m_ctrlArrivalList.DrawList( &m_listArrival );
 			m_staNo.EnableWindow( TRUE );

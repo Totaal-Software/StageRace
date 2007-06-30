@@ -2,7 +2,7 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Mon Sep 11 20:45:19 2006
+/* at Fri Jun 29 12:15:51 2007
  */
 /* Compiler settings for D:\Projects\StageRace\trunk\StageRace.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
