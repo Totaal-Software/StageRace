@@ -36,6 +36,7 @@ protected:
 	CImageList m_imageListState;
 	bool IsItemChecked(HTREEITEM hItem);
 	CEventItem	m_eiSelected;
+	bool m_bViewCsv;
 	CHalfStage*	m_pHalfStage;
 	BOOL		m_bRedrawMode;
 	// Our own - casted - document pointer
@@ -59,6 +60,7 @@ protected:
 	afx_msg void OnUpdateConfigureInsertHalfStage(CCmdUI* pCmdUI);
 	afx_msg void OnUpdateConfigureDelete(CCmdUI* pCmdUI);
 	afx_msg void OnUpdateConfigureConfigure(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateViewCsv(CCmdUI* pCmdUI);
 	afx_msg void OnToolsExportoptic();
 	afx_msg void OnUpdateToolsExportoptic(CCmdUI* pCmdUI);
 	afx_msg void OnToolsExportchronx();
@@ -100,6 +102,7 @@ protected:
 	afx_msg void OnToolsEditpubl();
 	afx_msg void OnUpdateToolsEditpubl(CCmdUI* pCmdUI);
 	afx_msg void OnViewExpand();
+	afx_msg void OnViewCsv();
 	afx_msg void OnToolsExportttware();
 	afx_msg void OnUpdateToolsExportttware(CCmdUI* pCmdUI);
 	//}}AFX_MSG

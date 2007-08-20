@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 14, 1974
- PRODUCTVERSION 2005, 3, 14, 1974
+ FILEVERSION 2005, 3, 14, 2076
+ PRODUCTVERSION 2005, 3, 14, 2076
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 14, 1974\0"
+            VALUE "FileVersion", "2005, 3, 14, 2076\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 14, 1974\0"
+            VALUE "ProductVersion", "2005, 3, 14, 2076\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -215,6 +215,7 @@ BEGIN
     SEPARATOR
     BUTTON      ID_EDIT_EDITSELECTION
     BUTTON      ID_EDIT_PUBLISH
+    BUTTON      ID_VIEW_CSVVIEW
     SEPARATOR
     BUTTON      ID_INSERT_SIGNOUTS
     BUTTON      ID_INSERT_COMMUNIQUE
@@ -916,7 +917,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 279, 153
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Start interval"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     LTEXT           "Start at competitor",IDC_STATIC,20,20,58,8
     EDITTEXT        IDC_STANO,87,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -3076,6 +3077,8 @@ BEGIN
         MENUITEM "&Active event selection",     ID_VIEW_LISTVIEWACTIVEDOC
         MENUITEM "&Event items selection",      ID_VIEW_EVENTITEMSELECTION
         MENUITEM SEPARATOR
+        MENUITEM "View CSV &publications",      ID_VIEW_CSVVIEW
+        MENUITEM SEPARATOR
         MENUITEM "&Monitor mode",               ID_VIEW_MONITORMODE
         MENUITEM "Add fi&le to monitor...",     ID_VIEW_ADDFILETOMONITOR
         MENUITEM SEPARATOR
@@ -4395,6 +4398,11 @@ BEGIN
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Separator line"
     IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
                             "Exclude time cut offs from general sprint, points, climbing, most aggressive"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CSVVIEW         "Show or hide the CSV file version of publications if available\nView CSV publications"
 END
 
 #endif    // English (U.S.) resources
@@ -5754,7 +5762,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 296, 153
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Intervalle de départ"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     LTEXT           "Commence au coureur",IDC_STATIC,20,20,72,8
     EDITTEXT        IDC_STANO,103,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -6990,12 +6998,26 @@ BEGIN
         MENUITEM "Barre de &générer",           ID_VIEW_TLBAR_GENERATE
         MENUITEM "&Barre d'état",               ID_VIEW_STATUS_BAR
         MENUITEM SEPARATOR
+        MENUITEM "Gri&d",                       ID_VIEW_GRID
+        MENUITEM "&Bars",                       ID_VIEW_BARS
+        MENUITEM SEPARATOR
         MENUITEM "Arborescence de l'&épreuve ", ID_VIEW_TREEVIEWMAIN
         MENUITEM "&Déployer toutes les arborescences", ID_VIEW_EXPAND
         MENUITEM SEPARATOR
         MENUITEM "Sélectionner &l'épreuve active", ID_VIEW_LISTVIEWACTIVEDOC
         MENUITEM "&Sélectionner les éléments de l'épreuve", 
                                                 ID_VIEW_EVENTITEMSELECTION
+        MENUITEM SEPARATOR
+        MENUITEM "View CSV &publications",      ID_VIEW_CSVVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Monitor mode",               ID_VIEW_MONITORMODE
+        MENUITEM "Add fi&le to monitor...",     ID_VIEW_ADDFILETOMONITOR
+        MENUITEM SEPARATOR
+        POPUP "&Font"
+        BEGIN
+            MENUITEM "&Smaller",                    ID_VIEW_FONT_ZOOMOUT
+            MENUITEM "&Larger",                     ID_VIEW_FONT_ZOOMIN
+        END
         MENUITEM SEPARATOR
         MENUITEM "Ac&tualiser\tF5",             ID_VIEW_REFRESH
         MENUITEM "&Propriété de la publication...", ID_VIEW_INFO
@@ -8445,6 +8467,11 @@ BEGIN
                             "Ajouter un fichier au moniteur qui ne fait pas partie de ce document\nAjouter fichier moniteur"
 END
 
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CSVVIEW         "Show or hide the CSV file version of publications if available\nView CSV publications"
+END
+
 #endif    // French (France) resources
 /////////////////////////////////////////////////////////////////////////////
 
@@ -9817,7 +9844,7 @@ END
 IDD_TTORDER_INTERVAL DIALOGEX 0, 0, 259, 153
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Startinterval"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     LTEXT           "Vanaf deelnemer",IDC_STATIC,20,20,54,8
     EDITTEXT        IDC_STANO,87,20,67,12,ES_RIGHT | ES_AUTOHSCROLL | 
@@ -11211,6 +11238,8 @@ BEGIN
         MENUITEM "Selectie &actieve wedstrijd", ID_VIEW_LISTVIEWACTIVEDOC
         MENUITEM "Selectie wedstrijd&onderdelen", ID_VIEW_EVENTITEMSELECTION
         MENUITEM SEPARATOR
+        MENUITEM "CSV-&publicaties weergeven",  ID_VIEW_CSVVIEW
+        MENUITEM SEPARATOR
         MENUITEM "&Meekijkmodus",               ID_VIEW_MONITORMODE
         MENUITEM "Voeg bestand &toe om mee te kijken...", 
                                                 ID_VIEW_ADDFILETOMONITOR
@@ -12560,6 +12589,11 @@ BEGIN
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Scheidingslijn"
     IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
                             "Na tijdslimiet uitsluiten van algemeen sprint, punten, berg, agressiefste"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CSVVIEW         "CSV-bestand-versie van publicaties weergeven of verbergen, indien beschikbaar\nCSV-publicaties weergeven"
 END
 
 #endif    // Dutch (Netherlands) resources

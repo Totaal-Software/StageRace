@@ -20,6 +20,7 @@ CTreeViewMain::CTreeViewMain()
 	m_DragDrop.m_bDragging	= false;
 	m_pHalfStage			= NULL;
 	m_bRedrawMode			= false;
+	m_bViewCsv				= false;
 }
 
 BEGIN_MESSAGE_MAP(CTreeViewMain, CTreeView)
@@ -34,6 +35,7 @@ BEGIN_MESSAGE_MAP(CTreeViewMain, CTreeView)
 	ON_NOTIFY_REFLECT(TVN_SELCHANGED, OnSelchanged)
 	ON_COMMAND(ID_INSERT_COMMUNIQUE, OnInsertCommunique)
 	ON_COMMAND(ID_EDIT_DELETE, OnEditDelete)
+	ON_UPDATE_COMMAND_UI(ID_VIEW_CSVVIEW, OnUpdateViewCsv)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_DELETE, OnUpdateEditDelete)
 	ON_UPDATE_COMMAND_UI(ID_INSERT_COMMUNIQUE, OnUpdateInsertCommunique)
 	ON_UPDATE_COMMAND_UI(ID_INSERT_SIGNOUTS, OnUpdateInsertSignouts)
@@ -82,6 +84,7 @@ BEGIN_MESSAGE_MAP(CTreeViewMain, CTreeView)
 	ON_COMMAND(ID_TOOLS_EDITPUBL, OnToolsEditpubl)
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_EDITPUBL, OnUpdateToolsEditpubl)
 	ON_COMMAND(ID_VIEW_EXPAND, OnViewExpand)
+	ON_COMMAND(ID_VIEW_CSVVIEW, OnViewCsv)
 	ON_COMMAND(ID_PREV_PANE, OnNextPane)
 	ON_COMMAND(ID_TOOLS_EXPORTTTWARE, OnToolsExportttware)
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_EXPORTTTWARE, OnUpdateToolsExportttware)
@@ -806,176 +809,316 @@ void CTreeViewMain::ItemDisplay()
 	{
 	// ROOT ITEM
 		case TI_ROOT:
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// CROSS OUT LIST
 		case TI_CROSSOUTLIST:
 			m_pIdView->Set( &m_pHalfStage->m_idCrossOut );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// SIGN IN LIST
 		case TI_SIGNINLIST:
 			m_pIdView->Set( &m_pHalfStage->m_idSignIn );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MOST AGGRESSIVE
 		case TI_MOSTAGGRESSIVE:
 			m_pIdView->Set( &m_pHalfStage->m_idMostAggressive );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// CLIMB
 		case TI_CLIMB:
 			m_pIdView->Set( &m_pHalfStage->m_idClimbs );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// POINTS
 		case TI_POINTS:
 			m_pIdView->Set( &m_pHalfStage->m_idPoints );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// SPRINT
 		case TI_SPRINT:
 			m_pIdView->Set( &m_pHalfStage->m_idSprints );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// TIME TRIAL ORDER
 		case TI_TIMETRIALORDER:
 			m_pIdView->Set( &m_pHalfStage->m_idStartList );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// LIST COMPETITORS TYPE 1
 		case TI_LISTCOMPETITORS1:
 			m_pIdView->Set( &m_pDoc->m_idCompetitors );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// LIST COMPETITORS TYPE 2
 		case TI_LISTCOMPETITORS2:
 			m_pIdView->Set( &m_pDoc->m_idTeams );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// TIME TRIAL ARRIVAL LISTING
 		case TI_TTARRIVALLIST:
 			m_pIdView->Set( &m_pHalfStage->m_idTTArrival );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// GENERAL CLASSIFICATION ON STANO
 		case TI_CLASSSTANOSORTEDGENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idGeneralStaNoSorted );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// GENERAL CLASSIFICATION
 		case TI_CLASSGENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idGeneral );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 1 STAGE CLASSIFICATION
 		case TI_CLASSMASK1STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask1stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 1 GENERAL CLASSIFICATION
 		case TI_CLASSMASK1GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask1gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 2 STAGE CLASSIFICATION
 		case TI_CLASSMASK2STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask2stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 2 GENERAL CLASSIFICATION
 		case TI_CLASSMASK2GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask2gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 3 STAGE CLASSIFICATION
 		case TI_CLASSMASK3STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask3stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 3 GENERAL CLASSIFICATION
 		case TI_CLASSMASK3GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask3gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 4 STAGE CLASSIFICATION
 		case TI_CLASSMASK4STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask4stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 4 GENERAL CLASSIFICATION
 		case TI_CLASSMASK4GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask4gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 5 STAGE CLASSIFICATION
 		case TI_CLASSMASK5STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask5stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 5 GENERAL CLASSIFICATION
 		case TI_CLASSMASK5GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask5gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 6 STAGE CLASSIFICATION
 		case TI_CLASSMASK6STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask6stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 6 GENERAL CLASSIFICATION
 		case TI_CLASSMASK6GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask6gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 7 STAGE CLASSIFICATION
 		case TI_CLASSMASK7STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask7stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 7 GENERAL CLASSIFICATION
 		case TI_CLASSMASK7GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask7gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 8 STAGE CLASSIFICATION
 		case TI_CLASSMASK8STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask8stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 8 GENERAL CLASSIFICATION
 		case TI_CLASSMASK8GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask8gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 9 STAGE CLASSIFICATION
 		case TI_CLASSMASK9STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask9stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 9 GENERAL CLASSIFICATION
 		case TI_CLASSMASK9GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask9gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 10 STAGE CLASSIFICATION
 		case TI_CLASSMASK10STAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idMask10stage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// MASK 10 GENERAL CLASSIFICATION
 		case TI_CLASSMASK10GENERAL:
 			m_pIdView->Set( &m_pHalfStage->m_idMask10gen );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// TEAMS CLASSIFICATION
 		case TI_CLASSTEAMS:
 			m_pIdView->Set( &m_pHalfStage->m_idTeams );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// HALFSTAGE CLASSIFICATION
 		case TI_HALFSTAGE:
 			m_pIdView->Set( &m_pHalfStage->m_idStage );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	// COMPETITORS VIEW
@@ -1000,6 +1143,10 @@ void CTreeViewMain::ItemDisplay()
 				else
 				// Event communiqué
 					m_pIdView->Set( &m_pDoc->m_communique.m_id );
+			if( m_bViewCsv )
+			{
+				if( pFrame->ShowViewPresentationText()->Navigate(&m_eiSelected) ) return;
+			}
 			if( pFrame->ShowViewPresentation()->Navigate(&m_eiSelected) ) return;
 			break;
 	}
@@ -2540,6 +2687,17 @@ void CTreeViewMain::OnViewExpand()
 {
 	ExpandBranch( GetTreeCtrl().GetRootItem() );
     GetTreeCtrl().EnsureVisible( GetTreeCtrl().GetSelectedItem() );
+}
+
+void CTreeViewMain::OnViewCsv() 
+{
+	m_bViewCsv = !m_bViewCsv;
+	ItemDisplay();
+}
+
+void CTreeViewMain::OnUpdateViewCsv(CCmdUI* pCmdUI) 
+{
+	pCmdUI->SetCheck( m_bViewCsv ? 1 : 0 );
 }
 
 BOOL CTreeViewMain::PreTranslateMessage(MSG* pMsg) 

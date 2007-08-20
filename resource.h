@@ -1194,6 +1194,7 @@
 #define ID_ARRIVALFUNCTIONS_GROUPT_2    33102
 #define ID_ARRIVALFUNCTIONS_GROUPT_3    33103
 #define ID_EDITSELECTALL                33104
+#define ID_VIEW_CSVVIEW                 33105
 #define ID_INDICATOR_KEY                59142
 #define ID_INDICATOR_ACTIVEDOC          59143
 #define ID_INDICATOR_MESSAGINGACTION    59144
@@ -1206,7 +1207,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        355
-#define _APS_NEXT_COMMAND_VALUE         33105
+#define _APS_NEXT_COMMAND_VALUE         33107
 #define _APS_NEXT_CONTROL_VALUE         1455
 #define _APS_NEXT_SYMED_VALUE           118
 #endif

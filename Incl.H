@@ -239,6 +239,7 @@
 	// Dependent views
 	// Must before child frame
 	#include "PresentationView.h"
+	#include "PresentationTextView.h"
 	#include "StaticPresentationView.h"
 	#include "ListViewCompetitorsTeams.h"
 	#include "ListViewCompetitors.h"

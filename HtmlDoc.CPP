@@ -32,7 +32,7 @@ CHtmlDoc::CHtmlDoc( CEventItem ei )
 	// Generation of CSV counterpart of this method
 	m_ptextdoc = NULL;
 	// Feature switch on/off right here
-	if( false )
+	if( true )
 	{
 		if( ei.IsPublicableCSV() )
 		{

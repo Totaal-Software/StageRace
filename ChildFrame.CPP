@@ -26,6 +26,7 @@ CChildFrame::CChildFrame()
 	m_nListViewTeams		= -1;
 	m_nPresentationView		= -1;
 	m_nFormViewDetailsEmpty = -1;
+	m_nPresentationViewText	= -1;
 	m_bDisplayConfigureToolBar = false;
 	m_bDisplayTreeViewMainToolBar = true;
 }
@@ -245,6 +246,23 @@ CPresentationView* CChildFrame::ShowViewPresentation()
 	SwitchToolbar();
 
 	return (CPresentationView*)m_wndSplitterColumns.GetView( m_nPresentationView );
+}
+
+CPresentationTextView* CChildFrame::ShowViewPresentationText()
+{
+	// If this is the first time
+	if( m_nPresentationViewText == -1 )
+	{
+		m_nPresentationViewText = 0;
+		// Set up the view
+		m_nPresentationViewText = m_wndSplitterColumns.AddView(
+			0,m_wndSplitterColumns.Hidden()?0:1,RUNTIME_CLASS(CPresentationTextView),NULL);
+	}
+	// Anyway, display it
+	m_wndSplitterColumns.ShowView( m_nPresentationViewText );
+	SwitchToolbar();
+
+	return (CPresentationTextView*)m_wndSplitterColumns.GetView( m_nPresentationViewText );
 }
 
 UINT CChildFrame::GetResourceID()

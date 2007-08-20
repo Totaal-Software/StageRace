@@ -33,6 +33,7 @@ public:
 	CListViewTeams*			ShowViewListTeams();
 	CListViewCompetitors*	ShowViewListCompetitors();
 	CPresentationView*		ShowViewPresentation();
+	CPresentationTextView*	ShowViewPresentationText();
 	void SetActivePaneDetailView();
 	void SetActivePaneTreeViewMain();
 protected:
@@ -46,6 +47,7 @@ protected:
 	int m_nListViewCompetitors;
 	int m_nListViewTeams;
 	int m_nPresentationView;
+	int m_nPresentationViewText;
 	CSplitterWndHidable		m_wndSplitterColumns;
 	CSplitterWndFixed		m_wndSplitterLeftColumn;
 	virtual ~CChildFrame();
