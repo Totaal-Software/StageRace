@@ -1027,6 +1027,11 @@
 #define IDS_SETT_RANK_TEAMS_BUNCH_FROMRANKINGS 25274
 #define IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE 25275
 #define IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 25276
+#define IDS_SETT_CSV                    25277
+#define IDS_SETT_CSV_MAIL               25278
+#define IDS_SETT_CSV_UPLOAD             25279
+#define IDS_SETT_PUBL_CSV               25280
+#define IDS_SETT_PUBL_CSV_GENERATE      25281
 #define IDS_MBC_44                      32774
 #define IDS_MBT_44                      32775
 #define IDS_MBC_45                      32776

@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 14, 2076
- PRODUCTVERSION 2005, 3, 14, 2076
+ FILEVERSION 2005, 3, 14, 2085
+ PRODUCTVERSION 2005, 3, 14, 2085
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 14, 2076\0"
+            VALUE "FileVersion", "2005, 3, 14, 2085\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 14, 2076\0"
+            VALUE "ProductVersion", "2005, 3, 14, 2085\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -215,7 +215,6 @@ BEGIN
     SEPARATOR
     BUTTON      ID_EDIT_EDITSELECTION
     BUTTON      ID_EDIT_PUBLISH
-    BUTTON      ID_VIEW_CSVVIEW
     SEPARATOR
     BUTTON      ID_INSERT_SIGNOUTS
     BUTTON      ID_INSERT_COMMUNIQUE
@@ -273,6 +272,8 @@ BEGIN
     SEPARATOR
     BUTTON      ID_VIEW_REFRESH
     BUTTON      ID_VIEW_INFO
+    SEPARATOR
+    BUTTON      ID_VIEW_CSVVIEW
     SEPARATOR
     BUTTON      ID_VIEW_FONT_ZOOMIN
     BUTTON      ID_VIEW_FONT_ZOOMOUT
@@ -4398,11 +4399,20 @@ BEGIN
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Separator line"
     IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
                             "Exclude time cut offs from general sprint, points, climbing, most aggressive"
+    IDS_SETT_CSV            "Comma-separated value (CSV) files"
+    IDS_SETT_CSV_MAIL       "Attach to mails"
+    IDS_SETT_CSV_UPLOAD     "Include in uploads"
 END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
     ID_VIEW_CSVVIEW         "Show or hide the CSV file version of publications if available\nView CSV publications"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETT_PUBL_CSV       "Comma-separated value (CSV) files"
+    IDS_SETT_PUBL_CSV_GENERATE "Generate CSV files"
 END
 
 #endif    // English (U.S.) resources
@@ -8289,6 +8299,9 @@ BEGIN
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Ligne pour séparer"
     IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
                             "Exclure terminant hors-délai de sprint, points, grimpeur, plus agressif général"
+    IDS_SETT_CSV            "Comma-separated value (CSV) files"
+    IDS_SETT_CSV_MAIL       "Attach to mails"
+    IDS_SETT_CSV_UPLOAD     "Include in uploads"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -8470,6 +8483,12 @@ END
 STRINGTABLE DISCARDABLE 
 BEGIN
     ID_VIEW_CSVVIEW         "Show or hide the CSV file version of publications if available\nView CSV publications"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETT_PUBL_CSV       "Comma-separated value (CSV) files"
+    IDS_SETT_PUBL_CSV_GENERATE "Generate CSV files"
 END
 
 #endif    // French (France) resources
@@ -12589,11 +12608,20 @@ BEGIN
     IDS_SETT_PUBL_COLS_LISTCOMP2_COLUMNS_SEPARATE "Scheidingslijn"
     IDS_SETT_RANK_EXCLUDETIMECUTOFFFROMSPRINTS 
                             "Na tijdslimiet uitsluiten van algemeen sprint, punten, berg, agressiefste"
+    IDS_SETT_CSV            "Bestanden met komma-gescheiden waardes (CSV)"
+    IDS_SETT_CSV_MAIL       "Insluiten in mails"
+    IDS_SETT_CSV_UPLOAD     "Meenemen in uploads"
 END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
     ID_VIEW_CSVVIEW         "CSV-bestand-versie van publicaties weergeven of verbergen, indien beschikbaar\nCSV-publicaties weergeven"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETT_PUBL_CSV       "Bestanden met komma-gescheiden waardes (CSV)"
+    IDS_SETT_PUBL_CSV_GENERATE "CSV-bestanden genereren"
 END
 
 #endif    // Dutch (Netherlands) resources

@@ -27,6 +27,12 @@ CSettingsUpload::CSettingsUpload()
 				CSettings::CSetting::GROUP, false, 0, 21 );
 	ValueAdd( IDS_SETT_MAIL_BCC,
 				CSettings::CSetting::SINGLEOPTION, false, IDS_SETT_MAIL );
+	ValueAdd( IDS_SETT_CSV,
+				CSettings::CSetting::GROUP, false, 0, 22 );
+	ValueAdd( IDS_SETT_CSV_MAIL,
+				CSettings::CSetting::SINGLEOPTION, true, IDS_SETT_CSV );
+	ValueAdd( IDS_SETT_CSV_UPLOAD,
+				CSettings::CSetting::SINGLEOPTION, true, IDS_SETT_CSV );
 }
 
 CSettingsUpload::CSettingsUpload(CSettingsUpload *pSettings)

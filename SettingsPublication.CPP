@@ -17,6 +17,11 @@ static char THIS_FILE[]=__FILE__;
 
 CSettingsPublication::CSettingsPublication()
 {
+	ValueAdd( IDS_SETT_PUBL_CSV,
+				CSettings::CSetting::GROUP, false, 0, 22 );
+	ValueAdd( IDS_SETT_PUBL_CSV_GENERATE,
+				CSettings::CSetting::SINGLEOPTION, false, IDS_SETT_PUBL_CSV );
+
 	ValueAdd( IDS_SETT_PUBL_COMMNOS,
 				CSettings::CSetting::GROUP, false, 0, 18 );
 	ValueAdd( IDS_SETT_PUBL_COMMNOS_USE,
