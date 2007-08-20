@@ -71,7 +71,7 @@ void CPresentationTextView::OnNextPane()
 
 bool CPresentationTextView::Navigate(CEventItem* pEI)
 {
-	if( pEI->IsPublicationAvailable() )
+	if( pEI->IsPublicationAvailableCSV() )
 	{
 		CString strFile = pEI->ComposeFileNamePathCSV();
 
@@ -200,4 +200,10 @@ void CPresentationTextView::OnInitialUpdate()
 	m_cf2.yHeight = 250;
 	m_cf2.crTextColor = RGB(128,0,0);
 	m_cf2.bPitchAndFamily = TMPF_TRUETYPE|FF_ROMAN;
+}
+
+UINT CPresentationTextView::GetResourceID()
+{
+	// Yes, this one actually reuses the resources of the presentation view
+	return IDR_PRESENTATIONVIEW;
 }

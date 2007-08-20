@@ -1738,7 +1738,7 @@ void CTreeViewMain::OnGenerateSelection()
 
 void CTreeViewMain::OnUpdateGenerateSelection(CCmdUI* pCmdUI) 
 {
-	pCmdUI->Enable( m_eiSelected.IsPublicable() );
+	pCmdUI->Enable( m_eiSelected.IsPublicableCSV() | m_eiSelected.IsPublicableHTML() );
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -2634,7 +2634,7 @@ void CTreeViewMain::OnEditCopytoselectiondlg()
 
 void CTreeViewMain::OnUpdateEditCopytoselectiondlg(CCmdUI* pCmdUI) 
 {
-	pCmdUI->Enable( m_eiSelected.IsPublicable() );
+	pCmdUI->Enable( m_eiSelected.IsPublicableCSV() | m_eiSelected.IsPublicableHTML() );
 }
 
 void CTreeViewMain::OnSetFocus(CWnd* pOldWnd) 
@@ -2651,23 +2651,56 @@ void CTreeViewMain::OnKillFocus(CWnd* pNewWnd)
 
 void CTreeViewMain::OnGenerateReadonly() 
 {
-	m_eiSelected.ToggleReadonly();
+	CChildFrame* pFrame = (CChildFrame*)GetParentFrame();
+	if(pFrame->GetActiveDetailView()->IsKindOf(RUNTIME_CLASS(CPresentationTextView)))
+	{
+		m_eiSelected.ToggleReadonlyCSV();
+	}
+	else
+	{
+		m_eiSelected.ToggleReadonlyHTML();
+	}
 }
 
 void CTreeViewMain::OnUpdateGenerateReadonly(CCmdUI* pCmdUI) 
 {
-	pCmdUI->Enable	( m_eiSelected.IsPublicationAvailable() );
-	pCmdUI->SetCheck( m_eiSelected.IsPublicationReadonly() );
+	CChildFrame* pFrame = (CChildFrame*)GetParentFrame();
+	if(pFrame->GetActiveDetailView()->IsKindOf(RUNTIME_CLASS(CPresentationTextView)))
+	{
+		pCmdUI->Enable	( m_eiSelected.IsPublicationAvailableCSV() );
+		pCmdUI->SetCheck( m_eiSelected.IsPublicationReadonlyCSV() );
+	}
+	else
+	{
+		pCmdUI->Enable	( m_eiSelected.IsPublicationAvailableHTML() );
+		pCmdUI->SetCheck( m_eiSelected.IsPublicationReadonlyHTML() );
+	}
 }
 
 void CTreeViewMain::OnToolsEditpubl() 
 {
-	m_eiSelected.EditPublication();
+	CChildFrame* pFrame = (CChildFrame*)GetParentFrame();
+	if(pFrame->GetActiveDetailView()->IsKindOf(RUNTIME_CLASS(CPresentationTextView)))
+	{
+		m_eiSelected.EditPublicationCSV();
+	}
+	else
+	{
+		m_eiSelected.EditPublicationHTML();
+	}
 }
 
 void CTreeViewMain::OnUpdateToolsEditpubl(CCmdUI* pCmdUI) 
 {
-	pCmdUI->Enable( m_eiSelected.IsPublicationAvailable() );
+	CChildFrame* pFrame = (CChildFrame*)GetParentFrame();
+	if(pFrame->GetActiveDetailView()->IsKindOf(RUNTIME_CLASS(CPresentationTextView)))
+	{
+		pCmdUI->Enable( m_eiSelected.IsPublicationAvailableCSV() );
+	}
+	else
+	{
+		pCmdUI->Enable( m_eiSelected.IsPublicationAvailableHTML() );
+	}
 }
 
 void CTreeViewMain::ExpandBranch(HTREEITEM hti)
@@ -2715,7 +2748,7 @@ BOOL CTreeViewMain::PreTranslateMessage(MSG* pMsg)
 
 bool CTreeViewMain::ShouldDrag(CEventItem &ei)
 {
-	if( ei.IsPublicable() )
+	if( m_eiSelected.IsPublicableCSV() | m_eiSelected.IsPublicableHTML() )
 	{
 		return true;
 	}

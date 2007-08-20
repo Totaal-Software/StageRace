@@ -26,6 +26,7 @@ public:
 
 // Operations
 public:
+	UINT GetResourceID();
 	void OnNextPane();
 
 // Overrides

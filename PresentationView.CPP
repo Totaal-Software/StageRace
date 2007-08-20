@@ -160,7 +160,7 @@ void CPresentationView::Navigate(LPCTSTR URL)
 
 bool CPresentationView::Navigate(CEventItem* pEI)
 {
-	if( pEI->IsPublicationAvailable() )
+	if( pEI->IsPublicationAvailableHTML() )
 	{
 		CPresentationView::Navigate( pEI->ComposeFileNamePathHTML() );	
 		return true;

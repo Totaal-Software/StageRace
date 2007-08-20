@@ -195,12 +195,18 @@ class CEventItem
 	public:
 		CString GetSponsor();
 		CString GetSponsorSubTitle();
-		static void EditPublication(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS);
-		void EditPublication();
-		void ToggleReadonly(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS);
-		void ToggleReadonly();
-		static bool IsPublicationReadonly(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
-		bool IsPublicationReadonly();
+		static void EditPublicationHTML(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS);
+		void EditPublicationHTML();
+		void ToggleReadonlyHTML(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS);
+		void ToggleReadonlyHTML();
+		static bool IsPublicationReadonlyHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
+		bool IsPublicationReadonlyHTML();
+		static void EditPublicationCSV(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS);
+		void EditPublicationCSV();
+		void ToggleReadonlyCSV(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS);
+		void ToggleReadonlyCSV();
+		static bool IsPublicationReadonlyCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
+		bool IsPublicationReadonlyCSV();
 		CString StagesMakeIDString();
 		static CString StagesMakeIDString(int nFS, int nHS, const CStageRaceDoc* pDoc);
 		static CString StagesMakeIDString(int nFS, const CStageRaceDoc* pDoc);
@@ -218,8 +224,9 @@ class CEventItem
 		void GetPublicationColumns(PUBLI_BODYCOLUMNS columns[], STAGETYPES stType = ST_NORMAL);
 		const CStageRaceDoc* GetDocument();
 		void SetDoc(const CStageRaceDoc* pDoc);
-		static bool IsPublicationAvailable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
-		static bool IsPublicable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
+		static bool IsPublicationAvailableHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
+		static bool IsPublicationAvailableCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
+		static bool IsPublicableHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static bool IsPublicableCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeTocTitle(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeFileTitle(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
@@ -227,8 +234,9 @@ class CEventItem
 		static CString ComposeFileNamePathHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeFileNameCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
 		static CString ComposeFileNamePathCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS);
-		bool IsPublicationAvailable();
-		bool IsPublicable();
+		bool IsPublicationAvailableHTML();
+		bool IsPublicationAvailableCSV();
+		bool IsPublicableHTML();
 		bool IsPublicableCSV();
 		CEventItem( const CEventItem& ei );
 		CString ComposeTocTitle();

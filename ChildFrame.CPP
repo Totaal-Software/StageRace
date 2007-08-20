@@ -285,7 +285,14 @@ UINT CChildFrame::GetResourceID()
 			if( pView->IsKindOf( RUNTIME_CLASS(CPresentationView) ) )
 				return ((CPresentationView*)pView)->GetResourceID();
 			else
-				return 0;
+			{
+				if( pView->IsKindOf( RUNTIME_CLASS(CPresentationTextView) ) )
+					return ((CPresentationTextView*)pView)->GetResourceID();
+				else
+				{
+					return 0;
+				}
+			}
 		}
 	}
 
@@ -486,3 +493,9 @@ void CChildFrame::OnMDIActivate(BOOL bActivate, CWnd* pActivateWnd, CWnd* pDeact
 		((CMainFrame*)AfxGetMainWnd())->m_wndStandardToolBar.ResetDoc();
 }
 
+
+CWnd* CChildFrame::GetActiveDetailView()
+{
+	int nCurID;
+	return m_wndSplitterColumns.GetCurrentView(0, 1, &nCurID);
+}

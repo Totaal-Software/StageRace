@@ -25,6 +25,7 @@ public:
 				CCreateContext* pContext);
 	void ShowView(int nViewID);
 	CWnd* GetView(int nViewID);
+	CWnd* GetCurrentView(int nRow, int nCol, int * nCurID);
 
 protected:
 	map<int, long> m_mapViewPane;
@@ -33,7 +34,6 @@ protected:
 
 	int m_nIDCounter;
 
-	CWnd* GetCurrentView(int nRow, int nCol, int * nCurID);
 	void SetCurrentView(int nRow, int nCol, int nViewID);
 	int HideCurrentView(int nRow, int nCol);
 

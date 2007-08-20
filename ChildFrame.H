@@ -27,6 +27,7 @@ public:
 
 // Implementation
 public:
+	CWnd* GetActiveDetailView();
 	void DoInitialMaximize();
 	UINT GetResourceID();
 	CFormViewDetailsEmpty*	ShowViewDetailsEmpty();

@@ -518,20 +518,33 @@ CString CEventItem::ComposeFileNamePathCSV(const CStageRaceDoc* pDoc, TREEITEMS 
 	return ei.ComposeFileNamePathCSV();
 }
 
-bool CEventItem::IsPublicationAvailable()
+bool CEventItem::IsPublicationAvailableHTML()
 {
 	CFileFind objCheckFile;
 	// If the file exists...
 	return objCheckFile.FindFile( ComposeFileNamePathHTML() )==TRUE;
 }
 
-bool CEventItem::IsPublicationAvailable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+bool CEventItem::IsPublicationAvailableHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
-	return ei.IsPublicationAvailable();
+	return ei.IsPublicationAvailableHTML();
 }
 
-bool CEventItem::IsPublicable()
+bool CEventItem::IsPublicationAvailableCSV()
+{
+	CFileFind objCheckFile;
+	// If the file exists...
+	return objCheckFile.FindFile( ComposeFileNamePathCSV() )==TRUE;
+}
+
+bool CEventItem::IsPublicationAvailableCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	return ei.IsPublicationAvailableCSV();
+}
+
+bool CEventItem::IsPublicableHTML()
 {
 	return ComposeFileTitle().GetLength()>0;
 }
@@ -600,10 +613,10 @@ bool CEventItem::IsPublicableCSV()
 	}
 }
 
-bool CEventItem::IsPublicable(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
+bool CEventItem::IsPublicableHTML(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
-	return ei.IsPublicable();
+	return ei.IsPublicableHTML();
 }
 
 bool CEventItem::IsPublicableCSV(const CStageRaceDoc* pDoc, TREEITEMS ti, int nFS, int nHS)
@@ -1412,9 +1425,9 @@ CString CEventItem::StagesMakeIDString()
 	return StagesMakeIDString( m_nFullStage, m_nHalfStage, m_pDoc );
 }
 
-bool CEventItem::IsPublicationReadonly()
+bool CEventItem::IsPublicationReadonlyHTML()
 {
-	if( IsPublicationAvailable() )
+	if( IsPublicationAvailableHTML() )
 	{
 		HANDLE handle;
 		BY_HANDLE_FILE_INFORMATION info;
@@ -1440,15 +1453,15 @@ bool CEventItem::IsPublicationReadonly()
 	return false;
 }
 
-bool CEventItem::IsPublicationReadonly(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
+bool CEventItem::IsPublicationReadonlyHTML(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
-	return ei.IsPublicationReadonly();
+	return ei.IsPublicationReadonlyHTML();
 }
 
-void CEventItem::ToggleReadonly()
+void CEventItem::ToggleReadonlyHTML()
 {
-	if( IsPublicationAvailable() )
+	if( IsPublicationAvailableHTML() )
 	{
 		HANDLE handle;
 		BY_HANDLE_FILE_INFORMATION info;
@@ -1478,13 +1491,13 @@ void CEventItem::ToggleReadonly()
 	}
 }
 
-void CEventItem::ToggleReadonly(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
+void CEventItem::ToggleReadonlyHTML(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
-	ei.ToggleReadonly();
+	ei.ToggleReadonlyHTML();
 }
 
-void CEventItem::EditPublication()
+void CEventItem::EditPublicationHTML()
 {
 	// First get the name of the application
 	CSRRegKey reg;
@@ -1522,10 +1535,126 @@ void CEventItem::EditPublication()
 		);
 }
 
-void CEventItem::EditPublication(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
+void CEventItem::EditPublicationHTML(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
 {
 	CEventItem ei( pDoc, ti, nFS, nHS );
-	ei.EditPublication();
+	ei.EditPublicationHTML();
+}
+
+bool CEventItem::IsPublicationReadonlyCSV()
+{
+	if( IsPublicationAvailableCSV() )
+	{
+		HANDLE handle;
+		BY_HANDLE_FILE_INFORMATION info;
+
+		handle = CreateFile(
+			ComposeFileNamePathCSV(),
+			GENERIC_READ,
+			FILE_SHARE_READ | FILE_SHARE_WRITE,
+			NULL,
+			OPEN_EXISTING,
+			FILE_ATTRIBUTE_NORMAL,
+			NULL );
+
+		if( handle != INVALID_HANDLE_VALUE )
+		{
+			GetFileInformationByHandle(handle, &info);
+
+			CloseHandle( handle );
+
+			return info.dwFileAttributes & FILE_ATTRIBUTE_READONLY;
+		}
+	}
+	return false;
+}
+
+bool CEventItem::IsPublicationReadonlyCSV(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	return ei.IsPublicationReadonlyCSV();
+}
+
+void CEventItem::ToggleReadonlyCSV()
+{
+	if( IsPublicationAvailableCSV() )
+	{
+		HANDLE handle;
+		BY_HANDLE_FILE_INFORMATION info;
+
+		handle = CreateFile(
+			ComposeFileNamePathCSV(),
+			GENERIC_READ,
+			FILE_SHARE_READ | FILE_SHARE_WRITE,
+			NULL,
+			OPEN_EXISTING,
+			FILE_ATTRIBUTE_NORMAL,
+			NULL );
+
+		if( handle != INVALID_HANDLE_VALUE )
+		{
+			GetFileInformationByHandle(handle, &info);
+
+			CloseHandle( handle );
+
+			info.dwFileAttributes = info.dwFileAttributes ^ FILE_ATTRIBUTE_READONLY;
+
+			SetFileAttributes(
+				ComposeFileNamePathCSV(),
+				info.dwFileAttributes
+			);
+		}
+	}
+}
+
+void CEventItem::ToggleReadonlyCSV(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	ei.ToggleReadonlyCSV();
+}
+
+void CEventItem::EditPublicationCSV()
+{
+	// First get the name of the application
+	CSRRegKey reg;
+	reg.Open( HKEY_CURRENT_USER, TEXT("Software\\Totaal Software\\StageRace\\Options") );
+
+	// Set up a path for Notepad that we use as default application
+	TCHAR lpBuffer[MAX_PATH];
+	GetWindowsDirectory( lpBuffer, MAX_PATH );
+	CString cBuffer = CString(lpBuffer);
+	if( cBuffer.Right(1)!="\\" ) cBuffer+="\\";
+	cBuffer+="notepad.exe";
+
+	// Get the path to the file we need to convert.
+	CString cPath = reg.GetString( TEXT("Publication editor"), cBuffer );
+
+	// Create a process with the application and document we want
+	STARTUPINFO si;
+	PROCESS_INFORMATION pi;
+
+	memset (&si, 0, sizeof (si));
+	si.cb = sizeof(si);
+	si.wShowWindow = SW_SHOW;
+
+	CreateProcess(
+			cPath.GetBuffer(0),
+			CString(" \""+ComposeFileNamePathCSV()+"\"").GetBuffer(0),
+			NULL,
+			NULL,
+			FALSE,
+			NORMAL_PRIORITY_CLASS,
+			NULL,
+			NULL,
+			&si,
+			&pi
+		);
+}
+
+void CEventItem::EditPublicationCSV(const CStageRaceDoc *pDoc, TREEITEMS ti, int nFS, int nHS)
+{
+	CEventItem ei( pDoc, ti, nFS, nHS );
+	ei.EditPublicationCSV();
 }
 
 CString CEventItem::GetSponsorSubTitle()

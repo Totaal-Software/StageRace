@@ -313,7 +313,7 @@ void CDlgEventItemSelection::OnPrint()
 		CPrintItem* p;
 		m_mapPrintItems.GetNextAssoc( nPos, p, p );
 
-		if( p->m_pEventItem->IsPublicationAvailable() )
+		if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
 		{
 			// Make a new print web browser that
 			// is going to handle the printing
@@ -352,7 +352,7 @@ void CDlgEventItemSelection::OnUpload()
 			CPrintItem* p;
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
 
-			if( p->m_pEventItem->IsPublicationAvailable() )
+			if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
 			{
 
 				if( (p->m_pEventItem->m_tiConcerning==TI_ROOT)
@@ -489,7 +489,7 @@ void CDlgEventItemSelection::OnMail()
 			// Get every item that needs sending
 			CPrintItem* p;
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
-			if( p->m_pEventItem->IsPublicationAvailable() )
+			if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
 			{
 				WideCharToMultiByte( CP_ACP, 0, p->m_pEventItem->ComposeFileNamePathHTML(), -1, Attachments[n], MAX_PATH, NULL, NULL );
 				MailAttachments[n].lpszPathName	= Attachments[n];
@@ -557,7 +557,7 @@ void CDlgEventItemSelection::OnCopy()
 			// Get every item that needs copying
 			CPrintItem* p;
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
-			if( p->m_pEventItem->IsPublicationAvailable() )
+			if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
 			{
 				// Copy files that exist
 				if( !CopyFile(
