@@ -29,6 +29,10 @@ static char THIS_FILE[]=__FILE__;
 // CONSTRUCTION AND INITIALISATION
 CHtmlDoc::CHtmlDoc( CEventItem ei )
 {
+	// Save for further use
+	m_ei = ei;
+	m_pDocument = ei.GetDocument();
+
 	// Generation of CSV counterpart of this method
 	m_ptextdoc = NULL;
 	// Feature switch on/off right here
@@ -44,10 +48,6 @@ CHtmlDoc::CHtmlDoc( CEventItem ei )
 			}
 		}
 	}
-	// Save for further use
-	m_ei = ei;
-	m_pDocument = ei.GetDocument();
-
 	// Set the flags
 	m_competitorsStarted = false;
 	m_unknownlabelcounter = 0;
