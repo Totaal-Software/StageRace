@@ -2730,6 +2730,7 @@ void CTreeViewMain::OnViewCsv()
 
 void CTreeViewMain::OnUpdateViewCsv(CCmdUI* pCmdUI) 
 {
+	pCmdUI->Enable( GetDocument()->m_allsettings.ValueGet(IDS_SETT_PUBL_CSV_GENERATE)?TRUE:FALSE );
 	pCmdUI->SetCheck( m_bViewCsv ? 1 : 0 );
 }
 

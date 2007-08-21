@@ -71,7 +71,8 @@ void CPresentationTextView::OnNextPane()
 
 bool CPresentationTextView::Navigate(CEventItem* pEI)
 {
-	if( pEI->IsPublicationAvailableCSV() )
+	if( pEI->GetDocument()->m_allsettings.ValueGet(IDS_SETT_PUBL_CSV_GENERATE)
+		&& pEI->IsPublicationAvailableCSV() )
 	{
 		CString strFile = pEI->ComposeFileNamePathCSV();
 

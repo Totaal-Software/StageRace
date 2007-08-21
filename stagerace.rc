@@ -137,8 +137,8 @@ IDB_SETTINGS_TOPICS     BITMAP  DISCARDABLE     "res\\idb_settings_topic.bmp"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2005, 3, 14, 2085
- PRODUCTVERSION 2005, 3, 14, 2085
+ FILEVERSION 2005, 3, 20, 2094
+ PRODUCTVERSION 2005, 3, 20, 2094
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -156,14 +156,14 @@ BEGIN
             VALUE "Comments", "Information at http://www.stagerace.com\0"
             VALUE "CompanyName", "Totaal Software\0"
             VALUE "FileDescription", "StageRace\0"
-            VALUE "FileVersion", "2005, 3, 14, 2085\0"
+            VALUE "FileVersion", "2005, 3, 20, 2094\0"
             VALUE "InternalName", "StageRace\0"
             VALUE "LegalCopyright", "Copyright © 1999-2003\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "StageRace.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Totaal Software StageRace\0"
-            VALUE "ProductVersion", "2005, 3, 14, 2085\0"
+            VALUE "ProductVersion", "2005, 3, 20, 2094\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -4413,6 +4413,7 @@ STRINGTABLE DISCARDABLE
 BEGIN
     IDS_SETT_PUBL_CSV       "Comma-separated value (CSV) files"
     IDS_SETT_PUBL_CSV_GENERATE "Generate CSV files"
+    IDS_SETT_PUBL_CSV_COPYTO "Copy along in 'Event items selection'"
 END
 
 #endif    // English (U.S.) resources
@@ -8489,6 +8490,7 @@ STRINGTABLE DISCARDABLE
 BEGIN
     IDS_SETT_PUBL_CSV       "Comma-separated value (CSV) files"
     IDS_SETT_PUBL_CSV_GENERATE "Generate CSV files"
+    IDS_SETT_PUBL_CSV_COPYTO "Copy along in 'Event items selection'"
 END
 
 #endif    // French (France) resources
@@ -12622,6 +12624,7 @@ STRINGTABLE DISCARDABLE
 BEGIN
     IDS_SETT_PUBL_CSV       "Bestanden met komma-gescheiden waardes (CSV)"
     IDS_SETT_PUBL_CSV_GENERATE "CSV-bestanden genereren"
+    IDS_SETT_PUBL_CSV_COPYTO "Meekopiëren bij 'Selectie wedstrijdonderdelen'"
 END
 
 #endif    // Dutch (Netherlands) resources

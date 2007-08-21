@@ -481,6 +481,10 @@ SOURCE=.\PointsDat.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\PresentationTextView.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\PresentationView.cpp
 # End Source File
 # Begin Source File
@@ -1128,6 +1132,10 @@ SOURCE=.\PointsClassification.h
 # Begin Source File
 
 SOURCE=.\PointsDat.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\PresentationTextView.h
 # End Source File
 # Begin Source File
 
