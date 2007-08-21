@@ -1032,6 +1032,7 @@
 #define IDS_SETT_CSV_UPLOAD             25279
 #define IDS_SETT_PUBL_CSV               25280
 #define IDS_SETT_PUBL_CSV_GENERATE      25281
+#define IDS_SETT_PUBL_CSV_COPYTO        25282
 #define IDS_MBC_44                      32774
 #define IDS_MBT_44                      32775
 #define IDS_MBC_45                      32776

@@ -21,6 +21,8 @@ CSettingsPublication::CSettingsPublication()
 				CSettings::CSetting::GROUP, false, 0, 22 );
 	ValueAdd( IDS_SETT_PUBL_CSV_GENERATE,
 				CSettings::CSetting::SINGLEOPTION, false, IDS_SETT_PUBL_CSV );
+	ValueAdd( IDS_SETT_PUBL_CSV_COPYTO,
+				CSettings::CSetting::SINGLEOPTION, true, IDS_SETT_PUBL_CSV );
 
 	ValueAdd( IDS_SETT_PUBL_COMMNOS,
 				CSettings::CSetting::GROUP, false, 0, 18 );

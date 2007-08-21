@@ -313,7 +313,7 @@ void CDlgEventItemSelection::OnPrint()
 		CPrintItem* p;
 		m_mapPrintItems.GetNextAssoc( nPos, p, p );
 
-		if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
+		if( p->m_pEventItem->IsPublicationAvailableHTML() )
 		{
 			// Make a new print web browser that
 			// is going to handle the printing
@@ -352,7 +352,8 @@ void CDlgEventItemSelection::OnUpload()
 			CPrintItem* p;
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
 
-			if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
+			// HTML part
+			if( p->m_pEventItem->IsPublicationAvailableHTML() )
 			{
 
 				if( (p->m_pEventItem->m_tiConcerning==TI_ROOT)
@@ -377,6 +378,24 @@ void CDlgEventItemSelection::OnUpload()
 						czReport = czReport + p->m_pEventItem->ComposeFileNameHTML() + " (ERROR)\n";
 						error = true;
 					}
+				}
+			}
+
+			// CSV part
+			if( p->m_pEventItem->GetDocument()->m_allsettings.ValueGet(IDS_SETT_PUBL_CSV_GENERATE)
+				&& p->m_pEventItem->GetDocument()->m_allsettings.ValueGet(IDS_SETT_CSV_UPLOAD)
+				&& p->m_pEventItem->IsPublicationAvailableCSV() )
+			{
+				// Upload every event item
+				if(pFtpConnection->PutFile(	p->m_pEventItem->ComposeFileNamePathCSV(),
+											p->m_pEventItem->ComposeFileNameCSV() ) )
+				{
+					czReport = czReport + p->m_pEventItem->ComposeFileNameCSV() + "\n";
+				}
+				else
+				{
+					czReport = czReport + p->m_pEventItem->ComposeFileNameCSV() + " (ERROR)\n";
+					error = true;
 				}
 			}
 		}
@@ -489,9 +508,25 @@ void CDlgEventItemSelection::OnMail()
 			// Get every item that needs sending
 			CPrintItem* p;
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
-			if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
+			// HTML part
+			if( p->m_pEventItem->IsPublicationAvailableHTML() )
 			{
 				WideCharToMultiByte( CP_ACP, 0, p->m_pEventItem->ComposeFileNamePathHTML(), -1, Attachments[n], MAX_PATH, NULL, NULL );
+				MailAttachments[n].lpszPathName	= Attachments[n];
+
+				MailAttachments[n].ulReserved	= 0;
+				MailAttachments[n].flFlags		= 0;
+				MailAttachments[n].nPosition	= -1;
+				MailAttachments[n].lpFileType	= NULL;
+				MailAttachments[n].lpszFileName	= NULL;
+				n++;
+			}
+			// CSV part
+			if( p->m_pEventItem->GetDocument()->m_allsettings.ValueGet(IDS_SETT_PUBL_CSV_GENERATE)
+				&& p->m_pEventItem->GetDocument()->m_allsettings.ValueGet(IDS_SETT_CSV_MAIL)
+				&& p->m_pEventItem->IsPublicationAvailableCSV() )
+			{
+				WideCharToMultiByte( CP_ACP, 0, p->m_pEventItem->ComposeFileNamePathCSV(), -1, Attachments[n], MAX_PATH, NULL, NULL );
 				MailAttachments[n].lpszPathName	= Attachments[n];
 
 				MailAttachments[n].ulReserved	= 0;
@@ -557,7 +592,9 @@ void CDlgEventItemSelection::OnCopy()
 			// Get every item that needs copying
 			CPrintItem* p;
 			m_mapPrintItems.GetNextAssoc( nPos, p, p );
-			if( p->m_pEventItem->IsPublicationAvailableHTML() )//TODO
+
+			// HTML part
+			if( p->m_pEventItem->IsPublicationAvailableHTML() )
 			{
 				// Copy files that exist
 				if( !CopyFile(
@@ -579,6 +616,44 @@ void CDlgEventItemSelection::OnCopy()
 						MessageBox( LoadStr( IDS_MBC_55 )
 								+"\n\n"
 								+p->m_pEventItem->ComposeFileNameHTML()
+								+"\n\n"
+								+CString((LPCTSTR)lpMessage),
+							LoadStr( IDS_MBT_55 ), MB_OK );
+					}
+					else
+					{
+						MessageBox( LoadStr( IDS_MBC_55 ),
+							LoadStr( IDS_MBT_55 ), MB_OK );
+					}
+					// Abort further copying
+					return;
+				}
+			}
+			// CSV part
+			if( p->m_pEventItem->GetDocument()->m_allsettings.ValueGet(IDS_SETT_PUBL_CSV_GENERATE)
+				&& p->m_pEventItem->GetDocument()->m_allsettings.ValueGet(IDS_SETT_PUBL_CSV_COPYTO)
+				&& p->m_pEventItem->IsPublicationAvailableCSV() )
+			{
+				// Copy files that exist
+				if( !CopyFile(
+						p->m_pEventItem->ComposeFileNamePathCSV(),
+						cSelectedItem+p->m_pEventItem->ComposeFileNameCSV(),
+						false ) )
+				{
+					// Show an error message when the copying fails
+					LPVOID lpMessage;
+					if( FormatMessage(
+							FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_IGNORE_INSERTS | FORMAT_MESSAGE_FROM_SYSTEM,
+							NULL,
+							GetLastError(),
+							0,
+							(LPTSTR)&lpMessage,
+							0,
+							NULL ) )
+					{
+						MessageBox( LoadStr( IDS_MBC_55 )
+								+"\n\n"
+								+p->m_pEventItem->ComposeFileNameCSV()
 								+"\n\n"
 								+CString((LPCTSTR)lpMessage),
 							LoadStr( IDS_MBT_55 ), MB_OK );
