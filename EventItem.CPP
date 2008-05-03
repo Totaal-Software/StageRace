@@ -154,11 +154,16 @@ TREEICONS CEventItem::IconFromItem() const
 CString CEventItem::ComposeTocTitle()
 {
 	CString cstage;
-	//THERE's A BUG HERE!!!
-	if( ((CStageRaceDoc*)m_pDoc)->StagesGet( m_nFullStage, m_nHalfStage )->m_stageType==ST_NORMAL )
-		cstage = AssembleStr( TEXT("TocStage"), TEXT(", "), &((CSettingsPublication*)m_pDoc->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages );
-	else
-		cstage = AssembleStr( TEXT("TocTimeTrial"), TEXT(", "), &((CSettingsPublication*)m_pDoc->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages );
+
+	CHalfStage* pStage = ((CStageRaceDoc*)m_pDoc)->StagesGet( m_nFullStage, m_nHalfStage );
+	// Make sure there IS actually a stage that we can use
+	if( pStage )
+	{
+		if( pStage->m_stageType==ST_NORMAL )
+			cstage = AssembleStr( TEXT("TocStage"), TEXT(", "), &((CSettingsPublication*)m_pDoc->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages );
+		else
+			cstage = AssembleStr( TEXT("TocTimeTrial"), TEXT(", "), &((CSettingsPublication*)m_pDoc->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages );
+	}
 	CString cgeneral;
 	cgeneral = AssembleStr( TEXT("TocGeneral"), TEXT(", "),&((CSettingsPublication*)m_pDoc->m_allsettings.GetSettings(SETT_PUBLICATION))->m_requiredLanguages );
 
