@@ -563,8 +563,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask1;
 					// We write the competitor with his ranking to the html document
 					pMask1->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 2
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE2)
@@ -587,8 +586,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask2;
 					// We write the competitor with his ranking to the html document
 					pMask2->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 3
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE3)
@@ -611,8 +609,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask3;
 					// We write the competitor with his ranking to the html document
 					pMask3->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 4
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE4)
@@ -635,8 +632,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask4;
 					// We write the competitor with his ranking to the html document
 					pMask4->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 5
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE5)
@@ -659,8 +655,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask5;
 					// We write the competitor with his ranking to the html document
 					pMask5->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 6
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE6)
@@ -683,8 +678,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask6;
 					// We write the competitor with his ranking to the html document
 					pMask6->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 7
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE7)
@@ -707,8 +701,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask7;
 					// We write the competitor with his ranking to the html document
 					pMask7->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 8
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE8)
@@ -731,8 +724,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask8;
 					// We write the competitor with his ranking to the html document
 					pMask8->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 9
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE9)
@@ -755,8 +747,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask9;
 					// We write the competitor with his ranking to the html document
 					pMask9->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 				// Mask 10
 				if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE10)
@@ -779,8 +770,7 @@ void CClassification::PublishClass(int nFS, int nHS)
 					objArrival.m_rank = nMask10;
 					// We write the competitor with his ranking to the html document
 					pMask10->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
-						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE)
-						&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+						m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
 				}
 
 				nPreviousRank = nAll;
@@ -790,11 +780,245 @@ void CClassification::PublishClass(int nFS, int nHS)
 		if( objArrival.m_staNo != 0 )
 		{
 			// This is the last competitor
+			nAll = objArrival.m_rank;
 			// We write the competitor with his ranking to the html document
 			objHtml.Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
 				( bDraw
 					||m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) )
 				&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
+
+			// Following is a blunt copy of above!!!
+			// It fixes the last competitor to miss from the masked stage classifications
+			// Mask 1
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE1)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask1 )
+			{
+				if( !pMask1 )
+				{
+					pMask1 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK1STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask1->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask1->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask1stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask1++;
+				}
+				objArrival.m_rank = nMask1;
+				// We write the competitor with his ranking to the html document
+				pMask1->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 2
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE2)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask2 )
+			{
+				if( !pMask2 )
+				{
+					pMask2 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK2STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask2->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask2->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask2stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask2++;
+				}
+				objArrival.m_rank = nMask2;
+				// We write the competitor with his ranking to the html document
+				pMask2->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 3
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE3)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask3 )
+			{
+				if( !pMask3 )
+				{
+					pMask3 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK3STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask3->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask3->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask3stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask3++;
+				}
+				objArrival.m_rank = nMask3;
+				// We write the competitor with his ranking to the html document
+				pMask3->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 4
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE4)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask4 )
+			{
+				if( !pMask4 )
+				{
+					pMask4 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK4STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask4->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask4->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask4stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask4++;
+				}
+				objArrival.m_rank = nMask4;
+				// We write the competitor with his ranking to the html document
+				pMask4->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 5
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE5)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask5 )
+			{
+				if( !pMask5 )
+				{
+					pMask5 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK5STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask5->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask5->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask5stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask5++;
+				}
+				objArrival.m_rank = nMask5;
+				// We write the competitor with his ranking to the html document
+				pMask5->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 6
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE6)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask6 )
+			{
+				if( !pMask6 )
+				{
+					pMask6 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK6STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask6->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask6->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask6stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask6++;
+				}
+				objArrival.m_rank = nMask6;
+				// We write the competitor with his ranking to the html document
+				pMask6->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 7
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE7)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask7 )
+			{
+				if( !pMask7 )
+				{
+					pMask7 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK7STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask7->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask7->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask7stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask7++;
+				}
+				objArrival.m_rank = nMask7;
+				// We write the competitor with his ranking to the html document
+				pMask7->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 8
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE8)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask8 )
+			{
+				if( !pMask8 )
+				{
+					pMask8 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK8STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask8->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask8->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask8stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask8++;
+				}
+				objArrival.m_rank = nMask8;
+				// We write the competitor with his ranking to the html document
+				pMask8->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 9
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE9)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask9 )
+			{
+				if( !pMask9 )
+				{
+					pMask9 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK9STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask9->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask9->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask9stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask9++;
+				}
+				objArrival.m_rank = nMask9;
+				// We write the competitor with his ranking to the html document
+				pMask9->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
+			// Mask 10
+			if( m_pDoc->m_allsettings.ValueGet(IDS_SETT_GNRL_MASKS_USE10)
+				&& m_pDoc->CompetitorsGet(objArrival.m_staNo).m_mask10 )
+			{
+				if( !pMask10 )
+				{
+					pMask10 = new CHtmlDoc( CEventItem( m_pDoc, TI_CLASSMASK10STAGE, nFS, nHS ) );
+					// We provide the html document with the information
+					// needed to calculate the time gaps...
+					pMask10->m_championTime = (objArrival.m_units/1000)*1000;
+					// ...and to make the headers
+					pMask10->Header(m_pDoc->StagesGet(nFS,nHS)->m_idMask10stage.GetNo());
+				}
+				// We calculate the new rank; this way ex equos still exist
+				if( nPreviousRank!=nAll )
+				{
+					nMask10++;
+				}
+				objArrival.m_rank = nMask10;
+				// We write the competitor with his ranking to the html document
+				pMask10->Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
+					m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) );
+			}
 		}
 
 		// We make a list of competitors who were behind the deadline
