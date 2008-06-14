@@ -789,10 +789,11 @@ void CClassification::PublishClass(int nFS, int nHS)
 		}
 		if( objArrival.m_staNo != 0 )
 		{
+			// This is the last competitor
 			// We write the competitor with his ranking to the html document
 			objHtml.Competitor( columns, objArrival.m_staNo, &objArrival, NULL,
 				( bDraw
-					||!m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) )
+					||m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWACCURATE) )
 				&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_PUBL_TT_SHOWNORMAL) );
 		}
 
