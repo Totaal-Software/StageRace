@@ -244,7 +244,15 @@ bool CClassification::CalculateGeneralFromStage(CArrival *pArr)
 		//  it up with the new information before we handle it
 		if( m_store.Lookup( pArr->m_staNo, objStored ) )
 		{
-			(*pArr) = (*pArr) + objStored;
+			// Need to add new one to old one, not the other way around
+			// (That's just not how the particular operator+ is designed)
+			(*pArr) = objStored + (*pArr);
+		}
+		else
+		{
+			// The above only adds on 2nd and following,
+			// so we do the initial sumRank here
+			pArr->m_sumRank = pArr->m_rank;
 		}
 		return true;
 	}
