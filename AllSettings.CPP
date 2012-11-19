@@ -556,7 +556,8 @@ int CAllSettings::Settings(HANDLE hSemaphore)
 
 	// Make a page for every CSettings that is
 	// held by this CAllSettings
-	for( int i=0; i<=SETT_MAX; i++ )
+	int i;
+	for( i=0; i<=SETT_MAX; i++ )
 	{
 		// Get the CSettings
 		CSettings* pSet = GetSettings((SETTINGS_TYPE)i);

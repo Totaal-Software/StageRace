@@ -2284,7 +2284,8 @@ void CHalfStage::PublishTTArrivalList(CStageRaceDoc *pDoc, int nFS, int nHS)
 		while( pos )
 		{
 			m_arrival.Iterate( pos, arr );
-			for( int i=sorted.GetSize()-1; i>=0; i-- )
+			int i;
+			for( i=sorted.GetSize()-1; i>=0; i-- )
 			{
 				arrtest = m_arrival.GetAt(sorted.GetAt(i));
 				if( arr.m_unitsAtArrival > arrtest.m_unitsAtArrival )

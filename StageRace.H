@@ -59,6 +59,7 @@ protected:
 	//}}AFX_VIRTUAL
 
 // Implementation
+	void ShowOperatorMessage(WPARAM,LPARAM);
 
 	//{{AFX_MSG(CStageRaceApp)
 	afx_msg void OnAppAbout();

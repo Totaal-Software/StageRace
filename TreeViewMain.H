@@ -42,12 +42,13 @@ protected:
 	// Our own - casted - document pointer
 	CStageRaceDoc* m_pDoc;
 
+	afx_msg bool OnEditEditselection();
 	//{{AFX_MSG(CTreeViewMain)
 	afx_msg void OnConfigureInsertFullstage();
 	afx_msg void OnConfigureInsertHalfstage();
 	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
 	afx_msg void OnConfigureConfigure();
-	afx_msg bool OnEditEditselection();
+	afx_msg void OnVoidEditEditselection();
 	afx_msg void OnConfigureDelete();
 	afx_msg void OnInsertSignouts();
 	afx_msg void OnSelchanged(NMHDR* pNMHDR, LRESULT* pResult);

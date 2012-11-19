@@ -109,8 +109,9 @@ void cdxCDynamicPropSheet::OnInitPage(cdxCDynamicPropPage & rPage)
 
 void cdxCDynamicPropSheet::OnClose() 
 {
-	if(!PressButton(PSBTN_CANCEL))
-		CPropertySheet::OnClose();
+	// todo:
+	PressButton(PSBTN_CANCEL);
+//	CPropertySheet::OnClose();
 }
 
 /*

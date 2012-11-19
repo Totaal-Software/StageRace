@@ -46,8 +46,11 @@ public:
 	//}}AFX_VIRTUAL
 
 protected:
+	LRESULT Cut(WPARAM, LPARAM);
 	void Cut();
+	LRESULT Paste(WPARAM, LPARAM);
 	void Paste();
+	LRESULT Delete(WPARAM, LPARAM);
 	void Delete();
     bool            m_bInit;
     CString         m_strPrompt;

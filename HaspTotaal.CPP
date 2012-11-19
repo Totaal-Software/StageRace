@@ -162,6 +162,8 @@ CString CHaspTotaal::HaspContents()
 
 bool CHaspTotaal::HaspCheckDongle()
 {
+	//todo:
+	return true;
 	Lock();
 	
 	int n1, n2, n3, n4;
@@ -191,6 +193,8 @@ bool CHaspTotaal::HaspCheckSeed()
 
 CString CHaspTotaal::HaspID()
 {
+	//todo:
+	return "dummy id";
 	Lock();
 
 	union

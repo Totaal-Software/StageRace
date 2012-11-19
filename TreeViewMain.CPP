@@ -29,7 +29,7 @@ BEGIN_MESSAGE_MAP(CTreeViewMain, CTreeView)
 	ON_COMMAND(ID_CONFIGURE_INSERT_HALFSTAGE, OnConfigureInsertHalfstage)
 	ON_WM_LBUTTONDBLCLK()
 	ON_COMMAND(ID_CONFIGURE_CONFIGURE, OnConfigureConfigure)
-	ON_COMMAND(ID_EDIT_EDITSELECTION, OnEditEditselection)
+	ON_COMMAND(ID_EDIT_EDITSELECTION, OnVoidEditEditselection)
 	ON_COMMAND(ID_CONFIGURE_DELETE, OnConfigureDelete)
 	ON_COMMAND(ID_INSERT_SIGNOUTS, OnInsertSignouts)
 	ON_NOTIFY_REFLECT(TVN_SELCHANGED, OnSelchanged)
@@ -1882,6 +1882,11 @@ void CTreeViewMain::OnUpdateToolsExportttware(CCmdUI* pCmdUI)
 /////////////////////////////////////////////////////////////////////////////
 // CTreeViewMain message handlers
 // TREE ITEM RELATED
+
+void CTreeViewMain::OnVoidEditEditselection()
+{
+	(void)this->OnEditEditselection();
+}
 
 bool CTreeViewMain::OnEditEditselection() 
 {

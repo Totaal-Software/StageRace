@@ -23,7 +23,7 @@ CTeamClassification::CTeamClassification(CStageRaceDoc *pDoc) : CClassification(
 	{
 		CString czKey;
 		CTeam* pValue;
-		pDoc->TeamsIterate( nPos, pValue );
+		pDoc->TeamsIterate( nPos, (const CTeam*&)pValue );
 
 		CArrival objArrival;
 		objArrival.m_pTeam = pValue;

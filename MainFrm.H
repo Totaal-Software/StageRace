@@ -59,7 +59,6 @@ protected:
 
 // Generated message map functions
 protected:
-	void ShowOperatorMessage(WPARAM,LPARAM);
 	//{{AFX_MSG(CMainFrame)
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);

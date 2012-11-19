@@ -73,7 +73,7 @@ void CListViewTeams::OnInitialUpdate()
 	POSITION pos = m_pDoc->TeamsGetStartPosition();
 	while(pos)
 	{
-		m_pDoc->TeamsIterate(pos, (CTeam*&)pTeam);
+		m_pDoc->TeamsIterate(pos, (const CTeam*&)pTeam);
 		DrawTeam(pTeam);
 	}
 

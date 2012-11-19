@@ -319,7 +319,8 @@ void CStaNoObjectList::Insert(CStaNoObject *pObj)
 
 	// Arrange the sorting maps
 	// Look where to insert in the array
-	for( int i=0; i<m_IndexToStaNo.GetSize(); i++ )
+	int i;
+	for( i=0; i<m_IndexToStaNo.GetSize(); i++ )
 		if( m_IndexToStaNo.GetAt(i) > pObj->m_staNo )
 			break;
 	// Insert in the array

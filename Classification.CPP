@@ -1714,12 +1714,12 @@ CClassification& CClassification::operator =(const CClassification & cl)
 	m_classification.RemoveAll();
 	nPos = cl.m_classification.GetHeadPosition();
 	while( nPos )
-		m_classification.AddTail( cl.m_classification.GetNext( nPos ) );
+		m_classification.AddTail( (CArrival&)cl.m_classification.GetNext( nPos ) );
 
 	m_generalClassification.RemoveAll();
 	nPos = cl.m_generalClassification.GetHeadPosition();
 	while( nPos )
-		m_generalClassification.AddTail( cl.m_generalClassification.GetNext( nPos ) );
+		m_generalClassification.AddTail( (CArrival&)cl.m_generalClassification.GetNext( nPos ) );
 
 	m_store.RemoveAll();
 	WORD nKey;

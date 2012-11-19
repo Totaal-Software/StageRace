@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\Program Files\HTML Help Workshop\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\StageRace.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>D:\Projects\Non-StageRace\buildinc\Debug\buildinc.exe version.ver stagerace.rc
+rc /l 0x809 /fo"Release/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc</Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>copy Release\StageRace.tlb StageRace.tlb
+"AppendChecksum\release\AppendChecksum.exe" "StageRace.exe"
+copy StageRace.exe executable\StageRace.exe</Command>
+    </PostBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\StageRace.tlb</TypeLibraryName>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0809</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\StageRace.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>StageRace.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\Program Files\HTML Help Workshop\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>version.lib;htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Program Files\HTML Help Workshop\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;DEBUG;_WINDOWS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\StageRace.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>D:\Projects\Non-StageRace\buildinc\Debug\buildinc.exe version.ver stagerace.rc
+rc /l 0x809 /fo"Debug/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc</Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>copy Debug\StageRace.tlb StageRace.tlb
+"AppendChecksum\release\AppendChecksum.exe" "StageRace.exe"</Command>
+    </PostBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\StageRace.tlb</TypeLibraryName>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\StageRace.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>StageRace.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\Program Files\HTML Help Workshop\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>htmlhelp.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="ActiveDocTracker.cpp" />
+    <ClCompile Include="AllListArrivals.cpp" />
+    <ClCompile Include="AllListPages.cpp" />
+    <ClCompile Include="AllSettings.cpp" />
+    <ClCompile Include="Arrival.cpp" />
+    <ClCompile Include="ArrivalList.cpp" />
+    <ClCompile Include="ArrivalListCtrl.cpp" />
+    <ClCompile Include="AvailableList.cpp" />
+    <ClCompile Include="AW_CMultiViewSplitter.cpp" />
+    <ClCompile Include="BonusDat.cpp" />
+    <ClCompile Include="cdxCDynamicDialog.cpp" />
+    <ClCompile Include="cdxCDynamicPropSheet.cpp" />
+    <ClCompile Include="cdxCDynamicWnd.cpp" />
+    <ClCompile Include="cdxCDynamicWndEx.cpp" />
+    <ClCompile Include="cdxCSizeIconCtrl.cpp" />
+    <ClCompile Include="CheckImportFile.cpp" />
+    <ClCompile Include="ChildFrame.cpp" />
+    <ClCompile Include="ChildFrameExclusive.cpp" />
+    <ClCompile Include="Classification.cpp" />
+    <ClCompile Include="ClimbsClassification.cpp" />
+    <ClCompile Include="ColorStaticST.cpp" />
+    <ClCompile Include="Communique.cpp" />
+    <ClCompile Include="Competitor.cpp" />
+    <ClCompile Include="CompetitorList.cpp" />
+    <ClCompile Include="Correction.cpp" />
+    <ClCompile Include="CorrectionList.cpp" />
+    <ClCompile Include="Credits.cpp" />
+    <ClCompile Include="DistributedClassification.cpp" />
+    <ClCompile Include="DlgArrivalInsertPositions.cpp" />
+    <ClCompile Include="DlgAutonumberCommuniques.cpp" />
+    <ClCompile Include="DlgCleanupCompetitors.cpp" />
+    <ClCompile Include="DlgEventItemSelection.cpp" />
+    <ClCompile Include="DlgInsertItemInCommunique.cpp" />
+    <ClCompile Include="DlgInterval.cpp" />
+    <ClCompile Include="DlgNewParagraphTitle.cpp" />
+    <ClCompile Include="DlgProfileName.cpp" />
+    <ClCompile Include="DlgProfilePicker.cpp" />
+    <ClCompile Include="DocManagerEx.cpp" />
+    <ClCompile Include="EditCommunique.cpp" />
+    <ClCompile Include="EditCompetitor.cpp" />
+    <ClCompile Include="EditTeam.cpp" />
+    <ClCompile Include="EventItem.cpp" />
+    <ClCompile Include="ExeChecksum.cpp" />
+    <ClCompile Include="FileDialogImport.cpp" />
+    <ClCompile Include="FileDialogWithMemory.cpp" />
+    <ClCompile Include="FormViewDetailsEmpty.cpp" />
+    <ClCompile Include="FullStage.cpp" />
+    <ClCompile Include="FullStageTrialDat.cpp" />
+    <ClCompile Include="GeneralFunctions.cpp" />
+    <ClCompile Include="GetPwd.cpp" />
+    <ClCompile Include="HalfStage.cpp" />
+    <ClCompile Include="HalfStageTrialDat.cpp" />
+    <ClCompile Include="HaspTotaal.cpp" />
+    <ClCompile Include="Help.cpp" />
+    <ClCompile Include="HtmlDoc.cpp" />
+    <ClCompile Include="Hyperlink.cpp" />
+    <ClCompile Include="Id.cpp" />
+    <ClCompile Include="IdUseList.cpp" />
+    <ClCompile Include="IdView.cpp" />
+    <ClCompile Include="ImportPreview.cpp" />
+    <ClCompile Include="License.cpp" />
+    <ClCompile Include="ListArrival.cpp" />
+    <ClCompile Include="ListCorrection.cpp" />
+    <ClCompile Include="ListSignOuts.cpp" />
+    <ClCompile Include="ListTimeTrialArrival.cpp" />
+    <ClCompile Include="ListTimeTrialArrivalNet.cpp" />
+    <ClCompile Include="ListTimeTrialOrder.cpp" />
+    <ClCompile Include="ListViewActiveDoc.cpp" />
+    <ClCompile Include="ListViewCompetitors.cpp" />
+    <ClCompile Include="ListViewCompetitorsTeams.cpp" />
+    <ClCompile Include="ListViewTeams.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MaskApplyDlg.cpp" />
+    <ClCompile Include="MDIClient.cpp" />
+    <ClCompile Include="mEdit.cpp" />
+    <ClCompile Include="MostAggressiveClassification.cpp" />
+    <ClCompile Include="MostAggressiveDat.cpp" />
+    <ClCompile Include="MountainDat.cpp" />
+    <ClCompile Include="MsgBoxBeforePaste.cpp" />
+    <ClCompile Include="MsgBoxHardwareKey.cpp" />
+    <ClCompile Include="MsgBoxIndexHtml.cpp" />
+    <ClCompile Include="MultiLanguage.cpp" />
+    <ClCompile Include="OptionsDlg.cpp" />
+    <ClCompile Include="OptionsPanel.cpp" />
+    <ClCompile Include="PageSettings.cpp" />
+    <ClCompile Include="PageSettingsAccess.cpp" />
+    <ClCompile Include="PageSettingsGeneral.cpp" />
+    <ClCompile Include="PageSettingsHTML.cpp" />
+    <ClCompile Include="PageSettingsPublication.cpp" />
+    <ClCompile Include="PageSettingsRanking.cpp" />
+    <ClCompile Include="PageSettingsUpload.cpp" />
+    <ClCompile Include="PointsClassification.cpp" />
+    <ClCompile Include="PointsDat.cpp" />
+    <ClCompile Include="PresentationTextView.cpp" />
+    <ClCompile Include="PresentationView.cpp" />
+    <ClCompile Include="PresentationViewIDocHostUIWrapper.CPP" />
+    <ClCompile Include="PreviewCommunique.cpp" />
+    <ClCompile Include="Publication.cpp" />
+    <ClCompile Include="ReportDlg.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SettingsAccess.cpp" />
+    <ClCompile Include="SettingsGeneral.cpp" />
+    <ClCompile Include="SettingsHTML.cpp" />
+    <ClCompile Include="SettingsPanel.cpp" />
+    <ClCompile Include="SettingsPublication.cpp" />
+    <ClCompile Include="SettingsRanking.cpp" />
+    <ClCompile Include="SettingsUpload.cpp" />
+    <ClCompile Include="SignOut.cpp" />
+    <ClCompile Include="SignOutList.cpp" />
+    <ClCompile Include="SignOutListCtrl.cpp" />
+    <ClCompile Include="SimpleCrypt.cpp" />
+    <ClCompile Include="SizablePropertySheet.cpp" />
+    <ClCompile Include="SplitterWndFixed.cpp" />
+    <ClCompile Include="SplitterWndHidable.cpp" />
+    <ClCompile Include="SprintClassification.cpp" />
+    <ClCompile Include="SprintDat.cpp" />
+    <ClCompile Include="SRHalfStage (COM).cpp" />
+    <ClCompile Include="SRRegKey.cpp" />
+    <ClCompile Include="StageCalc.cpp" />
+    <ClCompile Include="StageDistance.cpp" />
+    <ClCompile Include="StageRace.cpp" />
+    <ClCompile Include="StageRaceDoc (COM).cpp" />
+    <ClCompile Include="StageRaceDoc.cpp" />
+    <ClCompile Include="StageRaceServer (COM).cpp" />
+    <ClCompile Include="StageRaceStatusBar.cpp" />
+    <ClCompile Include="StageRaceWnd.cpp" />
+    <ClCompile Include="StageSpeed.cpp" />
+    <ClCompile Include="StaNoEdit.cpp" />
+    <ClCompile Include="StaNoListCtrl.cpp" />
+    <ClCompile Include="StaNoObject.cpp" />
+    <ClCompile Include="StaNoObjectList.cpp" />
+    <ClCompile Include="StartScreen.cpp" />
+    <ClCompile Include="StaticPresentationView.cpp" />
+    <ClCompile Include="StaticWebBrowser2.cpp" />
+    <ClCompile Include="StatusActiveDoc.cpp" />
+    <ClCompile Include="StatusCombo.cpp" />
+    <ClCompile Include="StatusControl.cpp" />
+    <ClCompile Include="StatusGenerate.cpp" />
+    <ClCompile Include="StatusProgress.cpp" />
+    <ClCompile Include="StatusStatic.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SubEdit1.cpp" />
+    <ClCompile Include="Team.cpp" />
+    <ClCompile Include="TeamClassification.cpp" />
+    <ClCompile Include="TextDoc.cpp" />
+    <ClCompile Include="TextOutput.cpp" />
+    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="TimeEdit.cpp" />
+    <ClCompile Include="TipDlg.cpp" />
+    <ClCompile Include="ToolBarWithProfilePicker.cpp" />
+    <ClCompile Include="TransparentImage.cpp" />
+    <ClCompile Include="TreeViewMain.cpp" />
+    <ClCompile Include="TTOrderOptionsDlg.cpp" />
+    <ClCompile Include="UpdateViewHint.cpp" />
+    <ClCompile Include="webbrowser2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="StageRace.idl">
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StageRace_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StageRace_i.c</InterfaceIdentifierFileName>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StageRace_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StageRace_i.c</InterfaceIdentifierFileName>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="StageRace.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Hasp32b.obj" />
+    <Object Include="Haspms32.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="ActiveDocTracker.h" />
+    <ClInclude Include="AllListArrivals.h" />
+    <ClInclude Include="AllListPages.h" />
+    <ClInclude Include="AllSettings.h" />
+    <ClInclude Include="Arrival.h" />
+    <ClInclude Include="ArrivalList.h" />
+    <ClInclude Include="ArrivalListCtrl.h" />
+    <ClInclude Include="AvailableList.h" />
+    <ClInclude Include="AW_CMultiViewSplitter.h" />
+    <ClInclude Include="BonusDat.h" />
+    <ClInclude Include="cdxCDynamicDialog.h" />
+    <ClInclude Include="cdxCDynamicPropSheet.h" />
+    <ClInclude Include="cdxCDynamicWnd.h" />
+    <ClInclude Include="cdxCDynamicWndEx.h" />
+    <ClInclude Include="cdxCSizeIconCtrl.h" />
+    <ClInclude Include="CheckImportFile.h" />
+    <ClInclude Include="ChildFrame.h" />
+    <ClInclude Include="ChildFrameExclusive.h" />
+    <ClInclude Include="Classification.h" />
+    <ClInclude Include="ClimbsClassification.h" />
+    <ClInclude Include="ColorStaticST.h" />
+    <ClInclude Include="Communique.h" />
+    <ClInclude Include="Competitor.h" />
+    <ClInclude Include="CompetitorList.h" />
+    <ClInclude Include="Correction.h" />
+    <ClInclude Include="CorrectionList.h" />
+    <ClInclude Include="Credits.h" />
+    <ClInclude Include="DistributedClassification.h" />
+    <ClInclude Include="DlgArrivalInsertPositions.h" />
+    <ClInclude Include="DlgAutonumberCommuniques.h" />
+    <ClInclude Include="DlgCleanupCompetitors.h" />
+    <ClInclude Include="DlgEventItemSelection.h" />
+    <ClInclude Include="DlgInsertItemInCommunique.h" />
+    <ClInclude Include="DlgInterval.h" />
+    <ClInclude Include="DlgNewParagraphTitle.h" />
+    <ClInclude Include="DlgProfileName.h" />
+    <ClInclude Include="DlgProfilePicker.h" />
+    <ClInclude Include="DocManagerEx.h" />
+    <ClInclude Include="EditCommunique.h" />
+    <ClInclude Include="EditCompetitor.h" />
+    <ClInclude Include="EditTeam.h" />
+    <ClInclude Include="EventItem.h" />
+    <ClInclude Include="ExeChecksum.h" />
+    <ClInclude Include="FileDialogImport.h" />
+    <ClInclude Include="FileDialogWithMemory.h" />
+    <ClInclude Include="FormViewDetailsEmpty.h" />
+    <ClInclude Include="FullStage.h" />
+    <ClInclude Include="FullStageTrialDat.h" />
+    <ClInclude Include="GeneralFunctions.h" />
+    <ClInclude Include="GetPwd.h" />
+    <ClInclude Include="HalfStage.h" />
+    <ClInclude Include="HalfStageTrialDat.h" />
+    <ClInclude Include="Hasp.h" />
+    <ClInclude Include="Haspconf.h" />
+    <ClInclude Include="HaspTotaal.h" />
+    <ClInclude Include="Help.h" />
+    <ClInclude Include="HtmlDoc.h" />
+    <ClInclude Include="Hyperlink.h" />
+    <ClInclude Include="Id.h" />
+    <ClInclude Include="IdUseList.h" />
+    <ClInclude Include="IdView.h" />
+    <ClInclude Include="ImportPreview.h" />
+    <ClInclude Include="Incl.h" />
+    <ClInclude Include="License.h" />
+    <ClInclude Include="ListArrival.h" />
+    <ClInclude Include="ListCorrection.h" />
+    <ClInclude Include="ListSignOuts.h" />
+    <ClInclude Include="ListTimeTrialArrival.h" />
+    <ClInclude Include="ListTimeTrialArrivalNet.h" />
+    <ClInclude Include="ListTimeTrialOrder.h" />
+    <ClInclude Include="ListViewActiveDoc.h" />
+    <ClInclude Include="ListViewCompetitors.h" />
+    <ClInclude Include="ListViewCompetitorsTeams.h" />
+    <ClInclude Include="ListViewTeams.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MaskApplyDlg.h" />
+    <ClInclude Include="MDIClient.h" />
+    <ClInclude Include="mEdit.h" />
+    <ClInclude Include="MostAggressiveClassification.h" />
+    <ClInclude Include="MostAggressiveDat.h" />
+    <ClInclude Include="MountainDat.h" />
+    <ClInclude Include="MsgBoxBeforePaste.h" />
+    <ClInclude Include="MsgBoxHardwareKey.h" />
+    <ClInclude Include="MsgBoxIndexHtml.h" />
+    <ClInclude Include="MultiLanguage.h" />
+    <ClInclude Include="OptionsDlg.h" />
+    <ClInclude Include="OptionsPanel.h" />
+    <ClInclude Include="PageSettings.h" />
+    <ClInclude Include="PageSettingsAccess.h" />
+    <ClInclude Include="PageSettingsGeneral.h" />
+    <ClInclude Include="PageSettingsHTML.h" />
+    <ClInclude Include="PageSettingsPublication.h" />
+    <ClInclude Include="PageSettingsRanking.h" />
+    <ClInclude Include="PageSettingsUpload.h" />
+    <ClInclude Include="PointsClassification.h" />
+    <ClInclude Include="PointsDat.h" />
+    <ClInclude Include="PresentationTextView.h" />
+    <ClInclude Include="PresentationView.h" />
+    <ClInclude Include="PresentationViewIDocHostUIWrapper.H" />
+    <ClInclude Include="PreviewCommunique.h" />
+    <ClInclude Include="Publication.h" />
+    <ClInclude Include="ReportDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SettingsAccess.h" />
+    <ClInclude Include="SettingsGeneral.h" />
+    <ClInclude Include="SettingsHTML.h" />
+    <ClInclude Include="SettingsPanel.h" />
+    <ClInclude Include="SettingsPublication.h" />
+    <ClInclude Include="SettingsRanking.h" />
+    <ClInclude Include="SettingsUpload.h" />
+    <ClInclude Include="SignOut.h" />
+    <ClInclude Include="SignOutList.h" />
+    <ClInclude Include="SignOutListCtrl.h" />
+    <ClInclude Include="SimpleCrypt.h" />
+    <ClInclude Include="SizablePropertySheet.h" />
+    <ClInclude Include="SplitterWndFixed.h" />
+    <ClInclude Include="SplitterWndHidable.h" />
+    <ClInclude Include="SprintClassification.h" />
+    <ClInclude Include="SprintDat.h" />
+    <ClInclude Include="SRHalfStage (COM).h" />
+    <ClInclude Include="SRRegKey.h" />
+    <ClInclude Include="StageCalc.h" />
+    <ClInclude Include="StageDistance.h" />
+    <ClInclude Include="StageRace.h" />
+    <ClInclude Include="StageRace_i.h" />
+    <ClInclude Include="StageRaceDoc (COM).h" />
+    <ClInclude Include="StageRaceDoc.h" />
+    <ClInclude Include="StageRaceServer (COM).h" />
+    <ClInclude Include="StageRaceSplitFrame.h" />
+    <ClInclude Include="StageRaceSplitterWnd.h" />
+    <ClInclude Include="StageRaceStatusBar.h" />
+    <ClInclude Include="StageRaceWnd.h" />
+    <ClInclude Include="StageSpeed.h" />
+    <ClInclude Include="StaNoEdit.h" />
+    <ClInclude Include="StaNoListCtrl.h" />
+    <ClInclude Include="StaNoObject.h" />
+    <ClInclude Include="StaNoObjectList.h" />
+    <ClInclude Include="StartScreen.h" />
+    <ClInclude Include="StaticPresentationView.h" />
+    <ClInclude Include="StaticWebBrowser2.h" />
+    <ClInclude Include="StatusActiveDoc.h" />
+    <ClInclude Include="StatusCombo.h" />
+    <ClInclude Include="StatusControl.h" />
+    <ClInclude Include="StatusGenerate.h" />
+    <ClInclude Include="StatusProgress.h" />
+    <ClInclude Include="StatusStatic.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SubEdit1.h" />
+    <ClInclude Include="Team.h" />
+    <ClInclude Include="TeamClassification.h" />
+    <ClInclude Include="TextDoc.h" />
+    <ClInclude Include="TextOutput.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="TimeEdit.h" />
+    <ClInclude Include="TipDlg.h" />
+    <ClInclude Include="ToolBarWithProfilePicker.h" />
+    <ClInclude Include="TransparentImage.h" />
+    <ClInclude Include="TreeViewMain.h" />
+    <ClInclude Include="TTOrderOptionsDlg.h" />
+    <ClInclude Include="UpdateViewHint.h" />
+    <ClInclude Include="versionno.h" />
+    <ClInclude Include="webbrowser2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\bannerbottom.bmp" />
+    <CustomBuild Include="res\bitmap1.bmp" />
+    <CustomBuild Include="res\bitmap2.bmp" />
+    <CustomBuild Include="res\bmp00001.bmp" />
+    <CustomBuild Include="res\bmp00002.bmp" />
+    <CustomBuild Include="res\bmp00003.bmp" />
+    <CustomBuild Include="res\borderli.bmp" />
+    <CustomBuild Include="res\dialog1.ico" />
+    <CustomBuild Include="res\ico00001.ico" />
+    <CustomBuild Include="res\ico00002.ico" />
+    <CustomBuild Include="res\ico00003.ico" />
+    <CustomBuild Include="res\icon1.ico" />
+    <CustomBuild Include="res\icon2.ico" />
+    <CustomBuild Include="res\idb_bannerbottom.bmp" />
+    <CustomBuild Include="res\idb_borderline.bmp" />
+    <CustomBuild Include="res\idb_credits.bmp" />
+    <CustomBuild Include="res\idb_lightbulb.bmp" />
+    <CustomBuild Include="res\idb_liststate.bmp" />
+    <CustomBuild Include="res\idb_mdiclient.bmp" />
+    <CustomBuild Include="res\idb_options_panel_images.bmp" />
+    <CustomBuild Include="res\idb_settings_topic.bmp" />
+    <CustomBuild Include="res\idb_splashlogo.bmp" />
+    <CustomBuild Include="res\idb_splashlogo_en.bmp" />
+    <CustomBuild Include="RES\idb_splashlogo_fr.bmp" />
+    <CustomBuild Include="res\idb_splashlogo_nl.bmp" />
+    <CustomBuild Include="res\idb_StageRace.bmp" />
+    <CustomBuild Include="res\idb_state.bmp" />
+    <CustomBuild Include="res\idb_totaal.BMP" />
+    <CustomBuild Include="res\idb_tree.bmp" />
+    <CustomBuild Include="res\idb_treestate.bmp" />
+    <CustomBuild Include="res\idc_hlink.cur" />
+    <CustomBuild Include="res\idi_activedoctracker.ico" />
+    <CustomBuild Include="res\idi_activedoctracker_gray.ico" />
+    <CustomBuild Include="res\idi_dialog.ico" />
+    <CustomBuild Include="res\idi_key_free.ico" />
+    <CustomBuild Include="res\idi_key_lock.ico" />
+    <CustomBuild Include="res\idr_acti.ico" />
+    <CustomBuild Include="res\idr_configure.bmp" />
+    <CustomBuild Include="res\idr_credits.txt" />
+    <CustomBuild Include="res\idr_license_du.txt" />
+    <CustomBuild Include="res\idr_license_en.txt" />
+    <CustomBuild Include="res\idr_mainframe.bmp" />
+    <CustomBuild Include="res\idr_mainframe.ico" />
+    <CustomBuild Include="Res\idr_stag.ico" />
+    <CustomBuild Include="res\idr_stageracedoc.ico" />
+    <CustomBuild Include="res\idr_stageracetype.ico" />
+    <CustomBuild Include="res\key_free.ico" />
+    <CustomBuild Include="res\key_lock.ico" />
+    <CustomBuild Include="res\liststat.bmp" />
+    <CustomBuild Include="res\listview.bmp" />
+    <CustomBuild Include="res\litebulb.bmp" />
+    <CustomBuild Include="res\logo.bmp" />
+    <CustomBuild Include="res\logo_bit.bmp" />
+    <CustomBuild Include="res\mainfram.bmp" />
+    <CustomBuild Include="res\mdiclien.bmp" />
+    <CustomBuild Include="res\mdiclient.bmp" />
+    <CustomBuild Include="res\options_.bmp" />
+    <CustomBuild Include="res\OptionsPanel.bmp" />
+    <CustomBuild Include="res\splashlogo.bmp" />
+    <CustomBuild Include="res\splashlogo_en.bmp" />
+    <CustomBuild Include="res\splashlogo_nl.bmp" />
+    <CustomBuild Include="res\StageRace.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\toolbar1.bmp" />
+    <CustomBuild Include="res\toolbar_competitors.bmp" />
+    <CustomBuild Include="res\toolbar_configure.bmp" />
+    <CustomBuild Include="res\toolbar_generate.bmp" />
+    <CustomBuild Include="res\toolbar_mainframe.bmp" />
+    <CustomBuild Include="res\toolbar_presentation.bmp" />
+    <CustomBuild Include="res\toolbar_teams.bmp" />
+    <CustomBuild Include="res\toolbar_treeview.bmp" />
+    <CustomBuild Include="RES\treecomp.bmp" />
+    <CustomBuild Include="CStageRaceDoc.rgs" />
+    <CustomBuild Include="Dutch.tip">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="English.tip">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\idr_credits.html" />
+    <CustomBuild Include="Help\Dutch\License.html" />
+    <CustomBuild Include="Help\English\License.html" />
+    <CustomBuild Include="MultiLanguage.mdb">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Resource symbols.txt" />
+    <CustomBuild Include="SRHalfStage.rgs" />
+    <CustomBuild Include="StageRace.clw">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="StageRace.rgs" />
+    <CustomBuild Include="StageRaceServer.rgs" />
+    <CustomBuild Include="version.ver">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

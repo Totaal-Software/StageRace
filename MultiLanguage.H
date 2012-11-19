@@ -5,6 +5,9 @@
 #if !defined(AFX_MULTILANGUAGE_H__75009714_033B_424F_B99F_2BBD945B7B0D__INCLUDED_)
 #define AFX_MULTILANGUAGE_H__75009714_033B_424F_B99F_2BBD945B7B0D__INCLUDED_
 
+#include <iostream> 
+#include <fstream> 
+
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
@@ -23,7 +26,21 @@ public:
 		TCHAR* id;
 		HANDLE hSemaphore;
 	};
-	typedef CArray<LANGUAGE,LANGUAGE> REQUIREDLANGUAGES;
+	typedef class MyArray : public CArray<LANGUAGE,LANGUAGE&>
+	{
+	public:
+		MyArray &operator =(const MyArray& s)
+		{
+			this->RemoveAll();
+			for(int i=0; i<s.GetSize(); i++)
+			{
+				const LANGUAGE & element = s.GetAt(i);
+				this->Add((LANGUAGE &)element);
+			}
+			return *this;
+		}
+	};
+	typedef MyArray REQUIREDLANGUAGES;
 
 	void PopulateListBox( CComboBox* pComboBox );
 	CString AssembleStr(TCHAR czID[],TCHAR czCement[], const REQUIREDLANGUAGES* pLang);

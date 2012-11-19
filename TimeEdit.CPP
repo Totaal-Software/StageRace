@@ -83,7 +83,7 @@ void CTimeEdit::Init(unsigned short nSizeT/*=3*/, unsigned short nSizeH/*=1*/, b
 			c += "(";
 	}
 	// Number of ms digits
-	for(     i=1; i<=nSizeT; i++ )
+	for( int i=1; i<=nSizeT; i++ )
 		c += "[0-9]";
 	// Brackets for hiding
 	if( nSizeT && bBrackets )

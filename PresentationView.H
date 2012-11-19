@@ -24,7 +24,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // CPresentationView html view
 
-class CPresentationView : public CHtmlView, public IDispatch, public IDocHostUIHandler
+class CPresentationView : public CHtmlView, public IDispatch
 {
 	DECLARE_DYNCREATE( CPresentationView )
 protected:
@@ -40,56 +40,21 @@ protected:
 		{ return E_NOTIMPL; }
 	STDMETHOD(GetTypeInfo)(unsigned int,unsigned long,struct ITypeInfo **)
 		{ return E_NOTIMPL; }
+	STDMETHOD(GetIDsOfNames)(const IID &, LPOLESTR *, UINT, LCID, DISPID *)
+		{ return E_NOTIMPL; }
 	STDMETHOD(GetIDsOfNames)(const struct _GUID &,unsigned short **,unsigned int,unsigned long,long *)
 		{ return E_NOTIMPL; }
 	STDMETHOD(Invoke)(long,const struct _GUID &,unsigned long,unsigned short,struct tagDISPPARAMS *,struct tagVARIANT *,struct tagEXCEPINFO *,unsigned int *)
 		{ return E_NOTIMPL; }
-	// IDocHostUIHandler members
-	STDMETHOD(ShowContextMenu)(unsigned long,struct tagPOINT *,struct IUnknown *,struct IDispatch *);
-	STDMETHOD(GetHostInfo)(struct _DOCHOSTUIINFO * pInfo)
-	{
-		pInfo->cbSize  = sizeof(DOCHOSTUIINFO);
-		pInfo->dwFlags = 0;
-		return S_OK;
-	}
-	STDMETHOD(ShowUI)(unsigned long,struct IOleInPlaceActiveObject *,struct IOleCommandTarget *,struct IOleInPlaceFrame *,struct IOleInPlaceUIWindow *)
-		{ return E_NOTIMPL; }
-	STDMETHOD(HideUI)(void)
-		{ return E_NOTIMPL; }
-	STDMETHOD(UpdateUI)(void)
-		{ return E_NOTIMPL; }
-	STDMETHOD(EnableModeless)(int)
-		{ return E_NOTIMPL; }
-	STDMETHOD(OnDocWindowActivate)(int)
-		{ return E_NOTIMPL; }
-	STDMETHOD(OnFrameWindowActivate)(int)
-		{ return E_NOTIMPL; }
-	STDMETHOD(ResizeBorder)(const struct tagRECT *,struct IOleInPlaceUIWindow *,int)
-		{ return E_NOTIMPL; }
-	STDMETHOD(TranslateAcceleratorA)(struct tagMSG *,const struct _GUID *,unsigned long)
-		{ return E_NOTIMPL; }
-	STDMETHOD(TranslateAcceleratorW)(struct tagMSG *,const struct _GUID *,unsigned long)
-		{ return E_NOTIMPL; }
-	STDMETHOD(GetOptionKeyPath)(unsigned short ** ,unsigned long)
-		{ return E_NOTIMPL; }
-	STDMETHOD(GetDropTarget)(struct IDropTarget *,struct IDropTarget ** )
-		{ return E_NOTIMPL; }
-	STDMETHOD(GetExternal)(struct IDispatch ** ppDispatch)
-	{
-		*ppDispatch = this;
-		return S_OK;
-	}
-	STDMETHOD(TranslateUrl)(unsigned long,unsigned short *,unsigned short ** )
-		{ return E_NOTIMPL; }
-	STDMETHOD(FilterDataObject)(struct IDataObject *,struct IDataObject ** )
-		{ return E_NOTIMPL; }
 
 protected:
 	CPresentationView(); // protected constructor used by dynamic creation
+	~CPresentationView();
 	CString m_cLastFile;
 	CTime m_tLastFile;
 	CString m_cTitle;
 	long m_scrollheight;
+	IDocHostUIHandler* m_pHandler;
 
 public:
 	void Navigate( LPCTSTR URL);
@@ -114,7 +79,8 @@ public:
 protected:
 	bool CanZoom(bool in = true);
 	void Zoom( bool in = true );
-	HRESULT OnGetOptionKeyPath(LPOLESTR *, DWORD);
+//note: this seems to have been disabled quite a while ago in the .cpp; the .h was forgotten
+//	HRESULT OnGetOptionKeyPath(LPOLESTR *, DWORD);
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

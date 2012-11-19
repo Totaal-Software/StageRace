@@ -438,7 +438,8 @@ void CListViewCompetitorsTeams::RestoreSettings(CString key)
 
 			// Convert string to int array
 			int nTemp[25];
-			for( int i = 0; (i<nColumnCount)&&(i<cVal.GetLength()); i++ )
+			int i;
+			for( i = 0; (i<nColumnCount)&&(i<cVal.GetLength()); i++ )
 				nTemp[i] = (int)(cVal[i]-'a');
 
 			// Set the column order
@@ -483,7 +484,8 @@ void CListViewCompetitorsTeams::StoreSettings(CString key)
 			
 			// Convert int array to string
 			CString cVal;
-			for( int i = 0; i<nColumnCount; i++ )
+			int i;
+			for( i = 0; i<nColumnCount; i++ )
 				cVal += CString((char)('a'+nTemp[i]));
 
 			// Write to registry

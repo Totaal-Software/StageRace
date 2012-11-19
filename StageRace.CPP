@@ -42,6 +42,7 @@ BEGIN_MESSAGE_MAP(CStageRaceApp, CWinApp)
 	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, CWinApp::OnFileOpen)
+	ON_THREAD_MESSAGE(WM_USER_COM_OPERATORMESSAGE, ShowOperatorMessage)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -542,4 +543,23 @@ bool CStageRaceApp::CheckExe()
 	}
 	else
 		return true;
+}
+
+void CStageRaceApp::ShowOperatorMessage(WPARAM message, LPARAM user)
+{
+	CString* pMessage = (CString*)message;
+	CString* pUser = (CString*)user;
+
+	// Show a message
+	AfxMessageBox(
+		LoadStr(IDS_DIV102)+
+		*pUser+
+		LoadStr(IDS_DIV103)+
+		CTime::GetCurrentTime().Format(TEXT("%Hh%M"))+
+		TEXT(":\n\n")+
+		*pMessage );
+
+	// Delete the strings
+	delete pMessage;
+	delete pUser;
 }

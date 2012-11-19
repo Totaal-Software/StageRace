@@ -2014,7 +2014,7 @@ void CStageRaceDoc::CompetitorsCleanup()
 		while( nPos )
 		{
 			CTeam* pTeam;
-			TeamsIterate( nPos, pTeam );
+			TeamsIterate( nPos, (const CTeam*&)pTeam );
 
 			Lock();
 
@@ -2686,7 +2686,7 @@ void CStageRaceDoc::CompetitorsPaste(bool bWithStaNos)
 						while(hPos)
 						{
 							//Get the team pointer
-							TeamsIterate(hPos, (CTeam*&)pTeam);
+							TeamsIterate(hPos, (const CTeam*&)pTeam);
 							//Check for a match in the team-code or team-name
 							if(!tempTeam.CompareNoCase(pTeam->m_code) || !tempTeam.CompareNoCase(pTeam->m_name))
 							{
@@ -3538,7 +3538,7 @@ const CTeam* CStageRaceDoc::TeamsGet(CString sCode) const
 	POSITION nPos = TeamsGetStartPosition();
 	while( nPos )
 	{
-		TeamsIterate( nPos, pTeam );
+		TeamsIterate( nPos, (const CTeam*&)pTeam );
 		if( pTeam->m_code==sCode )
 			return pTeam;
 	}
@@ -3660,7 +3660,7 @@ void CStageRaceDoc::ExportScanovision()
 			{
 				CString czCode;
 				CTeam* pTeam;
-				TeamsIterate( nPos, pTeam );
+				TeamsIterate( nPos, (const CTeam*&)pTeam );
 				objTheFile.WriteString( "\""+NoQuotes(pTeam->m_name)+"\";\""+NoQuotes(pTeam->m_code)+"\";\n" );
 			}
 
@@ -3678,7 +3678,8 @@ void CStageRaceDoc::ExportScanovision()
 			TCHAR buffer[10];
 
 			objTheFile.WriteString( TEXT("\"Event\";\"Round\";\"Titre\";\"Sponsor\"\n") );
-			for( int i=1; i<=StagesFullCount(); i++ )
+			int i;
+			for( i=1; i<=StagesFullCount(); i++ )
 				for( int j=1; j<=StagesGet(i)->CountHalfStages(); j++ )
 				{
 					_itot( i, buffer, 10 );
@@ -3690,7 +3691,7 @@ void CStageRaceDoc::ExportScanovision()
 					objTheFile.WriteString( NoQuotes( StagesGet( i, j )->m_title+TEXT(" (")+((CSettingsGeneral*)m_allsettings.GetSettings(SETT_GENERAL))->m_eventName+TEXT(")") ) ); //Titre
 					objTheFile.WriteString( TEXT("\";\"StageRace ")+((CStageRaceApp*)AfxGetApp())->m_key.GetVersionTitle()+TEXT("\"\n") ); //Sponsor
 				}
-			for( i; i<=StagesFullCount()+5; i++ )
+			for( ; i<=StagesFullCount()+5; i++ )
 			{
 				_itot( i, buffer, 10 );
 				objTheFile.WriteString( CString(buffer) );
@@ -3712,7 +3713,8 @@ void CStageRaceDoc::ExportScanovision()
 			int nRow=1;
 
 			objTheFile.WriteString( TEXT("\"Event\";\"Round\";\"NbHeat\";\"idLong\";\"idStyle\";\"AbrevCat\";\"Date\";\"Heure\";\"idJuge1\";\"idJuge2\"\n") );
-			for( int i=1; i<=StagesFullCount(); i++ )
+			int i;
+			for( i=1; i<=StagesFullCount(); i++ )
 				for( int j=1; j<=StagesGet(i)->CountHalfStages(); j++ )
 				{
 					_itot( i, buffer, 10 );
@@ -3733,7 +3735,7 @@ void CStageRaceDoc::ExportScanovision()
 					objTheFile.WriteString( TEXT("\"") + NoQuotes( StagesGet( i, j )->m_openingHour ) + TEXT("\";") ); //Heure
 					objTheFile.WriteString( TEXT(";\n") ); //idJuge1;idJuge2
 				}
-			for( i; i<=StagesFullCount()+5; i++ )
+			for( ; i<=StagesFullCount()+5; i++ )
 			{
 				_itot( i, buffer, 10 );
 				objTheFile.WriteString( CString(buffer) );

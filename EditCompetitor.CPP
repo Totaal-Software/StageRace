@@ -148,7 +148,7 @@ BOOL CEditCompetitor::OnInitDialog()
 		while(hPos)
 		{
 			//Get the team pointer
-			m_pStageRaceDoc->TeamsIterate(hPos, pTeam);
+			m_pStageRaceDoc->TeamsIterate(hPos, (const CTeam*&)pTeam);
 			//Add the team to the list
 			CString tempTeam;
 			tempTeam = pTeam->m_code + " " + pTeam->m_name;

@@ -62,7 +62,7 @@ void CStatusActiveDoc::AddDoc(CStageRaceDoc *pDoc)
 				bSelected = true;
 			DeleteString( i-1 );
 		}
-	i = AddString( pDoc->GetTitle() );
+	int i = AddString( pDoc->GetTitle() );
 	SetItemData( i, (DWORD)pDoc );
 	if( bSelected )
 		SetCurSel( i );

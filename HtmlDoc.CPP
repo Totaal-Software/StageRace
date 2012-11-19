@@ -639,7 +639,7 @@ CString CHtmlDoc::EncodeURL(CString cURL)
 	// sequences according to W3C specifications
 	// For instance: " " --> "%20"
 
-	char hexVals[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+	wchar_t hexVals[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
 		'A', 'B', 'C', 'D', 'E', 'F' };
 
 	CString cNewURL = "";
@@ -649,8 +649,8 @@ CString CHtmlDoc::EncodeURL(CString cURL)
 		if( IsUnsafe( cURL[i] ) )
 		{
 			// Replace unsafe characters by their safe escape code
-			unsigned char temp = cURL[i];
-			cNewURL += TEXT("%") + CString(__toascii( hexVals[temp/16] )) + CString(__toascii( hexVals[temp%16] ));
+			wchar_t temp = cURL[i];
+			cNewURL += TEXT("%") + CString((char)__toascii( hexVals[temp/16] )) + CString((char)__toascii( hexVals[temp%16] ));
 		}
 		else
 			// Just copy safe characters
@@ -660,7 +660,7 @@ CString CHtmlDoc::EncodeURL(CString cURL)
 	return cNewURL;
 }
 
-bool CHtmlDoc::IsUnsafe(unsigned char cCompare)
+bool CHtmlDoc::IsUnsafe(wchar_t cCompare)
 {
 	// This function checks to see if a char is URL unsafe
 	// Returns bool result. True = unsafe, False = safe
@@ -1832,43 +1832,46 @@ CString CHtmlDoc::CommuniqueStatic(CCommunique *pComm, const CStageRaceDoc *pDoc
 		while( n1!=-1 && n2!=-1 )
 		{
 			n1 = cReturn.Find( TEXT("{comp,"), n1 );
-			n2 = cReturn.Find( '}', n1 );
-			if( n2!=-1 )
+			if( n1!=-1 )
 			{
-				// Get the start no.
-				int nStaNo = _ttoi( cReturn.Mid( n1+6, n2-n1-6 ) );
-
-				CString temp;
-				if( pDoc->CompetitorsExist(nStaNo) )
+				n2 = cReturn.Find( '}', n1 );
+				if( n2!=-1 )
 				{
-					CCompetitor comp = pDoc->CompetitorsGet(nStaNo);
+					// Get the start no.
+					int nStaNo = _ttoi( cReturn.Mid( n1+6, n2-n1-6 ) );
 
-					// Set up a string
-					if( comp.m_pTeam )
+					CString temp;
+					if( pDoc->CompetitorsExist(nStaNo) )
 					{
-						temp.Format(
-							TEXT("#%d %s (%s, %s)"),
-							nStaNo,
-							comp.m_competitor,
-							comp.m_UCICode,
-							comp.m_pTeam->m_code );
+						CCompetitor comp = pDoc->CompetitorsGet(nStaNo);
+
+						// Set up a string
+						if( comp.m_pTeam )
+						{
+							temp.Format(
+								TEXT("#%d %s (%s, %s)"),
+								nStaNo,
+								comp.m_competitor,
+								comp.m_UCICode,
+								comp.m_pTeam->m_code );
+						}
+						else
+						{
+							temp.Format(
+								TEXT("#%d %s (%s)"),
+								nStaNo,
+								comp.m_competitor,
+								comp.m_UCICode );
+						}
 					}
 					else
 					{
-						temp.Format(
-							TEXT("#%d %s (%s)"),
-							nStaNo,
-							comp.m_competitor,
-							comp.m_UCICode );
+						// Set up a string
+						temp.Format( TEXT("#%d"), nStaNo );
 					}
+					// Insert the string
+					cReturn = cReturn.Left( n1 ) + TEXT("<I>") + temp + TEXT("</I>") + cReturn.Mid( n2+1 );
 				}
-				else
-				{
-					// Set up a string
-					temp.Format( TEXT("#%d"), nStaNo );
-				}
-				// Insert the string
-				cReturn = cReturn.Left( n1 ) + TEXT("<I>") + temp + TEXT("</I>") + cReturn.Mid( n2+1 );
 			}
 		}
 	}
@@ -1880,35 +1883,38 @@ CString CHtmlDoc::CommuniqueStatic(CCommunique *pComm, const CStageRaceDoc *pDoc
 		while( n1!=-1 && n2!=-1 )
 		{
 			n1 = cReturn.Find( TEXT("{team,"), n1 );
-			n2 = cReturn.Find( '}', n1 );
-			if( n2!=-1 )
+			if( n1!=-1 )
 			{
-				// Get the team code
-				CString code = cReturn.Mid( n1+6, n2-n1-6 );
-				// Format the team code
-				code.MakeUpper();
-				code.TrimLeft();
-				code.TrimRight();
-				code = code.Left(3);
-
-				CString temp;
-				if( pDoc->TeamsExist(code) )
+				n2 = cReturn.Find( '}', n1 );
+				if( n2!=-1 )
 				{
-					CTeam team = pDoc->TeamsGet(code);
+					// Get the team code
+					CString code = cReturn.Mid( n1+6, n2-n1-6 );
+					// Format the team code
+					code.MakeUpper();
+					code.TrimLeft();
+					code.TrimRight();
+					code = code.Left(3);
 
-					// Set up a string
-					temp.Format(
-						TEXT("%s %s"),
-						team.m_code,
-						team.m_name );
+					CString temp;
+					if( pDoc->TeamsExist(code) )
+					{
+						CTeam team = pDoc->TeamsGet(code);
+
+						// Set up a string
+						temp.Format(
+							TEXT("%s %s"),
+							team.m_code,
+							team.m_name );
+					}
+					else
+					{
+						// Set up a string
+						temp.Format( TEXT("%s"), code );
+					}
+					// Insert the string
+					cReturn = cReturn.Left( n1 ) + TEXT("<I>") + temp + TEXT("</I>") + cReturn.Mid( n2+1 );
 				}
-				else
-				{
-					// Set up a string
-					temp.Format( TEXT("%s"), code );
-				}
-				// Insert the string
-				cReturn = cReturn.Left( n1 ) + TEXT("<I>") + temp + TEXT("</I>") + cReturn.Mid( n2+1 );
 			}
 		}
 	}
@@ -1920,36 +1926,39 @@ CString CHtmlDoc::CommuniqueStatic(CCommunique *pComm, const CStageRaceDoc *pDoc
 		while( n1!=-1 && n2!=-1 )
 		{
 			n1 = cReturn.Find( TEXT("{captain,"), n1 );
-			n2 = cReturn.Find( '}', n1 );
-			if( n2!=-1 )
+			if( n1!=-1 )
 			{
-				// Get the team code
-				CString code = cReturn.Mid( n1+9, n2-n1-9 );
-				// Format the team code
-				code.MakeUpper();
-				code.TrimLeft();
-				code.TrimRight();
-				code = code.Left(3);
-
-				CString temp;
-				if( pDoc->TeamsExist(code) )
+				n2 = cReturn.Find( '}', n1 );
+				if( n2!=-1 )
 				{
-					CTeam team = pDoc->TeamsGet(code);
+					// Get the team code
+					CString code = cReturn.Mid( n1+9, n2-n1-9 );
+					// Format the team code
+					code.MakeUpper();
+					code.TrimLeft();
+					code.TrimRight();
+					code = code.Left(3);
 
-					// Set up a string
-					temp.Format(
-						TEXT("%s (%s, %s)"),
-						team.m_manager.GetLength()?team.m_manager:TEXT("..."),
-						team.m_code,
-						team.m_name );
+					CString temp;
+					if( pDoc->TeamsExist(code) )
+					{
+						CTeam team = pDoc->TeamsGet(code);
+
+						// Set up a string
+						temp.Format(
+							TEXT("%s (%s, %s)"),
+							team.m_manager.GetLength()?team.m_manager:TEXT("..."),
+							team.m_code,
+							team.m_name );
+					}
+					else
+					{
+						// Set up a string
+						temp.Format( TEXT("%s"), code );
+					}
+					// Insert the string
+					cReturn = cReturn.Left( n1 ) + TEXT("<I>") + temp + TEXT("</I>") + cReturn.Mid( n2+1 );
 				}
-				else
-				{
-					// Set up a string
-					temp.Format( TEXT("%s"), code );
-				}
-				// Insert the string
-				cReturn = cReturn.Left( n1 ) + TEXT("<I>") + temp + TEXT("</I>") + cReturn.Mid( n2+1 );
 			}
 		}
 	}
@@ -2378,7 +2387,8 @@ void CHtmlDoc::CrossOut( int nCompetitors[10], int nCrossedOut[10], CTeam* pTeam
 		m_competitorsStarted = true;
 	};
 
-	for( int nMax=9; (nMax>0) && !nCompetitors[nMax]; nMax-- );
+	int nMax;
+	for( nMax=9; (nMax>0) && !nCompetitors[nMax]; nMax-- );
 		 
 	WriteString( TEXT("<TR ALIGN=\"center\" VALIGN=\"middle\">\r\n") );
 	// Check whether team names are actually required in this configuration

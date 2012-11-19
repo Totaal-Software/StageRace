@@ -48,7 +48,6 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_COMMAND(ID_HELP_SEARCH, OnHelpSearch)
 	ON_COMMAND(ID_HELP_TIPOFTHEDAY, OnHelpTipoftheday)
 	ON_COMMAND(ID_HELP_ABOUT, OnHelpAbout)
-	ON_THREAD_MESSAGE(WM_USER_COM_OPERATORMESSAGE, ShowOperatorMessage)
 	//}}AFX_MSG_MAP
 	// Global help commands
 
@@ -384,23 +383,4 @@ void CMainFrame::OnHelpTipoftheday()
 void CMainFrame::OnHelpAbout() 
 {
 	CHelp::Topic(CHelp::HLP_HLPABOUT);
-}
-
-void CMainFrame::ShowOperatorMessage(WPARAM message, LPARAM user)
-{
-	CString* pMessage = (CString*)message;
-	CString* pUser = (CString*)user;
-
-	// Show a message
-	AfxMessageBox(
-		LoadStr(IDS_DIV102)+
-		*pUser+
-		LoadStr(IDS_DIV103)+
-		CTime::GetCurrentTime().Format(TEXT("%Hh%M"))+
-		TEXT(":\n\n")+
-		*pMessage );
-
-	// Delete the strings
-	delete pMessage;
-	delete pUser;
 }

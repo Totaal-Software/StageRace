@@ -36,8 +36,8 @@ protected:
 // Message map
 	static const AFX_MSGMAP* PASCAL _GetBaseMessageMap();
 	static const AFX_MSGMAP* GetMessageMap();
-	static AFX_COMDAT AFX_DATADEF const AFX_MSGMAP messageMap;
-	static AFX_COMDAT const AFX_MSGMAP_ENTRY _messageEntries[];
+	static AFX_DATADEF const AFX_MSGMAP messageMap;
+	static const AFX_MSGMAP_ENTRY _messageEntries[];
 };
 
 //////////////////////////////////////////////////////////////////////

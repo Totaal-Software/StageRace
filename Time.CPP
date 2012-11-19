@@ -31,7 +31,7 @@ CStageTime::CStageTime( CString hours="0", CString minutes="0", CString seconds=
 
 CStageTime::CStageTime( DWORD units )
 {
-
+	int i;
 	m_units = units;
 
 	TCHAR   chrBuffer[10];
@@ -41,7 +41,7 @@ CStageTime::CStageTime( DWORD units )
 	strBuffer    = chrBuffer;
 	strBuffer    = "    " + strBuffer;
 	m_hours      = strBuffer.Right( 3 );
-	for (int i=0; i<=1; i++ ) if ( m_hours.GetAt( i )==' ' ) m_hours.SetAt( i, '0' );
+	for (i=0; i<=1; i++ ) if ( m_hours.GetAt( i )==' ' ) m_hours.SetAt( i, '0' );
 	units        = units % 3600000;
 
 	_itot( units /   60000, chrBuffer, 10 );

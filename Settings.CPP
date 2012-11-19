@@ -108,7 +108,7 @@ CSettings& CSettings::operator=( const CSettings& s )
 	m_values.RemoveAll();
 
 	// Then fill the values list
-	for( i=0; i<s.m_values.GetSize(); i++ )
+	for( int i=0; i<s.m_values.GetSize(); i++ )
 	{
 		CSetting* pSet = (CSetting*)s.m_values.GetAt( i );
 		ValueAdd( pSet->m_nID, pSet->m_type, pSet->m_bValue, pSet->m_nGroupID, pSet->m_nIcon );

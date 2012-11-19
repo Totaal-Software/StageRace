@@ -4,7 +4,7 @@
 //
 
 #define _UNICODE
-#define _WIN32_WINNT 0x0400
+#define _WIN32_WINNT 0x0500
 
 #if !defined(AFX_STDAFX_H__552C7526_B87F_11D2_B376_0040954019F4__INCLUDED_)
 #define AFX_STDAFX_H__552C7526_B87F_11D2_B376_0040954019F4__INCLUDED_
@@ -38,7 +38,7 @@
 // DAO database support
 #include <afxdao.h>
 // MS HTML
-#include "D:\Projects\Workshop\ie55_lib\Include\mshtml.h"
+#include <MsHTML.h>
 // Control identifiers for file dialog
 #include <dlgs.h>
 // Necessary for OptionsPanel.h

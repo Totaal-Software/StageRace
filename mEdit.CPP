@@ -141,6 +141,12 @@ CString CmEdit::GetData()
     return strData;
 }
 
+LRESULT CmEdit::Delete(WPARAM, LPARAM)
+{
+	this->Delete();
+	return NULL;
+}
+
 void CmEdit::Delete()
 {
 	int x, y, z;
@@ -592,6 +598,12 @@ void CmEdit::OnLButtonDblClk(UINT nFlags, CPoint point)
 	m_iCurrentChar = m_iNumChars;
 }
 
+LRESULT CmEdit::Paste(WPARAM, LPARAM)
+{
+	this->Paste();
+	return NULL;
+}
+
 void CmEdit::Paste()
 {
 	if(!(GetStyle()&ES_READONLY))
@@ -639,6 +651,12 @@ void CmEdit::Paste()
 		// Close the clipboard
 		::CloseClipboard();
 	}
+}
+
+LRESULT CmEdit::Cut(WPARAM, LPARAM)
+{
+	this->Cut();
+	return NULL;
 }
 
 void CmEdit::Cut()

@@ -43,7 +43,7 @@ public:
 	static void MakeDummy(CEventItem, unsigned short nId);
 	static CString GetStylePart(const CStageRaceDoc* pDoc);
 	static CString CommuniqueStatic(CCommunique* pComm, const CStageRaceDoc *pDoc);
-	static bool IsUnsafe( unsigned char cCompare );
+	static bool IsUnsafe( wchar_t cCompare );
 	static CString EncodeURL( CString cURL );
 	void TocRow( int nIndent, CString cContent, const CId* objId=NULL, CString cNo="" );
 	void Toc();
