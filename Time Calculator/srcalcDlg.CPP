@@ -179,7 +179,7 @@ void CSrcalcDlg::DoCalc(bool bPlus)
 	}
 	else
 	{
-		m_res1.SetTime( abs( m_inp1.GetTime() - m_inp2.GetTime() ) );
+		m_res1.SetTime( abs((long) (m_inp1.GetTime() - m_inp2.GetTime()) ) );
 		SetDlgItemText( IDC_OPERATION, "-" );
 	}
 

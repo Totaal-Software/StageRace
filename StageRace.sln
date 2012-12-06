@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "HelpTool", "..\StageRace 2003\HELP\ENGLISH\HELPTOOL\HelpTool\HelpTool.dsp", "{CF4B193A-7EC3-4378-BA35-5FC5BE5F3E0E}"
+EndProject
+Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "KeySupport", "..\KeySupport\KeySupport.dsp", "{DC7ED979-C1FA-4552-8F46-EE693FDD2B62}"
+EndProject
+Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "SetupStageRace", "..\StageRace 2003\Setup\SetupStageRace\SetupStageRace.dsp", "{99DE2970-0458-46F8-A60E-EB404472B147}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StageRace", "Core Application\StageRace.vcxproj", "{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SRCALC", "Time Calculator\SRCALC.vcxproj", "{2399BF81-D705-88C1-1834-9F5551249DF2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SRSPEED", "Speed Calculator\SRSPEED.vcxproj", "{7BF100A5-163F-CE0B-502F-E26039533F80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Debug|Win32.Build.0 = Debug|Win32
+		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Release|Win32.ActiveCfg = Release|Win32
+		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Release|Win32.Build.0 = Release|Win32
+		{2399BF81-D705-88C1-1834-9F5551249DF2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2399BF81-D705-88C1-1834-9F5551249DF2}.Release|Win32.ActiveCfg = Release|Win32
+		{7BF100A5-163F-CE0B-502F-E26039533F80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7BF100A5-163F-CE0B-502F-E26039533F80}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

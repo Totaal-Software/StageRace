@@ -1,7 +1,7 @@
-#include "..\StageRace 2003\StageCalc.h"
-#include "..\StageRace 2003\Time.h"
-#include "..\StageRace 2003\mEdit.h"
-#include "..\StageRace 2003\TimeEdit.h"
+#include "..\Core Application\StageCalc.h"
+#include "..\Core Application\Time.h"
+#include "..\Core Application\mEdit.h"
+#include "..\Core Application\TimeEdit.h"
 
 #include "srcalc.h"
 #include "AboutDlg.h"
