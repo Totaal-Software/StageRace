@@ -3980,8 +3980,9 @@ BEGIN
                             "Most high rankings - Last solution"
     IDS_SETT_RANK_GENERAL   "General classifications sort order"
     IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING "Last ranking"
-    IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS "Sum rankings - Last ranking"
-    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS 
+    IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING "Sum rankings - Last ranking"
+    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONLATESTRANKING "Time trials - Last ranking"
+    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING 
                             "Time trials - Sum rankings - Last ranking"
     IDS_SETT_RANK_INDIVIDUAL "Individual classifications"
 END
@@ -8043,9 +8044,11 @@ BEGIN
                             "Le plus de meilleurs résultats - Dernière solution"
     IDS_SETT_RANK_GENERAL   "Ordre de tri des classements général"
     IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING "Dernier rang"
-    IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS 
+    IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING 
                             "Rangs par addition - Dernier rang"
-    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS 
+    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONLATESTRANKING 
+                            "Contre-la-montre - Dernier rang"
+    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING
                             "Contre-la-montre - Rangs par addition - Dernier rang"
     IDS_SETT_RANK_INDIVIDUAL "Classements individuels"
 END
@@ -11798,9 +11801,11 @@ BEGIN
                             "Meeste hoge klasseringen - Laatste oplossing"
     IDS_SETT_RANK_GENERAL   "Algemene klassementen sorteervolgorde"
     IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING "Laatste klassering"
-    IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS 
+    IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING
                             "Som klasseringen - Laatste klassering"
-    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS 
+    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONLATESTRANKING
+                            "Tijdritten - Laatste klassering"
+    IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING 
                             "Tijdritten - Som klasseringen - Laatste klassering"
     IDS_SETT_RANK_INDIVIDUAL "Individuele klassementen"
 END

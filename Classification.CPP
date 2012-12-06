@@ -37,42 +37,73 @@ bool CClassification::InsertHere(CArrival &objTest, CArrival &objSubj, bool bRan
 	// just "before" the test object, where "after" means further away from
 	// the winner
 
-	// First test on the ridden time (where thousandth already have been subtracted)
-	if( (objTest.m_units > objSubj.m_units)
-		&& (!bRankOnly) )
-		return true;
-	if( (objTest.m_units == objSubj.m_units)
-
-		|| bRankOnly )
+	// For single stage classifications you want only to sort on the ranking
+	if(bRankOnly)
 	{
-		// Secondly test for the thousandth of seconds (*)
-		if( (objTest.m_thousandth > objSubj.m_thousandth)
-			&& m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS) && (!bRankOnly) )
-			return true;
-
-		if( (objTest.m_thousandth == objSubj.m_thousandth)
-			|| !m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS) || bRankOnly )
-			{
-				// Thirthly test on sum of the rankings (*)
-				if( (objTest.m_sumRank+objTest.m_rank > objSubj.m_sumRank+objSubj.m_rank)
-					&& !m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING) && (!bRankOnly) )
-					return true;
-
-				if( (objTest.m_sumRank+objTest.m_rank == objSubj.m_sumRank+objSubj.m_rank)
-					|| m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING) || bRankOnly )
-				{
-					// Fourthly test on the ranking in the last (always current) stage
-					if( objTest.m_rank > objSubj.m_rank )
-						return true;
-				}
-			}
+		return objTest.m_rank > objSubj.m_rank;
 	}
+
+	// Looking at units is common to ALL configurable strategies
+	if(objTest.m_units > objSubj.m_units)
+	{
+		return true;
+	}
+	if(objTest.m_units < objSubj.m_units)
+	{
+		return false;
+	}
+
+	// Further differentiate per configurable strategy
+	if(m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING))
+	{
+		if(objTest.m_thousandth > objSubj.m_thousandth)
+		{
+			return true;
+		}
+		if(objTest.m_thousandth == objSubj.m_thousandth)
+		{
+			if(objTest.m_sumRank > objSubj.m_sumRank)
+			{
+				return true;
+			}
+			if(objTest.m_sumRank == objSubj.m_sumRank)
+			{
+				// Test on the ranking in the last (always current) stage
+				return objTest.m_rank > objSubj.m_rank;
+			}
+		}
+	}
+	else if(m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONLATESTRANKING))
+	{
+		if(objTest.m_thousandth > objSubj.m_thousandth)
+		{
+			return true;
+		}
+		if(objTest.m_thousandth == objSubj.m_thousandth)
+		{
+			// Test on the ranking in the last (always current) stage
+			return objTest.m_rank > objSubj.m_rank;
+		}
+	}
+	else if(m_pDoc->m_allsettings.ValueGet(IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING))
+	{
+		if(objTest.m_sumRank > objSubj.m_sumRank)
+		{
+			return true;
+		}
+		if(objTest.m_sumRank == objSubj.m_sumRank)
+		{
+			// Test on the ranking in the last (always current) stage
+			return objTest.m_rank > objSubj.m_rank;
+		}
+	}
+	else // IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING
+	{
+		// Test on the ranking in the last (always current) stage
+		return objTest.m_rank > objSubj.m_rank;
+	}
+
 	return false;
-
-	// (*) Note: these (*) tests can be overridden by user settings
-
-	// Note: for single stage classifications you want only to sort on the ranking
-	//		(the fourth test). For this the bRankOnly is used
 }
 
 void CClassification::StoreClassification()
