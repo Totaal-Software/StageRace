@@ -162,10 +162,8 @@ CString CHaspTotaal::HaspContents()
 
 bool CHaspTotaal::HaspCheckDongle()
 {
-	//todo:
-	return true;
 	Lock();
-	
+
 	int n1, n2, n3, n4;
 	// Check presence of any hardware key
 	hasp (1, 0, 0, 0, 0, &n1, &n2, &n3, &n4);
@@ -193,8 +191,6 @@ bool CHaspTotaal::HaspCheckSeed()
 
 CString CHaspTotaal::HaspID()
 {
-	//todo:
-	return "dummy id";
 	Lock();
 
 	union
