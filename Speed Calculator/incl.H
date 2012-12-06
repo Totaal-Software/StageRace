@@ -1,0 +1,10 @@
+#include "..\StageRace 2003\StageCalc.h"
+#include "..\StageRace 2003\StageDistance.h"
+#include "..\StageRace 2003\StageSpeed.h"
+#include "..\StageRace 2003\Time.h"
+#include "..\StageRace 2003\mEdit.h"
+#include "..\StageRace 2003\TimeEdit.h"
+
+#include "srspeed.h"
+#include "AboutDlg.h"
+#include "srspeedDlg.h"
