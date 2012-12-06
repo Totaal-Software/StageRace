@@ -246,7 +246,9 @@ bool CClassification::CalculateGeneralFromStage(CArrival *pArr)
 		{
 			// Need to add new one to old one, not the other way around
 			// (That's just not how the particular operator+ is designed)
+			WORD rank = pArr->m_rank;
 			(*pArr) = objStored + (*pArr);
+			pArr->m_rank = rank;
 		}
 		else
 		{
