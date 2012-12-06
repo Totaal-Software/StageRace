@@ -109,9 +109,13 @@ void cdxCDynamicPropSheet::OnInitPage(cdxCDynamicPropPage & rPage)
 
 void cdxCDynamicPropSheet::OnClose() 
 {
-	// todo:
+	/*
+		This used to be as follows:
+			if(!PressButton(PSBTN_CANCEL))
+				CPropertySheet::OnClose();
+		But that could not be sustained under VS 2010
+	*/
 	PressButton(PSBTN_CANCEL);
-//	CPropertySheet::OnClose();
 }
 
 /*
