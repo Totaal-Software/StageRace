@@ -34,10 +34,8 @@ protected:
 	BOOL OnEraseBkgnd(CDC* pDC);
 
 // Message map
-	static const AFX_MSGMAP* PASCAL _GetBaseMessageMap();
-	static const AFX_MSGMAP* GetMessageMap();
-	static AFX_DATADEF const AFX_MSGMAP messageMap;
-	static const AFX_MSGMAP_ENTRY _messageEntries[];
+	static const AFX_MSGMAP* PASCAL GetThisMessageMap();
+	virtual const AFX_MSGMAP* GetMessageMap() const;
 };
 
 //////////////////////////////////////////////////////////////////////
@@ -210,19 +208,31 @@ template <class T> BOOL CStageRaceWnd<T>::PreTranslateMessage(MSG *pMsg)
 	return T::PreTranslateMessage(pMsg);
 }
 
-template <class T> const AFX_MSGMAP* PASCAL CStageRaceWnd<T>::_GetBaseMessageMap()
-	{ return &T::messageMap; }
-template <class T> const AFX_MSGMAP* CStageRaceWnd<T>::GetMessageMap()
-	{ return &messageMap; } 
-template <class T> AFX_COMDAT AFX_DATADEF const AFX_MSGMAP CStageRaceWnd<T>::messageMap =
-	{ &CStageRaceWnd<T>::_GetBaseMessageMap, CStageRaceWnd<T>::_messageEntries };
-template <class T> AFX_COMDAT const AFX_MSGMAP_ENTRY CStageRaceWnd<T>::_messageEntries[] = 
+
+// following pretty much stolen from afxwin.h
+PTM_WARNING_DISABLE
+template <class T> const AFX_MSGMAP* CStageRaceWnd<T>::GetMessageMap() const
+{
+	return GetThisMessageMap();
+}
+template <class T> const AFX_MSGMAP* PASCAL CStageRaceWnd<T>::GetThisMessageMap()
+{
+	typedef CStageRaceWnd<T> ThisClass;
+	typedef T TheBaseClass;
+	static const AFX_MSGMAP_ENTRY _messageEntries[] =
 	{
 		ON_WM_ERASEBKGND()
 		ON_WM_SIZE()
 		ON_COMMAND(ID_SRWND_HELP, OnHelp)
 		ON_WM_CTLCOLOR()
+		{0, 0, 0, 0, AfxSig_end, (AFX_PMSG)0 }
 	};
+	static const AFX_MSGMAP messageMap =
+	{ &TheBaseClass::GetThisMessageMap, &_messageEntries[0] };
+	return &messageMap;
+}
+PTM_WARNING_RESTORE
+
 
 template <class T> void CStageRaceWnd<T>::OnSize(UINT nType, int cx, int cy)
 {
