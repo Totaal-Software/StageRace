@@ -1,5 +1,8 @@
-1. Build StageRace as you would, release configuration
-2. Make sure Little Setup Builder is installed (lsb02_01.exe)
-2. Open "Setup Definition.LSB"
-3. Project --> Global Settings --> adjust the version number in the output file (e.g. stagerace2005399.exe)
-4. Run --> "Build setup program"
+- Build StageRace as you would, release configuration
+- Make sure Updatex.HTML is uptodate; it has to contain:
+	- An entry in the overview with the correct date
+	- An entry in the Fixes per Update
+- Make sure Little Setup Builder is installed (lsb02_01.exe)
+- Open "Setup Definition.LSB"
+- Project --> Global Settings --> adjust the version number in the output file (e.g. stagerace2005399.exe)
+- Run --> "Build setup program"

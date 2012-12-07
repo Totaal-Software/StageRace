@@ -133,6 +133,17 @@ Overview </H2><P>&nbsp; </P>
             <p> Final release update</p>
           </td>
         </tr>
+        <tr> 
+          <td> 
+            <p> <a href="#2005323"> 2005.3.23 update</a></p>
+          </td>
+          <td> 
+            <p> <a href="#2005323"> 2012.12.07</a></p>
+          </td>
+          <td> 
+            <p> Final release update</p>
+          </td>
+        </tr>
         <TR> 
           <TD COLSPAN="3"> 
             <P> The following are releases from the 2003 version series of StageRace:</P>
@@ -1056,7 +1067,6 @@ Overview </H2><P>&nbsp; </P>
         <TR VALIGN="top"> 
           <TD> 
             <P> October 27th 2008</P>
-            <p> <font color="red">Latest, current version </font></p>
           </TD>
           <TD> 
             <P> <A NAME="2005322"> </A> Program: V3.22 - 2005.3.22 <font color="green">final 
@@ -1082,6 +1092,43 @@ Overview </H2><P>&nbsp; </P>
               <LI VALUE="118">Bug fixed that rendered the &quot;sum rankings&quot; 
                 general classification sort order quite useless [65]</LI>
             </OL>
+          </TD>
+        </TR>
+        <TR VALIGN="top"> 
+          <TD> 
+            <P> December 7th 2012</P>
+            <p> <font color="red">Latest, current version </font></p>
+          </TD>
+          <TD> 
+            <P> <A NAME="2005323"> </A> Program: V3.23 - 2005.3.23 <font color="green">final 
+              update </font></P>
+            <P> File format: </P>
+            <TABLE BORDERCOLOR="blue" BGCOLOR="#DDDDFF" WIDTH="120"% BORDER=1 CELLSPACING=0 CELLPADDING=3>
+              <TR> 
+                <TD ALIGN="middle"> fV3123 </TD>
+              </TR>
+            </TABLE>
+            <P> Messaging protocol: </P>
+            <TABLE BORDERCOLOR="blue" BGCOLOR="#DDDDFF" WIDTH="120"% BORDER=1 CELLSPACING=0 CELLPADDING=3>
+              <TR> 
+                <TD ALIGN="middle"> WMSR01</TD>
+              </TR>
+              <TR> 
+                <TD ALIGN="middle">SR Server 1.00</TD>
+              </TR>
+            </TABLE>
+          </TD>
+          <TD> 
+            <OL>
+              <LI VALUE="119">Updated toolchain and fixing subsequent issues [67, 71, 73-76, 93-105, 108]</LI>
+              <LI>Bug fixed where the wrong rank was taken as the last ranking in calculating the general classification [68, 77]</LI>
+              <LI>Added "Time trials - Last ranking" sort order option for calculating the general classification [69]</LI>
+              <LI>Always discarding 1/xth seconds when calculating speed, as using 1/xth seconds in time trial classifications lead to what seemed discrepancies with the header information (that didn't use the 1/xth seconds, as would the general classification); note that while less accurate, this is more consistent between the different classifications [70]</LI>
+              <LI>Making hardware keys work with new toolchain and Windows 7 [72]</LI>
+              <LI>Making installation of hardware key device drivers work on 64-bit Windows 7 [106]</LI>
+              <LI>Make it possible for the language database to be opened even when no write permissions in program folder [109]</LI>
+            </OL>
+            <P>Note that this V3.23 was tested on Windows 7. Older versions of Windows are per V3.23 no longer supported.</P>
           </TD>
         </TR>
         <TR VALIGN="top"> 
