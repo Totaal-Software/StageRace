@@ -5,8 +5,6 @@ Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "HelpTool", "..\StageRace 20
 EndProject
 Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "KeySupport", "..\KeySupport\KeySupport.dsp", "{DC7ED979-C1FA-4552-8F46-EE693FDD2B62}"
 EndProject
-Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "SetupStageRace", "..\StageRace 2003\Setup\SetupStageRace\SetupStageRace.dsp", "{99DE2970-0458-46F8-A60E-EB404472B147}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StageRace", "Core Application\StageRace.vcxproj", "{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Speed Calculator", "Speed Calculator\Speed Calculator.vcxproj", "{CC26697A-A7CD-4714-9787-DED63E618345}"
@@ -15,28 +13,45 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Time Calculator", "Time Cal
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buildinc", "Increment Build Number\buildinc.vcxproj", "{8392D021-F3AB-1748-D0B7-798D9F179B70}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Setup Support Library", "Setup Support Library\SetupStageRace.vcxproj", "{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Debug|Win32.Build.0 = Debug|Win32
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Release|Win32.ActiveCfg = Release|Win32
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Release|Win32.Build.0 = Release|Win32
+		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Template|Win32.ActiveCfg = Release|Win32
+		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Template|Win32.Build.0 = Release|Win32
 		{CC26697A-A7CD-4714-9787-DED63E618345}.Debug|Win32.ActiveCfg = Debug|Win32
 		{CC26697A-A7CD-4714-9787-DED63E618345}.Debug|Win32.Build.0 = Debug|Win32
 		{CC26697A-A7CD-4714-9787-DED63E618345}.Release|Win32.ActiveCfg = Release|Win32
 		{CC26697A-A7CD-4714-9787-DED63E618345}.Release|Win32.Build.0 = Release|Win32
+		{CC26697A-A7CD-4714-9787-DED63E618345}.Template|Win32.ActiveCfg = Release|Win32
+		{CC26697A-A7CD-4714-9787-DED63E618345}.Template|Win32.Build.0 = Release|Win32
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Debug|Win32.ActiveCfg = Debug|Win32
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Debug|Win32.Build.0 = Debug|Win32
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Release|Win32.ActiveCfg = Release|Win32
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Release|Win32.Build.0 = Release|Win32
+		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Template|Win32.ActiveCfg = Release|Win32
+		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Template|Win32.Build.0 = Release|Win32
 		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Debug|Win32.ActiveCfg = Debug|Win32
 		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Debug|Win32.Build.0 = Debug|Win32
 		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Release|Win32.ActiveCfg = Release|Win32
 		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Release|Win32.Build.0 = Release|Win32
+		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Template|Win32.ActiveCfg = Release|Win32
+		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Template|Win32.Build.0 = Release|Win32
+		{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}.Debug|Win32.ActiveCfg = Template|Win32
+		{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}.Debug|Win32.Build.0 = Template|Win32
+		{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}.Release|Win32.ActiveCfg = Release|Win32
+		{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}.Release|Win32.Build.0 = Release|Win32
+		{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}.Template|Win32.ActiveCfg = Template|Win32
+		{B580F2B7-BC39-60E2-8935-7FF6A73AE36E}.Template|Win32.Build.0 = Template|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
