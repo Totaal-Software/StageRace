@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -458,8 +458,6 @@ rc /l 0x809 /fo"Debug/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc</Comm
     <ClInclude Include="StageRaceDoc (COM).h" />
     <ClInclude Include="StageRaceDoc.h" />
     <ClInclude Include="StageRaceServer (COM).h" />
-    <ClInclude Include="StageRaceSplitFrame.h" />
-    <ClInclude Include="StageRaceSplitterWnd.h" />
     <ClInclude Include="StageRaceStatusBar.h" />
     <ClInclude Include="StageRaceWnd.h" />
     <ClInclude Include="StageSpeed.h" />
@@ -582,9 +580,6 @@ rc /l 0x809 /fo"Debug/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc</Comm
     </CustomBuild>
     <CustomBuild Include="Resource symbols.txt" />
     <CustomBuild Include="SRHalfStage.rgs" />
-    <CustomBuild Include="StageRace.clw">
-      <FileType>Document</FileType>
-    </CustomBuild>
     <CustomBuild Include="StageRace.rgs" />
     <CustomBuild Include="StageRaceServer.rgs" />
     <CustomBuild Include="version.ver">
