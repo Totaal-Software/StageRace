@@ -144,7 +144,7 @@ void CSrcalcDlg::OnClear()
 	m_inp3.SetTime( 0 );
 	m_res1.SetTime( 0 );
 	m_inp1.SetFocus();
-	SetDlgItemText( IDC_OPERATION, "+/-" );
+	SetDlgItemText( IDC_OPERATION, _T("+/-") );
 
 	m_afterClear = true;
 }
@@ -175,12 +175,12 @@ void CSrcalcDlg::DoCalc(bool bPlus)
 	if( bPlus )
 	{
 		m_res1.SetTime( m_inp1.GetTime() + m_inp2.GetTime() );
-		SetDlgItemText( IDC_OPERATION, "+" );
+		SetDlgItemText( IDC_OPERATION, _T("+") );
 	}
 	else
 	{
 		m_res1.SetTime( abs((long) (m_inp1.GetTime() - m_inp2.GetTime()) ) );
-		SetDlgItemText( IDC_OPERATION, "-" );
+		SetDlgItemText( IDC_OPERATION, _T("-") );
 	}
 
 	m_inp1.SetReadOnly( true  );

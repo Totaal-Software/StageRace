@@ -9,9 +9,9 @@ Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "SetupStageRace", "..\StageR
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StageRace", "Core Application\StageRace.vcxproj", "{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SRCALC", "Time Calculator\SRCALC.vcxproj", "{2399BF81-D705-88C1-1834-9F5551249DF2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Speed Calculator", "Speed Calculator\Speed Calculator.vcxproj", "{CC26697A-A7CD-4714-9787-DED63E618345}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SRSPEED", "Speed Calculator\SRSPEED.vcxproj", "{7BF100A5-163F-CE0B-502F-E26039533F80}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Time Calculator", "Time Calculator\Time Calculator.vcxproj", "{6EE7D626-7988-43F3-ACD0-59B0947D0932}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,14 @@ Global
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Debug|Win32.Build.0 = Debug|Win32
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Release|Win32.ActiveCfg = Release|Win32
 		{F08F0D9B-CD81-8E6A-504D-0E15AF6827C0}.Release|Win32.Build.0 = Release|Win32
-		{2399BF81-D705-88C1-1834-9F5551249DF2}.Debug|Win32.ActiveCfg = Debug|Win32
-		{2399BF81-D705-88C1-1834-9F5551249DF2}.Release|Win32.ActiveCfg = Release|Win32
-		{7BF100A5-163F-CE0B-502F-E26039533F80}.Debug|Win32.ActiveCfg = Debug|Win32
-		{7BF100A5-163F-CE0B-502F-E26039533F80}.Release|Win32.ActiveCfg = Release|Win32
+		{CC26697A-A7CD-4714-9787-DED63E618345}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC26697A-A7CD-4714-9787-DED63E618345}.Debug|Win32.Build.0 = Debug|Win32
+		{CC26697A-A7CD-4714-9787-DED63E618345}.Release|Win32.ActiveCfg = Release|Win32
+		{CC26697A-A7CD-4714-9787-DED63E618345}.Release|Win32.Build.0 = Release|Win32
+		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Debug|Win32.Build.0 = Debug|Win32
+		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Release|Win32.ActiveCfg = Release|Win32
+		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

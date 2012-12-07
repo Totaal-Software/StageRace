@@ -137,7 +137,7 @@ void CSrspeedDlg::DoCalc()
 
 	bool bMPH = IsDlgButtonChecked( IDC_MPH )>0;
 
-	int i = atoi( czDistance );
+	int i = _ttoi( czDistance );
 	SetDlgItemText(
 			IDC_SPEED,
 			CStageSpeed::GetSpeed( i, m_time.GetTime(), true, bMPH, "\r\n" )
