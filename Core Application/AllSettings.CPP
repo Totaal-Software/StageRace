@@ -211,8 +211,8 @@ void CAllSettings::Serialize(CArchive & objAr)
 
 					//Ranking
 					objAr >> n1;
-					m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS, n1==0 );
-					m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS, n1==1 );
+					m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING, n1==0 );
+					m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING, n1==1 );
 					m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING, n1==2 );
 
 					objAr >> n1;
@@ -346,8 +346,8 @@ void CAllSettings::Serialize(CArchive & objAr)
 
 						//Ranking
 						objAr >> n1;
-						m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS, n1==0 );
-						m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS, n1==1 );
+						m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING, n1==0 );
+						m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING, n1==1 );
 						m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING, n1==2 );
 
 						objAr >> n1;
@@ -470,8 +470,8 @@ void CAllSettings::Serialize(CArchive & objAr)
 
 							//Ranking
 							objAr >> n1;
-							m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS, n1==0 );
-							m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS, n1==1 );
+							m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONTIMETRIALS_ONSUMRANKINGS_ONLATESTRANKING, n1==0 );
+							m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONSUMRANKINGS_ONLATESTRANKING, n1==1 );
 							m_allsettings[1]->ValueSet( IDS_SETT_RANK_GENERAL_SORT_ONLATESTRANKING, n1==2 );
 
 							objAr >> n1;
