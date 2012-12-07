@@ -3,7 +3,8 @@
 
 #include "stdafx.h"
 #include "buildinc.h"
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

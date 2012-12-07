@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Speed Calculator", "Speed C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Time Calculator", "Time Calculator\Time Calculator.vcxproj", "{6EE7D626-7988-43F3-ACD0-59B0947D0932}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buildinc", "Increment Build Number\buildinc.vcxproj", "{8392D021-F3AB-1748-D0B7-798D9F179B70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,10 @@ Global
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Debug|Win32.Build.0 = Debug|Win32
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Release|Win32.ActiveCfg = Release|Win32
 		{6EE7D626-7988-43F3-ACD0-59B0947D0932}.Release|Win32.Build.0 = Release|Win32
+		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Debug|Win32.Build.0 = Debug|Win32
+		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Release|Win32.ActiveCfg = Release|Win32
+		{8392D021-F3AB-1748-D0B7-798D9F179B70}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
