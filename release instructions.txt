@@ -1,4 +1,5 @@
 - Build StageRace as you would, release configuration
+- Update version number in English.TIP
 - Make sure Updatex.HTML is uptodate; it has to contain:
 	- An entry in the overview with the correct date
 	- An entry in the Fixes per Update
