@@ -119,7 +119,8 @@ UINT CMultiLanguage::ThreadFunction(LPVOID pParam)
 
 			// Open the database
 			database.Open( GetModulePathName()+"MultiLanguage2005.mdb",
-					FALSE,	// the database is to be opened for shared access
+					TRUE,	// the database is to be opened for exclusive access,
+							// see: http://support.microsoft.com/kb/191737
 					TRUE	// the database is to be opened for read-only access
 				);
 
