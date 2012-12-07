@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -64,12 +64,12 @@
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
     <PreLinkEvent>
-      <Command>D:\Projects\Non-StageRace\buildinc\Debug\buildinc.exe version.ver stagerace.rc
+      <Command>"..\Increment Build Number\Debug\buildinc.exe" version.ver stagerace.rc
 rc /l 0x809 /fo"Release/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc</Command>
     </PreLinkEvent>
     <PostBuildEvent>
       <Command>copy Release\StageRace.tlb StageRace.tlb
-"AppendChecksum\release\AppendChecksum.exe" "StageRace.exe"
+"..\Append Checksum\release\AppendChecksum.exe" "StageRace.exe"
 copy StageRace.exe executable\StageRace.exe</Command>
     </PostBuildEvent>
     <Midl>
@@ -116,12 +116,12 @@ copy StageRace.exe executable\StageRace.exe</Command>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
     </ClCompile>
     <PreLinkEvent>
-      <Command>D:\Projects\Non-StageRace\buildinc\Debug\buildinc.exe version.ver stagerace.rc
+      <Command>"..\Increment Build Number\Debug\buildinc.exe" version.ver stagerace.rc
 rc /l 0x809 /fo"Debug/StageRace.res" /d "NDEBUG" /d "_AFXDLL" stagerace.rc</Command>
     </PreLinkEvent>
     <PostBuildEvent>
       <Command>copy Debug\StageRace.tlb StageRace.tlb
-"AppendChecksum\release\AppendChecksum.exe" "StageRace.exe"</Command>
+"..\Append Checksum\release\AppendChecksum.exe" "StageRace.exe"</Command>
     </PostBuildEvent>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

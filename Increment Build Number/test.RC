@@ -1,0 +1,3031 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Telacon32.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include ""afxdb.rc""          // Database resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\mainIcon.ico"
+IDR_TELACOTYPE          ICON    DISCARDABLE     "res\\Telacon32Doc.ico"
+IDI_CONNECTED           ICON    DISCARDABLE     "res\\connected.ico"
+IDI_CONNECTION          ICON    DISCARDABLE     "res\\connection.ico"
+IDR_CONSOLE             ICON    DISCARDABLE     "res\\console.ico"
+IDI_CROSSPOINT          ICON    DISCARDABLE     "res\\crosspoint.ico"
+IDR_EVENT               ICON    DISCARDABLE     "res\\EVENT.ICO"
+IDI_EVENTNOFILTERS      ICON    DISCARDABLE     "res\\EventNoFilters.ico"
+IDI_INACTIVE_CONSOLE    ICON    DISCARDABLE     "res\\InactiveConsole.ico"
+IDI_INACTIVE_EVENT      ICON    DISCARDABLE     "res\\InactiveEvent.ico"
+IDI_INACTIVE_LOG        ICON    DISCARDABLE     "res\\InactiveLog.ico"
+IDR_LOG                 ICON    DISCARDABLE     "res\\log.ico"
+IDR_MESSAGES            ICON    DISCARDABLE     "res\\MessageWindow.ico"
+IDI_MORE                ICON    DISCARDABLE     "res\\MORE.ICO"
+IDI_NOTICE              ICON    DISCARDABLE     "res\\notice.ico"
+IDR_PERFORMANCE         ICON    DISCARDABLE     "res\\Performance.ico"
+IDR_TELALERT            ICON    DISCARDABLE     "res\\TELALERT.ICO"
+IDR_TIMER               ICON    DISCARDABLE     "res\\TIMER.ICO"
+IDI_VIEWER              ICON    DISCARDABLE     "res\\viewer.ico"
+IDR_WATCHDOG            ICON    DISCARDABLE     "res\\WATCHDOG.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+CONNECTBMP              BITMAP  DISCARDABLE     "res\\CONNECTB.BMP"
+CONSOLEBMP              BITMAP  DISCARDABLE     "res\\CONSOLEB.BMP"
+DATAPROCBMP             BITMAP  DISCARDABLE     "res\\DATAPROC.BMP"
+EVENTBMP                BITMAP  DISCARDABLE     "res\\EVENTBMP.BMP"
+IDB_ABCONSOLE           BITMAP  DISCARDABLE     "res\\ABCONSOLE.BMP"
+IDB_ABCROSSPOINT        BITMAP  DISCARDABLE     "res\\ABCROSSPOINT.BMP"
+IDB_ABEVENT             BITMAP  DISCARDABLE     "res\\ABEVENT.BMP"
+IDB_ABLOG               BITMAP  DISCARDABLE     "res\\ABLOG.BMP"
+IDB_ABMESSAGES          BITMAP  DISCARDABLE     "res\\ABMESSAGES.BMP"
+IDB_ABPERFORMANCE       BITMAP  DISCARDABLE     "res\\ABPERFORMANCE.BMP"
+IDB_ABTIMED             BITMAP  DISCARDABLE     "res\\ABTIMED.BMP"
+IDB_ABVIEWER            BITMAP  DISCARDABLE     "res\\ABVIEWER.BMP"
+IDB_ABWATCHDOG          BITMAP  DISCARDABLE     "res\\ABWATCH.BMP"
+IDB_ACTION              BITMAP  DISCARDABLE     "res\\EXEBMP.BMP"
+IDB_ADDEXDISABLED       BITMAP  DISCARDABLE     "res\\AddExeDisabled.bmp"
+IDB_ADDEXDOWN           BITMAP  DISCARDABLE     "res\\AddExeDown.bmp"
+IDB_ADDEXUP             BITMAP  DISCARDABLE     "res\\AddExeUp.bmp"
+IDB_ALERT               BITMAP  DISCARDABLE     "res\\ALERT.BMP"
+IDB_ALERT_ACKNOWLEDGED  BITMAP  DISCARDABLE     "res\\AlertAcknowledged.bmp"
+IDB_AUDIT               BITMAP  DISCARDABLE     "res\\AUDIT.BMP"
+IDB_BLANK               BITMAP  DISCARDABLE     "res\\BLANK.BMP"
+IDB_BLANKCHECK          BITMAP  DISCARDABLE     "res\\BlankChecked.bmp"
+IDB_BLANKUNCHECKED      BITMAP  DISCARDABLE     "res\\BlankUnchecked.bmp"
+IDB_CHECKED             BITMAP  DISCARDABLE     "res\\Checked.bmp"
+IDB_CHECKED_DISABLED    BITMAP  DISCARDABLE     "res\\CheckedDisabled.bmp"
+IDB_CONSOLE             BITMAP  DISCARDABLE     "res\\Console.bmp"
+IDB_CROSSPOINT          BITMAP  DISCARDABLE     "res\\Crosspoint.bmp"
+IDB_DELEXDISABLED       BITMAP  DISCARDABLE     "res\\DeleteExeDisabled.bmp"
+IDB_DELEXDOWN           BITMAP  DISCARDABLE     "res\\DeleteExeDown.bmp"
+IDB_DELEXUP             BITMAP  DISCARDABLE     "res\\DeleteExeUp.bmp"
+IDB_DOWN_DISABLED       BITMAP  DISCARDABLE     "res\\MoveDownDisabled.bmp"
+IDB_DOWN_DOWN           BITMAP  DISCARDABLE     "res\\MoveDownDown.bmp"
+IDB_DOWN_UP             BITMAP  DISCARDABLE     "res\\MoveDownUp.bmp"
+IDB_EDITEXDISABLED      BITMAP  DISCARDABLE     "res\\EditExeDisabled.bmp"
+IDB_EDITEXDOWN          BITMAP  DISCARDABLE     "res\\EditExeDown.bmp"
+IDB_EDITEXUP            BITMAP  DISCARDABLE     "res\\EditExeUp.bmp"
+IDB_ERROR               BITMAP  DISCARDABLE     "res\\Error.bmp"
+IDB_EVENT               BITMAP  DISCARDABLE     "res\\Event.bmp"
+IDB_EXECUTE_OFF         BITMAP  DISCARDABLE     "res\\ExecuteOff.bmp"
+IDB_EXECUTE_ON          BITMAP  DISCARDABLE     "res\\ExecuteOn.bmp"
+IDB_HITLIMIT            BITMAP  DISCARDABLE     "res\\HitLimit.bmp"
+IDB_INDETERMINATE       BITMAP  DISCARDABLE     "res\\Indeterminate.bmp"
+IDB_INFO                BITMAP  DISCARDABLE     "res\\Info.bmp"
+IDB_INTERNAL            BITMAP  DISCARDABLE     "res\\Internal.bmp"
+IDB_LAUNCH_BAD          BITMAP  DISCARDABLE     "res\\LaunchBad.bmp"
+IDB_LAUNCH_OK           BITMAP  DISCARDABLE     "res\\LauchOK.bmp"
+IDB_LAUNCH_QUEUED       BITMAP  DISCARDABLE     "res\\LaunchQueued.bmp"
+IDB_LOG                 BITMAP  DISCARDABLE     "res\\Log.bmp"
+IDB_MINUS               BITMAP  DISCARDABLE     "res\\Minus.bmp"
+IDB_MINUSERR            BITMAP  DISCARDABLE     "res\\MinusError.bmp"
+IDB_NOCON               BITMAP  DISCARDABLE     "res\\NoConnection.bmp"
+IDB_NOSOUND             BITMAP  DISCARDABLE     "res\\NoSound.bmp"
+IDB_NOTICE              BITMAP  DISCARDABLE     "res\\Notice.bmp"
+IDB_NOTIFIED            BITMAP  DISCARDABLE     "res\\Notified.bmp"
+IDB_NOTIFYING           BITMAP  DISCARDABLE     "res\\Notifying.bmp"
+IDB_PENDING             BITMAP  DISCARDABLE     "res\\Pending.bmp"
+IDB_PLAY                BITMAP  DISCARDABLE     "res\\Play.bmp"
+IDB_PLAY_DISABLED       BITMAP  DISCARDABLE     "res\\PlayDisabled.bmp"
+IDB_PLUS                BITMAP  DISCARDABLE     "res\\Plus.bmp"
+IDB_PLUSERR             BITMAP  DISCARDABLE     "res\\PlusError.bmp"
+IDB_REPLAY              BITMAP  DISCARDABLE     "res\\Replay.bmp"
+IDB_SEND_DYING          BITMAP  DISCARDABLE     "res\\SendDying.bmp"
+IDB_SEND_OLD            BITMAP  DISCARDABLE     "res\\SendOld.bmp"
+IDB_SEND_PENDING        BITMAP  DISCARDABLE     "res\\SendPending.bmp"
+IDB_SORTEXDISABLED      BITMAP  DISCARDABLE     "res\\SortExeDisabled.bmp"
+IDB_SORTEXDOWN          BITMAP  DISCARDABLE     "res\\SortExeDown.bmp"
+IDB_SORTEXUP            BITMAP  DISCARDABLE     "res\\SortExeUp.bmp"
+IDB_SOUND               BITMAP  DISCARDABLE     "res\\sound.bmp"
+IDB_SPKRDISABLED        BITMAP  DISCARDABLE     "res\\SpeakerDisabled.bmp"
+IDB_SPKRDOWN            BITMAP  DISCARDABLE     "res\\SpearkerDown.bmp"
+IDB_SPKRUP              BITMAP  DISCARDABLE     "res\\SpeakerUp.bmp"
+IDB_STOPPED             BITMAP  DISCARDABLE     "res\\Stopped.bmp"
+IDB_TIME_PAUSED         BITMAP  DISCARDABLE     "res\\TimePaused.bmp"
+IDB_TIMED               BITMAP  DISCARDABLE     "res\\Timed.bmp"
+IDB_TIMEDERR            BITMAP  DISCARDABLE     "res\\TimedError.bmp"
+IDB_UNCHECKED           BITMAP  DISCARDABLE     "res\\Unchecked.bmp"
+IDB_UP_DISABLED         BITMAP  DISCARDABLE     "res\\MoveUpDisabled.bmp"
+IDB_UP_DOWN             BITMAP  DISCARDABLE     "res\\MoveUpDown.bmp"
+IDB_UP_UP               BITMAP  DISCARDABLE     "res\\MoveUpUp.bmp"
+IDB_WARNING             BITMAP  DISCARDABLE     "res\\Warning.bmp"
+IDB_WATCHDOG            BITMAP  DISCARDABLE     "res\\Watchdog.bmp"
+IDB_WATCHING            BITMAP  DISCARDABLE     "res\\Watching.bmp"
+LOG                     BITMAP  DISCARDABLE     "res\\Log2.bmp"
+LOGBMP                  BITMAP  DISCARDABLE     "res\\Log3.bmp"
+TELACONBMP              BITMAP  DISCARDABLE     "res\\TELACON.BMP"
+UIBMP                   BITMAP  DISCARDABLE     "res\\UI.BMP"
+IDB_ABTELALERT          BITMAP  DISCARDABLE     "res\\abtelalert.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      IDM_CONNECTION
+    BUTTON      IDM_AGENTS
+    SEPARATOR
+    BUTTON      IDM_BROADCAST
+    BUTTON      IDM_VIEWER
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Control"
+    BEGIN
+        MENUITEM "Agents...",                   IDM_AGENTS
+        MENUITEM "&Connections...",             IDM_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Assign Terminals...",        IDM_ASSIGN_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "S&peech Setup...",            IDM_SPEECH_SETUP
+        MENUITEM "&Restart Reflection Filter",  IDM_RESTART_FILTER
+    END
+    POPUP "&Define"
+    BEGIN
+        MENUITEM "&Agents...",                  IDM_DEFINE_AGENTS
+        MENUITEM "&Filters...",                 IDM_DEFINE_FILTERS
+        MENUITEM "&Tasks...",                   IDM_DEFINE_TASKS
+        MENUITEM SEPARATOR
+        MENUITEM "CO&M ports...",               IDM_DEFINE_COMPORTS
+        MENUITEM "&Connections...",             IDM_DEFINE_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Terminals...",               IDM_DEFINE_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Defaults...",                IDM_DEFINE_DEFAULTS
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Define...",                  IDM_OPTIONS_DEFINE
+        MENUITEM "Error Logging...",            IDM_LOGGING
+        MENUITEM "&Preferences...",             IDM_PREFERENCES
+        MENUITEM "&Quiet",                      IDM_QUIET
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Broadcaster...",             IDM_TOOLS_BROADCASTER
+        MENUITEM "&Viewer...",                  IDM_TOOLS_VIEWER
+        MENUITEM "&Connection Map",             IDM_CROSSPOINT
+        MENUITEM "&Performance Data",           IDM_PERFORMANCE_DATA
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About Telacon32...",         ID_APP_ABOUT
+    END
+    POPUP "Debug"
+    BEGIN
+        MENUITEM "Simulate Disk &Full",         IDM_DISKFULL
+        MENUITEM "Simulate Ti&me",              IDM_SIMTIME
+        MENUITEM "Tim&ed DB",                   IDM_TIMED_DB
+        MENUITEM "Trace &Watchdog",             IDM_TRACE_WATCHDOG
+        MENUITEM "&RCON info...",               IDM_RCONSTAT
+        MENUITEM SEPARATOR
+        MENUITEM "&Break",                      IDM_BREAK
+        MENUITEM "&Trace...",                   IDM_TRACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Show print setup",           IDM_SHOW_SETUP
+        MENUITEM "&Clean Window Menu",          IDM_CLEAN_MENU
+        MENUITEM "Error &Log test",             IDM_LOG_ERROR
+        MENUITEM SEPARATOR
+        MENUITEM "&Display DB stats",           IDM_DB_STATS
+        MENUITEM "&Memory statistics",          IDM_SHOW_MEMORY
+        MENUITEM "Show memory &Usage",          IDM_SHOW_USAGE
+        MENUITEM "Lo&g memory allocation",      IDM_MEMORY_LOG
+        MENUITEM SEPARATOR
+        MENUITEM "&Retain journal files",       IDM_RETAIN_JOURNALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide this menu",             IDM_HIDE_DEBUG_MENU
+    END
+END
+
+IDR_AGENT MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "&Alert Bar",                  IDM_VIEW_ALERTBAR
+    END
+    POPUP "&Control"
+    BEGIN
+        MENUITEM "Agents...",                   IDM_AGENTS
+        MENUITEM "&Connections...",             IDM_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Assign Terminals...",        IDM_ASSIGN_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "S&peech Setup...",            IDM_SPEECH_SETUP
+        MENUITEM "&Restart Reflection Filter",  IDM_RESTART_FILTER
+    END
+    POPUP "&Define"
+    BEGIN
+        MENUITEM "&Agents...",                  IDM_DEFINE_AGENTS
+        MENUITEM "&Filters...",                 IDM_DEFINE_FILTERS
+        MENUITEM "&Tasks...",                   IDM_DEFINE_TASKS
+        MENUITEM SEPARATOR
+        MENUITEM "CO&M ports...",               IDM_DEFINE_COMPORTS
+        MENUITEM "&Connections...",             IDM_DEFINE_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Terminals...",               IDM_DEFINE_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Defaults...",                IDM_DEFINE_DEFAULTS
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Define...",                  IDM_OPTIONS_DEFINE
+        MENUITEM "Error Logging...",            IDM_LOGGING
+        MENUITEM "&Preferences...",             IDM_PREFERENCES
+        MENUITEM "&Quiet",                      IDM_QUIET
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Broadcaster...",             IDM_TOOLS_BROADCASTER
+        MENUITEM "&Viewer...",                  IDM_TOOLS_VIEWER
+        MENUITEM "&Connection Map",             IDM_CROSSPOINT
+        MENUITEM "&Performance Data",           IDM_PERFORMANCE_DATA
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile Horizontal\tShift+F4",  IDM_WINDOWTILE_HORIZONTAL
+        MENUITEM "Tile &Vertical",              IDM_WINDOWTILE_VERTICAL
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM "&Search...",                  IDM_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "&About Telacon...",           ID_APP_ABOUT
+    END
+    POPUP "Debug"
+    BEGIN
+        MENUITEM "Simulate Disk &Full",         IDM_DISKFULL
+        MENUITEM "Simulate Ti&me",              IDM_SIMTIME
+        MENUITEM "Tim&ed DB",                   IDM_TIMED_DB
+        MENUITEM "Trace &Watchdog",             IDM_TRACE_WATCHDOG
+        MENUITEM "&RCON info...",               IDM_RCONSTAT
+        MENUITEM SEPARATOR
+        MENUITEM "&Break",                      IDM_BREAK
+        MENUITEM "&Trace...",                   IDM_TRACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Show print setup",           IDM_SHOW_SETUP
+        MENUITEM "&Clean Window Menu",          IDM_CLEAN_MENU
+        MENUITEM "Error &Log test",             IDM_LOG_ERROR
+        MENUITEM SEPARATOR
+        MENUITEM "&Display DB stats",           IDM_DB_STATS
+        MENUITEM "&Memory statistics",          IDM_SHOW_MEMORY
+        MENUITEM "Show memory &Usage",          IDM_SHOW_USAGE
+        MENUITEM "Lo&g memory allocation",      IDM_MEMORY_LOG
+        MENUITEM SEPARATOR
+        MENUITEM "&Retain journal files",       IDM_RETAIN_JOURNALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide this menu",             IDM_HIDE_DEBUG_MENU
+    END
+END
+
+IDR_CROSSPOINT MENU DISCARDABLE 
+BEGIN
+    MENUITEM "&File",                       65535
+END
+
+CONSOLEPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "ConsolePopup"
+    BEGIN
+        MENUITEM "&Edit...",                    IDM_AGENTMENU_EDIT
+        MENUITEM "E&nable/Disable filters...",  IDM_AGENTMENU_FILTERS
+        MENUITEM "C&lear All",                  IDM_AGENTMENU_CLEARALL
+        MENUITEM "&Print...",                   IDM_AGENTMENU_PRINT
+    END
+END
+
+EVENTPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "EventPopupMenu"
+    BEGIN
+        MENUITEM "&Edit event [%s]...",         IDM_AGENTMENU_EDIT
+        MENUITEM "Edit &filter [%s]...",        IDM_EDIT_FILTER
+        MENUITEM "E&nable/Disable filters...",  IDM_AGENTMENU_FILTERS
+        MENUITEM "C&lear All",                  IDM_AGENTMENU_CLEARALL
+        MENUITEM "&Print...",                   IDM_AGENTMENU_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Respond...",                 IDM_AGENTMENU_RESPOND
+        MENUITEM "&Info...",                    IDM_INFO
+        MENUITEM "Show &Properties...",         IDM_SHOW_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Journalled",                  IDM_JOURNAL
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     IDM_AGENTMENU_DELETE
+        MENUITEM "&Mark ",                      IDM_MARK
+        MENUITEM "&Unmark",                     IDM_UNMARK
+        MENUITEM "Mark &Alert",                 IDM_MARKALERT
+        MENUITEM "Unmar&k Alert",               IDM_UNMARKALERT
+        MENUITEM SEPARATOR
+        MENUITEM "&Silence",                    IDM_SILENCE
+        MENUITEM "Repea&t",                     IDM_SAYAGAIN
+        MENUITEM "&Silence All",                IDM_SILENCEALL
+        MENUITEM "S&ound All",                  IDM_SOUNDALL
+    END
+END
+
+IDR_BUTTON_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Alert Button Popup Menu"
+    BEGIN
+        MENUITEM "Dismiss %d alerts",           IDM_DISMISS
+    END
+END
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Page &Layout...",             IDM_PAGELAYOUT
+        MENUITEM "P&rint Setup...",             IDM_PRINTSETUP
+        MENUITEM "&Print...\tCtrl+P",           IDM_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X",                IDM_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               IDM_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              IDM_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                IDM_EDIT_DELETE
+        MENUITEM "&Select All\tCtrl+A",         IDM_EDIT_SELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "C&lear",                      IDM_EDIT_CLEARALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tAlt+F3",            IDM_EDIT_FIND
+        MENUITEM "Find Event...\tCtrl+F3",      ID_EDIT_FINDEVENT
+    END
+    POPUP "&Control"
+    BEGIN
+        MENUITEM "&Start Agents...",            IDM_START_AGENTS
+        MENUITEM "Sto&p Agents...",             IDM_STOP_AGENTS
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Connections...",        IDM_OPEN_CONNECTIONS
+        MENUITEM "&Close Connections..",        IDM_CLOSE_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Assign Terminals...",        IDM_ASSIGN_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "S&peech Setup...",            IDM_SPEECH_SETUP
+        MENUITEM "&Restart Reflection Filter",  IDM_RESTART_FILTER
+    END
+    POPUP "&Define"
+    BEGIN
+        MENUITEM "&Agents...",                  IDM_DEFINE_AGENTS
+        MENUITEM "&Filters...",                 IDM_DEFINE_FILTERS
+        MENUITEM "&Tasks...",                   IDM_DEFINE_TASKS
+        MENUITEM SEPARATOR
+        MENUITEM "CO&M ports...",               IDM_DEFINE_COMPORTS
+        MENUITEM "&Connections...",             IDM_DEFINE_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Terminals...",               IDM_DEFINE_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Defaults...",                IDM_DEFINE_DEFAULTS
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Broadcaster...",             IDM_TOOLS_BROADCASTER
+        MENUITEM "&Viewer...",                  IDM_TOOLS_VIEWER
+        MENUITEM "&Connection Map",             IDM_CROSSPOINT
+        MENUITEM "&Performance Data",           IDM_PERFORMANCE_DATA
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Define...",                  IDM_OPTIONS_DEFINE
+        MENUITEM "Error Logging...",            IDM_LOGGING
+        MENUITEM "&Preferences...",             IDM_PREFERENCES
+        MENUITEM "&Quiet",                      IDM_QUIET
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade\tShift+F5",          IDM_WINDOWCASCADE
+        MENUITEM "&Tile Horizontal\tShift+F4",  IDM_WINDOWTILE_HORIZONTAL
+        MENUITEM "Tile &Vertical",              IDM_WINDOWTILE_VERTICAL
+        MENUITEM "Arrange &Icons",              IDM_WINDOWICONS
+        MENUITEM SEPARATOR
+        MENUITEM "Tool&bar",                    IDM_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 IDM_VIEW_STATUSBAR
+        MENUITEM "&Alert Bar",                  IDM_VIEW_ALERTBAR
+        MENUITEM "Window Placeholder",          IDM_WINDOW_PLACEHOLDER
+        , GRAYED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents\tF1",               IDM_HELP_CONTENTS
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   IDM_ABOUT
+    END
+END
+
+IDR_TIMEDSTATUS_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Timed Status Popup"
+    BEGIN
+        MENUITEM "&Disable",                    IDM_DISABLE
+        MENUITEM "&Silence",                    IDM_SILENCE
+        MENUITEM "&Reset Frequency Counter",    IDM_RESET
+        MENUITEM "&Edit Filter",                IDM_EDIT
+    END
+END
+
+LOGPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "AgentMenu"
+    BEGIN
+        MENUITEM "&Edit...",                    IDM_AGENTMENU_EDIT
+        MENUITEM "E&nable/Disable Filters",     IDM_EDITFILTERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Viewer",                     IDM_AGENTMENU_VIEWER
+    END
+END
+
+MAPPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "ConnectMap Popup"
+    BEGIN
+        MENUITEM "Edit &Log [%s]...",           IDM_EDIT_LOG
+        MENUITEM "Edit &Console [%s]...",       IDM_EDIT_CONSOLE
+        MENUITEM "Edit &Event [%s]...",         IDM_EDIT_EVENT
+        MENUITEM "Cl&ose Log [%s]",             IDM_CLOSE_LOG
+        MENUITEM "Cl&ose Console [%s]",         IDM_CLOSE_CONSOLE
+        MENUITEM "Cl&ose Event [%s]",           IDM_CLOSE_EVENT
+        MENUITEM "&View Log [%s]",              IDM_VIEW_LOG
+        MENUITEM "&View Console [%s]",          IDM_VIEW_CONSOLE
+        MENUITEM "&View Event [%s]",            IDM_VIEW_EVENT
+        MENUITEM "Sto&p Agents...",             IDM_STOP_AGENTS
+        MENUITEM "&Start Agents...",            IDM_START_AGENTS
+        MENUITEM SEPARATOR
+        MENUITEM "Edit &Connection [%s]...",    IDM_EDIT_CONNECTION
+        MENUITEM "Cl&ose Connection [%s]",      IDM_CLOSE_CONNECTION
+        MENUITEM "&Modify connections...",      IDM_EDIT_CONNECTIONS
+        MENUITEM "&Open Connections...",        IDM_OPEN_CONNECTIONS
+        MENUITEM "Cl&ose Connections...",       IDM_CLOSE_CONNECTIONS
+        MENUITEM "Cl&ose Selected Connections", IDM_CLOSE_SEL_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Font...",                    IDM_SETFONT
+    END
+END
+
+MESSAGEWINDOWPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "MessageWindowPopup"
+    BEGIN
+        MENUITEM "&Edit...",                    IDM_AGENTMENU_EDIT
+        MENUITEM "C&lear All",                  IDM_AGENTMENU_CLEARALL
+        MENUITEM "&Font...",                    IDM_AGENTMENU_FONT
+        MENUITEM "&Print...",                   IDM_AGENTMENU_PRINT
+        MENUITEM "&Delete",                     IDM_AGENTMENU_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&ItemHeight",                 IDM_ITEMHEIGHT
+    END
+END
+
+TIMERPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "AgentMenu"
+    BEGIN
+        MENUITEM "&Edit...",                    IDM_AGENTMENU_EDIT
+        MENUITEM "&Font...",                    IDM_AGENTMENU_FONT
+        MENUITEM "&Print...",                   IDM_AGENTMENU_PRINT
+        MENUITEM "&Delete",                     IDM_AGENTMENU_DELETE
+        MENUITEM "Select &all",                 IDM_AGENTMENU_SELECTALL
+        MENUITEM "P&ause Task",                 IDM_PAUSE
+        MENUITEM "&Unpause Task",               IDM_UNPAUSE
+        MENUITEM "&Show Properties",            IDM_SHOW_PROPERTIES
+    END
+END
+
+IDR_MESSAGES MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "&Alert Bar",                  IDM_VIEW_ALERTBAR
+    END
+    POPUP "&Control"
+    BEGIN
+        MENUITEM "Agents...",                   IDM_AGENTS
+        MENUITEM "&Connections...",             IDM_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Assign Terminals...",        IDM_ASSIGN_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "S&peech Setup...",            IDM_SPEECH_SETUP
+        MENUITEM "&Restart Reflection Filter",  IDM_RESTART_FILTER
+    END
+    POPUP "&Define"
+    BEGIN
+        MENUITEM "&Agents...",                  IDM_DEFINE_AGENTS
+        MENUITEM "&Filters...",                 IDM_DEFINE_FILTERS
+        MENUITEM "&Tasks...",                   IDM_DEFINE_TASKS
+        MENUITEM SEPARATOR
+        MENUITEM "CO&M ports...",               IDM_DEFINE_COMPORTS
+        MENUITEM "&Connections...",             IDM_DEFINE_CONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Terminals...",               IDM_DEFINE_TERMINALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Defaults...",                IDM_DEFINE_DEFAULTS
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Define...",                  IDM_OPTIONS_DEFINE
+        MENUITEM "Error Logging...",            IDM_LOGGING
+        MENUITEM "&Preferences...",             IDM_PREFERENCES
+        MENUITEM "&Quiet",                      IDM_QUIET
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Broadcaster...",             IDM_TOOLS_BROADCASTER
+        MENUITEM "&Viewer...",                  IDM_TOOLS_VIEWER
+        MENUITEM "&Connection Map",             IDM_CROSSPOINT
+        MENUITEM "&Performance Data",           IDM_PERFORMANCE_DATA
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile Horizontal\tShift+F4",  IDM_WINDOWTILE_HORIZONTAL
+        MENUITEM "Tile &Vertical",              IDM_WINDOWTILE_VERTICAL
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM "&Search...",                  IDM_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "&About Telacon...",           ID_APP_ABOUT
+    END
+    POPUP "Debug"
+    BEGIN
+        MENUITEM "Simulate Disk &Full",         IDM_DISKFULL
+        MENUITEM "Simulate Ti&me",              IDM_SIMTIME
+        MENUITEM "Tim&ed DB",                   IDM_TIMED_DB
+        MENUITEM "Trace &Watchdog",             IDM_TRACE_WATCHDOG
+        MENUITEM "&RCON info...",               IDM_RCONSTAT
+        MENUITEM SEPARATOR
+        MENUITEM "&Break",                      IDM_BREAK
+        MENUITEM "&Trace...",                   IDM_TRACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Show print setup",           IDM_SHOW_SETUP
+        MENUITEM "&Clean Window Menu",          IDM_CLEAN_MENU
+        MENUITEM "Error &Log test",             IDM_LOG_ERROR
+        MENUITEM SEPARATOR
+        MENUITEM "&Display DB stats",           IDM_DB_STATS
+        MENUITEM "&Memory statistics",          IDM_SHOW_MEMORY
+        MENUITEM "Show memory &Usage",          IDM_SHOW_USAGE
+        MENUITEM "Lo&g memory allocation",      IDM_MEMORY_LOG
+        MENUITEM SEPARATOR
+        MENUITEM "&Retain journal files",       IDM_RETAIN_JOURNALS
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide this menu",             IDM_HIDE_DEBUG_MENU
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT
+    VK_F1,          ID_HELP,                VIRTKEY 
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 226, 133
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About "
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,193,118,32,14,WS_GROUP
+    LTEXT           "FileDescription",IDC_ABOUT_FILEDESCRIPTION,47,25,118,8
+    LTEXT           "Version ",IDC_STATIC,171,25,28,8
+    LTEXT           "ProductVersion",IDC_ABOUT_VERSION,199,25,25,8
+    LTEXT           "LegalCopyright",IDC_ABOUT_LEGALCOPYRIGHT,47,33,168,16
+    LTEXT           "Comments",IDC_ABOUT_COMMENTS,47,54,168,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,2,86,223,1
+    LTEXT           "OSVERSION",IDC_ABOUT_OSVERSION,4,89,196,8
+    LTEXT           "ProcessorVersion",IDC_ABOUT_PROCESSORVERSION,4,97,196,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,2,107,223,1
+    LTEXT           "LegalTrademarks",IDC_ABOUT_LEGALTRADEMARKS,3,112,156,18
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,41,21,20
+    CONTROL         143,IDC_STATIC,"Static",SS_BITMAP,3,3,32,30
+    LTEXT           "License Name",IDC_ABOUT_LICENSE,47,64,168,8
+    LTEXT           "License Company",IDC_ABOUT_COMPANY,47,74,168,8
+    RTEXT           "Licensed to: ",IDC_STATIC,3,64,39,8
+END
+
+IDR_MAINFRAME DIALOG DISCARDABLE  0, 0, 330, 16
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: layout dialog bar ",IDC_STATIC,12,4,300,8
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  10, 25, 226, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About "
+FONT 8, "Helv"
+BEGIN
+    ICON            186,IDC_ABOUTICON,7,7,18,20
+    CONTROL         "",IDC_COPYRIGHT,"Static",SS_BLACKRECT,5,74,217,1
+    DEFPUSHBUTTON   "OK",IDOK,93,119,40,14
+    LTEXT           "Available Memory:",IDC_COPYRIGHT,7,80,60,8,SS_NOPREFIX | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_FREEMEM,74,80,79,8,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "Math Co-processor:",IDC_COPYRIGHT,7,88,64,8,SS_NOPREFIX | 
+                    NOT WS_GROUP
+    LTEXT           "~",IDC_COPROCESSOR,74,88,79,8
+    LTEXT           "System Resources:",IDC_COPYRIGHT,7,104,63,8,SS_NOPREFIX | 
+                    NOT WS_GROUP
+    LTEXT           "%d%%",IDC_RESOURCES,74,104,79,8,SS_NOPREFIX | NOT 
+                    WS_GROUP
+    LTEXT           "Disk Space:",IDC_COPYRIGHT,7,96,43,8,SS_NOPREFIX | NOT 
+                    WS_GROUP
+    LTEXT           "",IDC_DISK_SPACE,74,96,79,8,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "pgm name & version",IDC_TITLELINE,55,5,171,8,
+                    SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "copyright message",IDC_COPYRIGHT1A,55,15,171,8,
+                    SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "All rights reserved.",IDC_COPYRIGHT1C,55,25,62,8,
+                    SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "Portions Copyright © Microsoft Corp.",IDC_COPYRIGHT2A,
+                    55,44,120,8,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "All rights reserved.",IDC_COPYRIGHT2C,55,60,62,8,
+                    SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "1985-1993",IDC_COPYRIGHT2B,55,52,36,8,SS_NOPREFIX | NOT 
+                    WS_GROUP
+    CONTROL         "",IDC_METER,"Meter",NOT WS_VISIBLE,5,119,217,14
+END
+
+IDD_AGENT_CONTROL DIALOG DISCARDABLE  10, 25, 175, 180
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Start/Stop Agents"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Agents:",IDC_STATIC,7,7,44,8
+    LISTBOX         IDC_AGENT_LIST,7,18,104,116,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List Agents of &Type:",IDC_STATIC,7,141,85,8
+    COMBOBOX        IDC_AGENT_TYPE,7,152,104,99,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,118,18,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,34,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,118,121,50,14
+END
+
+IDD_AGENTCOLOR DIALOG DISCARDABLE  0, 0, 222, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Agent Color"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Color",IDC_STATIC,7,6,155,63,WS_GROUP
+    CONTROL         "&Connection",IDC_CONNECTION_COLOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_TABSTOP,13,22,48,
+                    10
+    CONTROL         "Fi&lter",IDC_FILTER_COLOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_TABSTOP,13,34,48,10
+    CONTROL         "&Fixed",IDC_FIXED_COLOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,13,47,48,10
+    COMBOBOX        IDC_COLOR,75,36,77,82,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,166,10,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,166,26,50,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDC_DOHELP,166,54,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,72,21,82,42
+END
+
+IDD_AGENTCONN DIALOG DISCARDABLE  18, 30, 361, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure Connections"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "System Connections:",IDC_STATIC,7,7,72,8
+    LISTBOX         IDC_LHS,7,18,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Add-->",IDC_ADD_CONNECTION,118,34,50,14
+    PUSHBUTTON      "Add A&ll->",IDC_ADD_ALL_CONNECTIONS,118,50,50,14
+    PUSHBUTTON      "<--&Remove",IDC_REMOVE_CONNECTION,118,66,50,14
+    PUSHBUTTON      "<-Re&move All",IDC_REMOVE_ALL_CONNECTIONS,118,82,50,14
+    PUSHBUTTON      "&Duplicate",IDC_BUTTON1,118,103,50,14
+    LTEXT           "Agent Connections:",IDC_STATIC,175,7,75,8
+    LISTBOX         IDC_RHS,175,18,102,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Connection &Filters...",IDC_CONNECTION_FILTERS,285,88,
+                    71,14
+    DEFPUSHBUTTON   "OK",IDOK,285,18,71,14
+    PUSHBUTTON      "Cancel",IDCANCEL,285,34,71,14
+    LTEXT           "Static",IDC_REASON,287,111,68,12
+    CONTROL         "",IDC_REASON_FRAME,"Static",SS_BLACKRECT,281,105,80,24
+    PUSHBUTTON      "&Help",IDC_DOHELP,285,51,71,14
+END
+
+IDD_AGENTCONNFILTERS DIALOG DISCARDABLE  18, 30, 290, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Connection Filters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Filter Mode",-1,7,7,57,43
+    CONTROL         "Include",IDC_INCLUDE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,14,20,34,10
+    CONTROL         "Exclude",IDC_EXCLUDE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,14,33,37,10
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,4,56,278,1
+    LTEXT           "&System Filters:",-1,7,64,48,8
+    LISTBOX         IDC_LHS,7,76,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "&Add-->",IDC_ADD,119,110,50,14
+    PUSHBUTTON      "Add A&ll->",IDC_ADD_ALL,119,126,50,14
+    PUSHBUTTON      "<--&Remove",IDC_REMOVE,119,142,50,14
+    PUSHBUTTON      "<-Re&move All",IDC_REMOVE_ALL,119,158,50,14
+    LTEXT           "A&gent Filters:",-1,176,65,44,8
+    LISTBOX         IDC_RHS,176,76,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,234,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,234,23,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,234,39,50,14
+END
+
+IDD_AGENTFILTEROPTIONS DIALOG DISCARDABLE  10, 25, 333, 256
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Filter Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PATTERN,39,7,230,12,ES_AUTOHSCROLL | ES_READONLY
+    COMBOBOX        IDC_COLOR,40,23,80,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CONSOLE_DISPLAY_FORMAT,13,70,230,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    EDITTEXT        IDC_EVENT_DISPLAY_FORMAT,12,120,230,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    EDITTEXT        IDC_EVENT_DUPLICATE_FORMAT,12,148,230,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    CONTROL         "Display E&vent",IDC_DISPLAY_EVENT,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,12,168,60,10
+    CONTROL         "&Send Task",IDC_SEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,183,46,10
+    COMBOBOX        IDC_TASK_LIST,63,183,104,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Define Help Text...",IDC_BUTTON1,172,170,70,14
+    EDITTEXT        IDC_LOG_DISPLAY_FORMAT,13,233,230,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,276,6,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,276,22,50,14,WS_GROUP
+    LTEXT           "&Pattern:",IDC_STATIC,7,10,27,8
+    LTEXT           "&Color:",IDC_STATIC,7,26,20,8
+    GROUPBOX        "Console Agent Options",IDC_STATIC,6,44,244,47
+    LTEXT           "&Display Format:",IDC_STATIC,13,58,51,8
+    GROUPBOX        "Event Agent Options",IDC_STATIC,6,94,244,107
+    GROUPBOX        "Log Agent Options",IDC_STATIC,7,203,243,46
+    LTEXT           "Display &Format:",IDC_STATIC,11,222,51,8
+    LTEXT           "Display &Format:",IDC_STATIC,11,111,51,8
+    LTEXT           "Dup&licate Format:",IDC_STATIC,11,138,59,8
+    PUSHBUTTON      "&Help",IDC_DOHELP,276,49,50,14
+    CONTROL         "Mark as alert",IDC_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,83,168,62,10
+END
+
+IDD_AGENTLINEFORMAT DIALOG DISCARDABLE  0, 0, 338, 144
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Agent Line Format"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Line Format",-1,7,7,269,128
+    CONTROL         "&Use Prefix",IDC_USE_PREFIX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,22,43,45,10
+    GROUPBOX        "Prefix",-1,14,28,255,59
+    COMBOBOX        IDC_TOKEN_LIST1,21,58,67,48,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    EDITTEXT        IDC_SEPARATOR1,91,58,13,13,ES_AUTOHSCROLL | WS_GROUP
+    COMBOBOX        IDC_TOKEN_LIST2,109,58,67,48,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_SEPARATOR2,179,57,13,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_TOKEN_LIST3,197,58,67,48,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Example",IDC_EXAMPLE_FRAME,13,92,180,32
+    CTEXT           "",IDC_EXAMPLE,17,103,170,15,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,283,10,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,283,26,50,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDC_DOHELP,283,55,50,14
+END
+
+IDD_ALERTBAR DIALOG DISCARDABLE  0, 0, 187, 14
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_ASSIGNTERMINALS DIALOG DISCARDABLE  10, 25, 291, 248
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Assign Terminals"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Terminals:",IDC_STATIC,7,7,70,8
+    LISTBOX         IDC_TERMINAL_LIST,7,18,104,116,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Connections:",IDC_STATIC,123,6,46,8
+    LISTBOX         IDC_CONNECTION_LIST,124,18,104,116,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "A&ssigned Terminal Connections:",IDC_STATIC,7,144,105,8
+    LISTBOX         IDC_ASSIGNED_LIST,7,154,221,86,LBS_SORT | 
+                    LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Assign",IDC_ASSIGN,234,63,50,14
+    PUSHBUTTON      "&Deassign",IDC_DEASSIGN,234,79,50,14
+    PUSHBUTTON      "Deassign A&ll",IDC_DEASSIGN_ALL,234,101,50,14
+    DEFPUSHBUTTON   "OK",IDOK,234,17,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,234,33,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,235,123,50,14
+    RTEXT           "ConnID",IDC_LOGICAL_CAPTION,234,156,24,8
+    EDITTEXT        IDC_LOGICAL,264,153,21,13,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_BROADCASTER DIALOG DISCARDABLE  10, 25, 353, 212
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Broadcaster"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Broadcast ",-1,301,73,51,43,WS_GROUP
+    CONTROL         "&Message",IDC_MESSAGE_OPTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,306,89,40,10
+    CONTROL         "&Task",IDC_TASK_OPTION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,306,102,35,10
+    LTEXT           "Tas&ks:",IDC_TASK_CAPTION,14,25,23,8
+    COMBOBOX        IDC_TASK_TASK_LIST,39,22,95,133,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "&Command Text:",IDCD_TASK_STATIC3,14,41,51,8
+    EDITTEXT        IDC_MESSAGE_TEXT,14,52,272,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Task Connections:",IDC_LHS_CAPTION,14,66,102,8
+    LISTBOX         IDC_LHS,14,78,102,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Broadcast Message",IDC_BROADCAST_TYPE,6,6,287,203
+    PUSHBUTTON      "&Add-->",IDC_ADD,125,97,50,14
+    PUSHBUTTON      "Add A&ll->",IDC_ADD_ALL,125,113,50,14
+    PUSHBUTTON      "<--&Remove",IDC_REMOVE,125,129,50,14
+    PUSHBUTTON      "<-Re&move All",IDC_REMOVE_ALL,125,145,50,14
+    LTEXT           "&Message Connections:",IDC_RHS_CAPTION,182,66,101,8
+    LISTBOX         IDC_RHS,182,78,102,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Cl&ose",IDOK,299,9,50,14,WS_GROUP
+    PUSHBUTTON      "Se&nd",IDC_SEND,299,31,50,14,WS_GROUP
+    EDITTEXT        IDC_TASK_TEXT,13,194,272,13,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_DISABLED | WS_GROUP
+    PUSHBUTTON      "&Help",IDC_DOHELP,299,51,50,14
+END
+
+IDD_BUTTONBAR DIALOG DISCARDABLE  14, 24, 215, 30
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    CONTROL         "441;;TBSTARTAGENTS",TB_STARTAGENTS,"HButt",0x6000,5,3,
+                    24,24
+    CONTROL         "441;;TBSTOPAGENTS",TB_STOPAGENTS,"HButt",0x6000,28,3,24,
+                    24
+    CONTROL         "441;;TBOPEN",TB_OPEN,"HButt",0x6000,57,3,24,24
+    CONTROL         "441;;TBCLOSE",TB_CLOSE,"HButt",0x6000,79,3,24,24
+    CONTROL         "441;;TBVIEWER",TB_VIEWER,"HButt",0x6000,108,3,24,24
+    CONTROL         "441;;TBBROADCASTER",TB_BROADCASTER,"HButt",0x6000,132,3,
+                    24,24
+    CONTROL         "441;;TBPRINT",TB_PRINT,"HButt",0x6000,161,3,24,24
+    CONTROL         "441;;TBHELP",TB_ABOUT,"HButt",0x6000,185,3,24,24
+END
+
+IDD_COMPORTS_32 DIALOG DISCARDABLE  0, 0, 246, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Available COM ports"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "COM&1",IDC_COM1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    6,35,10
+    CONTROL         "COM&2",IDC_COM2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    17,35,10
+    CONTROL         "COM&3",IDC_COM3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    28,35,10
+    CONTROL         "COM&4",IDC_COM4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    39,35,10
+    CONTROL         "COM&5",IDC_COM5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    50,35,10
+    CONTROL         "COM&6",IDC_COM6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    61,35,10
+    CONTROL         "COM&7",IDC_COM7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    72,35,10
+    CONTROL         "COM&8",IDC_COM8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    83,35,10
+    CONTROL         "COM&13",IDC_COM13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,6,35,10
+    CONTROL         "COM&14",IDC_COM14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,17,35,10
+    CONTROL         "COM&15",IDC_COM15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,28,35,10
+    CONTROL         "COM&16",IDC_COM16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,39,35,10
+    CONTROL         "COM&17",IDC_COM17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,50,35,10
+    CONTROL         "COM&18",IDC_COM18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,61,35,10
+    CONTROL         "COM&19",IDC_COM19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,72,35,10
+    CONTROL         "COM&20",IDC_COM20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,83,35,10
+    CONTROL         "COM&21",IDC_COM21,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,94,35,10
+    CONTROL         "COM&22",IDC_COM22,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,105,35,10
+    CONTROL         "COM&23",IDC_COM23,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,116,35,10
+    CONTROL         "COM&24",IDC_COM24,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,127,35,10
+    CONTROL         "COM&25",IDC_COM25,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,6,35,10
+    CONTROL         "COM&26",IDC_COM26,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,17,35,10
+    CONTROL         "COM&27",IDC_COM27,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,28,35,10
+    CONTROL         "COM&28",IDC_COM28,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,39,35,10
+    CONTROL         "COM&29",IDC_COM29,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,50,35,10
+    CONTROL         "COM&30",IDC_COM30,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,61,35,10
+    CONTROL         "COM&31",IDC_COM31,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,72,35,10
+    CONTROL         "COM&32",IDC_COM32,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,83,35,10
+    CONTROL         "COM&33",IDC_COM33,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,94,35,10
+    CONTROL         "COM&34",IDC_COM34,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,105,35,10
+    CONTROL         "COM&35",IDC_COM35,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,116,35,10
+    CONTROL         "COM&36",IDC_COM36,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,127,35,10
+    CONTROL         "COM&37",IDC_COM37,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,6,35,10
+    CONTROL         "COM&38",IDC_COM38,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,17,35,10
+    CONTROL         "COM&39",IDC_COM39,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,28,35,10
+    CONTROL         "COM&40",IDC_COM40,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,39,35,10
+    CONTROL         "COM&41",IDC_COM41,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,50,35,10
+    CONTROL         "COM&42",IDC_COM42,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,61,35,10
+    CONTROL         "COM&43",IDC_COM43,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,72,35,10
+    CONTROL         "COM&44",IDC_COM44,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,83,35,10
+    CONTROL         "COM&45",IDC_COM45,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,94,35,10
+    CONTROL         "COM&46",IDC_COM46,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,105,35,10
+    CONTROL         "COM&47",IDC_COM47,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,116,35,10
+    CONTROL         "COM&48",IDC_COM48,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,127,35,10
+    CONTROL         "COM&49",IDC_COM49,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,6,35,10
+    CONTROL         "COM&50",IDC_COM50,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,17,35,10
+    CONTROL         "COM&51",IDC_COM51,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,28,35,10
+    CONTROL         "COM&52",IDC_COM52,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,39,35,10
+    CONTROL         "COM&53",IDC_COM53,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,50,35,10
+    CONTROL         "COM&54",IDC_COM54,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,61,35,10
+    CONTROL         "COM&55",IDC_COM55,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,72,35,10
+    CONTROL         "COM&56",IDC_COM56,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,83,35,10
+    CONTROL         "COM&57",IDC_COM57,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,94,35,10
+    CONTROL         "COM&58",IDC_COM58,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,105,35,10
+    CONTROL         "COM&59",IDC_COM59,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,116,35,10
+    CONTROL         "COM&60",IDC_COM60,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,127,35,10
+    CONTROL         "COM&61",IDC_COM61,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    205,94,35,10
+    CONTROL         "COM&62",IDC_COM62,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    205,105,35,10
+    CONTROL         "COM&63",IDC_COM63,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    205,116,35,10
+    CONTROL         "COM&64",IDC_COM64,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    205,127,35,10
+    DEFPUSHBUTTON   "OK",IDOK,205,4,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,205,21,40,14
+    CONTROL         "COM&9",IDC_COM9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    94,35,10
+    CONTROL         "COM&10",IDC_COM10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,105,35,10
+    CONTROL         "COM&11",IDC_COM11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,116,35,10
+    CONTROL         "COM&12",IDC_COM12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,127,35,10
+END
+
+IDD_CONFIRM DIALOG DISCARDABLE  10, 25, 279, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDYES,18,52,50,14
+    PUSHBUTTON      "Yes to &All",IDYESALL,82,52,50,14
+    PUSHBUTTON      "&No",IDNO,146,52,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,210,52,50,14
+    LTEXT           "Static",IDC_DELETE_WHAT,11,7,166,8
+    EDITTEXT        IDC_ITEM,11,22,260,13,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_DISABLED
+    SCROLLBAR       IDC_HSCROLL,11,36,260,12,NOT WS_VISIBLE | WS_TABSTOP
+END
+
+IDD_CONNECTION DIALOG DISCARDABLE  10, 25, 280, 280
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Connection "
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_NAME_CAPTION,7,10,22,8
+    EDITTEXT        IDC_NAME,38,7,115,13,ES_AUTOHSCROLL
+    GROUPBOX        "Port Settings",IDC_STATIC,7,24,208,65
+    LTEXT           "Connection &Port",IDC_STATIC,13,42,53,8
+    COMBOBOX        IDC_COMPORT,72,40,63,61,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Host OS:",IDC_STATIC,13,60,31,8
+    COMBOBOX        IDC_HOST_OSCB,72,57,63,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Can &Transmit Data to connection",IDC_TRANSMIT_DATA,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,76,118,10
+    GROUPBOX        "Communication Settings",IDC_COMMUNICATIONSGB,7,92,208,
+                    70
+    RTEXT           "&Baud Rate:",IDC_BAUDCP,13,107,42,8,NOT WS_GROUP
+    COMBOBOX        IDC_BAUDCB,63,105,64,115,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Data Bits:",IDC_DATABITSCP,138,107,39,8,NOT WS_GROUP
+    COMBOBOX        IDC_DATABITSCB,179,105,26,46,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "P&arity:",IDC_PARITYCP,13,122,42,8,NOT WS_GROUP
+    COMBOBOX        IDC_PARITYCB,63,122,64,56,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Stop Bits:",IDC_STOPBITSCP,138,122,39,8,NOT WS_GROUP
+    COMBOBOX        IDC_STOPBITSCB,179,122,26,30,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "F&low Control:",IDC_FLOWCTRLCP,12,141,42,8,NOT WS_GROUP
+    COMBOBOX        IDC_FLOWCTRLCB,62,139,143,142,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Data Formatting Settings",IDC_STATIC,7,164,270,110
+    LTEXT           "C&olor:",IDC_STATIC,14,185,20,8
+    COMBOBOX        IDC_COLOR,38,183,77,120,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_PROMPTS,175,182,98,34,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Agent Tags",IDC_STATIC,14,200,165,70
+    LTEXT           "&Console:",IDC_STATIC,20,218,30,8
+    EDITTEXT        IDC_CONSOLE_TAG,56,216,115,13,ES_AUTOHSCROLL
+    LTEXT           "&Event:",IDC_STATIC,20,237,23,8
+    EDITTEXT        IDC_EVENT_TAG,56,234,115,13,ES_AUTOHSCROLL
+    LTEXT           "Lo&g:",IDC_STATIC,20,253,16,8
+    EDITTEXT        IDC_LOG_TAG,56,251,115,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,222,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,23,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,222,44,50,14
+    EDITTEXT        IDC_CONFLICT,140,40,71,29,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY
+    RTEXT           "Prompt detect:",IDC_PROMPT_DETECT_CAPTION,121,185,52,8
+    CONTROL         "Static",IDC_PROMPTPATTERN,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,183,211,86,36
+    GROUPBOX        "Prompt Pattern",IDC_PROMPTPATTERN_CAPTION,180,200,94,53
+    EDITTEXT        IDC_HOSTNAME,63,105,142,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "A host designator, of the form\nmycomputer.com\n192.123.12.11\n*",
+                    IDC_HOSTHELP,62,122,143,38
+END
+
+IDD_CONNECTIONS DIALOG DISCARDABLE  10, 25, 175, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Open Connections"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "C&onnections:",IDC_STATIC,7,7,44,8
+    LISTBOX         IDC_CONNECTION_LIST,7,18,104,116,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,118,17,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,34,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,118,121,50,14
+    LTEXT           "~",IDC_PORTTYPE,120,64,47,11
+END
+
+IDD_CONSOLE DIALOG DISCARDABLE  0, 0, 215, 124
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Console"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_NAME_CAPTION,7,10,22,8
+    EDITTEXT        IDC_NAME,37,7,115,13,ES_AUTOHSCROLL
+    GROUPBOX        "Console Options",IDC_STATIC,7,29,144,59
+    CONTROL         "Acti&ve",IDC_ACTIVE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,13,44,36,13
+    LTEXT           "&Number of Lines:",IDC_STATIC,13,63,56,8
+    CONTROL         "%nw###0",IDC_MAXIMUM_LINES,"HEdit_SS",WS_TABSTOP | 
+                    0xa02,72,61,31,12
+    PUSHBUTTON      "Connec&tions...",IDC_CONNECTIONS,159,45,52,14
+    PUSHBUTTON      "&Font..",IDC_FONT,159,61,52,14
+    PUSHBUTTON      "&Color..",IDC_COLOR,159,77,52,14
+    PUSHBUTTON      "&Line Format...",IDC_LINE_FORMAT,159,93,52,14
+    DEFPUSHBUTTON   "OK",IDOK,159,7,52,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,23,52,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,159,109,52,14
+END
+
+IDD_CTLFILTER DIALOG DISCARDABLE  0, 0, 259, 222
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Control Character Filter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,6,171,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,6,188,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,6,206,50,14
+    CONTROL         "\\000 0x00 00 NUL ^@",IDC_000,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,6,89,10
+    CONTROL         "\\001 0x01 01 SOH ^A",IDC_001,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,16,84,10
+    CONTROL         "\\002 0x02 02 STX ^B",IDC_002,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,26,86,10
+    CONTROL         "\\003 0x03 03 ETX ^C",IDC_003,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,36,84,10
+    CONTROL         "\\004 0x04 04 EOT ^D",IDC_004,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,46,85,10
+    CONTROL         "\\005 0x05 05 ENQ ^E",IDC_005,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,56,85,10
+    CONTROL         "\\006 0x06 06 ACK ^F",IDC_006,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,66,84,10
+    CONTROL         "\\007 0x07 07 BEL ^G Bell",IDC_007,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,76,98,10
+    CONTROL         "\\010 0x08 08 BS   ^H \\b Backspace",IDC_008,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,86,133,10
+    CONTROL         "\\011 0x09 09 TAB ^I \\t Tab",IDC_009,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,96,108,10
+    CONTROL         "\\012 0x0A 10 LF  ^J \\n LineFeed",IDC_010,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,106,124,10
+    CONTROL         "\\013 0x0B 11 VT  ^K",IDC_011,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,116,81,10
+    CONTROL         "\\014 0x0C 12 FF  ^L \\f FormFeed",IDC_012,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,126,125,10
+    CONTROL         "\\015 0x0D 13 CR ^M \\r Return",IDC_013,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,136,119,10
+    CONTROL         "\\016 0x0E 14 SO  ^N",IDC_014,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,146,84,10
+    CONTROL         "\\017 0x0F 15 SI   ^O",IDC_015,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,156,84,10
+    CONTROL         "\\020 0x10 16 DLE ^P",IDC_016,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,6,89,10
+    CONTROL         "\\021 0x11 17 XON ^Q XON",IDC_017,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,145,16,101,10
+    CONTROL         "\\022 0x12 18 DC2 ^R",IDC_018,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,26,86,10
+    CONTROL         "\\023 0x13 19 XOF ^S XOFF",IDC_019,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,145,36,106,10
+    CONTROL         "\\024 0x14 20 DC4 ^T",IDC_020,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,46,84,10
+    CONTROL         "\\025 0x15 21 NAK ^U",IDC_021,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,56,86,10
+    CONTROL         "\\026 0x16 22 SYN ^V",IDC_022,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,66,84,10
+    CONTROL         "\\027 0x17 23 ETB ^W",IDC_023,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,76,88,10
+    CONTROL         "\\030 0x18 24 CAN ^X",IDC_024,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,86,88,10
+    CONTROL         "\\031 0x19 25 EM   ^Y ",IDC_025,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,145,96,86,10
+    CONTROL         "\\032 0x1A 26 SUB ^Z",IDC_026,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,106,84,10
+    CONTROL         "\\033 0x1B 27 ESC ^[",IDC_027,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,116,81,10
+    CONTROL         "\\034 0x1C 28 FS   ^\\",IDC_028,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,145,126,85,10
+    CONTROL         "\\035 0x1D 29 GS  ^]",IDC_029,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,136,82,10
+    CONTROL         "\\036 0x1E 30 RS  ^^",IDC_030,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,146,84,10
+    CONTROL         "\\037 0x1F 31 US  ^_",IDC_031,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,156,84,10
+    LTEXT           "A box is checked to permit the control character to be passed through.  It is unchecked to drop the control character.",
+                    IDC_STATIC,71,173,180,35
+END
+
+IDD_DATA_IN DIALOG DISCARDABLE  0, 0, 342, 33
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Simulated Data In"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,287,3,50,14
+    SCROLLBAR       IDC_SPIN_PORT,325,20,10,12,SBS_VERT
+    EDITTEXT        IDC_PORT,292,20,33,13,ES_AUTOHSCROLL
+    RTEXT           "Port",IDC_STATIC,264,23,24,9
+    COMBOBOX        IDC_COMBO1,4,4,278,13,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Send",IDC_SEND,209,20,50,12
+END
+
+IDD_DEFAULTS DIALOG DISCARDABLE  10, 25, 422, 409
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Defaults"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Category:",IDC_STATIC,7,7,32,8
+    LISTBOX         ID_LISTBOX,7,18,54,128,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,69,2,1,189
+    GROUPBOX        "Board Defaults",ID_BOARD_DEFAULTS,279,213,133,90
+    LTEXT           "Number of Ports:",IDCD_BD_STATIC2,287,230,60,8
+    COMBOBOX        IDCD_BD_NUM_PORTS,355,227,50,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "IRQ:",IDCD_BD_STATIC4,287,246,30,8
+    COMBOBOX        IDCD_BD_IRQ,355,243,50,30,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "I/O Address:",IDCD_BD_STATIC5,287,262,50,8
+    COMBOBOX        IDCD_BD_BASE,355,259,50,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Memory Address:",IDCD_BD_STATIC3,287,276,56,8
+    COMBOBOX        IDCD_BD_SEGMENT,355,275,50,30,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "To see more categories, click on the list at left.",
+                    IDC_STATIC,74,180,155,8
+    DEFPUSHBUTTON   "OK",IDOK,294,17,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,294,33,50,14
+    PUSHBUTTON      "&Restore",IDC_RESTORE,295,80,50,14
+    PUSHBUTTON      "&Defaults",IDC_DEFAULTS,295,62,50,14
+    COMBOBOX        IDCD_CN_BAUD,285,318,55,49,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDCD_CN_DATABITS,285,334,55,52,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDCD_CN_PARITY,285,350,55,30,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDCD_CN_STOPBITS,285,366,55,30,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Baud Rate:",IDCD_CN_STATIC2,233,321,38,8,NOT WS_GROUP
+    LTEXT           "&Data Bits:",IDCD_CN_STATIC3,233,337,34,8,NOT WS_GROUP
+    LTEXT           "P&arity:",IDCD_CN_STATIC4,233,353,22,8,NOT WS_GROUP
+    LTEXT           "&Stop Bits:",IDCD_CN_STATIC5,233,368,33,8,NOT WS_GROUP
+    LTEXT           "F&low Control:",IDCD_CN_STATIC6,219,387,44,8,NOT 
+                    WS_GROUP
+    COMBOBOX        IDCD_CN_FLOWCTRL,271,386,143,30,CBS_DROPDOWNLIST | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Connection Defaults",ID_CONNECTION_DEFAULTS,213,303,209,
+                    105
+    CONTROL         "Active",IDCD_LW_ACTIVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,84,265,44,10
+    EDITTEXT        IDCD_LW_ROLLOVER_HOUR,116,332,15,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDCD_LW_ROLLOVER_MIN,135,332,15,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    CONTROL         "&Mon",IDCD_LW_MONDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,89,351,25,10
+    CONTROL         "&Tue",IDCD_LW_TUESDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,89,364,24,10
+    CONTROL         "&Wed",IDCD_LW_WEDNESDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,89,378,26,10
+    CONTROL         "T&hu",IDCD_LW_THURSDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,89,391,24,10
+    CONTROL         "&Fri",IDCD_LW_FRIDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,123,351,20,10
+    CONTROL         "&Sat",IDCD_LW_SATURDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,123,364,22,10
+    CONTROL         "Su&n",IDCD_LW_SUNDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,123,378,24,10
+    GROUPBOX        "Rollover ",IDCD_LW_STATIC2,81,314,76,95,NOT WS_VISIBLE
+    LTEXT           "Time:",IDCD_LW_STATIC3,91,332,25,8,NOT WS_VISIBLE
+    GROUPBOX        "Log Defaults",ID_LOG_DEFAULTS,71,249,137,56
+    CONTROL         "Purge Log Files after ",IDCD_LW_AUTO_PURGE,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,
+                    85,281,81,10
+    EDITTEXT        IDCD_LW_RETENTION_DAYS,168,278,15,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "days",IDCD_LW_STATIC4,188,281,16,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_FRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,1,0,
+                    350,195
+    LTEXT           "Note to maintainers: Controls appear within a group box.  The ID_FRAME delimits the size to which the dialog will be shrunk during startup and the modes each take the id of a group box.  The top left of the group box is positioned at ID_CONTROLS",
+                    IDC_STATIC,13,198,262,34
+    CONTROL         "",IDC_CONTROLS,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
+                    83,16,203,158
+    PUSHBUTTON      "&Help",IDC_DOHELP,295,107,50,14
+    LTEXT           "Note: these were\nmoved out of the\nlog defaults box\n until they are implemented",
+                    IDC_STATIC,18,319,61,47
+END
+
+IDD_DEFINE DIALOG DISCARDABLE  0, 0, 175, 136
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Define"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&List box:",IDC_LBCAPTION,7,7,96,8
+    LISTBOX         IDC_LIST,7,18,104,116,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&New...",IDC_NEW,118,50,50,14
+    DEFPUSHBUTTON   "&Edit...",IDC_EDIT,118,66,50,14
+    PUSHBUTTON      "&Copy...",IDC_COPY,118,82,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,118,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,18,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,118,120,50,14
+END
+
+IDD_DEFINE_AGENTS DIALOG DISCARDABLE  0, 0, 175, 180
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Agents"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Agents:",IDC_STATIC,7,7,44,8
+    LISTBOX         IDC_AGENT_LIST,10,18,104,116,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "List Agents of &Type:",IDC_STATIC,7,141,85,8
+    COMBOBOX        IDC_AGENT_TYPE,7,152,104,99,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&New...",IDC_NEW,118,50,50,14
+    DEFPUSHBUTTON   "&Edit...",IDC_EDIT,118,66,50,14
+    PUSHBUTTON      "&Copy...",IDC_COPY,118,82,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,118,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,18,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,118,121,50,14
+END
+
+IDD_EDITHELPTEXT DIALOG DISCARDABLE  10, 25, 270, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Help Text : "
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Help Text:",-1,7,7,42,8
+    EDITTEXT        IDC_TEXT,7,18,255,73,ES_MULTILINE | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,26,103,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,82,102,50,14
+    PUSHBUTTON      "&Restore",IDC_RESTORE,138,102,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,194,102,50,14
+END
+
+IDD_EVENT DIALOG DISCARDABLE  0, 0, 218, 174
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Event"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_STATIC,7,10,22,8
+    EDITTEXT        IDC_NAME,37,7,115,13,ES_AUTOHSCROLL
+    GROUPBOX        "Event Options",IDC_STATIC,7,28,144,136
+    CONTROL         "Acti&ve",IDC_ACTIVE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,14,44,36,13
+    CONTROL         "&Purge Oldest Entry",IDC_PURGE_OLDEST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,58,70,10
+    CONTROL         "&Journal",IDC_JOURNAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,72,35,10
+    LTEXT           "&Number of Entries:",IDC_MAXIMUM_ENTRIES_CAPTION,14,88,
+                    62,8
+    CONTROL         "%nw###0",IDC_MAXIMUM_ENTRIES,"HEdit_SS",WS_TABSTOP | 
+                    0xa02,82,86,31,12
+    PUSHBUTTON      "Connec&tions...",IDC_CONNECTIONS,159,45,52,14
+    PUSHBUTTON      "&Font..",IDC_FONT,159,61,52,14
+    PUSHBUTTON      "&Color..",IDC_COLOR,159,77,52,14
+    PUSHBUTTON      "&Line Format...",IDC_LINE_FORMAT,159,93,52,14
+    DEFPUSHBUTTON   "OK",IDOK,159,7,52,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,23,52,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,159,110,52,14
+    GROUPBOX        "Attention Blink",IDC_STATIC,16,104,128,54
+    CONTROL         "Ne&ver",IDC_NEVER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,24,116,34,10
+    CONTROL         "&Always",IDC_ALWAYS,"Button",BS_AUTORADIOBUTTON,24,129,
+                    34,10
+    CONTROL         "&Responses/Tasks/Watchdog",IDC_RESPONSES,"Button",
+                    BS_AUTORADIOBUTTON,24,142,116,10
+END
+
+IDD_EVENTINFO DIALOG DISCARDABLE  18, 30, 307, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Event Information : "
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",8,242,24,59,14,WS_GROUP
+    SCROLLBAR       IDC_HSCROLL,7,33,227,13,WS_TABSTOP
+    PUSHBUTTON      "&Delete",IDC_DELETE,242,4,59,14
+    PUSHBUTTON      "View Help &Text..",IDC_VIEW_HELP_TEXT,242,44,59,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,244,104,59,14
+    LTEXT           "&Data Line:",IDC_STATIC,7,7,35,8
+    EDITTEXT        IDC_DATA_LINE,7,18,227,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_DISABLED
+    RTEXT           "Filter:",IDC_STATIC,26,55,20,8
+    LTEXT           "Static",IDC_FILTER,53,55,185,8
+    RTEXT           "Received:",IDC_RECEIVED_CAPTION,11,69,35,8
+    CONTROL         "asdfasdfasdfasdf",IDC_IN_DATETIMESTAMP,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,53,69,185,8
+    RTEXT           "Command:",IDC_COMMAND_CAPTION,11,84,35,8
+    EDITTEXT        IDC_COMMAND_TEXT,53,82,185,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Mark &Alert",IDC_MARKALERT,243,64,59,14
+    PUSHBUTTON      "Unmar&k Alert",IDC_UNMARKALERT,244,84,59,14
+END
+
+IDD_EVENTRESP DIALOG DISCARDABLE  18, 30, 308, 248
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Event Action : "
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Data Line:",IDC_STATIC,7,4,35,8
+    EDITTEXT        IDC_DATA_LINE,7,13,227,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "&Filter:",IDC_STATIC,7,31,20,8
+    LTEXT           "Static",IDC_FILTER,31,31,135,8
+    GROUPBOX        "Event Action",IDC_STATIC,8,47,227,200
+    LTEXT           "Tas&k:",IDC_STATIC_TASK,14,59,23,8
+    LTEXT           "",IDC_TASK,59,59,167,8
+    LTEXT           "Command:",IDC_STATIC_TASK2,14,73,35,8
+    LTEXT           "",IDC_TASK_COMMAND,59,73,167,8
+    LTEXT           "Program:",IDC_STATIC_PROGRAM,14,87,35,8
+    LTEXT           "",IDC_TASK_PROGRAM,59,87,167,8
+    LTEXT           "Task &Connections:",IDC_STATIC,14,113,82,8
+    LISTBOX         IDC_CONNECTION_LIST,15,125,104,42,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Status",IDC_STATIC,14,173,209,70
+    LTEXT           "&Received:",IDC_STATIC,20,186,35,8
+    CONTROL         "",IDC_IN_DATETIMESTAMP,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,62,186,153,8
+    LTEXT           "Comp&leted:",IDC_STATIC,20,197,38,8
+    LTEXT           "",IDC_COMPLETE_DATETIMESTAMP,62,197,153,8
+    LTEXT           "&Message:",IDC_STATIC,20,210,30,8
+    EDITTEXT        IDC_STATUS_MESSAGE,20,220,197,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Se&nd Task",IDC_SEND,242,7,59,14,WS_GROUP
+    PUSHBUTTON      "View Help &Text..",IDC_VIEW_HELP_TEXT,242,141,59,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,242,27,59,14,WS_GROUP
+    PUSHBUTTON      "&Mark Task",IDC_MARK,242,65,59,14
+    PUSHBUTTON      "&Unmark Task",IDC_UNMARK,242,84,59,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,242,46,59,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,243,160,59,14
+    LTEXT           "Connection:",IDC_STATIC_CONNECTION,14,101,40,8
+    LTEXT           "",IDC_TASK_CONNECTION,59,101,167,8
+    PUSHBUTTON      "Mark &Alert",IDC_MARKALERT,242,102,59,14
+    PUSHBUTTON      "Unmar&k Alert",IDC_UNMARKALERT,243,121,59,14
+END
+
+IDD_FILTER DIALOG DISCARDABLE  10, 25, 371, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Filter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_NAME_CAPTION,7,7,22,8
+    EDITTEXT        IDC_NAME,39,4,115,12,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Pattern:",IDC_STATIC,7,22,27,8
+    EDITTEXT        IDC_PATTERN,39,20,228,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Syslog",IDC_SYSLOG,276,18,33,14
+    LTEXT           "&Color:",IDC_STATIC,7,41,20,8
+    COMBOBOX        IDC_COLOR,39,39,77,82,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Sample",IDC_SAMPLECP,8,63,25,10
+    COMBOBOX        IDC_SAMPLE,39,61,228,137,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Console Agent Options",IDC_CONSOLE_CAPTION,7,79,261,42
+    LTEXT           "&Display Format:",IDC_CONSOLE_DISPLAY_CAPTION,14,96,51,
+                    8
+    EDITTEXT        IDC_CONSOLE_DISPLAY_FORMAT,14,106,247,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    GROUPBOX        "Event Agent Options",IDC_EVENT_AGENT_CAPTION,7,123,261,
+                    131
+    LTEXT           "Display &Format:",IDC_EVENT_DISPLAY_CAPTION,14,132,51,8
+    EDITTEXT        IDC_EVENT_DISPLAY_FORMAT,14,143,247,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    LTEXT           "Dup&licate Format:",IDC_DUPLICATE_CAPTION,14,157,59,8
+    EDITTEXT        IDC_DUPLICATE_FORMAT,14,167,247,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    GROUPBOX        "Event Action Options",IDC_EVENT_CAPTION,14,180,248,72
+    CONTROL         "&Send Task",IDC_SEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,192,46,10
+    COMBOBOX        IDC_TASK_LIST,71,191,101,106,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "#",IDC_SOUND,"Button",BS_OWNERDRAW | WS_TABSTOP,176,190,
+                    14,14
+    PUSHBUTTON      "Define &Help Text...",IDC_DEFINE_HELP_TEXT,192,190,67,
+                    14
+    CONTROL         "Mark as alert",IDC_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,203,63,10
+    CONTROL         "Confirmation Re&quired",IDC_CONFIRM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,214,89,10
+    GROUPBOX        "Perform Event Action",IDC_PERFORM_ACTION,117,204,142,22
+    CONTROL         "&Always",IDC_NOTIME,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,121,213,35,10
+    CONTROL         "&Watchdog",IDC_WATCHDOG,"Button",BS_AUTORADIOBUTTON,159,
+                    213,45,10
+    CONTROL         "&Frequency",IDC_FREQUENCY,"Button",BS_AUTORADIOBUTTON,
+                    209,212,46,11
+    CONTROL         "&Audio",IDC_SPEAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    21,226,34,10
+    RTEXT           "Command line:",IDC_COMMAND_CAPTION,57,227,37,8
+    LTEXT           "sample",IDC_SAMPLE_CMDLINE,99,227,161,8
+    LTEXT           "E&xecute",IDC_STATIC,20,238,30,9
+    COMBOBOX        IDC_EXECUTE_NAMES,56,236,148,11,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | CBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "+",IDC_ADD_EXECUTE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    207,236,13,12
+    CONTROL         "X",IDC_DELETE_EXECUTE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,220,236,13,12
+    CONTROL         "E",IDC_EDIT_EXECUTE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    233,236,13,12
+    GROUPBOX        "Log Agent Options",IDC_LOG_CAPTION,6,256,262,37
+    LTEXT           "Display &Format:",IDC_LOG_DISPLAY_CAPTION,12,266,51,8
+    EDITTEXT        IDC_LOG_DISPLAY_FORMAT,11,277,252,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,317,2,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,317,18,50,14,WS_GROUP
+    PUSHBUTTON      "Chec&k",IDC_CHECK,276,37,49,14
+    PUSHBUTTON      "&Test",IDC_TEST,275,60,50,14,WS_GROUP
+    CONTROL         "&Quiet",IDC_QUIET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    330,62,34,10
+    PUSHBUTTON      "&Delete",IDC_DELETE,276,79,50,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDC_DOHELP,276,109,50,14,WS_GROUP
+    PUSHBUTTON      "&Restore",IDC_RESTORE,276,126,50,14,WS_GROUP
+    PUSHBUTTON      "Sho&w Code",IDC_SHOW_CODE,276,143,50,14
+    LTEXT           "",IDC_ERROR_MESSAGE,121,39,148,11
+    LTEXT           "",IDC_SAMPLE_CONSOLE,69,96,195,8
+    LTEXT           "",IDC_SAMPLE_EVENT,66,133,198,8
+    LTEXT           "",IDC_SAMPLE_DUPLICATE,81,158,181,8
+    LTEXT           "",IDC_SAMPLE_LOG,65,266,197,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,118,34,249,20
+    COMBOBOX        IDC_CODE,1,4,269,276,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,2,57,365,19
+    GROUPBOX        "WatchDog",IDC_WATCHDOG_CAPTION,272,160,81,133
+    EDITTEXT        IDC_W_COUNT,276,174,13,12,ES_AUTOHSCROLL
+    LTEXT           "&messages\nwithin",IDC_W_CAPTION,293,171,41,17
+    CONTROL         "Every",IDC_EVERY,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,275,189,35,10
+    LTEXT           "hours",IDC_EVERY_HOURS_CAPTION,276,199,22,8
+    LTEXT           "mins",IDC_EVERY_MINS_CAPTION,300,199,20,8
+    EDITTEXT        IDC_W_HH_EVERY,276,209,13,12,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_EVERY_COLON,294,210,8,11
+    EDITTEXT        IDC_W_MM_EVERY,301,209,13,12,ES_AUTOHSCROLL
+    CONTROL         "&At",IDC_AT,"Button",BS_AUTORADIOBUTTON,275,227,21,10
+    CONTROL         "&24H",IDC_24H,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,301,
+                    227,23,10
+    LTEXT           "hours",IDC_AT_HOURS_CAPTION,276,238,22,8
+    LTEXT           "mins",IDC_AT_MINS_CAPTION,300,238,20,8
+    EDITTEXT        IDC_W_HH_AT,276,248,13,12,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_AT_COLON,294,249,8,11
+    EDITTEXT        IDC_W_MM_AT,301,248,13,12,ES_AUTOHSCROLL
+    CONTROL         "am",IDC_AM,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,319,244,22,10
+    CONTROL         "pm",IDC_PM,"Button",BS_AUTORADIOBUTTON,319,256,22,10
+    LTEXT           "minus",IDC_AT_MINUS_CAPTION,277,264,20,8
+    LTEXT           "plus",IDC_AT_PLUS_CAPTION,301,264,20,8
+    EDITTEXT        IDC_W_MINUS,277,274,13,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_W_PLUS,301,274,13,12,ES_AUTOHSCROLL
+    LTEXT           "mins",IDC_AT_UNITS_CAPTION,317,274,32,15
+    CONTROL         "Prompt pattern",IDC_PROMPT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,191,84,70,10
+    CONTROL         "^",IDC_SORT_EXECUTE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    246,236,13,12
+END
+
+IDD_FILTERONOFF DIALOG DISCARDABLE  0, 0, 239, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Enable/Disable fitlers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Connection",IDC_STATIC,0,21,44,7
+    LISTBOX         IDC_CONNECTION,2,33,88,81,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Filters",IDC_STATIC,94,21,44,7
+    LISTBOX         IDC_FILTERS,95,33,88,81,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | LBS_WANTKEYBOARDINPUT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Cl&ose",IDOK,187,3,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,187,20,50,14
+    RTEXT           "Agent",IDC_STATIC,1,4,30,8
+    EDITTEXT        IDC_AGENT,37,2,146,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_FINDEVENT DIALOG DISCARDABLE  0, 0, 187, 42
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Find Event by ID"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Find",IDOK,131,6,50,14
+    PUSHBUTTON      "Close",IDCANCEL,131,23,50,14
+    RTEXT           "ID:",IDC_STATIC,11,13,30,7
+    EDITTEXT        IDC_ID,46,10,43,14,ES_AUTOHSCROLL
+    RTEXT           "Static",IDC_STATUS,2,26,125,12
+END
+
+IDD_LOG DIALOG DISCARDABLE  10, 25, 217, 224
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Log"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_NAME_CAPTION,7,10,22,8
+    EDITTEXT        IDC_NAME,38,7,115,13,ES_AUTOHSCROLL
+    GROUPBOX        "Log Options",IDC_STATIC,7,30,146,190
+    CONTROL         "Acti&ve",IDC_ACTIVE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,14,44,40,10
+    LTEXT           "&Buffer Size:",IDC_STATIC,14,60,39,8
+    CONTROL         "%nw####0",IDC_BUFFER_SIZE,"HEdit_SS",WS_TABSTOP | 0xa02,
+                    64,58,31,12
+    LTEXT           "Post Log I&nterval:",IDC_STATIC,13,78,59,8
+    CONTROL         "%nw#0",IDC_POST_INTERVAL,"HEdit_SS",WS_TABSTOP | 0xa02,
+                    78,77,16,12
+    GROUPBOX        "Rollover Options",IDC_STATIC,13,123,72,93,NOT 
+                    WS_VISIBLE
+    LTEXT           "Ti&me:",IDC_STATIC,21,138,19,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_ROLLOVER_HOUR,45,138,15,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_GROUP
+    EDITTEXT        IDC_ROLLOVER_MIN,65,138,15,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    CONTROL         "&Mon",IDC_MONDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,21,162,25,10
+    CONTROL         "&Tue",IDC_TUESDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,21,174,24,10
+    CONTROL         "&Wed",IDC_WEDNESDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,21,185,26,10
+    CONTROL         "T&hu",IDC_THURSDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,21,198,24,10
+    CONTROL         "&Fri",IDC_FRIDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,55,162,20,10
+    CONTROL         "&Sat",IDC_SATURDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,55,174,22,10
+    CONTROL         "Su&n",IDC_SUNDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,55,185,24,10
+    CONTROL         "&Purge Log Files after ",IDC_AUTO_PURGE,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,
+                    14,99,81,10
+    CONTROL         "%nw#0",IDC_RETENTION_DAYS,"HEdit_SS",NOT WS_VISIBLE | 
+                    WS_TABSTOP | 0xa02,94,99,16,12
+    LTEXT           "days",IDC_STATIC,114,100,16,8,NOT WS_VISIBLE
+    PUSHBUTTON      "Connec&tions...",IDC_CONNECTIONS,159,45,52,14
+    PUSHBUTTON      "&Line Format...",IDC_LINE_FORMAT,159,61,52,14
+    DEFPUSHBUTTON   "OK",IDOK,159,7,52,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,23,52,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,159,84,52,14
+END
+
+IDD_LOGFORM DIALOG DISCARDABLE  0, 0, 237, 91
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_NUMBYTESWRITTEN,106,33,40,13,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_BUFFERUSED,106,51,40,13,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    LTEXT           "Current Log File:",IDC_STATIC,5,5,60,8
+    LTEXT           "Number of Bytes Written:",IDC_NUMBYTESWRITTEN_CAPTION,7,
+                    36,83,8
+    LTEXT           "Bytes used in current buffer",IDC_BUFFERUSED_CAPTION,7,
+                    54,95,8
+    LTEXT           "~",IDC_LOGFILENAME,7,20,227,8
+    LTEXT           "Static",IDC_STATUS_MESSAGE,7,74,227,8
+    CONTROL         "",IDC_FRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,0,0,
+                    237,90
+    LTEXT           "of",IDC_BUFFERSIZE_CAPTION,150,54,8,8
+    EDITTEXT        IDC_BUFFERSIZE,165,51,40,13,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_METER,"Meter",0x0,165,33,66,13
+END
+
+IDD_LOGGING DIALOG DISCARDABLE  0, 0, 205, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Error Logging Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,148,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,23,50,14
+    CONTROL         "Stop with MessageBox notification",IDC_LOG_MESSAGEBOX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,6,123,10
+    CONTROL         "Log to error file",IDC_LOG_TO_FILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,23,123,10
+    CONTROL         "Log to Message Window",IDC_LOG_MSGWIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,40,123,10
+    PUSHBUTTON      "&Help",IDC_DOHELP,148,40,50,14
+    PUSHBUTTON      "&Test",IDC_TEST,148,57,50,14
+END
+
+IDD_MORE DIALOG DISCARDABLE  10, 25, 177, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "More Windows"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST,7,7,108,116,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,121,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,121,24,50,14
+    ICON            186,IDC_MOREWINDOWS_ICON,138,58,18,20
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 251, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Event Options",IDC_STATIC,7,7,122,38
+    CONTROL         "Journal E&vents",IDCD_EW_JOURNAL_EVENTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,26,60,10
+    GROUPBOX        "Message Window Options",IDC_STATIC,7,49,122,62
+    LTEXT           "&Number of Entries:",IDC_STATIC,12,68,62,8
+    CONTROL         "%nw###0",IDCD_MW_MAXIMUM_ENTRIES,"HEdit_SS",WS_TABSTOP | 
+                    0xa02,77,66,31,12
+    CONTROL         "&Purge oldest entry",IDCD_MW_PURGE_OLDEST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,82,70,10
+    CONTROL         "&Journal Messages",IDCD_MW_JOURNAL_MESSAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,95,69,10
+    GROUPBOX        "Log Options",IDC_STATIC,7,114,241,50
+    LTEXT           "Log Drive",IDC_STATIC,12,128,33,8
+    COMBOBOX        IDC_DRIVE,52,126,71,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Log File Purge Time:",IDC_STATIC,11,148,68,8,NOT 
+                    WS_VISIBLE
+    CONTROL         "%nw###0",IDCD_LW_LOG_PURGE_TIME,"HEdit_SS",NOT 
+                    WS_VISIBLE | WS_TABSTOP | 0xa02,81,146,43,12
+    GROUPBOX        "Log Size",IDC_STATIC,129,120,115,40
+    CONTROL         "&32K",IDC_32K,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,133,133,34,11
+    CONTROL         "&64K",IDC_64K,"Button",BS_AUTORADIOBUTTON,133,146,34,11
+    CONTROL         "&128K",IDC_128K,"Button",BS_AUTORADIOBUTTON,170,133,34,
+                    11
+    CONTROL         "&256K",IDC_256K,"Button",BS_AUTORADIOBUTTON,170,146,34,
+                    11
+    CONTROL         "&512K",IDC_512K,"Button",BS_AUTORADIOBUTTON,207,133,34,
+                    11
+    CONTROL         "1&024K",IDC_1024K,"Button",BS_AUTORADIOBUTTON,207,146,
+                    34,11
+    GROUPBOX        "Inactive Agent Background",IDC_STATIC,134,56,114,59
+    LTEXT           "R",IDC_STATIC,138,65,7,8
+    CONTROL         "255",IDC_R255,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,136,73,24,10
+    CONTROL         "192",IDC_R192,"Button",BS_AUTORADIOBUTTON,136,83,24,10
+    CONTROL         "128",IDC_R128,"Button",BS_AUTORADIOBUTTON,136,93,24,10
+    CONTROL         "0",IDC_R0,"Button",BS_AUTORADIOBUTTON,136,103,24,10
+    LTEXT           "G",IDC_STATIC,167,65,7,8
+    CONTROL         "255",IDC_G255,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,166,73,24,10
+    CONTROL         "192",IDC_G192,"Button",BS_AUTORADIOBUTTON,166,83,24,10
+    CONTROL         "128",IDC_G128,"Button",BS_AUTORADIOBUTTON,166,93,24,10
+    CONTROL         "0",IDC_G0,"Button",BS_AUTORADIOBUTTON,166,103,24,10
+    LTEXT           "B",IDC_STATIC,197,65,7,8
+    CONTROL         "255",IDC_B255,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,196,73,24,10
+    CONTROL         "192",IDC_B192,"Button",BS_AUTORADIOBUTTON,196,83,24,10
+    CONTROL         "128",IDC_B128,"Button",BS_AUTORADIOBUTTON,196,93,24,10
+    CONTROL         "0",IDC_B0,"Button",BS_AUTORADIOBUTTON,196,103,24,10
+    LTEXT           "",IDC_SAMPLE,226,73,18,36
+    DEFPUSHBUTTON   "OK",IDOK,139,4,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,139,22,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,139,40,50,14
+END
+
+IDD_PAGE_LAYOUT DIALOG DISCARDABLE  0, 0, 349, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Page layout"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,291,4,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,291,20,50,14
+    PUSHBUTTON      "&Restore",IDC_RESTORE,291,36,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,291,123,50,14
+    COMBOBOX        IDC_TOPLEFT,11,53,83,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_TOPCENTER,102,53,83,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_TOPRIGHT,193,53,83,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_BOTTOMLEFT,10,122,83,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BOTTOMCENTER,102,122,83,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BOTTOMRIGHT,193,122,83,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WHAT,87,86,98,64,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Top left",IDC_TOPLEFT_SAMPLE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,11,28,83,19
+    CONTROL         "",IDC_TOPLEFT_FRAME,"Static",SS_WHITEFRAME,9,26,87,23
+    CONTROL         "Top center",IDC_TOPCENTER_SAMPLE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,102,28,83,19
+    CONTROL         "",IDC_TOPCENTER_FRAME,"Static",SS_WHITEFRAME,100,26,87,
+                    23
+    CONTROL         "Top right",IDC_TOPRIGHT_SAMPLE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,193,28,83,19
+    CONTROL         "",IDC_TOPRIGHT_FRAME,"Static",SS_WHITEFRAME,191,26,87,
+                    23
+    CONTROL         "Bottom left",IDC_BOTTOMLEFT_SAMPLE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,11,141,83,19
+    CONTROL         "",IDC_BOTTOMLEFT_FRAME,"Static",SS_WHITEFRAME,9,139,87,
+                    23
+    CONTROL         "Bottom center",IDC_BOTTOMCENTER_SAMPLE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,102,141,83,19
+    CONTROL         "",IDC_BOTTOMCENTER_FRAME,"Static",SS_WHITEFRAME,100,139,
+                    87,23
+    CONTROL         "Bottom right",IDC_BOTTOMRIGHT_SAMPLE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,193,141,83,19
+    CONTROL         "",IDC_BOTTOMRIGHT_FRAME,"Static",SS_WHITEFRAME,191,139,
+                    87,23
+    CONTROL         "Page body",IDC_BODY_SAMPLE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,193,84,83,19
+    CONTROL         "",IDC_BODY_FRAME,"Static",SS_WHITEFRAME,191,82,87,23
+    LTEXT           "Click on the text to change its font and size",
+                    IDC_CLICK,3,174,272,11
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,5,21,278,144
+    COMBOBOX        IDC_REPORT_TYPE,86,4,118,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Report type",IDC_STATIC,22,5,60,11
+END
+
+IDD_PERFORMANCE DIALOG DISCARDABLE  0, 0, 279, 82
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_DATA,0,37,278,45,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Connection",IDC_CONNECTION,0,24,75,12
+    PUSHBUTTON      "&Agent",IDC_AGENT,75,24,59,12
+    PUSHBUTTON      "Messages",IDC_MESSAGES,133,24,50,12
+    PUSHBUTTON      "&Rate",IDC_RATE,183,24,50,12
+    PUSHBUTTON      "&Other",IDC_OTHER,233,24,45,12
+    PUSHBUTTON      "&Zero",IDC_ZERO,0,1,35,14
+    PUSHBUTTON      "&Refresh",IDC_REFRESH,37,1,35,14
+    RTEXT           "Time",IDC_TIME_CAPTION,74,5,25,8
+    EDITTEXT        IDC_TIME,103,2,40,14,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_TABSTOP
+    CONTROL         "&Min",IDC_MIN,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,152,0,34,11
+    CONTROL         "&Sec",IDC_SEC,"Button",BS_AUTORADIOBUTTON,152,11,34,10
+    CONTROL         "&Disable",IDC_DISABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,3,34,10
+END
+
+IDD_PORT_STATUS DIALOG DISCARDABLE  0, 0, 257, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Port Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDCANCEL,206,3,50,14
+    RTEXT           "Connection Name",IDC_STATIC,4,6,56,8
+    EDITTEXT        IDC_CONNNAME,64,5,118,11,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "Available",IDC_AVAILABLE,64,21,35,9
+    RTEXT           "Logical Connection Name",IDC_STATIC,4,34,56,8
+    EDITTEXT        IDC_LOGICALCONNECTIONNAME,64,33,39,11,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Logical Connection Number",IDC_STATIC,4,49,56,8
+    EDITTEXT        IDC_LOGICALCONNECTIONNUMBER,64,48,16,11,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CHECKBOX        "Mapped",IDC_LOGICALCONNECTIONMAPPED,89,49,35,10
+    CHECKBOX        "Was Mapped",IDC_LOGICALCONNECTIONWASMAPPED,129,49,52,10
+    RTEXT           "TerminalName",IDC_STATIC,3,64,56,8
+    EDITTEXT        IDC_TERMINALNAME,63,63,39,11,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_LINE,63,78,193,11,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Line",IDC_STATIC,4,80,56,8
+    RTEXT           "Character Count",IDC_STATIC,3,94,56,8
+    EDITTEXT        IDC_CHARCOUNT,63,93,16,11,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Host OS",IDC_STATIC,108,65,27,8
+    EDITTEXT        IDC_HOSTOS,139,63,52,11,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "Can Transmit",IDC_CANTRANSMIT,89,93,52,10
+    RTEXT           "Console Tag",IDC_STATIC,3,109,56,8
+    EDITTEXT        IDC_CONSOLETAG,63,108,39,11,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Event Tag",IDC_STATIC,3,123,56,8
+    EDITTEXT        IDC_EVENTTAG,63,122,39,11,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Log Tag",IDC_STATIC,2,137,56,8
+    EDITTEXT        IDC_LOGTAG,62,136,39,11,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "Display",IDC_DISPLAYSTATE,144,93,35,10
+    CHECKBOX        "EOL",IDC_EOLSTATE,184,93,24,10
+    RTEXT           "Color",IDC_STATIC,2,153,56,8
+    EDITTEXT        IDC_COLOR,62,152,69,11,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Port Number",IDC_STATIC,123,21,40,8
+    EDITTEXT        IDC_PORTNO,166,20,16,11,ES_AUTOHSCROLL | ES_READONLY
+    LISTBOX         IDC_QUEUE,135,108,121,55,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Queue",IDC_QUEUE_CAPTION,106,110,25,8
+    LTEXT           "Xmit State:",IDC_STATIC,199,33,34,8
+    EDITTEXT        IDC_TRANSMITSTATE,213,44,39,11,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_PREFERENCES DIALOG DISCARDABLE  0, 0, 254, 207
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Window menu",IDC_STATIC,3,1,192,56
+    CONTROL         "&Use icons",IDC_USE_ICONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,18,94,10
+    EDITTEXT        IDC_ITEMS,10,34,20,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_SPIN_ITEMS,31,34,10,12,SBS_VERT | WS_TABSTOP
+    LTEXT           "&Menu items before ""More..."": 1..%d",IDC_LIMIT,47,36,
+                    134,8
+    GROUPBOX        "Debugging features",IDC_STATIC,3,61,192,53
+    CONTROL         "&Confirm filter program before launch",
+                    IDC_CONFIRM_LAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    8,74,180,10
+    CONTROL         "Log program launch &errors",IDC_LOG_LAUNCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,87,180,10
+    CONTROL         "&Log program launches",IDC_LOG_SUCCESS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,100,171,10
+    GROUPBOX        "Viewer Options",IDC_STATIC,3,121,249,57
+    CONTROL         "&Internal",IDC_VIEWER_INTERNAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,10,130,35,10
+    CONTROL         "E&xternal",IDC_VIEWER_EXTERNAL,"Button",
+                    BS_AUTORADIOBUTTON,10,146,36,10
+    LTEXT           "&Small",IDC_SMALL_CAPTION,52,146,19,8
+    EDITTEXT        IDC_SMALL_VIEWER,78,143,112,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,192,151,50,14
+    LTEXT           "Lar&ge",IDC_LARGE_CAPTION,52,160,19,8
+    EDITTEXT        IDC_LARGE_VIEWER,78,158,112,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,8,140,239,34
+    DEFPUSHBUTTON   "OK",IDOK,201,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,201,22,50,14
+    GROUPBOX        "Flyover Help",IDC_STATIC,4,182,247,23
+    LTEXT           "(No font specified)",IDC_FONTNAME,116,189,132,13
+    PUSHBUTTON      "Change...",IDC_CHANGEFONT,53,189,50,14
+END
+
+IDD_PRINTING DIALOG DISCARDABLE  10, 25, 122, 88
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,45,68,32,14,WS_GROUP
+    CTEXT           "Now printing",IDC_NOW_PRINTING,2,5,120,8
+    CTEXT           "what",IDC_PRINTING_WHAT,0,20,120,8
+    CTEXT           "on whatever",IDC_PRINTING_ON,1,32,120,29
+END
+
+IDD_SET_EXECUTE DIALOG DISCARDABLE  0, 0, 290, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Filter Execute Event"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Program name",IDC_STATIC,19,7,56,8
+    EDITTEXT        IDC_NAME,79,5,205,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,237,21,46,13
+    CONTROL         "&Active",IDC_EXECUTE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,79,23,34,10
+    RTEXT           "&Command line",IDC_STATIC,19,42,56,8
+    EDITTEXT        IDC_COMMANDLINE,79,39,205,13,ES_AUTOHSCROLL
+    RTEXT           "&Working Directory",IDC_STATIC,6,55,69,8
+    EDITTEXT        IDC_DIRECTORY,79,55,205,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,126,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,73,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,234,73,50,14
+END
+
+IDD_SHOWPROPERTIES DIALOG DISCARDABLE  0, 0, 319, 261
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Event Properties (Debug info)"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,259,2,50,14
+    RTEXT           "Name",IDC_STATIC,48,6,30,8
+    EDITTEXT        IDC_NAME,81,5,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Title",IDC_STATIC,48,19,30,8
+    EDITTEXT        IDC_TITLE,81,18,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "WindowMenuName",IDC_STATIC,12,44,66,8
+    EDITTEXT        IDC_WINDOWMENUNAME,81,43,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "MasterConnectionMask",IDC_STATIC,0,57,78,8
+    EDITTEXT        IDC_MASTERCONNECTIONMASK,81,56,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "NumConnections",IDC_STATIC,18,69,60,8
+    EDITTEXT        IDC_NUMCONNECTIONS,81,69,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "AgentConnList",IDC_STATIC,25,83,51,8
+    COMBOBOX        IDC_AGENTCONNLIST,81,82,72,84,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "Active",IDC_ACTIVE,53,95,35,11,BS_LEFTTEXT
+    RTEXT           "AgentState",IDC_STATIC,30,107,48,8
+    EDITTEXT        IDC_AGENTSTATE,81,106,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "AgentType",IDC_STATIC,34,121,44,8
+    EDITTEXT        IDC_AGENTTYPE,81,120,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "AgentFont",IDC_STATIC,37,134,41,8
+    EDITTEXT        IDC_AGENTFONT,81,134,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "ColorTypeCode",IDC_STATIC,28,149,50,8
+    EDITTEXT        IDC_COLORTYPECODE,81,148,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Color",IDC_STATIC,47,163,30,8
+    EDITTEXT        IDC_COLOR,81,163,72,10,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "UsePrefix",IDC_USEPREFIX,206,6,41,10,BS_LEFTTEXT
+    RTEXT           "NumPrefixes",IDC_STATIC,196,19,40,8
+    EDITTEXT        IDC_NUMPREFIXES,240,18,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "PrefixCodes",IDC_STATIC,197,30,39,8
+    EDITTEXT        IDC_PREFIXCODES,240,30,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Separators",IDC_STATIC,200,43,36,8
+    EDITTEXT        IDC_SEPARATORS,240,42,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "JournalDisp",IDC_STATIC,197,55,38,8
+    EDITTEXT        IDC_JOURNALDISP,240,54,72,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Current Selection",IDC_STATIC,177,67,58,8
+    EDITTEXT        IDC_CURSEL,240,66,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Selection Status",IDC_SEL_STATUS_CAPTION,169,79,66,8
+    EDITTEXT        IDC_SEL_STATUS,240,78,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Flags",IDC_SEL_STATUS_CAPTION2,172,93,28,8
+    EDITTEXT        IDC_FLAGS,204,92,108,38,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    RTEXT           "Filter",IDC_STATIC,48,33,30,8
+    EDITTEXT        IDC_FILTER,81,31,72,10,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "Sound",IDC_SOUND,10,219,34,10,BS_LEFTTEXT
+    CHECKBOX        "Speak",IDC_SPEAK,10,232,34,10,BS_LEFTTEXT
+    GROUPBOX        "Audio",IDC_AUDIO,3,187,310,73
+    CHECKBOX        "Active",IDC_SOUNDACTIVE,10,206,34,10,BS_LEFTTEXT
+    EDITTEXT        IDC_SOUNDFILE,55,219,249,10,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_SPEECHPATTERN,55,232,249,10,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Text",IDC_STATIC,47,177,30,7
+    EDITTEXT        IDC_TEXT,81,176,231,10,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "Repeat",IDC_REPEAT,65,195,34,10,BS_LEFTTEXT
+    RTEXT           "Every",IDC_EVERY_CAPTION,105,196,26,10
+    EDITTEXT        IDC_EVERY,135,194,24,12,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Last Time",IDC_TIME_CAPTION,164,196,40,7
+    EDITTEXT        IDC_TIME,209,195,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Index",IDC_STATIC,195,134,40,8
+    EDITTEXT        IDC_INDEX,240,133,72,10,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Speech",IDC_STATIC,20,245,30,10
+    EDITTEXT        IDC_SPEECH,55,244,249,10,ES_AUTOHSCROLL | ES_READONLY
+    CHECKBOX        "Repeating",IDC_REPEATING,54,206,45,10,BS_LEFTTEXT
+    CONTROL         "Expanded",IDC_EXPANDED,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,202,146,48,10
+    LTEXT           "Launchees",IDC_STATIC,254,146,42,7
+    EDITTEXT        IDC_LAUNCHEES,297,145,15,11,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "ItemHeight",IDC_STATIC,245,160,42,7
+    EDITTEXT        IDC_ITEMHEIGHT,292,158,20,12,ES_AUTOHSCROLL
+END
+
+IDD_SIMTIME DIALOG DISCARDABLE  0, 0, 121, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Simulated Time"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Year",IDC_STATIC,4,8,30,8
+    EDITTEXT        IDC_YEAR,38,6,24,13,ES_AUTOHSCROLL
+    RTEXT           "M&onth",IDC_STATIC,6,27,30,8
+    COMBOBOX        IDC_MONTH,40,25,32,108,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_DAY,24,54,13,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "1",IDC_1,40,54,11,14
+    PUSHBUTTON      "1",IDC_2,51,54,11,14
+    PUSHBUTTON      "1",IDC_3,62,54,11,14
+    PUSHBUTTON      "1",IDC_4,73,54,11,14
+    PUSHBUTTON      "1",IDC_5,84,54,11,14
+    PUSHBUTTON      "1",IDC_6,95,54,11,14
+    PUSHBUTTON      "1",IDC_7,106,54,11,14
+    PUSHBUTTON      "1",IDC_8,40,68,11,14
+    PUSHBUTTON      "1",IDC_9,51,68,11,14
+    PUSHBUTTON      "1",IDC_10,62,68,11,14
+    PUSHBUTTON      "1",IDC_11,73,68,11,14
+    PUSHBUTTON      "1",IDC_12,84,68,11,14
+    PUSHBUTTON      "1",IDC_13,95,68,11,14
+    PUSHBUTTON      "1",IDC_14,106,68,11,14
+    PUSHBUTTON      "1",IDC_15,40,82,11,14
+    PUSHBUTTON      "1",IDC_16,51,82,11,14
+    PUSHBUTTON      "1",IDC_17,62,82,11,14
+    PUSHBUTTON      "1",IDC_18,73,82,11,14
+    PUSHBUTTON      "1",IDC_19,84,82,11,14
+    PUSHBUTTON      "1",IDC_20,95,82,11,14
+    PUSHBUTTON      "1",IDC_21,106,82,11,14
+    PUSHBUTTON      "1",IDC_22,40,96,11,14
+    PUSHBUTTON      "1",IDC_23,51,96,11,14
+    PUSHBUTTON      "1",IDC_24,62,96,11,14
+    PUSHBUTTON      "1",IDC_25,73,96,11,14
+    PUSHBUTTON      "1",IDC_26,84,96,11,14
+    PUSHBUTTON      "1",IDC_27,95,96,11,14
+    PUSHBUTTON      "1",IDC_28,106,96,11,14
+    PUSHBUTTON      "1",IDC_29,40,110,11,14
+    PUSHBUTTON      "1",IDC_30,51,110,11,14
+    PUSHBUTTON      "1",IDC_31,62,110,11,14
+    PUSHBUTTON      "1",IDC_32,73,110,11,14
+    PUSHBUTTON      "1",IDC_33,84,110,11,14
+    PUSHBUTTON      "1",IDC_34,95,110,11,14
+    PUSHBUTTON      "1",IDC_35,106,110,11,14
+    PUSHBUTTON      "1",IDC_36,40,124,11,14
+    PUSHBUTTON      "1",IDC_37,51,124,11,14
+    PUSHBUTTON      "1",IDC_38,62,124,11,14
+    PUSHBUTTON      "1",IDC_39,73,124,11,14
+    PUSHBUTTON      "1",IDC_40,84,124,11,14
+    PUSHBUTTON      "1",IDC_41,95,124,11,14
+    PUSHBUTTON      "1",IDC_42,106,124,11,14
+    PUSHBUTTON      "&Close",IDCANCEL,68,5,50,14
+    PUSHBUTTON      "&Now",IDC_NOW,76,24,41,14
+    LTEXT           "&Hour",IDC_STATIC,2,71,15,8
+    EDITTEXT        IDC_HOUR,21,69,16,13,ES_AUTOHSCROLL
+    LTEXT           "&Min",IDC_STATIC,2,86,15,8
+    EDITTEXT        IDC_MINUTE,21,84,16,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Set",IDC_SET,0,123,35,14
+    CTEXT           "S",IDC_STATIC,40,43,11,8
+    CTEXT           "M",IDC_STATIC,51,43,11,8
+    CTEXT           "T",IDC_STATIC,62,43,11,8
+    CTEXT           "W",IDC_STATIC,73,43,11,8
+    CTEXT           "T",IDC_STATIC,84,43,11,8
+    CTEXT           "F",IDC_STATIC,95,43,11,8
+    CTEXT           "S",IDC_STATIC,106,43,11,8
+    CONTROL         "&Enable",IDC_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,2,112,35,10
+    LTEXT           "Wed",IDC_WKDAY,5,56,16,8
+END
+
+IDD_SORTEXE DIALOG DISCARDABLE  0, 0, 205, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Sort Execution Order"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,4,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,20,50,14
+    LISTBOX         IDC_SORT,17,0,121,94,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "^",IDC_UP,"Button",BS_OWNERDRAW | WS_TABSTOP,0,25,14,14
+    CONTROL         "v",IDC_DOWN,"Button",BS_OWNERDRAW | WS_TABSTOP,0,42,14,
+                    14
+    CONTROL         "E",IDC_ENABLEALL,"Button",BS_OWNERDRAW | WS_TABSTOP,151,
+                    46,14,14
+    CONTROL         "D",IDC_DISABLEALL,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    151,63,14,14
+END
+
+IDD_SPEECH DIALOG DISCARDABLE  0, 0, 291, 236
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Audio Messaging Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TEST_TEXT,1,42,229,15,ES_AUTOHSCROLL
+    CONTROL         "Pla&y sound",IDC_PLAYSOUND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,1,61,50,10
+    EDITTEXT        IDC_WAV,53,59,142,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,215,58,15,14
+    CONTROL         "Spea&k",IDC_SPEAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    1,77,34,10
+    CONTROL         "&Use \\speech tags\\",IDC_TAGGED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,43,77,78,10
+    CONTROL         "&Repeat unconfirmed events",IDC_REPEAT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,34,92,101,10
+    RTEXT           "&Every",IDC_EVERY_CAPTION,148,93,30,9
+    EDITTEXT        IDC_EVERY,182,91,20,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_SPIN_EVERY,204,91,10,12,SBS_VERT
+    LTEXT           "minutes",IDC_MINUTES_CAPTION,219,92,30,9
+    LTEXT           "Tag Help Here",IDC_TAGHELP,33,108,252,24
+    RTEXT           "Ta&gs",IDC_TAGS_CAPTION,26,138,23,10
+    COMBOBOX        IDC_TAGS,53,136,180,40,CBS_DROPDOWN | CBS_OWNERDRAWFIXED | 
+                    CBS_SORT | CBS_HASSTRINGS | CBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Insert",IDC_INSERT,235,136,50,14
+    RTEXT           "&Say",IDC_TEXT_CAPTION,2,155,20,10
+    EDITTEXT        IDC_TEXT,26,153,265,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    RTEXT           "Error msg",IDC_ERROR,127,76,158,11
+    EDITTEXT        IDC_COMPILED,26,197,265,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "&Test",IDC_TEST,236,54,50,14
+    DEFPUSHBUTTON   "OK",IDOK,236,3,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,236,20,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,236,37,50,14
+    EDITTEXT        IDC_PATTERN,1,13,229,15,ES_AUTOHSCROLL
+    LTEXT           "&Sample text",IDC_STATIC,1,31,46,8
+    LTEXT           "&Pattern",IDC_STATIC,4,2,30,7
+    CONTROL         "#",IDC_PLAY,"Button",BS_OWNERDRAW | WS_TABSTOP,199,58,
+                    14,14
+END
+
+IDD_STATUSBAR DIALOG DISCARDABLE  5, 2, 369, 20
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    CONTROL         "%kTDddd, Mmm d, yyyy - h:mm:ss ap",ID_DATELINE,"HEdit_SS",
+                    NOT WS_VISIBLE | WS_DISABLED | 0x200,159,4,152,12
+    CONTROL         "[];[LGray];",ID_STATLINE,"HStat",0x50,3,4,153,12
+    EDITTEXT        ID_JOURNALLING,315,5,54,12,ES_READONLY | NOT WS_TABSTOP
+END
+
+IDD_SYSLOGPATTERN DIALOG DISCARDABLE  0, 0, 337, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "syslog pattern generator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Facility Code",IDC_STATIC,3,4,192,140
+    CONTROL         "N&one",IDC_NONE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,14,16,57,10
+    CONTROL         "0 - &Kernel",IDC_KERNEL,"Button",BS_AUTORADIOBUTTON,14,
+                    26,57,10
+    CONTROL         "1 - &User",IDC_USER,"Button",BS_AUTORADIOBUTTON,14,36,
+                    57,10
+    CONTROL         "2 - &Mail",IDC_MAIL,"Button",BS_AUTORADIOBUTTON,14,46,
+                    57,10
+    CONTROL         "3 - &Daemon",IDC_DAEMON,"Button",BS_AUTORADIOBUTTON,14,
+                    56,57,10
+    CONTROL         "4 - &Auth/Sec",IDC_AUTH,"Button",BS_AUTORADIOBUTTON,14,
+                    66,57,10
+    CONTROL         "5 - &Syslog",IDC_SYSLOG,"Button",BS_AUTORADIOBUTTON,14,
+                    76,57,10
+    CONTROL         "6 - &LPR",IDC_LPR,"Button",BS_AUTORADIOBUTTON,14,86,57,
+                    10
+    CONTROL         "7 - News",IDC_NEWS,"Button",BS_AUTORADIOBUTTON,14,96,57,
+                    10
+    CONTROL         "8 - UUC&P",IDC_UUCP,"Button",BS_AUTORADIOBUTTON,73,16,
+                    57,10
+    CONTROL         "9 - Cron",IDC_CRON,"Button",BS_AUTORADIOBUTTON,73,26,57,
+                    10
+    CONTROL         "10 - &Auth/Sec",IDC_SYS10,"Button",BS_AUTORADIOBUTTON,
+                    73,36,57,10
+    CONTROL         "11 - &FTP",IDC_FTP,"Button",BS_AUTORADIOBUTTON,73,46,57,
+                    10
+    CONTROL         "12 - SYS12",IDC_SYS12,"Button",BS_AUTORADIOBUTTON,73,56,
+                    57,10
+    CONTROL         "13 - SYS13",IDC_SYS13,"Button",BS_AUTORADIOBUTTON,73,66,
+                    57,10
+    CONTROL         "14 - SYS14",IDC_SYS14,"Button",BS_AUTORADIOBUTTON,73,76,
+                    57,10
+    CONTROL         "15 - SYS15",IDC_SYS15,"Button",BS_AUTORADIOBUTTON,73,86,
+                    57,10
+    CONTROL         "16 - Local&0",IDC_LOCAL0,"Button",BS_AUTORADIOBUTTON,
+                    132,16,57,10
+    CONTROL         "17 - Local&1",IDC_LOCAL1,"Button",BS_AUTORADIOBUTTON,
+                    132,26,57,10
+    CONTROL         "18 - Local&2",IDC_LOCAL2,"Button",BS_AUTORADIOBUTTON,
+                    132,36,57,10
+    CONTROL         "19 - Local&3",IDC_LOCAL3,"Button",BS_AUTORADIOBUTTON,
+                    132,46,57,10
+    CONTROL         "20 - Local&4",IDC_LOCAL4,"Button",BS_AUTORADIOBUTTON,
+                    132,56,57,10
+    CONTROL         "21 - Local&5",IDC_LOCAL5,"Button",BS_AUTORADIOBUTTON,
+                    132,66,57,10
+    CONTROL         "22 - Local&6",IDC_LOCAL6,"Button",BS_AUTORADIOBUTTON,
+                    132,76,57,10
+    CONTROL         "23 - Local&7",IDC_LOCAL7,"Button",BS_AUTORADIOBUTTON,
+                    132,86,57,10
+    CONTROL         "&Telalert",IDC_TELALERT,"Button",BS_AUTORADIOBUTTON,132,
+                    97,50,10
+    CONTROL         "",IDC_TELALERT_BOX,"Static",SS_BLACKFRAME,114,96,71,44
+    EDITTEXT        IDC_TELAFACILITY,117,110,19,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_SPIN_FACILITY,136,110,10,12,SBS_VERT
+    EDITTEXT        IDC_TELAPRIORITY,158,110,12,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_SPIN_PRIORITY,170,110,10,12,SBS_VERT
+    EDITTEXT        IDC_TELAVALUE,130,125,40,12,ES_AUTOHSCROLL
+    GROUPBOX        "Priority Code",IDC_PRIORITY_CAPTION,197,4,76,140
+    CONTROL         "0 - &Emergency",IDC_EMERGENCY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,16,63,10
+    CONTROL         "1 - Aler&t",IDC_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,27,63,10
+    CONTROL         "2 - &Critical",IDC_CRITICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,37,63,10
+    CONTROL         "3 - E&rror",IDC_ERROR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,47,63,10
+    CONTROL         "4 - &Warning",IDC_WARNING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,57,63,10
+    CONTROL         "5 - &Notice",IDC_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,67,63,10
+    CONTROL         "6 - &Info",IDC_INFO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,77,63,10
+    CONTROL         "7 - Debu&g",IDC_DEBUG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,87,63,10
+    PUSHBUTTON      "All",IDC_SELECTALL,203,98,24,14
+    PUSHBUTTON      "None",IDC_SELECTNONE,230,98,24,14
+    DEFPUSHBUTTON   "OK",IDOK,282,8,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,282,25,50,14
+    CONTROL         "<Sample here>",IDC_SAMPLE,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,2,148,276,15
+    CONTROL         "<pattern here>",IDC_PATTERN,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,2,168,276,15
+    PUSHBUTTON      "&Help",IDC_DOHELP,282,42,50,14
+    LTEXT           " °",IDC_DOT,148,116,8,6
+END
+
+IDD_TASK DIALOG DISCARDABLE  10, 25, 343, 234
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Task"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_NAME_CAPTION,7,11,22,8
+    EDITTEXT        IDC_NAME,32,7,115,15,ES_AUTOHSCROLL
+    LTEXT           "&Command Text:",IDC_STATIC,5,74,51,8
+    EDITTEXT        IDC_TASK_TEXT,5,84,272,13,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,287,6,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,287,22,50,14,WS_GROUP
+    PUSHBUTTON      "&Restore",IDC_RESTORE,287,52,50,14
+    LTEXT           "&System Connections:",IDC_STATIC,5,106,72,8
+    LISTBOX         IDC_LHS,5,118,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Add-->",IDC_ADD,117,143,50,14
+    PUSHBUTTON      "Add A&ll->",IDC_ADD_ALL,117,159,50,14
+    PUSHBUTTON      "<--&Remove",IDC_REMOVE,117,175,50,14
+    PUSHBUTTON      "<-Re&move All",IDC_REMOVE_ALL,117,191,50,14
+    LTEXT           "&Task Connections:",IDC_STATIC,175,106,75,8
+    LISTBOX         IDC_RHS,173,118,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Help",IDC_DOHELP,287,78,50,14
+    CONTROL         "&Normal",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,166,3,34,10
+    CONTROL         "&Timed",IDC_TIMED,"Button",BS_AUTORADIOBUTTON,166,17,34,
+                    10
+    CONTROL         "&Every",IDC_EVERY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,39,34,10
+    CONTROL         "A&t",IDC_AT,"Button",BS_AUTORADIOBUTTON,14,51,34,10
+    EDITTEXT        IDC_EVERY_HOW_MUCH,54,38,40,12,ES_AUTOHSCROLL
+    CONTROL         "&Hour(s)",IDC_HOURS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,99,39,34,10
+    CONTROL         "&Minutes",IDC_MINUTES,"Button",BS_AUTORADIOBUTTON,99,54,
+                    34,10
+    EDITTEXT        IDC_WHEN,54,53,40,12,ES_AUTOHSCROLL
+    CONTROL         "Make A&ctive",IDC_ACTIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,157,38,78,10
+    GROUPBOX        "Timed Task",IDC_TIMED_BOX,8,26,269,44
+    CONTROL         "M",IDC_MON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,157,55,
+                    17,10
+    CONTROL         "T",IDC_TUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,177,55,
+                    17,10
+    CONTROL         "W",IDC_WED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,55,
+                    17,10
+    CONTROL         "Th",IDC_THU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,217,
+                    55,17,10
+    CONTROL         "F",IDC_FRI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,237,55,
+                    17,10
+    CONTROL         "Sa",IDC_SAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,257,
+                    55,17,10
+    CONTROL         "Su",IDC_SUN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,137,
+                    55,17,10
+END
+
+IDD_TERMINAL DIALOG DISCARDABLE  0, 0, 277, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Terminal"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name:",IDC_NAME_CAPTION,7,10,30,8
+    EDITTEXT        IDC_NAME,72,7,115,13,ES_AUTOHSCROLL
+    LTEXT           "&Product:",IDC_STATIC,6,26,29,8
+    COMBOBOX        IDC_PRODUCT,72,25,68,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Program &File:",IDC_STATIC,7,45,44,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_PROGRAM_FILE,72,42,140,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "&Configuration File:",IDC_STATIC,7,61,60,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_CONFIGURATION_FILE,72,59,140,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "&Arguments:",IDC_STATIC,6,78,38,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_ARGUMENTS,72,75,78,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Initial &Directory:",IDC_STATIC,6,94,53,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_INITIAL_DIRECTORY,72,92,140,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    DEFPUSHBUTTON   "OK",IDOK,221,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,221,23,50,14
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,221,47,50,14
+    PUSHBUTTON      "&Help",IDC_DOHELP,221,70,50,14
+END
+
+IDD_TIMEDSTATUS DIALOG DISCARDABLE  0, 0, 275, 108
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Watchdog Event Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cl&ose",IDCANCEL,218,6,50,14
+    LISTBOX         IDC_EVENTS,0,40,275,68,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Help",IDC_DOHELP,7,6,50,14
+    CONTROL         "",IDC_FRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,0,0,
+                    275,55
+    CONTROL         "",IDC_TITLE,"Static",SS_BLACKFRAME,-1,26,276,13
+END
+
+IDD_TIMEDTASK_PROPERTIES DIALOG DISCARDABLE  0, 0, 268, 148
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Timed Task Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,208,6,50,14
+    RTEXT           "&Name",IDC_STATIC,5,9,25,8
+    EDITTEXT        IDC_NAME,34,7,78,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_TEXT,34,29,225,13,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "&Text",IDC_STATIC,0,32,30,8
+    CHECKBOX        "&Paused",IDC_PAUSED,35,46,35,10
+    RTEXT           "&State",IDC_STATIC,0,61,30,8
+    EDITTEXT        IDC_STATE,34,58,225,13,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Schedule",IDC_STATIC,4,77,262,64
+    EDITTEXT        IDC_SCHEDULE,9,89,107,13,ES_AUTOHSCROLL
+    CHECKBOX        "M",IDC_MON,140,91,17,10
+    CHECKBOX        "T",IDC_TUE,160,91,17,10
+    CHECKBOX        "W",IDC_WED,180,91,17,10
+    CHECKBOX        "Th",IDC_THU,200,91,17,10
+    CHECKBOX        "F",IDC_FRI,220,91,17,10
+    CHECKBOX        "Sa",IDC_SAT,240,91,17,10
+    CHECKBOX        "Su",IDC_SUN,120,91,17,10
+    RTEXT           "Last Executed",IDC_LAST_EXECUTED_CAPTION,12,126,45,8
+    EDITTEXT        IDC_LAST_EXECUTED,61,124,116,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_NEXT_EXECUTE,61,108,116,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Scheduled For",IDC_STATIC,11,109,46,8
+END
+
+IDD_TRACE DIALOG DISCARDABLE  0, 0, 256, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Trace/Debug options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,204,4,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,204,21,50,14
+    CONTROL         "&Journalling",IDC_TRACE_JOURNALLING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,12,116,9
+    CONTROL         "&Board database updates",IDC_LOG_BOARD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,24,88,10
+    CONTROL         "Trace &Logical Connection mappings",IDC_TRACE_MAPPINGS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,36,128,10
+    CONTROL         "Inhibit &Reflection launch",IDC_NO_REFLECTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,48,93,10
+    CONTROL         "Trace &Ports",IDC_TRACE_PORTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,60,47,10
+    CONTROL         "Trace Ta&gs",IDC_TRACE_TAGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,72,47,10
+    CONTROL         "Trace Timed Tasks",IDC_TRACE_TASKS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,84,74,10
+END
+
+IDD_VIEWHELPTEXT DIALOG DISCARDABLE  10, 25, 267, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "View Help Text :"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,101,89,50,14,WS_GROUP
+    EDITTEXT        IDC_TEXT,7,10,255,73,ES_MULTILINE | ES_READONLY | 
+                    ES_WANTRETURN | WS_VSCROLL | WS_GROUP
+END
+
+IDD_ADDREMOVE DIALOG DISCARDABLE  0, 0, 354, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add/Remove"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,304,8,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,304,25,50,14
+    LISTBOX         IDC_LHS,7,18,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Add-->",IDC_ADD,118,34,50,14
+    PUSHBUTTON      "Add A&ll->",IDC_ADD_ALL,118,50,50,14
+    PUSHBUTTON      "<--&Remove",IDC_REMOVE,118,66,50,14
+    PUSHBUTTON      "<-Re&move All",IDC_REMOVE_ALL,118,82,50,14
+    LISTBOX         IDC_RHS,174,18,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Note: This dialog is never created; instead these controls are copied to specific subclasses of the dialog",
+                    IDC_STATIC,3,142,272,15
+    LTEXT           "LHS",IDC_LHS_CAPTION,7,5,104,12
+    LTEXT           "RHS",IDC_RHS_CAPTION,174,4,104,12
+END
+
+IDD_AGENTMGR DIALOG DISCARDABLE  0, 0, 380, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Agent Manager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Available Agents",IDC_LHS_CAPTION,7,5,104,12
+    LISTBOX         IDC_LHS,7,18,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "&Open-->",IDC_ADD,118,34,50,14
+    PUSHBUTTON      "Open &All->",IDC_ADD_ALL,118,50,50,14
+    PUSHBUTTON      "<--&Close",IDC_REMOVE,118,66,50,14
+    PUSHBUTTON      "<-C&lose All",IDC_REMOVE_ALL,118,82,50,14
+    LTEXT           "Open Agents",IDC_RHS_CAPTION,174,4,104,12
+    LISTBOX         IDC_RHS,174,18,104,116,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Agent Types",IDC_STATIC,288,44,91,90
+    CONTROL         "&All Agents",IDC_ALLAGENTS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,306,65,47,10
+    CONTROL         "&Console Agents",IDC_CONSOLE,"Button",
+                    BS_AUTORADIOBUTTON,306,77,65,10
+    CONTROL         "&Event Agents",IDC_EVENT,"Button",BS_AUTORADIOBUTTON,
+                    306,90,59,10
+    CONTROL         "&Log Agents",IDC_LOG,"Button",BS_AUTORADIOBUTTON,306,
+                    102,52,10
+    CONTROL         "&Telalert Agents",IDC_TELALERT,"Button",
+                    BS_AUTORADIOBUTTON,306,115,63,10
+    CONTROL         372,IDC_STATIC,"Static",SS_BITMAP,291,77,11,10
+    CONTROL         376,IDC_STATIC,"Static",SS_BITMAP,291,90,11,10
+    CONTROL         380,IDC_STATIC,"Static",SS_BITMAP,291,102,11,10
+    CONTROL         142,IDC_STATIC,"Static",SS_BITMAP,291,115,11,10
+    GROUPBOX        "Sort",IDC_SORT_CAPTION,117,99,53,35
+    CONTROL         "By &Name",IDC_BYNAME,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,121,108,45,10
+    CONTROL         "By T&ype",IDC_BYTYPE,"Button",BS_AUTORADIOBUTTON,121,
+                    120,42,10
+    DEFPUSHBUTTON   "OK",IDOK,321,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,321,24,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1, 0, 0, 28
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Development version\0"
+            VALUE "CompanyName", "Serial Technologies\0"
+            VALUE "FileDescription", "Telaconsole Server Monitor\0"
+            VALUE "FileVersion", "1, 0, 0, 28\0"
+            VALUE "InternalName", "Telacon32\0"
+            VALUE "LegalCopyright", "Copyright © 2000, Serial Technologies, all rights reserved\0"
+            VALUE "LegalTrademarks", "Telaconsole is a trademark of Serial Technologies\0"
+            VALUE "OriginalFilename", "Telacon32.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Telaconsole\0"
+            VALUE "ProductVersion", "2, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ADDREMOVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 347
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_AGENTMGR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 373
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR  DISCARDABLE     "res\\hand.cur"
+IDC_PLUS                CURSOR  DISCARDABLE     "res\\Plus.cur"
+IDC_SPYGLASS            CURSOR  DISCARDABLE     "res\\SPYGLASS.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Telacon32"
+    IDR_TELACOTYPE          "\nTelaco\nTelacon\n\n\nTelacon32.Document\nTelacon Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Telacon32"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PLATFORM_WIN32_NT   "Microsoft Windows NT %u.%u (Build %u)"
+    IDS_PLATFORM_WIN32_NTAS "Microsoft Windows NT Advanced Server %u.%u (Build %u)"
+    IDS_PLATFORM_WIN32_NTW  "Microsoft Windows NT Workstation %u.%u (Build %u)"
+    IDS_PLATFORM_WIN32_NTS  "Microsoft Windows NT Server %u.%u (Build %u)"
+    IDS_PLATFORM_WIN32s     "Microsoft Win32s %u.%u (Build %u)"
+    IDS_PLATFORM_WIN32_WINDOWS "Microsoft Windows 95 %u.%u (Build %u)"
+    IDS_PLATFORM_UNKNOWN    "Unknown operating system %u.%u (Build %u)"
+    IDS_PROCESSOR_ARCHITECTURE_UNKNOWN "Unknown processor architecture"
+    IDS_PROCESSOR_ARCHITECTURE_INTEL_386_486 
+                            "Intel %1 step %2!0.2X! processor"
+    IDS_PROCESSOR_ARCHITECTURE_INTEL_PENTIUM 
+                            "Intel %1 model %2!d!, stepping %3!d! processor"
+    IDS_PROCESSOR_ARCHITECTURE_ALPHA 
+                            "DEC Alpha %1 model %2!c!, pass %3!d! processor"
+    IDS_PROCESSOR_ARCHITECTURE_MIPS "MIPS %1 revision %2!d! processor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROCESSOR_ARCHITECTURE_PPC 
+                            "Power PC %1 revision %2!d!.%3!d! processor"
+    IDS_PROCESSOR_LEVEL_INTEL_UNKNOWN "Unknown Intel processor"
+    IDS_PROCESSOR_LEVEL_ALPHA_UNKNOWN "Unknown Alpha processor"
+    IDS_PROCESSOR_LEVEL_PPC_UNKNOWN "Unknown Power PC processor"
+    IDS_PROCESSOR_NOREV_INTEL_386 "Intel 80386 processor"
+    IDS_PROCESSOR_NOREV_INTEL_486 "Intel 80486 processor"
+    IDS_PROCESSOR_NOREV_INTEL_PENTIUM "Intel Pentium processor"
+    IDS_PROCESSOR_NOREV_MIPS_R4000 "MIPS R4000 processor"
+    IDS_PROCESSOR_NOREV_ALPHA_21064 "DEC Alpha 21064 processor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new connection, agent, or filter\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_OPEN_CONNECTION     "Open Connection\nOpen Connection"
+    ID_CLOSE_CONNECTION     "Close Connection\nClose Connection"
+    IDM_OPENAGENT           "Agent Manager\nAgent Manager"
+    IDM_BROADCAST           "Broadcast\nBroadcast"
+    IDM_VIEWER              "Viewer\nViewer"
+    IDM_AGENTS              "Start/Stop agents\nAgent Manager"
+    IDM_CONNECTIONS         "Open/Close connections"
+    IDM_AGENT               "Agent Manager\nAgent Manager"
+    IDM_CONNECTION          "Open/Close connections\nConnection Manager"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MESSAGES_CAPTION    "Messages"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CONSOLE_TYPE        "Console"
+    IDS_EVENT_TYPE          "Event"
+    IDS_LOG_TYPE            "Log"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MESSAGES_TYPE       "Messages"
+    IDS_TIMEDTASKS_TYPE     "Timed Tasks"
+    IDS_WATCHDOG_TYPE       "Watchdog"
+    IDS_CONNECTIONMAP_TYPE  "Connection Map"
+    IDS_PERFORMANCE_TYPE    "Performance"
+    IDS_TELALERT_TYPE       "Telalert"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Telacon32.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include "afxdb.rc"          // Database resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
