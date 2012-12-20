@@ -1,9 +1,12 @@
+- Update version number in Version.VER
 - Build StageRace as you would, release configuration
 - Update version number in English.TIP
-- Make sure Updatex.HTML is uptodate; it has to contain:
+- Make sure Updates.HTML is uptodate; it has to contain:
 	- An entry in the overview with the correct date
 	- An entry in the Fixes per Update
 - Make sure Little Setup Builder is installed (lsb02_01.exe)
 - Open "Setup Definition.LSB"
 - Project --> Global Settings --> adjust the version number in the output file (e.g. stagerace2005399.exe)
 - Run --> "Build setup program"
+- Move Setup/stagerace20053xx.exe to \\192.168.1.12\wwwroot\2005\download\fils
+- Update \\192.168.1.12\wwwroot\2005\download\fils.txt accordingly
