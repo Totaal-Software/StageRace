@@ -104,6 +104,10 @@ in `C...Dat`
 
 * Settings: data objects in `CSettings` and friends, property pages for settings dialogs in `CPageSettings` and friends
 
+* (D)COM application to let other applications integrate with a running instance of StageRace. This has, at times, been
+used to integrate with scoreboards and timekeeping systems. A MIDL interface is specified in `ISRHalfStage` and 
+implemented in `CStageRaceComDoc`. Also see "stagerace message protocol (EN)" in the `Documents/English` folder  
+
 ...and much, much more! Helper classes, status bars, tool bars, multi-language, ...
 
 Includes are managed centrally, in `incl.h`. This is convenient in the sense that all includes can be found in one 
