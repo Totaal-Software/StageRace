@@ -34,6 +34,13 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gen
 
 See `LICENSE.txt`.
 
+## Support
+
+Again, this program (source code) comes WITHOUT ANY WARRANTY, also without any promises of support from the original 
+author. However, you may always [reach out](mailto:sander@sanderverhagen.net) with questions, and entirely at their 
+discretion the original author may try to answer your questions. Most likely, however, they do not have a working 
+development environment at their disposal for this software.
+
 ## Usage
 
 Usage of this software is extensively documented [here](https://www.totaalsoftware.com/products/stagerace). The 
@@ -43,10 +50,17 @@ remainder of this documentation is meant for development.
 
 The remainder of this document describes the development using the StageRace source code.
 
-## Documentation Disclaimer
+## Note
 
 This documentation was written some years *after* the last active development took place. Some information may not be
-accurate as a result. If inaccuracies are suspected, these are indicated using the word PROBABLY. 
+accurate as a result. If inaccuracies are suspected, these are indicated using the word PROBABLY.
+ 
+## Another Note
+
+StageRace was mainly written while, and shortly after the original author went to college. Their Visual C skills were 
+mostly self-taught, and they still had a lot to learn in software development. As a seasoned professional, today, there 
+is a lot of things in this code base that they would strongly advise against. That said, there is a lot of intention in 
+the code, it has gotten a lot of love, and it has matured from the feedback of real-life application.
 
 ## Prerequisites
 
