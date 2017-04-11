@@ -71,6 +71,9 @@ not be the case anymore)
 * Git installed, cloned repository
 * Working knowledge of C++, MFC, Visual Studio, Win32 development, and Git
 
+Note that the Visual Studio project files, contained in this repository, PROBABLY reference file paths that are 
+different than the ones on your development PC. Let's just hope you know what to do!
+
 For releases:
 
 * Little Setup Builder installed (`lsb02_01.exe`)
