@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "HelpTool", "..\StageRace 2003\HELP\ENGLISH\HELPTOOL\HelpTool\HelpTool.dsp", "{CF4B193A-7EC3-4378-BA35-5FC5BE5F3E0E}"
+Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "HelpTool", "Core Application\HELP\ENGLISH\HELPTOOL\HelpTool\HelpTool.dsp", "{CF4B193A-7EC3-4378-BA35-5FC5BE5F3E0E}"
 EndProject
 Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "KeySupport", "..\KeySupport\KeySupport.dsp", "{DC7ED979-C1FA-4552-8F46-EE693FDD2B62}"
 EndProject
