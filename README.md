@@ -169,6 +169,9 @@ Various documents that were created for selling StageRace and training customers
 This `Documents` folder also contains a copy of UCI Cycling Regulations (PROBABLY old and outdated, just for 
 reference); these are the property of the respective copyright holder, probably UCI.
 
+This `Documents` folder also contains assets for the creation of CD-ROMs for StageRace (labels and covers), that were
+made using CorelDraw. For many years already, physical media have not been shipped for StageRace anymore.
+
 ## Release
 
 The main StageRace application can be built and released as follows:
