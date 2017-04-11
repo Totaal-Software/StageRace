@@ -22,6 +22,9 @@ other customers and the general public.
 
 Copyright 2000, 2003, 2005, 2012, 2017 Sander Verhagen, also acting as sole proprietor under the name "Totaal Software".
 
+The name Totaal Software and the "totaal" logo remain the exclusive property of Sander Verhagen, but can be used in any
+subsequent release of StageRace.
+
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public 
 License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later 
 version.
@@ -106,7 +109,9 @@ in `C...Dat`
 
 * (D)COM application to let other applications integrate with a running instance of StageRace. This has, at times, been
 used to integrate with scoreboards and timekeeping systems. A MIDL interface is specified in `ISRHalfStage` and 
-implemented in `CStageRaceComDoc`. Also see "stagerace message protocol (EN)" in the `Documents/English` folder  
+implemented in `CStageRaceComDoc`. Also see "stagerace message protocol (EN)" in the `Documents/English` folder. Note
+that this constellation involves a few files that are automatically generated on build, and that may appear in your 
+change set, even if it's just an updated timestamp
 
 ...and much, much more! Helper classes, status bars, tool bars, multi-language, ...
 
