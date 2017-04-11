@@ -162,6 +162,13 @@ A library used as part of the setup application, performing specific tasks durin
 not offered by Little Setup Builder, such as checking the version of Internet Explorer installed, and setting some 
 specific file attributes
 
+### Documents
+
+Various documents that were created for selling StageRace and training customers to use it.
+
+This `Documents` folder also contains a copy of UCI Cycling Regulations (PROBABLY old and outdated, just for 
+reference); these are the property of the respective copyright holder, probably UCI.
+
 ## Release
 
 The main StageRace application can be built and released as follows:
