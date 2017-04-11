@@ -25,8 +25,14 @@ CHaspTotaal::CHaspTotaal()
 
 	// Hasp related
 	m_haspChecksum	= -1475;		// p1-p2+p3-p4
+
+	// StageRace software is protected by use of a hardware key. Without the hardware key your copy will work in
+	// evaluation mode. With the release of the source code, this protection is also given up. It is the expectation
+	// that whomever uses this source code to craft a software update, also rips out the hardware keys requirement.
+	// Go for it!
 	m_haspPwd1		= 12981;		// SECRET SECRET SECRET
 	m_haspPwd2		=  7548;		// SECRET SECRET SECRET
+
 	m_haspSeedCode	=   100;		// Totaal-default=100
 	m_protected		= FALSE;		// Default FALSE on startup of application
 	m_firstshot		= TRUE;
